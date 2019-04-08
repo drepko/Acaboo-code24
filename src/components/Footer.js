@@ -7,10 +7,10 @@ export default function Footer(props) {
 
         <div>
             <h1>Navigate</h1>
-            <Link><p>About</p></Link>
+            <Link to = "/about"><p>About</p></Link>
             <Link><p>Blog</p></Link>
             <Link><p>Team</p></Link>
-            <Link><p>Courses</p></Link>
+            <Link to = "/courses"><p>Courses</p></Link>
             <Link><p>We're hiring</p></Link>
             <Link><p>Publishers</p></Link>
 
@@ -20,7 +20,7 @@ export default function Footer(props) {
             <p>Email here..</p>
 
             <h1>Subscribe</h1>
-            <Subscribe/>
+            {/* <Subscribe/> */}
 
         </div>
     )
