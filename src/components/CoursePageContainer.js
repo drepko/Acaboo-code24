@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import Course from './Course'
 
 class CoursePageContainer extends PureComponent {
 
@@ -9,7 +10,6 @@ class CoursePageContainer extends PureComponent {
     }
 
     renderCourses = (courses) => {
-        
         return (
             courses.map((course) => {
                 return <Course course={course}/>
@@ -33,4 +33,4 @@ const mapStateToProps = state => ({
     courses: state.courses === null
 })
 
-export default connect(mapStateToProps, { getCourses })(CoursePageContainer)
+export default connect(mapStateToProps)(CoursePageContainer) //{ getCourses }
