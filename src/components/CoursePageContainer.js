@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react'
+import Course from './Course'
 import { connect } from 'react-redux'
+import {getCourses} from '../actions/courses'
 
 class CoursePageContainer extends PureComponent {
 
     componentWillMount() {
-        const {universityId, studyId} = this.props.params.match
-        this.props.getCourses(universityId, studyId)
+        const {studyId} = this.props.match.params
+        this.props.getCourses(studyId)
     }
 
     renderCourses = (courses) => {
@@ -30,7 +32,7 @@ class CoursePageContainer extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-    courses: state.courses === null
+    courses: state.courses
 })
 
 export default connect(mapStateToProps, { getCourses })(CoursePageContainer)
