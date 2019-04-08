@@ -4,8 +4,10 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import CoursePageContainer from './components/CoursePageContainer'
 import AboutPageContainer from './components/AboutPageContainer'
+
 //import Subscribe from './components/subscribe/subscribe'
 import LandingsPageContainer from './components/LandingsPageContainer'
+
 
 class App extends Component {
   render() {
