@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Topbar from './components/layout/Topbar'
+
+import { Route } from 'react-router-dom'
+import { CoursePageCountainer } from './components/CoursePageContainer'
+import { AboutPageCountainer } from './components/AboutPageCountainer'
+
+
+
 import Subscribe from './components/subscribe/subscribe'
+
 class App extends Component {
   render() {
     return (
@@ -10,9 +17,15 @@ class App extends Component {
         <nav>
           <Topbar/>
         </nav>
+
+        <main>
+          <Route exact path="/courses" component={CoursePageCountainer} />
+          <Route exact path="/about" component={AboutPageCountainer} />
+        </main>
+
       </div>
     );
   }
 }
 
-export default Ap
+export default App
