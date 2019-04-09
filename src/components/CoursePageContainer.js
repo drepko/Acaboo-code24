@@ -33,8 +33,5 @@ const mapStateToProps = state => ({
     courses: state.courses
 })
 
-
-export default connect(mapStateToProps, { 
-    //getCourses 
-})(CoursePageContainer)
+export default connect(mapStateToProps, {getCourses})(CoursePageContainer) //{  }
 
