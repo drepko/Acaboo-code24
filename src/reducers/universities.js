@@ -5,7 +5,7 @@ export default (state = null, { type, payload }) => {
     case UPDATE_UNIVERSITIES:
       return payload
       
-    default:
-      return state
+     default:
+        return state
   }
 }

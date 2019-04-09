@@ -9,9 +9,7 @@ class CoursePageContainer extends PureComponent {
         const {studyId} = this.props.study.id
         this.props.getCourses(studyId)
     }
-
     renderCourses = (courses) => {
-        
         return (
             courses.map((course) => {
                 return <Course course={course}/>
@@ -36,4 +34,5 @@ const mapStateToProps = state => ({
     study: state.study
 })
 
-export default connect(mapStateToProps, { getCourses })(CoursePageContainer)
+export default connect(mapStateToProps, {getCourses})(CoursePageContainer) //{  }
+

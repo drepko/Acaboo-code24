@@ -1,6 +1,6 @@
 import {createStore, applyMiddleware, combineReducers, compose} from 'redux'
 import ReduxThunk from 'redux-thunk'
-import reducers from './reducers/index' // which is shorthand for import ./reducers/index.js
+import reducers from './reducers/index' // which is shorthand for import ./reducers/index.js => here it is 'import ./reducers/'
 
 
 const reducer = combineReducers(reducers)
