@@ -6,7 +6,7 @@ import {getCourses} from '../actions/courses'
 class CoursePageContainer extends PureComponent {
 
     componentWillMount() {
-        const {studyId} = this.props.match.params
+        const {studyId} = this.props.study.id
         this.props.getCourses(studyId)
     }
     renderCourses = (courses) => {
@@ -35,7 +35,8 @@ class CoursePageContainer extends PureComponent {
 }
 
 const mapStateToProps = state => ({
-    courses: state.courses
+    courses: state.courses,
+    study: state.study
 })
 
 export default connect(mapStateToProps, {getCourses})(CoursePageContainer) //{  }

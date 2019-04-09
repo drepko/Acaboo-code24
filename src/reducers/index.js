@@ -3,10 +3,13 @@ import universities from './universities'
 import users from './users'
 import login from './login'
 import currentUser from './currentUser'
+import studies from './studies'
 
 export default {
-    courses,universities,
+    courses,
+    universities,
     users,
     login,
-    currentUser,
+    studies,
+    currentUser
 }

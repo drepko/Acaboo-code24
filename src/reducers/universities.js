@@ -1,11 +1,11 @@
-import { FETCH_UNIVERSITIES} from '../actions/universities'
+import { UPDATE_UNIVERSITIES } from '../actions/universities'
 
 export default (state = null, { type, payload }) => {
   switch (type) {
-    case FETCH_UNIVERSITIES:
+    case UPDATE_UNIVERSITIES:
       return payload
       
-    default:
-      return state
+     default:
+        return state
   }
 }
