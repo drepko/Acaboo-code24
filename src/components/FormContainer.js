@@ -1,43 +1,58 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { getUniversities } from '../actions/universities'
-import { getStudies } from '../actions/studies'
+import { getStudies, setSelectedStudy } from '../actions/studies'
+import { getCourses } from '../actions/courses'
 import Form from './Form'
 
 class CoursePageContainer extends PureComponent {
     constructor(props) {
         super(props);
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleUniversitySelect = this.handleUniversitySelect.bind(this);
+        this.handleStudySelect = this.handleStudySelect.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     state = {
-        university: {id: null, name: null},
-        study: null
+        university: { id: null, name: null },
+        study: { id: null, name: null }
     }
 
     componentWillMount() {
         this.props.getUniversities()
     }
 
-    handleChange(event) {
+    handleUniversitySelect(event) {
         const selectedIndex = event.target.options.selectedIndex;
         const id = event.target.options[selectedIndex].getAttribute('id')
-        this.setState({ university: {id, name: event.target.value} });
+        this.setState({ university: { id, name: event.target.value } });
         this.props.getStudies(id)
+    }
+
+    handleStudySelect(event) {
+        const selectedIndex = event.target.options.selectedIndex;
+        const id = event.target.options[selectedIndex].getAttribute('id')
+        this.setState({ study: { id, name: event.target.value } });
     }
 
     handleSubmit(event) {
         event.preventDefault();
+        this.props.getCourses(this.state.study.id)
+        this.props.setSelectedStudy(this.state.study)
+        this.props.history.push(`/courses/${this.state.university.name}/${this.state.study.name}`)
     }
 
     render() {
         return this.props.universities === null ? <p>Loading ...</p> :
             <Form
-                handleChange={this.handleChange}
+                onSubmit={this.handleSubmit}
+                handleUniversitySelect={this.handleUniversitySelect}
+                handleStudySelect={this.handleStudySelect}
                 universities={this.props.universities}
                 university={this.state.university}
+                study={this.state.study}
+                studies={this.props.studies}
             />
     }
 }
@@ -47,4 +62,4 @@ const mapStateToProps = state => ({
     studies: state.studies
 })
 
-export default connect(mapStateToProps, { getUniversities, getStudies })(CoursePageContainer)
+export default connect(mapStateToProps, { getUniversities, getStudies, getCourses, setSelectedStudy })(CoursePageContainer)

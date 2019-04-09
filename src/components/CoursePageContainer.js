@@ -33,7 +33,7 @@ class CoursePageContainer extends PureComponent {
 
 const mapStateToProps = state => ({
     courses: state.courses,
-    study: state.study
+    study: state.selectedStudy
 })
 
 export default connect(mapStateToProps, { getCourses })(CoursePageContainer)
