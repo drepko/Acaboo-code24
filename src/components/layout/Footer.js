@@ -1,15 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
 
 export default function Footer(props) {
 
     return (
 
         <div>
-            <AppBar style={{ backgroundColor: '#2F2E41', height: '556px'}}>
-                <Toolbar >
+            <footer style={{ backgroundColor: '#2F2E41'}}>
                     <div style = {{display: 'flex'}}>
 
                         <div>
@@ -39,8 +36,7 @@ export default function Footer(props) {
                         </div>
 
                     </div>
-                </Toolbar>
-            </AppBar>
+            </footer>
 
         </div>
     )
