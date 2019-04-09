@@ -9,7 +9,7 @@ const TopBar = (props) => {
     const {history} = props
 
     return (
-        <div class="topnav">
+        <div className="topnav">
             <img src={Acaboo_logo} className="App-logo" alt="logo" />
             <button onClick={() => history.push('/')}>Acaboo</button>
             <button onClick={() => history.push('/course')}>Course</button>
