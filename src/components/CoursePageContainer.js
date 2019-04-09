@@ -33,4 +33,4 @@ const mapStateToProps = state => ({
     courses: state.courses === null
 })
 
-export default connect(mapStateToProps)(CoursePageContainer) //{ getCourses }
+export default connect(mapStateToProps, {getCourses})(CoursePageContainer) //{  }
