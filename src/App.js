@@ -4,8 +4,8 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import CoursePageContainer from './components/CoursePageContainer'
 import AboutPageContainer from './components/AboutPageContainer'
-import Subscribe from './components/subscribe/subscribe'
-//import FooterContainer from './components/FooterContainer'
+//import Subscribe from './components/subscribe/subscribe'
+import LandingsPageContainer from './components/LandingsPageContainer'
 
 
 class App extends Component {
@@ -17,7 +17,8 @@ class App extends Component {
             {/* <Topbar/> */}
           </nav>
           <main>
-            <Route exact path="/courses" component={CoursePageContainer} />
+            <Route exact path="/study/:studyId/courses" component={CoursePageContainer} />
+            <Route exact path="/" component={LandingsPageContainer} />
             <Route exact path="/about" component={AboutPageContainer} />
           </main>
         </div>
