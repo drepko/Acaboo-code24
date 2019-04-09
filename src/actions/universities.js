@@ -16,3 +16,4 @@ export const getUniversities = () => (dispatch) => {
     })
     .catch(err => console.error(err))
 }
+
