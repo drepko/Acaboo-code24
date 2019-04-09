@@ -12,9 +12,9 @@ class SignupPage extends PureComponent {
 
 	render() {
 		console.log("signup page props" ,this.props.signUp)
-		if (this.props.signup.success) return (
-			<Redirect to="/login" />
-		)
+		// if (this.props.signup.success) return (
+		// 	<Redirect to="/login" />
+		// )
 
 		return (
 			<div>
@@ -22,7 +22,7 @@ class SignupPage extends PureComponent {
 
 				<SignupForm onSubmit={this.handleSubmit} />
 
-				<p style={{color:'red'}}>{ this.props.signup.error }</p>
+				{/* <p style={{color:'red'}}>{ this.props.signup.error }</p> */}
 			</div>
 		)
 	}

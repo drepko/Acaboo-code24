@@ -8,6 +8,7 @@ import AboutPageContainer from './components/AboutPageContainer'
 import LandingsPageContainer from './components/LandingsPageContainer'
 import UniversityPageContainer from './components/UniversityPageContainer'
 import SignupPageContainer from './components/SignupPageContainer'
+import LoginPageContainer from './components/login/LoginPageContainer'
 
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route exact path="/study/:studyId/courses" component={CoursePageContainer} />
             <Route exact path="/" component={LandingsPageContainer} />
             <Route exact path="/about" component={AboutPageContainer} />
+            <Route exact path="/logins" component={LoginPageContainer} />
             <Route exact path="/signup" component={SignupPageContainer} />
 
           </main>

@@ -4,15 +4,15 @@ import { login } from '../../actions/users'
 import LoginForm from './LoginForm'
 import { Redirect } from 'react-router-dom'
 
-class LoginPage extends PureComponent {
+class LoginPageContainer extends PureComponent {
 	handleSubmit = (data) => {
 		this.props.login(data.email, data.password)
 	}
 
 	render() {
-		if (this.props.currentUser) return (
-			<Redirect to="/" />
-		)
+		// if (this.props.currentUser) return (
+		// 	<Redirect to="/" />
+		// )
 
 		return (
 			<div>
@@ -34,4 +34,4 @@ const mapStateToProps = state => {
 	}
 }
 
-export default connect(mapStateToProps, {login})(LoginPage)
+export default connect(mapStateToProps, {login})(LoginPageContainer)
