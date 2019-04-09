@@ -6,16 +6,17 @@ import {getUniversities} from '../actions/universities'
 class UniversityPageContainer extends PureComponent {
 
     componentWillMount() {
-        const {universityId, studyId} = this.props.params.match
-        this.props.getUniversities(universityId, studyId)
+        console.log("componentdid mount in iniversity container")
+        this.props.getUniversities()
     }
 
-    renderUniversities = (university) => {
+    renderUniversities = (universities) => {
         
         return (
-            university.map((university) => {
+            universities.map((university) => {
                 return <University university={university}/>
-            }))
+            })
+            )
         
     }
 
