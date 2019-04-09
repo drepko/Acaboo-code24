@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { login } from '../../actions/users'
 import LoginForm from './LoginForm'
 import { Redirect } from 'react-router-dom'
-
 class LoginPageContainer extends PureComponent {
 	handleSubmit = (data) => {
 		this.props.login(data.email, data.password)
@@ -16,6 +15,7 @@ class LoginPageContainer extends PureComponent {
 
 		return (
 			<div>
+
 				<h1>Login</h1>
 
 				<LoginForm onSubmit={this.handleSubmit} />
