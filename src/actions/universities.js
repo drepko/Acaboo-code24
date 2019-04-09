@@ -1,22 +1,19 @@
 import * as request from 'superagent'
-import {baseUrl} from '../constants'
-export const FETCH_UNIVERSITIES = 'FETCH_UNIVERSITIES'
+import { baseUrl } from '../constants'
 
+export const UPDATE_UNIVERSITIES = 'UPDATE_UNIVERSITIES'
 
+const updateUniversities = universities => ({
+  type: UPDATE_UNIVERSITIES,
+  payload: universities
+})
 
-const loadUniversities = universities => ({
-    type: FETCH_UNIVERSITIES,
-    payload: universities
-  })
-  
-  export const getUniversities = (studyId) => (dispatch) => {
-      console.log("at action" )
-    request
-      .get(`${baseUrl}/docs//api/v0/institute/`)
-      .then(result => {
-          console.log("RESULT",result)
-        dispatch(loadUniversities(result))
-      })
-      .catch(err => console.error(err))
-  }
+export const getUniversities = () => (dispatch) => {
+  request
+    .get(`${baseUrl}/api/v0/institute/`)
+    .then(result => {
+      dispatch(updateUniversities(JSON.parse(result.text)))
+    })
+    .catch(err => console.error(err))
+}
 

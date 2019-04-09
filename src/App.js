@@ -4,6 +4,7 @@ import Topbar from './components/layout/Topbar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import CoursePageContainer from './components/CoursePageContainer'
 import AboutPageContainer from './components/AboutPageContainer'
+import FormContainer from './components/FormContainer';
 //import Subscribe from './components/subscribe/subscribe'
 import LandingsPageContainer from './components/LandingsPageContainer'
 import Footer from './components/layout/Footer'
@@ -21,8 +22,9 @@ class App extends Component {
             <Topbar/>
           </nav>
           <main>
-          <Route exact path="/universities" component={UniversityPageContainer} />
-            <Route exact path="/study/:studyId/courses" component={CoursePageContainer} />
+            <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
+            <Route exact path="/formcontainer" component={FormContainer} />
+            <Route exact path="/universities" component={UniversityPageContainer} />
             <Route exact path="/" component={LandingsPageContainer} />
             <Route exact path="/about" component={AboutPageContainer} />
             <Route exact path="/logins" component={LoginPageContainer} />

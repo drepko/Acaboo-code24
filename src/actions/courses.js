@@ -10,9 +10,9 @@ const updateCourses = courses => ({
 
 export const getCourses = (studyId) => (dispatch) => {
   request
-    .get(`${baseUrl}/api/v0/course/`)
+    .get(`${baseUrl}/api/v0/course/?study=${studyId}`)
+    .withCredentials()
     .then(result => {
-        console.log(result)
       dispatch(updateCourses(result))
     })
     .catch(err => console.error(err))
