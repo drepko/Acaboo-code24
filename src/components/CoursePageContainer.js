@@ -18,6 +18,11 @@ class CoursePageContainer extends PureComponent {
     }
 
     render() {
+
+        // if (this.props.currentUser) return (
+		// 	<Redirect to="/" />
+        // )
+        
         const { courses } = this.props
 
         if (courses === null) return <p>Loading...</p>
