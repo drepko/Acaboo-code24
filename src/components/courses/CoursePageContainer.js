@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import Course from './Course'
 import { connect } from 'react-redux'
-import {getCourses} from '../actions/courses'
+import {getCourses} from '../../actions/courses'
 
 class CoursePageContainer extends PureComponent {
 
