@@ -1,6 +1,7 @@
 import React from 'react'
 import {withRouter} from 'react-router'
 import {connect} from 'react-redux'
+import Acaboo_logo from '../../images/Acaboo_logo.svg';
 
 
 const TopBar = (props) => {
@@ -9,7 +10,7 @@ const TopBar = (props) => {
 
     return (
         <div class="topnav">
-            <img src=''></img>
+            <img src={Acaboo_logo} className="App-logo" alt="logo" />
             <button onClick={() => history.push('/')}>Acaboo</button>
             <button onClick={() => history.push('/course')}>Course</button>
             <button onClick={() => history.push('/faq')}>FAQ</button>
