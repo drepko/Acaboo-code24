@@ -4,16 +4,14 @@ import { Link } from "react-router-dom";
 export default function Footer(props) {
 
     return (
-
-        <div>
-            <footer style={{ backgroundColor: '#2F2E41'}}>
+            <footer className="footer-component">
                     <div style = {{display: 'flex'}}>
-
-                        <div>
+                    
+                        <div className="footer-navigate">
                             <ul style={{ listStyle: 'none' }}>
                                 <li><h1>Navigate</h1></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/about"><p>About</p></Link></li>
-                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Blog</p></Link ></li>
+                                <li><a style={{ textDecoration: 'none', color: '#FFFFFF' }} onClick={()=> window.open("https://www.google.com", "_blank")}>Blog</a></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Team</p></Link ></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/courses"><p>Courses</p></Link ></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/careers"><p>Careers</p></Link ></li>
@@ -21,7 +19,7 @@ export default function Footer(props) {
                             </ul>
                         </div>
 
-                        <div>
+                        <div className="footer-contact">
                             <ul style={{ listStyle: 'none' }}>
                                 <li><h1>Contact</h1></li>
                                 <li><p>Boelelaan 1081 WN-P246 1081 HV Amsterdam</p></li>
@@ -30,15 +28,13 @@ export default function Footer(props) {
                             </ul>
                         </div>
 
-                        <div>
+                        <div className="footer-subscribe">
                             <h1>Subscribe</h1>
                             <p>Import Subscribe component here..</p>
                         </div>
 
                     </div>
             </footer>
-
-        </div>
     )
 }
 
