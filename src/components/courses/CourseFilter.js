@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './CourseFilter.css'
 
 export default class Filter extends Component {
 
@@ -30,7 +31,7 @@ export default class Filter extends Component {
     render() {
         const { study } = this.props
         return (
-            <div>
+            <div className = "filter-bar">
                 <form >
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}
