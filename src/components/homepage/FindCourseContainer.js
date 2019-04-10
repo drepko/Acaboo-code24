@@ -5,7 +5,7 @@ import { getStudies, setSelectedStudy } from '../../actions/studies'
 import { getCourses } from '../../actions/courses'
 import Form from './Form'
 
-class CoursePageContainer extends PureComponent {
+class FindCourseContainer extends PureComponent {
     constructor(props) {
         super(props);
 
@@ -61,4 +61,4 @@ const mapStateToProps = state => ({
     studies: state.studies
 })
 
-export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy })(CoursePageContainer)
+export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy })(FindCourseContainer)
