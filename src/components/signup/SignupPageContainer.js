@@ -2,6 +2,8 @@ import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {signup} from  '../../actions/signup'
 import SignupForm from './SignupForm'
+import {Redirect} from 'react-router-dom'
+import ProgressBar from './layout/ProgressBar'
 
 class SignupPage extends PureComponent {
 	state = { showPassword: false, formValues: {}, terms_accept: false }
@@ -38,6 +40,7 @@ class SignupPage extends PureComponent {
 
 		return (
 			<div>
+				<ProgressBar  />
 				<h3>Sign up</h3>
 				<SignupForm handleTermsChange={this.handleTermsChange} handleChange={this.handleChange} showPassword={this.showPassword} state={this.state} handleSubmit={this.handleSubmit} />
 			</div>
