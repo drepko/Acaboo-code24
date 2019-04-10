@@ -13,7 +13,7 @@ export default function Footer(props) {
                             <ul style={{ listStyle: 'none' }}>
                                 <li><h1>Navigate</h1></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/about"><p>About</p></Link></li>
-                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Blog</p></Link ></li>
+                                <li><a style={{ textDecoration: 'none', color: '#FFFFFF' }} onClick={()=> window.open("https://www.google.com", "_blank")}>Blog</a></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Team</p></Link ></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/courses"><p>Courses</p></Link ></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/careers"><p>Careers</p></Link ></li>
