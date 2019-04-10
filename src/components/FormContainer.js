@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { getUniversities } from '../actions/universities'
 import { getStudies, setSelectedStudy } from '../actions/studies'
-import { getCourses } from '../actions/courses'
 import Form from './Form'
 
 class CoursePageContainer extends PureComponent {
@@ -38,7 +37,6 @@ class CoursePageContainer extends PureComponent {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.props.getCourses(this.state.study.id)
         this.props.setSelectedStudy(this.state.study)
         this.props.history.push(`/courses/${this.state.university.name}/${this.state.study.name}`)
     }
@@ -62,4 +60,4 @@ const mapStateToProps = state => ({
     studies: state.studies
 })
 
-export default connect(mapStateToProps, { getUniversities, getStudies, getCourses, setSelectedStudy })(CoursePageContainer)
+export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy })(CoursePageContainer)
