@@ -1,0 +1,74 @@
+/* styling for src/components/Topbar.js */
+
+.topnav {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    
+}
+
+.topnav, .topnav-logo {
+    margin-right: auto;
+}
+
+.topnav {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    top: 0;
+    width: 100%;
+}
+
+/* The navigation bar
+.navbar {
+    overflow: hidden;
+    background-color: #333; */
+    /* position: fixed;  */
+    /* Set the navbar to fixed position */
+    /* top: 0;  */
+    /* Position the navbar at the top of the page */
+    /* width: 100%;  */
+    /* Full width */
+  /* } */
+
+.topnav-menu {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.tm-i {
+    color: #545B5E;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: normal;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    /* height: 45px;
+    left: 1120px;
+    /* top: 16px; */
+}
+
+.tm-logins {
+    border-left: 1px solid;
+    border-color: #959595;
+}
+
+.tm-signup {
+    margin-right: 40px;
+    background: #2D66F6;
+    border-radius: 5px; 
+    color: #FFFFFF;
+}
+
+/* font-family: Inter UI;
+font-style: normal;
+font-weight: 500;
+font-size: 17px;
+line-height: normal; */
