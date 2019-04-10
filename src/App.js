@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 import Topbar from './components/layout/Topbar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import CoursePageContainer from './components/courses/CoursePageContainer'
