@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import Subscribe from '../subscribe/Subscribe'
 
 export default function Footer(props) {
 
@@ -32,7 +33,7 @@ export default function Footer(props) {
 
                         <div>
                             <h1>Subscribe</h1>
-                            <p>Import Subscribe component here..</p>
+                            <Subscribe/>
                         </div>
 
                     </div>
