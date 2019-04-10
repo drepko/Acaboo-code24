@@ -18,7 +18,7 @@ class SignupPage extends PureComponent {
 
 		return (
 			<div>
-				<ProgressBar progress = {10} />
+				<ProgressBar  />
 				<h3>Sign up</h3>
 
 				<SignupForm onSubmit={this.handleSubmit} />
