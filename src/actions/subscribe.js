@@ -25,11 +25,11 @@ export const SUBSCRIBE_COURSE_SUCCES = 'SUBSCRIBE_COURSE_SUCCES'
         subscribe
     })
 
-    export const subscribeCourse = (email) => (dispatch) => {
+    export const subscribeCourse = (data) => (dispatch) => {
     
         request
-            .post(`${baseUrl}/courseavailable`)
-            .send(email)
+            .post(`${baseUrl}/course/${data.study}/subscribe`)
+            .send(data)
             .then(response => {
                 dispatch(subscribeCourseSuccess(response.body))
             })

@@ -5,20 +5,23 @@ import { subscribeCourse } from '../../actions/subscribe'
 
 class EmailWhenAvailable extends PureComponent {
     state = {
-        email: ''
+        email: '',
+        study: ''
     }
 
     onChange = (event) => {
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: event.target.value,
+            study: this.props.study.id
         })
     }
 
     onSubmit = (event) => {
-        console.log('subcsribe course', 'study', this.props.study )
+        console.log('subcsribe course', 'study', this.props.study.id )
         event.preventDefault()
         this.setState({
-            email: ''
+            email: '',
+            study: ''
         })
         this.props.subscribeCourse(this.state)
     }
