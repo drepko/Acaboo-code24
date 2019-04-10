@@ -8,8 +8,16 @@ export default function ProgressBar(props) {
     return (
   <div className="progress-bar">
 
-   <div className="filler" style={{ width: `${props.progress}%` }}/> 
-  </div>
+   {/* <div className="filler" style={{ width: `${props.progress}%` }}/> 
+  </div> */}
+  <ul>
+  <li>1</li>
+  <li >2</li>
+  <li class="active">3</li>
+  <li>4</li>
+  <li>5</li>
+</ul>  
+</div>
   )
     
 }
