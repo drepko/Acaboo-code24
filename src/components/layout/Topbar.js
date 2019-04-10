@@ -7,6 +7,7 @@ import Acaboo_logo from '../../images/Acaboo_logo.svg';
 const TopBar = (props) => {
 
     const {history} = props
+    console.log('props', props)
 
     return (
         <div className="topnav">
