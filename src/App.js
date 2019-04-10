@@ -24,7 +24,6 @@ class App extends Component {
           </nav>
           <main>
             <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
-            <Route exact path="/formcontainer" component={FindCourseContainer} />
             <Route exact path="/universities" component={UniversityPageContainer} />
             <Route exact path="/" component={LandingsPageContainer} />
             <Route exact path="/about" component={AboutPageContainer} />
