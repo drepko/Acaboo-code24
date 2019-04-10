@@ -12,7 +12,6 @@ import UniversityPageContainer from './components/homepage/UniversityPageContain
 import SignupPageContainer from './components/signup/SignupPageContainer'
 import LoginPageContainer from './components/login/LoginPageContainer'
 
-
 class App extends Component {
   render() {
     return (

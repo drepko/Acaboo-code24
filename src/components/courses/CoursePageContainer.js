@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import Course from './Course'
 import { connect } from 'react-redux'
 import {getCourses} from '../../actions/courses'
+import EmailWhenAvailable from './EmailWhenAvailable';
 
 class CoursePageContainer extends PureComponent {
 
@@ -15,8 +16,8 @@ class CoursePageContainer extends PureComponent {
             courses.map((course) => {
                 return (
                 course.provided === true ? <Course key={course.name} course={course} />
-                :
-                null
+                : null
+                
                 )
             })
         )
@@ -28,6 +29,7 @@ class CoursePageContainer extends PureComponent {
 
         if (courses === null) return <p>Loading...</p>
         console.log(courses)
+        if (courses.length === 0) return <EmailWhenAvailable courses = {this.props.courses} study = {this.props.study}/>
         return (
             <div>
                 {this.renderCourses(courses)}

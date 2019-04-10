@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import EmailForm from '../layout/EmailForm'
-import { subscribeNews } from '../../actions/subscribe'
+import { subscribeCourse } from '../../actions/subscribe'
 
-class SubscribeFormContainer extends React.Component {
+class EmailWhenAvailable extends PureComponent {
     state = {
         email: ''
     }
@@ -15,32 +15,32 @@ class SubscribeFormContainer extends React.Component {
     }
 
     onSubmit = (event) => {
+        console.log('subcsribe course', 'study', this.props.study )
         event.preventDefault()
         this.setState({
             email: ''
         })
-        this.props.subscribeNews(this.state)
+        this.props.subscribeCourse(this.state)
     }
 
     render() {
         return (
             <div>
-            <p>The latest Acaboo news, articles, and <br />
-            resources, sent straight to your inbox every <br />
-            month.</p>
+            <h1>Oops! We don’t offer your course yet!</h1>
+            <p>Let me know when available</p>
             <EmailForm
                 onSubmit={this.onSubmit}
                 onChange={this.onChange}
                 formValues={this.state}
             />
-            <p>We’ll never share your details. See our Privacy Policy</p>
-
+            
             </div>)
     }
 }
 
 const mapStateToProps = (state) => ({
-
+    //courses: state.courses,
+    study: state.selectedStudy
 })
 
-export default connect(mapStateToProps, {subscribeNews})(SubscribeFormContainer)
+export default connect(mapStateToProps, {subscribeCourse})(EmailWhenAvailable)
