@@ -27,7 +27,6 @@ class CoursePageContainer extends PureComponent {
         const { courses } = this.props
 
         if (courses === null) return <p>Loading...</p>
-        console.log(courses)
         return (
             <div>
                 {this.renderCourses(courses)}

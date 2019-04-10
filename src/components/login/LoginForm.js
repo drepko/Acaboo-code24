@@ -1,43 +1,28 @@
 import React, { PureComponent } from 'react'
 import './LoginForm.css'
+import show from '../../images/show.png'
+import hide from '../../images/hide.png'
 
 export default class LoginForm extends PureComponent {
-	state = {}
-
-	handleSubmit = (e) => {
-		e.preventDefault()
-		this.props.onSubmit(this.state)
-	}
-
-	handleChange = (event) => {
-    const {name, value} = event.target
-
-    this.setState({
-      [name]: value
-    })
-  }
 
 	render() {
-		return (
-      <div>
-  			<form onSubmit={this.handleSubmit}>
-  				<label>
-            Email
-            <input type="email" name="email" value={
-  						this.state.email || ''
-  					} onChange={ this.handleChange } /> <br />
-          </label>
 
-  				<label>
-						Password
-						<input type="password" name="password" value={
-  						this.state.password || ''
-  					} onChange={ this.handleChange } /> <br />
-          </label>
-					
-					
-  				<button type="submit">Login</button>
-  			</form>
+		const { state, onChange, onSubmit, showPassword } = this.props
+
+		return (
+			<div>
+				<form onSubmit={onSubmit}>
+					<input type="username" name="username" value={
+						state.username || ''
+					} onChange={onChange} /> <br />
+
+					<input className="password-field" placeholder="Password" type={state.showPassword ? "text" : "password"} name="password" value={
+						state.password || ''
+					} onChange={onChange} />
+					<img alt="hide-show-password" onClick={showPassword} src={state.showPassword === false ? hide : show} className="password-image" />
+
+					<button type="submit">Login</button>
+				</form>
 			</div>
 		)
 	}

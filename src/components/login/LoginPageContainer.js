@@ -5,9 +5,27 @@ import LoginForm from './LoginForm'
 import { Redirect } from 'react-router-dom'
 import ProgressBar from '../layout/ProgressBar'
 class LoginPageContainer extends PureComponent {
-	handleSubmit = (data) => {
-		this.props.login(data.email, data.password)
+
+	state = {}
+	
+	handleSubmit = (e) => {
+		e.preventDefault()
+		this.props.login(this.state, this.props.history)
 	}
+
+	handleChange = (event) => {
+    const {name, value} = event.target
+
+    this.setState({
+      [name]: value
+    })
+  }
+
+  showPassword = () => {
+	this.setState({
+		showPassword: !this.state.showPassword
+	})
+}
 
 	render() {
 		// if (this.props.currentUser) return (
@@ -16,9 +34,11 @@ class LoginPageContainer extends PureComponent {
 
 		return (
 			<div>
-				<h1>Login</h1>
+				<h1>Welcome back</h1>
 
-				<LoginForm onSubmit={this.handleSubmit} />
+				<h3>Enter your account details below</h3>
+
+				<LoginForm showPassword={this.showPassword} state={this.state} onChange={this.handleChange} onSubmit={this.handleSubmit} />
 
                 { this.props.error && 
                 <span style={{color:'red'}}>{this.props.error}</span> }

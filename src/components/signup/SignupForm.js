@@ -1,54 +1,61 @@
 import React, { PureComponent } from 'react'
+import './SignUpForm.css'
+import show from '../../images/show.png'
+import hide from '../../images/hide.png'
 
 export default class SignupForm extends PureComponent {
-	state = {}
-
-	handleSubmit = (e) => {
-		e.preventDefault()
-		this.props.onSubmit(this.state)
-	}
-
-	handleChange = (event) => {
-		const { name, value } = event.target
-
-		this.setState({
-			[name]: value
-		})
-	}
 
 	render() {
-        
+		const { handleSubmit, handleChange, state, showPassword, handleTermsChange } = this.props
+
 		return (
 			<div className="signup-form">
-				<form onSubmit={this.handleSubmit}>
-					<label>
-						Email
-            <input type="email" name="email" value={
-							this.state.email || ''
-						} onChange={this.handleChange} />
-					</label>
+				<form onSubmit={handleSubmit}>
 
-					<label>
-						Password
-  					<input type="password" name="password" value={
-							this.state.password || ''
-						} onChange={this.handleChange} />
-					</label>
+				<input placeholder="Username" type="text" name="username" value={
+						state.formValues.username || ''
+					} onChange={handleChange} />
 
-					<label>
-						Confirm password
-  					<input type="password" name="confirmPassword" value={
-							this.state.confirmPassword || ''
-						} onChange={this.handleChange} />
-					</label>
+					<input placeholder="First Name" type="text" name="first_name" value={
+						state.formValues.first_name || ''
+					} onChange={handleChange} />
+
+					<input placeholder="Last Name" type="text" name="last_name" value={
+						state.formValues.last_name || ''
+					} onChange={handleChange} />
+
+					<input placeholder="Telephone" type="text" name="phone_number" value={
+						state.formValues.phone_number || ''
+					} onChange={handleChange} />
+
+					<input placeholder="Email" type="email" name="email" value={
+						state.formValues.email || ''
+					} onChange={handleChange} />
+
+					<input className="password-field" placeholder="Password" type={state.showPassword ? "text" : "password"} name="password" value={
+						state.formValues.password || ''
+					} onChange={handleChange} />
+					<img alt="hide-show-password" onClick={showPassword} src={state.showPassword === false ? hide : show} className="password-image" />
+
+					<input className="password-field" placeholder="Confirm Password" type={state.showPassword ? "text" : "password"} name="confirmPassword" value={
+						state.formValues.confirmPassword || ''
+					} onChange={handleChange} />
+					<img alt="hide-show-password" onClick={showPassword} src={state.showPassword === false ? hide : show} className="password-image" />
 
 					{
-						this.state.password &&
-						this.state.confirmPassword &&
-						this.state.password !== this.state.confirmPassword &&
+						state.formValues.password &&
+						state.formValues.confirmPassword &&
+						state.formValues.password !== state.formValues.confirmPassword &&
 						<p style={{ color: 'red' }}>The passwords do not match!</p>
 					}
-
+					<label>
+						Terms:
+          					<input
+							name="terms_accept"
+							type="checkbox"
+							checked={state.terms_accept}
+							onChange={handleTermsChange} />
+					</label>
 					<button type="submit">Sign up</button>
 				</form>
 			</div>
