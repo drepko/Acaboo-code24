@@ -2,27 +2,44 @@ import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {signup} from  '../../actions/signup'
 import SignupForm from './SignupForm'
-import {Redirect} from 'react-router-dom'
 
 class SignupPage extends PureComponent {
-	handleSubmit = (data) => {
-		console.log('signup request  to action')
-		this.props.postSignup(data.email, data.password)
+	state = { showPassword: false, formValues: {}, terms_accept: false }
+
+	handleSubmit = (event) => {
+		event.preventDefault()
+		const {username, first_name, last_name, password, phone_number, email} = this.state.formValues
+		const {terms_accept} = this.state
+		const data = {terms_accept, username, first_name, last_name, password, phone_number, email}
+		this.props.postSignup(data)
+	}
+
+	handleChange = (event) => {
+		const { name, value } = event.target
+
+		this.setState({
+			formValues: {...this.state.formValues, [name]: value}
+		})
+	}
+
+	handleTermsChange = () => {
+		this.setState({
+			terms_accept: !this.state.terms
+		})
+	}
+
+	showPassword = () => {
+		this.setState({
+			showPassword: !this.state.showPassword
+		})
 	}
 
 	render() {
-		console.log("signup page props" ,this.props.signUp)
-		// if (this.props.signup.success) return (
-		// 	<Redirect to="/login" />
-		// )
 
 		return (
 			<div>
 				<h3>Sign up</h3>
-
-				<SignupForm onSubmit={this.handleSubmit} />
-
-				{/* <p style={{color:'red'}}>{ this.props.signup.error }</p> */}
+				<SignupForm handleTermsChange={this.handleTermsChange} handleChange={this.handleChange} showPassword={this.showPassword} state={this.state} handleSubmit={this.handleSubmit} />
 			</div>
 		)
 	}
