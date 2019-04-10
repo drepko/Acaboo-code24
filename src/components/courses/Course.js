@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import {baseUrl} from '../constants'
+import {baseUrl} from '../../constants'
 export default class Course extends PureComponent {
 
     render() {
