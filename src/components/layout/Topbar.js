@@ -10,8 +10,7 @@ const TopBar = (props) => {
 
     return (
         <div className="topnav">
-            <img src={Acaboo_logo} className="App-logo" alt="logo" />
-            <button onClick={() => history.push('/')}>Acaboo</button>
+            <img src={Acaboo_logo} className="App-logo" alt="logo" onClick={() => history.push('/')}/>
             <button onClick={() => history.push('/course')}>Course</button>
             <button onClick={() => history.push('/faq')}>FAQ</button>
             <button onClick={() => history.push('/logins')}>Login</button>
