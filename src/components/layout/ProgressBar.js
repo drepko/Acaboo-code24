@@ -13,8 +13,6 @@ class ProgressBar extends Component {
     return (
   <div className="progress-bar">
 
-   {/* <div className="filler" style={{ width: `${props.progress}%` }}/> 
-  </div> */}
   <ul>
   <li className = {location.pathname.indexOf('signup') > 0 ? "active" : ""}>1</li>
   <li>2</li>
