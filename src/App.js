@@ -18,21 +18,27 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <nav>
-            <Topbar/>
-          </nav>
-          <main>
-            <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
-            <Route exact path="/universities" component={UniversityPageContainer} />
-            <Route exact path="/" component={LandingsPageContainer} />
-            <Route exact path="/about" component={AboutPageContainer} />
-            <Route exact path="/logins" component={LoginPageContainer} />
-            <Route exact path="/signup" component={SignupPageContainer} />
-            <Route exact path="/careers" component={CareersPageContainer} />
-            <Route exact path="/faq" component={FAQPageContainer} />
-            <Footer />
-          </main>
+        {/* the div below is equivalent to the "body" element - note for Jewel */}
+        <div className="App"> 
+          <div className="App-content">
+            <div className="App-header">
+              <Topbar/>
+            </div>
+            <div className="App-main">
+              <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
+              <Route exact path="/courses" component={FindCourseContainer} />
+              <Route exact path="/universities" component={UniversityPageContainer} />
+              <Route exact path="/" component={LandingsPageContainer} />
+              <Route exact path="/about" component={AboutPageContainer} />
+              <Route exact path="/logins" component={LoginPageContainer} />
+              <Route exact path="/signup" component={SignupPageContainer} />
+              <Route exact path="/careers" component={CareersPageContainer} />
+              <Route exact path="/faq" component={FAQPageContainer} />
+            </div>
+            <div className="App-footer">
+              <Footer />
+            </div>
+          </div>
         </div>
       </Router>
     );
