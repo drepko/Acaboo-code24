@@ -11,7 +11,8 @@ import Footer from './components/layout/Footer'
 import UniversityPageContainer from './components/homepage/UniversityPageContainer'
 import SignupPageContainer from './components/signup/SignupPageContainer'
 import LoginPageContainer from './components/login/LoginPageContainer'
-
+import CareersPageContainer from './components/careers/CareersPageContainer'
+import FAQPageContainer from './components/faq/FAQPageContainer'
 
 class App extends Component {
   render() {
@@ -29,6 +30,8 @@ class App extends Component {
             <Route exact path="/about" component={AboutPageContainer} />
             <Route exact path="/logins" component={LoginPageContainer} />
             <Route exact path="/signup" component={SignupPageContainer} />
+            <Route exact path="/careers" component={CareersPageContainer} />
+            <Route exact path="/faq" component={FAQPageContainer} />
             <Footer />
           </main>
         </div>

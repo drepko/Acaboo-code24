@@ -16,8 +16,8 @@ export default function Footer(props) {
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Blog</p></Link ></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Team</p></Link ></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/courses"><p>Courses</p></Link ></li>
-                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>We're hiring</p></Link ></li>
-                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Publishers</p></Link ></li>
+                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/careers"><p>Careers</p></Link ></li>
+                                {/* <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Publishers</p></Link ></li> */}
                             </ul>
                         </div>
 
