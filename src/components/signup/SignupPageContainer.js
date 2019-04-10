@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {signup} from  '../../actions/signup'
 import SignupForm from './SignupForm'
 import {Redirect} from 'react-router-dom'
-import ProgressBar from './layout/ProgressBar'
+import ProgressBar from '../layout/ProgressBar'
 class SignupPage extends PureComponent {
 	handleSubmit = (data) => {
 		console.log('signup request  to action')
