@@ -1,9 +1,9 @@
-import { SUBSCRIBE_SUCCESS } from '../actions/signup'
+import { SUBSCRIBE_SUCCESS } from '../actions/subscribe'
 
 export default function (state = null, action = {}) {
-    switch (type) {
+    switch (action) {
         case SUBSCRIBE_SUCCESS:
-            return { ...state, subscribes: state.subscribes.concat(action.subscribe)}
+            return [action.subscribe, ...state]
         default:
             return state
     }

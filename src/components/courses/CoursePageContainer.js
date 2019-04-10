@@ -1,32 +1,33 @@
 import React, { PureComponent } from 'react'
 import Course from './Course'
 import { connect } from 'react-redux'
-import {getCourses} from '../actions/courses'
+import {getCourses} from '../../actions/courses'
 
 class CoursePageContainer extends PureComponent {
 
-    componentWillMount() {
-        const {studyId} = this.props.study.id
-        this.props.getCourses(studyId)
+    componentWillMount = () => {
+        const {study} = this.props
+        study !== null && this.props.getCourses(study.id)
     }
+
     renderCourses = (courses) => {
         return (
             courses.map((course) => {
-                return <Course course={course}/>
+                return (
+                course.provided === true ? <Course key={course.name} course={course} />
+                :
+                null
+                )
             })
         )
     }
 
     render() {
 
-        // if (this.props.currentUser) return (
-		// 	<Redirect to="/" />
-        // )
-        
         const { courses } = this.props
 
         if (courses === null) return <p>Loading...</p>
-
+        console.log(courses)
         return (
             <div>
                 {this.renderCourses(courses)}
@@ -36,8 +37,8 @@ class CoursePageContainer extends PureComponent {
 
 const mapStateToProps = state => ({
     courses: state.courses,
-    study: state.study
+    study: state.selectedStudy
 })
 
-export default connect(mapStateToProps, {getCourses})(CoursePageContainer) //{  }
+export default connect(mapStateToProps, { getCourses })(CoursePageContainer)
 

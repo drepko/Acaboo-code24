@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import Subscribe from '../subscribe/Subscribe'
+import SubscribeFormContainer from '../subscribe/SubscribeFormContainer'
 
 export default function Footer(props) {
 
@@ -14,11 +14,11 @@ export default function Footer(props) {
                             <ul style={{ listStyle: 'none' }}>
                                 <li><h1>Navigate</h1></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/about"><p>About</p></Link></li>
-                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }}><p>Blog</p></Link ></li>
-                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }}><p>Team</p></Link ></li>
+                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Blog</p></Link ></li>
+                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Team</p></Link ></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/courses"><p>Courses</p></Link ></li>
-                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }}><p>We're hiring</p></Link ></li>
-                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }}><p>Publishers</p></Link ></li>
+                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>We're hiring</p></Link ></li>
+                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Publishers</p></Link ></li>
                             </ul>
                         </div>
 
@@ -33,7 +33,7 @@ export default function Footer(props) {
 
                         <div>
                             <h1>Subscribe</h1>
-                            <Subscribe/>
+                            <SubscribeFormContainer/>
                         </div>
 
                     </div>
