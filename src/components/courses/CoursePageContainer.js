@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import Course from './Course'
 import { connect } from 'react-redux'
 import {getCourses} from '../../actions/courses'
-
+import CourseFilterbar from './CourseFilterbar'
 class CoursePageContainer extends PureComponent {
 
     componentWillMount = () => {
@@ -30,6 +30,7 @@ class CoursePageContainer extends PureComponent {
         console.log(courses)
         return (
             <div>
+                <CourseFilterbar />
                 {this.renderCourses(courses)}
             </div>)
     }
