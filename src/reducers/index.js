@@ -19,7 +19,7 @@ export default {
     login,
     studies,
     currentUser,
-    activate
+    activate,
     subscribeNews,
     subscribeCourse,
     sendMessage
