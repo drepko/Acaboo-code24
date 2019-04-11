@@ -4,6 +4,8 @@ import Mission from './Mission'
 import OpenPosition from './OpenPosition'
 import LifeComponent from './LifeAt'
 import {home_man_walking} from '../../images/imagelinks'
+import '../../styles/CareersPageContainer.css'
+
 
 class CareersPageContainer extends React.Component {
   componentDidMount() {
@@ -21,6 +23,7 @@ class CareersPageContainer extends React.Component {
         <div className="life_at">
             <img className="home_man_walking" src={home_man_walking} />
           </div>
+          <h1>Reimagine education with us</h1>
       </div>
     )
   }
