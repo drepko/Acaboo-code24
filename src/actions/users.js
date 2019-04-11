@@ -1,6 +1,5 @@
 import * as request from 'superagent'
 import {baseUrl} from '../constants'
-import {isExpired} from '../jwt'
 
 export const ADD_USER = 'ADD_USER'
 export const UPDATE_USER = 'UPDATE_USER'
@@ -28,20 +27,6 @@ const userLoginFailed = (error) => ({
   payload: error || 'Unknown error'
 })
 
-const userSignupFailed = (error) => ({
-  type: USER_SIGNUP_FAILED,
-  payload: error || 'Unknown error'
-})
-
-const userSignupSuccess = () => ({
-  type: USER_SIGNUP_SUCCESS
-})
-
-const updateUsers = (users) => ({
-  type: UPDATE_USERS,
-  payload: users
-})
-
 export const login = (data, history) => (dispatch) => {
   const {password, email} = data
 	request
@@ -60,17 +45,3 @@ export const login = (data, history) => (dispatch) => {
     	}
     })
   }
-
-export const getUsers = () => (dispatch, getState) => {
-  const state = getState()
-  if (!state.currentUser) return null
-  const jwt = state.currentUser.jwt
-
-  if (isExpired(jwt)) return dispatch(logout())
-
-  request
-    .get(`${baseUrl}/users`)
-    .set('Authorization', `Bearer ${jwt}`)
-    .then(result => dispatch(updateUsers(result.body)))
-    .catch(err => console.error(err))
-}
