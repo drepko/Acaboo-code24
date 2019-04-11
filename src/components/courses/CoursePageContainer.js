@@ -4,12 +4,24 @@ import { connect } from 'react-redux'
 import { getCourses } from '../../actions/courses'
 import EmailWhenAvailable from './EmailWhenAvailable';
 import CourseFilterbar from './CourseFilterbar'
+import {getHighLights} from '../../actions/courses'
+import {withRouter} from 'react-router'
+
 
 class CoursePageContainer extends PureComponent {
 
     componentWillMount = () => {
-        const { study } = this.props
-        study !== null && this.props.getCourses(study.id)
+        const { study, location } = this.props
+        study !== null && location.pathname.indexOf('courses') > 0 && this.props.getCourses(study.id)
+
+        //console.log(location, 'location')
+        location.pathname.indexOf('highlights') > 0 && this.props.getHighLights()
+    }
+
+    componentDidUpdate = (prevProps) => {
+        if(prevProps.study !== this.props.study) {
+            this.props.getCourses(this.props.study.id)
+        }
     }
 
     signUp = (event) => {
@@ -22,10 +34,10 @@ class CoursePageContainer extends PureComponent {
 
     renderCourses = (courses) => {
         return (
-            courses.map((course) => {
+            courses.map((course, index) => {
                 return (
                     <Course
-                        key={course.name}
+                        key={index}
                         course={course}
                         signUp={course.provided ? this.signUp : this.subscribe} />
                 )
@@ -42,7 +54,7 @@ class CoursePageContainer extends PureComponent {
         console.log(courses)
         return (
             <div>
-                <CourseFilterbar />
+                <CourseFilterbar history={this.props.history}/>
                 {this.renderCourses(courses)}
             </div>)
     }
@@ -53,5 +65,5 @@ const mapStateToProps = state => ({
     study: state.selectedStudy
 })
 
-export default connect(mapStateToProps, { getCourses })(CoursePageContainer)
+export default withRouter(connect(mapStateToProps, { getCourses, getHighLights })(CoursePageContainer))
 

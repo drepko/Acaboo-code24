@@ -38,7 +38,9 @@ class CourseFilter extends PureComponent {
        await this.setState({
              study: { id, name: event.target.value} });
              await this.props.setSelectedStudy(this.state.study)
-             this.props.getCourses(this.props.study.id)
+             //this.props.getCourses(this.props.study.id)
+             this.props.history.push(`/courses/${this.state.university.name}/${this.state.study.name}`)
+
             
 
     }
@@ -60,6 +62,7 @@ class CourseFilter extends PureComponent {
 
 const mapStateToProps = state => ({
     universities: state.universities,
+    university: state.university,
     studies: state.studies,
     study: state.selectedStudy
 })
