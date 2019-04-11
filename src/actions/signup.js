@@ -12,17 +12,17 @@ export const userSignupSuccess = () => ({
 	payload: error || 'Unknown error'
   })
 
-  export const signup = (email, password) => (dispatch) =>{
-    console.log("at action of signup",email,password)
+  export const signup = (data) => (dispatch) =>{
 
 	request
-		.post(`${baseUrl}/endpoint`)
-		.send({ firstName: email, lastName: email, email, password })
-		.then(result => {console.log("sign up sucess full fetched result",
+		.post(`${baseUrl}/api/v0/auth/users/create/`)
+		.send(data)
+		.then(() => {console.log("sign up sucess full fetched result",
 			dispatch(userSignupSuccess()))
 		})
 		.catch(err => {
 			if (err.status === 400) {
+				console.log(err)
 				dispatch(userSignupFailed(err.response.body.message))
 			}
 			else {

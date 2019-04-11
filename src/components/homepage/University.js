@@ -9,5 +9,6 @@ export default class University extends PureComponent {
             <div>
                 <p>{university.name}</p>
             </div>)
+        
     }
 }
