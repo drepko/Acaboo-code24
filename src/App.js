@@ -12,9 +12,9 @@ import SignupPageContainer from './components/signup/SignupPageContainer'
 import LoginPageContainer from './components/login/LoginPageContainer'
 import CareersPageContainer from './components/careers/CareersPageContainer'
 import FAQPageContainer from './components/faq/FAQPageContainer'
+import MessageContainer from './components/contact/MessageContainer'
 import EmailWhenAvailable from './components/courses/EmailWhenAvailable';
 import CheckEmailContainer from './components/checkEmail/CheckEmailContainer';
-
 
 class App extends Component {
   render() {
@@ -36,6 +36,7 @@ class App extends Component {
               <Route exact path="/signup" component={SignupPageContainer} />
               <Route exact path="/careers" component={CareersPageContainer} />
               <Route exact path="/faq" component={FAQPageContainer} />
+              <Route exact path="/email" component={MessageContainer} />
               <Route exact path="/course/:id/subscribe" component={EmailWhenAvailable} />                            
               <Route exact path="/checkemail" component={CheckEmailContainer} />
             </div>
