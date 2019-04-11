@@ -15,6 +15,7 @@ export const sendSucess = () => ({
   })
 
 export const sendmessage = (data) => (dispatch) =>{
+	console.log("data at action",data)
 	request
 		.post(`${baseUrl}/api/v0/message/`)
 		.send(data)

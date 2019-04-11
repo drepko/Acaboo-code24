@@ -5,39 +5,23 @@ import {sendmessage} from '../../actions/sendMessage'
 
 class MessageContainer extends React.Component {
 
-    state = { 
-		formValues: {}, 
-	 }
 
-	handleSubmit = async (event) => {
-		event.preventDefault()
-		const { sender_name, sender_email, sender_phone_number,message} = this.state.formValues
-        const data = {sender_name, sender_email, sender_phone_number,message}
-        data.message_type = "contact"
-        console.log("DATA",data)
-		this.props.sendmessage(data)
+    
+    handleSubmit = (data) => {
+		console.log('signup request  to action',data)
+		this.props.postMessage(data)
 	}
 
-	handleChange = (event) => {
-		const { name, value } = event.target
-
-		this.setState({
-			formValues: {...this.state.formValues, [name]: value}
-		})
-	}
-
-	
-
-	
 
 	render() {
-        console.log("signup page props" ,this.props.sendMessage.success)
-        console.log(this.props.sendMessage.success)
+        console.log("signup page props" ,this.props.sendMessage)
 		return (
 			<div>
 				<h3>Leave Message</h3>
-				<MessageForm handleChange={this.handleChange}  state={this.state} handleSubmit={this.handleSubmit} />
+				<MessageForm  onSubmit={this.handleSubmit} />
                 <p style={{color:'red'}}>{ this.props.sendMessage.error }</p>
+                <p style={{color:'green'}}>{ this.props.sendMessage.success }</p>
+
             </div>
 		)
 	}
@@ -50,5 +34,5 @@ const mapStateToProps = function (state) {
 }
 
         
-        export default connect(mapStateToProps , {sendmessage})(MessageContainer)
+        export default connect(mapStateToProps , {postMessage:sendmessage})(MessageContainer)
 

@@ -7,7 +7,7 @@ export default function (state = {}, {type, payload}) {
     case MESSAGE_SEND_SUCCESS:
     console.log("MESSAGE SENT SUCEESFULLY")
       return {
-        success: true
+        success: "Message sent sucessfully"
       }
 
     case MESSAGE_SEND_FAILED:
