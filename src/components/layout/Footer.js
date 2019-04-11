@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import SubscribeFormContainer from '../subscribe/SubscribeFormContainer'
 
 export default function Footer(props) {
 
@@ -30,7 +31,7 @@ export default function Footer(props) {
 
                         <div className="footer-subscribe">
                             <h1>Subscribe</h1>
-                            <p>Import Subscribe component here..</p>
+                            <SubscribeFormContainer/>
                         </div>
 
                     </div>
