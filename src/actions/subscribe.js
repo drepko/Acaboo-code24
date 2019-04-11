@@ -20,18 +20,17 @@ export const SUBSCRIBE_COURSE_SUCCES = 'SUBSCRIBE_COURSE_SUCCES'
     }
     
 
-    const subscribeCourseSuccess = subscribe => ({
-        type: SUBSCRIBE_COURSE_SUCCES,
-        subscribe
+    const subscribeCourseSuccess = ()=> ({
+        type: SUBSCRIBE_COURSE_SUCCES
     })
 
-    export const subscribeCourse = (data) => (dispatch) => {
-    
+    export const subscribeCourse = (data, id) => (dispatch) => {
+    console.log(data,'email')
         request
-            .post(`${baseUrl}/course/${data.study}/subscribe`)
-            .send(data)
-            .then(response => {
-                dispatch(subscribeCourseSuccess(response.body))
+            .post(`${baseUrl}/api/v0/course/${id}/subscribe`)
+            .send({email: data})
+            .then(() => {
+                dispatch(subscribeCourseSuccess())
             })
             .catch(console.error)
     }

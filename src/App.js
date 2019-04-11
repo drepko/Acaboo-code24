@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import CoursePageContainer from './components/courses/CoursePageContainer'
 import AboutPageContainer from './components/about/AboutPageContainer'
 import FindCourseContainer from './components/homepage/FindCourseContainer';
-//import Subscribe from './components/subscribe/subscribe'
 import LandingsPageContainer from './components/homepage/LandingsPageContainer'
 import Footer from './components/layout/Footer'
 import UniversityPageContainer from './components/homepage/UniversityPageContainer'
@@ -13,6 +12,7 @@ import SignupPageContainer from './components/signup/SignupPageContainer'
 import LoginPageContainer from './components/login/LoginPageContainer'
 import CareersPageContainer from './components/careers/CareersPageContainer'
 import FAQPageContainer from './components/faq/FAQPageContainer'
+import EmailWhenAvailable from './components/courses/EmailWhenAvailable';
 
 class App extends Component {
   render() {
@@ -34,6 +34,7 @@ class App extends Component {
               <Route exact path="/signup" component={SignupPageContainer} />
               <Route exact path="/careers" component={CareersPageContainer} />
               <Route exact path="/faq" component={FAQPageContainer} />
+              <Route exact path="/course/:id/subscribe" component={EmailWhenAvailable} />                            
             </div>
             <div className="App-footer">
               <Footer />

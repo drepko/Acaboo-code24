@@ -1,20 +1,16 @@
-import React, { PureComponent } from 'react'
+import React from'react'
 import {baseUrl} from '../../constants'
-export default class Course extends PureComponent {
 
-    signUp = (event) => {
-        console.log(event.target.value)
-    }
+export default function Course(props) {
 
-    render() {
-        const { course } = this.props
         return (
             <div>
-                <img alt={course.name} src={`${baseUrl}${course.image}`}/>
-                <p>{course.name}</p>
-                <p>{course.description}</p>
-                <p>{course.price}</p>
-                <button onClick={this.signUp} value={course.id}>Select this course</button>
+                <img alt={props.course.name} src={`${baseUrl}${props.course.image}`}/>
+                <p>{props.course.name}</p>
+                <p>{props.course.description}</p>
+                <p>{props.course.price}</p>
+                <button onClick={props.signUp} value={props.course.id}>Select this course</button>
             </div>)
-    }
+    
 }
+

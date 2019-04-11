@@ -6,24 +6,22 @@ import { subscribeCourse } from '../../actions/subscribe'
 class EmailWhenAvailable extends PureComponent {
     state = {
         email: '',
-        study: ''
     }
 
     onChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
-            study: this.props.study.id
         })
     }
 
     onSubmit = (event) => {
-        console.log('subcsribe course', 'study', this.props.study.id )
         event.preventDefault()
+        const id = this.props.match.params.id
+        this.props.subscribeCourse(this.state.email, id)
+
         this.setState({
             email: '',
-            study: ''
-        })
-        this.props.subscribeCourse(this.state)
+        })      
     }
 
     render() {
@@ -42,8 +40,8 @@ class EmailWhenAvailable extends PureComponent {
 }
 
 const mapStateToProps = (state) => ({
-    //courses: state.courses,
-    study: state.selectedStudy
+    // courses: state.courses,
+    // //study: state.selectedStudy
 })
 
 export default connect(mapStateToProps, {subscribeCourse})(EmailWhenAvailable)
