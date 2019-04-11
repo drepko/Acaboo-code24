@@ -11,11 +11,7 @@ export default class SignupForm extends PureComponent {
 		return (
 			<div className="signup-form">
 				<form onSubmit={handleSubmit}>
-
-				<input placeholder="Username" type="text" name="username" value={
-						state.formValues.username || ''
-					} onChange={handleChange} />
-
+				
 					<input placeholder="First Name" type="text" name="first_name" value={
 						state.formValues.first_name || ''
 					} onChange={handleChange} />

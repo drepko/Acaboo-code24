@@ -43,16 +43,15 @@ const updateUsers = (users) => ({
 })
 
 export const login = (data, history) => (dispatch) => {
-  const {password, username} = data
+  const {password, email} = data
 	request
 		.post(`${baseUrl}/api/v0/auth/token/login/`)
-    .send({password,username})
+    .send({email, password})
     .then(result => {
       dispatch(userLoginSuccess(result.body))
       history.push('/')
     })
     .catch(err => {
-      console.log(data)
     	if (err.status === 400) {
     		dispatch(userLoginFailed(err.response.body.message))
     	}
@@ -61,22 +60,6 @@ export const login = (data, history) => (dispatch) => {
     	}
     })
   }
-
-export const signup = (email, password) => (dispatch) =>
-	request
-		.post(`${baseUrl}/users`)
-		.send({ firstName: email, lastName: email, email, password })
-		.then(result => {
-			dispatch(userSignupSuccess())
-		})
-		.catch(err => {
-			if (err.status === 400) {
-				dispatch(userSignupFailed(err.response.body.message))
-			}
-			else {
-				console.error(err)
-			}
-		})
 
 export const getUsers = () => (dispatch, getState) => {
   const state = getState()
