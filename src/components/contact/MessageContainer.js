@@ -1,25 +1,38 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import MessageForm from './MessageForm'
+import {sendmessage} from '../../actions/sendMessage'
 
 class MessageContainer extends React.Component {
 
-    componentDidMount() {
-        // something
-        }
-      
-        render() {
-            return (
-              <div className = "hiring-page">
-              <h3>Leave Message</h3>
-              
-              </div>
-            )
-          }
-        }
+
+    
+    handleSubmit = (data) => {
+		console.log('signup request  to action',data)
+		this.props.postMessage(data)
+	}
+
+
+	render() {
+        console.log("signup page props" ,this.props.sendMessage)
+		return (
+			<div>
+				<h3>Leave Message</h3>
+				<MessageForm  onSubmit={this.handleSubmit} />
+                <p style={{color:'red'}}>{ this.props.sendMessage.error }</p>
+                <p style={{color:'green'}}>{ this.props.sendMessage.success }</p>
+
+            </div>
+		)
+	}
+}
+
+const mapStateToProps = function (state) {
+	return {
+		sendMessage: state.sendMessage
+	}
+}
+
         
-        const mapStateToProps = state => ({
-          // something
-        })
-        
-        export default connect(mapStateToProps)(MessageContainer)
+        export default connect(mapStateToProps , {postMessage:sendmessage})(MessageContainer)
 
