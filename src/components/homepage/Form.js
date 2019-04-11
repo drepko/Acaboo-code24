@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import '../../styles/Form.css'
+
 
 export default class Course extends Component {
 
@@ -17,23 +19,26 @@ export default class Course extends Component {
     renderStudyOptions = () => {
         const { studies } = this.props
         return (
+            
             studies === null ?
-                <div>
+            <div className="select_option">
+                <div >
                     <select disabled>
                         <option value="" disabled selected>First select your university</option>
                     </select><br/>
                 </div>
+            </div>
                 :
-
+            <div className="select_option">
                 <div>
-                <select onChange={this.props.handleStudySelect}>
-                    <option value="" disabled selected>Select your study...</option>
-                    {this.props.studies.map((studie) => {
-                        return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
-                    })}
-                </select><br/>
+                    <select onChange={this.props.handleStudySelect}>
+                        <option value="" disabled selected>Select your study...</option>
+                            {this.props.studies.map((studie) => {
+                                return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
+                            })}
+                    </select><br/>
                 </div>
-
+            </div>
         )
     }
 

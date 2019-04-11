@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './CourseFilter.css'
 
-export default class Filter extends Component {
+export default class CourseFilter extends Component {
 
     renderUniversityOptions = () => {
         return (

@@ -4,6 +4,7 @@ import { getUniversities } from '../../actions/universities'
 import { getStudies, setSelectedStudy } from '../../actions/studies'
 import {getCourses} from '../../actions/courses'
 import Filter from './CourseFilter'
+
 class CourseFilter extends PureComponent {
 
     constructor(props) {

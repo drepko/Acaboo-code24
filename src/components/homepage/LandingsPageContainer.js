@@ -1,9 +1,14 @@
 import React from 'react'
-import { connect } from 'react-redux'
+//import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 import '../../styles/LandingsPageContainer.css'
-import {home_lamp_img, home_hva_logo, home_studydashboard, home_man_walking} from '../../images/imagelinks'
+import {home_lamp_img, 
+        home_hva_logo, 
+        home_studydashboard, 
+        home_man_walking,
+        home_people} from '../../images/imagelinks'
+
 import LoginLink from '../login/LoginLink'
 import Testimonial from './Testimonial'
 class LandingsPageContainer extends React.Component {
@@ -14,14 +19,22 @@ class LandingsPageContainer extends React.Component {
 
         <div className="section_1 section_search">
 
-          <div className="search_course">
-            <FindCourseContainer history={this.props.history} />
+          <div className="section_1_1 section_search_box">
+
+            <div className="section_1_1_1 section_search_text">
+              <h1>The best way to <br/>study for your exam</h1>
+              <p>Sed ut perspiciatis unde omnis iste natus <br/>error sit voluptatem accusantium.</p>
+            </div>
+
+            <div className="section_1_1_2 section_search_form">
+              <FindCourseContainer history={this.props.history} />
+            </div>
           </div>
 
-          <div className="search_image">
+          <div className="section_1_2 section_search_image">
             <img className="search_image_1" src={home_lamp_img} />
           </div>
-          
+        
         </div>
 
         <div className="section_2 section_university_logos">
@@ -37,35 +50,39 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="section_3 section_study_more">
-          <h1>Study more efficiently with Acaboo.</h1>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
+          <div className="section_3_1">
+            <h1>Study more efficiently with Acaboo.</h1>
+          </div>
+          <div className="section_3_2">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
+          </div>  
         </div>
 
         <div className="section_4 section_coursedashboard">
-          <img className="cd_image" src={home_studydashboard} />
+          <img className="cd_image_1" src={home_studydashboard} />
         </div>
 
         <div className="section_5 section_about_us" >
 
-          <div>
+          <div className="section_5_1">
 
-            <div className="about_us_1">
+            <div className="section_5_1_1 about_us_1">
               <h1>About Acaboo</h1>
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
               <Link to="/about">Learn more &#8594;</Link>
             </div>
 
-            <div className="about_us_2">
-              <div className="about_us_2_1">
-                <p>Feature 1 <br />
-                  Sed ut perspiciatis unde omnis iste <br />
+            <div className="section_5_1_2">
+              <div className="section_5_1_2_1">
+                <h4>Feature 1</h4>
+                <p>  Sed ut perspiciatis unde omnis iste <br />
                   natus error sit voluptatem<br />
                   accusantium.</p>
               </div>
-              <div>
-                <p className="about_us_2_1">Feature 2 <br />
-                  Sed ut perspiciatis unde omnis iste <br />
+              <div className="section_5_1_2_2">
+                <h4>Feature 2</h4>
+                <p>  Sed ut perspiciatis unde omnis iste <br />
                   natus error sit voluptatem <br />
                   accusantium.</p>
               </div>
@@ -73,41 +90,111 @@ class LandingsPageContainer extends React.Component {
 
           </div>
           
-          <div className="about_us_3">
-            <img className="home_man_walking" src={home_man_walking} />
+          <div className="section_5_2">
+            <img className="section_5_2_image" src={home_man_walking} />
           </div>
 
         </div>
 
         <div className="section_6 section_start_studying" > 
-          <div className="ss_div">
-            <h1>Start studying with Acaboo</h1><Link to="/courses"><button>Browse courses</button></Link>
-            <LoginLink/>
+          <div className="section_6_1 ss_div">
+            <h1>Start studying with Acaboo</h1>
+            <Link to="/courses"><button className="btn_blue">Browse courses</button></Link>
+          </div>
+          <div className="section_6_2 ss_div">
+           <LoginLink/>
           </div>
         </div>
 
-        <Testimonial/>
+        <div className="section_7 section_university_logos">
 
-        <div>
-            <h1>Too much distraction, no focus? </h1>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-            <img src='https://s3-alpha-sig.figma.com/img/9682/9cf9/f50543efc622f16b18446ac498d06bd3?Expires=1555891200&Signature=Qn~vpVh5p~wAYr9ck8Icd~0Cd-SYAwxYU3YgjrRrFoY9~avnuJ8QPV7nsf95mKx47o23gYZXBwokyyNVrhfCr8NylBJ2-5NP6NW8wqQrAHvm3RS3K4xlIvOsIGlrOfhiLlOfXtByJ2SdlUtJ-NNVpHuU~0~RWUbp0XjHZhvjMChyujepNGZoA2lju1-GoXIjOEoDl~EflvcjP-HQKXI86gtUITDqlPYKqvuE9OBwF59tgQfVsG9Pxe9OKGHI0IobSURVVEnB7epWDgbZ-SenLxDw9Jw1CprdZu7L55QYNdwDkdTz0UQrD-pXg7gerMGFVkzI1srevdWwasuN6PeFQg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA' />
-        </div>
+          <div className="section_7_1">
+            <h2>
+              Loved by students and teachers
+            </h2>
+          </div>
 
-        <div>
-          <h1>Start studying with Acaboo.</h1>
-          <Link to="/courses"><button>Browse courses</button></Link>
-          <Link to="/about"><button>Learn More</button></Link>
+          <div className="section_7_2">
+
+          <div className="section_7_2_1">
+              <div className="section_7_2_1_p">
+                <p>“Saves me the hassle of studying. Acaboo does everything <br />everywhere.”</p>
+              </div>  
+
+              <div className="section_7_2_2">
+                <div className="section_7_2_2_img">
+                  <img className="home_hva_logo_small" src={home_hva_logo} />
+                </div>
+                <div className="section_7_2_2_p">
+                  <p>David de Bye, <br />Business Administration, UVA</p>
+                </div>  
+              </div>
+            </div>
+
+            <div className="section_7_2_1">
+              <div className="section_7_2_1_p">
+                <p>“It enables my students to get the most out of a course, everytime...”</p>
+              </div>  
+
+              <div className="section_7_2_2">
+                <div className="section_7_2_2_img">
+                  <img className="home_hva_logo_small" src={home_hva_logo} />
+                </div>
+                <div className="section_7_2_2_p">
+                  <p>Paul de Groot, <br />Mathematics teacher, UVA</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="section_7_2_1">
+              <div className="section_7_2_1_p">
+                <p>“Saves me the hassle of studying. Acaboo does everything <br />everywhere.”</p>
+              </div>  
+
+              <div className="section_7_2_2">
+                <div className="section_7_2_2_img">
+                  <img className="home_hva_logo_small" src={home_hva_logo} />
+                </div>
+                <div className="section_7_2_2_p">
+                  <p>Emma de Leeuw, <br />Business teacher, UVA</p>
+                </div>
+              </div>
+            </div>
+
+            
         </div>
         
+        </div> 
+
+       
+
+        <Testimonial/>
+
+        <div className="section_8 section_focus">
+          <div className="section_8_1">
+            <h1>Too much distraction, no focus? </h1>
+          </div>
+          <div className="section_8_2">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          </div>    
+        </div>
+
+        <div className="section_9 section_image_people">
+          <img className="ip_image_1" src={home_people} />
+        </div>
+
+        <div className="section_10 section_start_studying">
+          <div className="section_10_1">
+            <h1>Start studying with Acaboo.</h1>
+          </div>
+          <div className="section_10_2">
+            <Link to="/courses"><button className="btn_white">Browse courses</button></Link>
+            <Link to="/about"><button className="btn_blue">Learn More</button></Link>
+          </div>
+        </div>
 
       </div>)
   }
 }
-
-
-const mapStateToProps = state => ({
-
-})
 
 export default LandingsPageContainer
