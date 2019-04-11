@@ -9,10 +9,7 @@ import '../../styles/CareersPageContainer.css'
 
 
 class CareersPageContainer extends React.Component {
-  componentDidMount() {
-  // something
-  }
-
+  
   render() {
     return (
       <div className = "hiring-page">
@@ -31,8 +28,6 @@ class CareersPageContainer extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  // something
-})
 
-export default connect(mapStateToProps)(CareersPageContainer)
+
+export default CareersPageContainer

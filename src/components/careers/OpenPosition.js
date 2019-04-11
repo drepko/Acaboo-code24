@@ -13,7 +13,7 @@ export default class Mission extends React.Component {
                 </div>
                 <p>Didn’t find your positions but still think you are a fit? 
                     {/* check the endpoint for email  */}
-                    <Link to="/about"> <b> Drop us an email!</b></Link>
+                    <Link to="/email"> <b> Drop us an email!</b></Link>
                        
                 </p>
             </div>
