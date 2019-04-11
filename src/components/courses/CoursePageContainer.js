@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import {getCourses} from '../../actions/courses'
 import EmailWhenAvailable from './EmailWhenAvailable';
 
+import CourseFilterbar from './CourseFilterbar'
 class CoursePageContainer extends PureComponent {
 
     componentWillMount = () => {
@@ -28,10 +29,14 @@ class CoursePageContainer extends PureComponent {
         const { courses } = this.props
 
         if (courses === null) return <p>Loading...</p>
+<<<<<<< HEAD
         console.log(courses)
         if (courses.length === 0) return <EmailWhenAvailable courses = {this.props.courses} study = {this.props.study}/>
+=======
+>>>>>>> dev
         return (
             <div>
+                <CourseFilterbar />
                 {this.renderCourses(courses)}
             </div>)
     }
