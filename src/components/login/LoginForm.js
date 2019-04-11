@@ -12,8 +12,8 @@ export default class LoginForm extends PureComponent {
 		return (
 			<div>
 				<form onSubmit={onSubmit}>
-					<input type="username" name="username" value={
-						state.username || ''
+					<input placeholder="Email" type="email" name="email" value={
+						state.email || ''
 					} onChange={onChange} /> <br />
 
 					<input className="password-field" placeholder="Password" type={state.showPassword ? "text" : "password"} name="password" value={

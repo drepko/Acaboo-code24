@@ -16,7 +16,7 @@ const TopBar = (props) => {
                 <img onClick={() => history.push('/')} src={Acaboo_logo} className="App-logo" alt="logo" />
             </div>
             <div className="topnav-menu">
-                <a className="tm-i tm-courses" onClick={() => history.push('/courses')}>Courses</a>
+                <a className="tm-i tm-courses" onClick={() => history.push('/highlights')}>Courses</a>
                 <a className="tm-i tm-faq" onClick={() => history.push('/faq')}>FAQ</a>
                 <a className="tm-i tm-logins" onClick={() => history.push('/logins')}>Login</a>
                 <a className="tm-i tm-signup" onClick={() => history.push('/signup')}>Sign up</a>

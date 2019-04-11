@@ -12,10 +12,6 @@ export default class SignupForm extends PureComponent {
 			<div className="signup-form">
 				<form onSubmit={handleSubmit}>
 
-				<input placeholder="Username" type="text" name="username" value={
-						state.formValues.username || ''
-					} onChange={handleChange} />
-
 					<input placeholder="First Name" type="text" name="first_name" value={
 						state.formValues.first_name || ''
 					} onChange={handleChange} />
@@ -48,6 +44,7 @@ export default class SignupForm extends PureComponent {
 						state.formValues.password !== state.formValues.confirmPassword &&
 						<p style={{ color: 'red' }}>The passwords do not match!</p>
 					}
+					
 					<label>
 						Terms:
           					<input

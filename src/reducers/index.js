@@ -5,6 +5,10 @@ import login from './login'
 import currentUser from './currentUser'
 import studies from './studies'
 import selectedStudy from './setSelectedStudy'
+import subscribeNews from './subscribeNews'
+import subscribeCourse from './subscribeCourse'
+import sendMessage from './sendMessage'
+
 
 export default {
     courses,
@@ -13,5 +17,8 @@ export default {
     users,
     login,
     studies,
-    currentUser
+    currentUser,
+    subscribeNews,
+    subscribeCourse,
+    sendMessage
 }

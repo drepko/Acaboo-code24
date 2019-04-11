@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import SubscribeFormContainer from '../subscribe/SubscribeFormContainer'
 
 export default function Footer(props) {
 
@@ -14,7 +15,7 @@ export default function Footer(props) {
                                 <li><a style={{ textDecoration: 'none', color: '#FFFFFF' }} onClick={()=> window.open("https://www.google.com", "_blank")}>Blog</a></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Team</p></Link ></li>
                                 <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/courses"><p>Courses</p></Link ></li>
-                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/careers"><p>Careers</p></Link ></li>
+                                <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/careers"><p>We’re Hiring</p></Link ></li>
                                 {/* <li><Link style={{ textDecoration: 'none', color: '#FFFFFF' }} to="/"><p>Publishers</p></Link ></li> */}
                             </ul>
                         </div>
@@ -30,7 +31,7 @@ export default function Footer(props) {
 
                         <div className="footer-subscribe">
                             <h1>Subscribe</h1>
-                            <p>Import Subscribe component here..</p>
+                            <SubscribeFormContainer/>
                         </div>
 
                     </div>

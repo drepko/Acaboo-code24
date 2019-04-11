@@ -9,6 +9,8 @@ import {home_lamp_img,
         home_man_walking,
         home_people} from '../../images/imagelinks'
 
+import LoginLink from '../login/LoginLink'
+import Testimonial from './Testimonial'
 class LandingsPageContainer extends React.Component {
 
   render() {
@@ -100,7 +102,7 @@ class LandingsPageContainer extends React.Component {
             <Link to="/courses"><button className="btn_blue">Browse courses</button></Link>
           </div>
           <div className="section_6_2 ss_div">
-            <p>Already using Acaboo? <Link to='/logins'>Log In</Link> </p>
+           <LoginLink/>
           </div>
         </div>
 
@@ -163,6 +165,10 @@ class LandingsPageContainer extends React.Component {
         </div>
         
         </div> 
+
+       
+
+        <Testimonial/>
 
         <div className="section_8 section_focus">
           <div className="section_8_1">
