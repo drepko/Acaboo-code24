@@ -5,6 +5,7 @@ import login from './login'
 import currentUser from './currentUser'
 import studies from './studies'
 import selectedStudy from './setSelectedStudy'
+import activate from './activate'
 
 export default {
     courses,
@@ -13,5 +14,6 @@ export default {
     users,
     login,
     studies,
-    currentUser
+    currentUser,
+    activate
 }

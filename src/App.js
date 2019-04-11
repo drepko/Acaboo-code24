@@ -14,6 +14,7 @@ import LoginPageContainer from './components/login/LoginPageContainer'
 import CareersPageContainer from './components/careers/CareersPageContainer'
 import FAQPageContainer from './components/faq/FAQPageContainer'
 import CheckEmailContainer from './components/checkEmail/CheckEmailContainer';
+import ActivationContainer from './components/activation/ActivationContainer'
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
               <Route exact path="/careers" component={CareersPageContainer} />
               <Route exact path="/faq" component={FAQPageContainer} />
               <Route exact path="/checkemail" component={CheckEmailContainer} />
+              <Route exact path="/verify/:uid/:token" component={ActivationContainer} />
             </div>
             <div className="App-footer">
               <Footer />
