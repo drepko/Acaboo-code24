@@ -1,25 +1,24 @@
 import * as request from 'superagent'
 import {baseUrl} from '../constants'
-export const MESSAGE_SEND_SUCESS = 'MESSAGE_SEND_SUCESS'
+export const MESSAGE_SEND_SUCCESS = 'MESSAGE_SEND_SUCCESS'
 export const MESSAGE_SEND_FAILED ='MESSAGE_SEND_FAILED'
 
 
 
 export const sendSucess = () => ({
-	type: MESSAGE_SEND_SUCESS
+	type: MESSAGE_SEND_SUCCESS
   })
 
   export const sendFailed = () => ({
-	type: MESSAGE_SEND_FAILED
+	type: MESSAGE_SEND_FAILED,
+	payload: "Message send failed"
   })
 
-export const sendMessage = (data) => (dispatch) =>{
-
+export const sendmessage = (data) => (dispatch) =>{
 	request
-		.post(`${baseUrl}/message/`)
+		.post(`${baseUrl}/api/v0/message/`)
 		.send(data)
 		.then(() => {
-			console.log("send message")
 			dispatch(sendSucess())
 		})
 		.catch(err => {
