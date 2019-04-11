@@ -6,14 +6,21 @@ import {Redirect} from 'react-router-dom'
 import ProgressBar from '../layout/ProgressBar'
 
 class SignupPage extends PureComponent {
-	state = { showPassword: false, formValues: {}, terms_accept: false }
+	state = { 
+		showPassword: false, 
+		formValues: {}, 
+		terms_accept: false,
+		errors: {
+
+		}
+	 }
 
 	handleSubmit = async (event) => {
 		event.preventDefault()
 		const {first_name, last_name, password, phone_number, email} = this.state.formValues
 		const {terms_accept} = this.state
 		const data = {terms_accept, first_name, last_name, password, phone_number, email}
-		this.fieldChecks() && this.props.postSignup(data)
+		this.fieldChecks() && this.props.signup(data, this.props.history)
 	}
 
 	handleChange = (event) => {
@@ -37,6 +44,7 @@ class SignupPage extends PureComponent {
 	}
 
 	fieldChecks = () => {
+		const errors = {}
 		return true
 	}
 
@@ -58,4 +66,4 @@ const mapStateToProps = function (state) {
 	}
 }
 
-export default connect(mapStateToProps, {postSignup: signup})(SignupPage)
+export default connect(mapStateToProps, {signup})(SignupPage)
