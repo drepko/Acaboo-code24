@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import CareersPage from './CareersPage'
+import Mission from './Mission'
 
 class CareersPageContainer extends React.Component {
   componentDidMount() {
@@ -8,7 +8,14 @@ class CareersPageContainer extends React.Component {
   }
 
   render() {
-    return <CareersPage />
+    return (
+      <div className = "hiring-page">
+      <h3>Join the team</h3>
+      <h1>We are Acaboo. Help shape the future of education.</h1>
+        <Mission/>
+
+      </div>
+    )
   }
 }
 
