@@ -2,6 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import Mission from './Mission'
 import OpenPosition from './OpenPosition'
+import LifeComponent from './LifeAt'
+import {home_man_walking} from '../../images/imagelinks'
+
 class CareersPageContainer extends React.Component {
   componentDidMount() {
   // something
@@ -14,6 +17,10 @@ class CareersPageContainer extends React.Component {
       <h1>We are Acaboo. Help shape the future of education.</h1>
         <Mission/>
         <OpenPosition/>
+        <LifeComponent/>
+        <div className="life_at">
+            <img className="home_man_walking" src={home_man_walking} />
+          </div>
       </div>
     )
   }
