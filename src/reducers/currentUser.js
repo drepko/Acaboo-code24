@@ -1,22 +1,12 @@
 import { USER_LOGIN_SUCCESS, USER_LOGOUT } from '../actions/users'
-import { localStorageJwtKey } from '../constants'
+import {UPDATE_CURRENT_USER} from '../actions/signup'
 
-let initialState = null
-try {
-  const jwt = localStorage.getItem(localStorageJwtKey)
-  if (jwt) {
-    initialState = { jwt }
-  }
-}
-catch (e) {
-  console.log(`Error retrieving data from local storage`, e)
-}
-
-export default function (state = initialState, {type, payload}) {
+export default function (state = null, {type, payload}) {
 	switch (type) {
     case USER_LOGIN_SUCCESS:
         return payload
-
+    case UPDATE_CURRENT_USER:
+      return {...state, credentials: payload}
     case USER_LOGOUT:
       return null
 

@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 import '../../styles/LandingsPageContainer.css'
 import {home_lamp_img, home_hva_logo, home_studydashboard, home_man_walking} from '../../images/imagelinks'
-
+import LoginLink from '../login/LoginLink'
+import Testimonial from './Testimonial'
 class LandingsPageContainer extends React.Component {
 
   render() {
@@ -81,32 +82,11 @@ class LandingsPageContainer extends React.Component {
         <div className="section_6 section_start_studying" > 
           <div className="ss_div">
             <h1>Start studying with Acaboo</h1><Link to="/courses"><button>Browse courses</button></Link>
-            <p>Already using Acaboo?<Link to='/logins'>Log In</Link> </p>
+            <LoginLink/>
           </div>
         </div>
 
-        <div className="section_7 section_university_logos">
-
-          <div className="hu_logo">
-            <p>“Saves me the hassle of studying. Acaboo does everything everywhere.”</p>
-            <img className="home_hva_logo_small" src={home_hva_logo} />
-            <p>David de Bie, <br />Business Administration student, VU</p>
-          </div>
-
-          <div className="hu_logo">
-            <p>“It enables my students to get the most out of a course, everytime...”</p>
-            <img className="home_hva_logo_small" src={home_hva_logo} />
-            <p>Paul de Groot, <br />Mathematics teacher UVA</p>
-          </div>
-
-          <div className="hu_logo">
-            <p>“Saves me the hassle of studying. Acaboo does everything everywhere.”</p>
-            <img className="home_hva_logo_small" src={home_hva_logo} />
-            <p>Emma de Leeuw, <br />Business teacher, UVA</p>
-          </div>
-
-          
-        </div>
+        <Testimonial/>
 
         <div>
             <h1>Too much distraction, no focus? </h1>

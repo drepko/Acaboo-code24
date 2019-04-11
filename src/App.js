@@ -13,6 +13,8 @@ import LoginPageContainer from './components/login/LoginPageContainer'
 import CareersPageContainer from './components/careers/CareersPageContainer'
 import FAQPageContainer from './components/faq/FAQPageContainer'
 import EmailWhenAvailable from './components/courses/EmailWhenAvailable';
+import CheckEmailContainer from './components/checkEmail/CheckEmailContainer';
+
 
 class App extends Component {
   render() {
@@ -35,6 +37,7 @@ class App extends Component {
               <Route exact path="/careers" component={CareersPageContainer} />
               <Route exact path="/faq" component={FAQPageContainer} />
               <Route exact path="/course/:id/subscribe" component={EmailWhenAvailable} />                            
+              <Route exact path="/checkemail" component={CheckEmailContainer} />
             </div>
             <div className="App-footer">
               <Footer />
