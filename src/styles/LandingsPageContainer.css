@@ -1,0 +1,87 @@
+div {
+    border: solid black;
+    border-color: darkred
+}
+
+.main {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column
+}
+
+.section_1, .section_2, .section_5, .section_7 {
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.section_1, .section_5  {
+    justify-content: space-evenly
+}
+
+.search_image_1 {
+    width: 504px;
+    height: 504px
+}
+
+.section_2, .section_7 {
+    justify-content: center;
+    padding: 10px
+}
+    .hu_logo {
+        margin-left: 20px;
+        margin-right: 20px
+    }
+
+    .home_hva_logo_large {
+        width: 115px;
+        height: 115px;
+        margin: 30px
+    }
+
+.section_3 {
+    color:#545B5E
+}
+.section_3, .section_6 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.section_4 {
+    justify-content: center;
+    padding: 10px
+}
+
+    .cd_image {
+        width: 1110px;;
+        height: 770px;;
+    }
+
+.section_5 {
+    margin-bottom: 200px;
+}
+
+.about_us_1 {
+    max-width: 50%;
+}
+
+.about_us_2 {
+    max-width: 35%;
+}
+
+.about_us_3 {
+    width: 713px;
+    height: 423px
+}
+
+.ss_div {
+    color: #FFFFFF;
+    background-color: #2D66F6
+}
+
+.home_hva_logo_small {
+    width: 40px ;
+    height: 40px
+}
