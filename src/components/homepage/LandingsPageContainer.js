@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 import '../../styles/LandingsPageContainer.css'
 import {home_lamp_img, home_hva_logo, home_studydashboard, home_man_walking} from '../../images/imagelinks'
+import LoginLink from '../login/LoginLink'
 
 class LandingsPageContainer extends React.Component {
 
@@ -81,7 +82,7 @@ class LandingsPageContainer extends React.Component {
         <div className="section_6 section_start_studying" > 
           <div className="ss_div">
             <h1>Start studying with Acaboo</h1><Link to="/courses"><button>Browse courses</button></Link>
-            <p>Already using Acaboo?<Link to='/logins'>Log In</Link> </p>
+            <LoginLink/>
           </div>
         </div>
 
