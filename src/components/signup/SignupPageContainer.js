@@ -8,12 +8,12 @@ import ProgressBar from '../layout/ProgressBar'
 class SignupPage extends PureComponent {
 	state = { showPassword: false, formValues: {}, terms_accept: false }
 
-	handleSubmit = (event) => {
+	handleSubmit = async (event) => {
 		event.preventDefault()
-		const {username, first_name, last_name, password, phone_number, email} = this.state.formValues
+		const {first_name, last_name, password, phone_number, email} = this.state.formValues
 		const {terms_accept} = this.state
-		const data = {terms_accept, username, first_name, last_name, password, phone_number, email}
-		this.props.postSignup(data)
+		const data = {terms_accept, first_name, last_name, password, phone_number, email}
+		this.fieldChecks() && this.props.postSignup(data)
 	}
 
 	handleChange = (event) => {
@@ -34,6 +34,10 @@ class SignupPage extends PureComponent {
 		this.setState({
 			showPassword: !this.state.showPassword
 		})
+	}
+
+	fieldChecks = () => {
+		return true
 	}
 
 	render() {

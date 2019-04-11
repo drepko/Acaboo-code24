@@ -21,6 +21,7 @@ export const userSignupSuccess = () => ({
 			dispatch(userSignupSuccess()))
 		})
 		.catch(err => {
+			console.log(data)
 			if (err.status === 400) {
 				console.log(err)
 				dispatch(userSignupFailed(err.response.body.message))
