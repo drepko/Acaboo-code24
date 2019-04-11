@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import './LoginForm.css'
+import '../../styles/Form.css'
 import show from '../../images/show.png'
 import hide from '../../images/hide.png'
 
