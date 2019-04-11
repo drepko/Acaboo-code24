@@ -16,7 +16,7 @@ import MessageContainer from './components/contact/MessageContainer'
 import EmailWhenAvailable from './components/courses/EmailWhenAvailable';
 import CheckEmailContainer from './components/checkEmail/CheckEmailContainer';
 import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurchaseContainer';
-
+import JobDetailPage from './components/careers/JobDetailPage'
 class App extends Component {
   render() {
     return (
@@ -41,6 +41,8 @@ class App extends Component {
               <Route exact path="/course/:id/subscribe" component={EmailWhenAvailable} />                            
               <Route exact path="/checkemail" component={CheckEmailContainer} />
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
+              <Route exact path="/jobdetails" component={JobDetailPage} />
+
             </div>
             <div className="App-footer">
               <Footer />
