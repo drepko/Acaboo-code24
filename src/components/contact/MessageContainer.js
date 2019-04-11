@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
+import MessageForm from './MessageForm'
 class MessageContainer extends React.Component {
 
     componentDidMount() {
@@ -11,7 +11,7 @@ class MessageContainer extends React.Component {
             return (
               <div className = "hiring-page">
               <h3>Leave Message</h3>
-              
+              <MessageForm/>
               </div>
             )
           }
