@@ -16,10 +16,10 @@ class SubscribeFormContainer extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault()
+        this.props.subscribeNews(this.state.email)
         this.setState({
             email: ''
         })
-        this.props.subscribeNews(this.state)
     }
 
     render() {
