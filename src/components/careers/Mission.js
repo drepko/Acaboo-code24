@@ -10,8 +10,6 @@ export default class Mission extends React.Component {
                 <div className = 'mission-image'>
                     <img className="search_image_1" src={home_lamp_img} />
                     <img className="search_image_1" src={mission_man_sitting} />
-
-
                 </div>
 
             </div>

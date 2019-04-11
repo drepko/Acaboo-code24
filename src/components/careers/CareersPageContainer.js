@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Mission from './Mission'
-
+import OpenPosition from './OpenPosition'
 class CareersPageContainer extends React.Component {
   componentDidMount() {
   // something
@@ -13,7 +13,7 @@ class CareersPageContainer extends React.Component {
       <h3>Join the team</h3>
       <h1>We are Acaboo. Help shape the future of education.</h1>
         <Mission/>
-
+        <OpenPosition/>
       </div>
     )
   }
