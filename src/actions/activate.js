@@ -15,7 +15,6 @@ const activateAccountNoSucces = (boolean) => ({
   })
 
 export const verifyEmail = (data) => (dispatch) => {
-    console.log(data)
   request
     .post(`${baseUrl}/api/v0/auth/users/activate/`)
     .send(data)

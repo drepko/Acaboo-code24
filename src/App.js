@@ -4,7 +4,6 @@ import Topbar from './components/layout/Topbar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import CoursePageContainer from './components/courses/CoursePageContainer'
 import AboutPageContainer from './components/about/AboutPageContainer'
-import FindCourseContainer from './components/homepage/FindCourseContainer';
 import LandingsPageContainer from './components/homepage/LandingsPageContainer'
 import Footer from './components/layout/Footer'
 import UniversityPageContainer from './components/homepage/UniversityPageContainer'
@@ -17,6 +16,8 @@ import EmailWhenAvailable from './components/courses/EmailWhenAvailable';
 import CheckEmailContainer from './components/checkEmail/CheckEmailContainer';
 import ActivationContainer from './components/activation/ActivationContainer'
 import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurchaseContainer';
+import JobDetailPage from './components/careers/JobDetailPage'
+import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
 
 class App extends Component {
   render() {
@@ -24,17 +25,12 @@ class App extends Component {
       <Router>
         {/* the div below is equivalent to the "body" element - note for Jewel */}
         <div className="App"> 
-          <div className="App-content">
-            <div className="App-header">
               <Topbar/>
-            </div>
-            <div className="App-main">
               <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
-              {/* <Route exact path="/courses" component={FindCourseContainer} /> */}
               <Route exact path="/universities" component={UniversityPageContainer} />
               <Route exact path="/" component={LandingsPageContainer} />
               <Route exact path="/about" component={AboutPageContainer} />
-              <Route exact path="/logins" component={LoginPageContainer} />
+              <Route exact path="/login" component={LoginPageContainer} />
               <Route exact path="/signup" component={SignupPageContainer} />
               <Route exact path="/careers" component={CareersPageContainer} />
               <Route exact path="/faq" component={FAQPageContainer} />
@@ -44,12 +40,10 @@ class App extends Component {
               <Route exact path="/verify/:uid/:token" component={ActivationContainer} />
               <Route exact path="/highlights" component={CoursePageContainer} />
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
-            </div>
-            <div className="App-footer">
+              <Route exact path="/jobdetails" component={JobDetailPage} />
+              <Route exact path="/dashboard" component={UserDashboardContainer} />
               <Footer />
             </div>
-          </div>
-        </div>
       </Router>
     );
   }
