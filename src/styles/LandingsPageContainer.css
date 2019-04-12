@@ -2,13 +2,15 @@
     border: solid black;
 } */
 
-.main {
+/* .main {
     display: flex;
     display: -webkit-flex;
     flex-direction: column
-}
+} */
 
-.section_1, .section_2, .section_3, 
+
+/* styling below can probably be erased. Jewel */
+/* .section_1, .section_2, .section_3, 
 .section_4, .section_5, .section_6, 
 .section_7, .section_8, .section_9, 
 .section_10, .section_7_2, .section_7_2_2 {
@@ -17,8 +19,8 @@
     align-items: center;
     -webkit-align-items: center;
     
-}
-
+} */
+/* 
 .section_1,  .section_2,  .section_5, 
 .section_10, .section_7_2, .section_7_2_2 {
     flex-direction: row;
@@ -65,12 +67,6 @@
 .section_5 {
     overflow: auto;
     margin-bottom: 100px;
-}
-
-.section_7 {
-    /* border-bottom: thin solid #545B5E;
-    padding-bottom: 10px; */
-
 }
 
 .section_3, .section_8 {
@@ -247,4 +243,4 @@
 }
 
 
-
+ */

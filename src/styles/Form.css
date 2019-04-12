@@ -1,4 +1,4 @@
-
+/* 
 input[type=text], input[type=username] {
     width: 100%;
     padding: 12px 20px;
@@ -35,10 +35,10 @@ input[type=submit] {
 
 .select_option {
     position: relative;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; */
     /*font-style: normal;
     font-size: 15px;
-    margin: 5px; */
+    margin: 5px; 
 
-}
+}*/
 
