@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 import '../../styles/LandingsPageContainer.css'
-import desklamp from '../../images/mock-ups/desklamp.png'
+import desklamp from '../../images/mock-ups/deskLamp.png'
 import Universiteit_Leiden from '../../images/universities/Universiteit_Leiden.png'
 import UvA from '../../images/universities/UvA.png'
 import man_handshake from'../../images/mock-ups/man_handshake.png'
