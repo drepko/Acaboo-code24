@@ -1,21 +1,13 @@
-import {
-	USER_SIGNUP_SUCCESS, USER_SIGNUP_FAILED
-} from '../actions/signup'
+import { UPDATE_SIGN_UP_DETAILS } from '../actions/signup'
 
-export default function (state = {}, {type, payload}) {
-	switch(type) {
-    case USER_SIGNUP_SUCCESS:
-      return {
-        success: true
-      }
+export default function (state = null, { type, payload }) {
+  switch (type) {
 
-    case USER_SIGNUP_FAILED:
-      return {
-        error: payload
-      }
+    case UPDATE_SIGN_UP_DETAILS:
+      return payload
 
-		default:
+    default:
       return state
-    }
+  }
 
 }

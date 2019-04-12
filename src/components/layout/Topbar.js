@@ -5,7 +5,6 @@ import Acaboo_logo from '../../images/Acaboo_logo.svg';
 import { logout } from '../../actions/users'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-
 import '../../styles/Topbar.css'
 
 class TopBar extends Component {
@@ -36,7 +35,6 @@ class TopBar extends Component {
 
                     {currentUser !== null && currentUser.credentials && 
                         <Nav.Link href="/dashboard">Hi {currentUser.credentials.first_name}</Nav.Link>}
-
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
