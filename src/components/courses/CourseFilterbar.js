@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { getUniversities } from '../../actions/universities'
 import { getStudies, setSelectedStudy } from '../../actions/studies'
-import {getCourses} from '../../actions/courses'
 import Filter from './CourseFilter'
 
 class CourseFilter extends PureComponent {
@@ -28,18 +27,14 @@ class CourseFilter extends PureComponent {
         const id = event.target.options[selectedIndex].getAttribute('id')
         this.setState({ university: { id: id, name: event.target.value } });
         this.props.getStudies(id)
-
-        console.log("UNIVERSITIES",this.state.university)
     }
 
     async handleStudySelect(event) {
         const selectedIndex = event.target.options.selectedIndex;
         const id = event.target.options[selectedIndex].getAttribute('id')
-        console.log("******",id,event.target.value)
        await this.setState({
              study: { id, name: event.target.value} });
              await this.props.setSelectedStudy(this.state.study)
-             //this.props.getCourses(this.props.study.id)
              this.props.history.push(`/courses/${this.state.university.name}/${this.state.study.name}`)
 
             
@@ -48,7 +43,6 @@ class CourseFilter extends PureComponent {
 
 
     render() {
-        console.log("STUDY state ",this.state.study)
         return this.props.universities === null ? <p>Loading ...</p> :
             <Filter
                 handleUniversitySelect={this.handleUniversitySelect}
@@ -68,4 +62,4 @@ const mapStateToProps = state => ({
     study: state.selectedStudy
 })
 
-export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy ,getCourses})(CourseFilter)
+export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy})(CourseFilter)
