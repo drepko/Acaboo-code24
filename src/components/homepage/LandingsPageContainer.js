@@ -3,11 +3,13 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 import '../../styles/LandingsPageContainer.css'
-import {home_lamp_img, 
-        home_hva_logo, 
-        home_studydashboard, 
-        home_man_walking,
-        home_people} from '../../images/imagelinks'
+import {
+  home_lamp_img,
+  home_hva_logo,
+  home_studydashboard,
+  home_man_walking,
+  home_people
+} from '../../images/imagelinks'
 
 import LoginLink from '../login/LoginLink'
 import Testimonial from './Testimonial'
@@ -22,8 +24,8 @@ class LandingsPageContainer extends React.Component {
           <div className="section_1_1 section_search_box">
 
             <div className="section_1_1_1 section_search_text">
-              <h1>The best way to <br/>study for your exam</h1>
-              <p>Sed ut perspiciatis unde omnis iste natus <br/>error sit voluptatem accusantium.</p>
+              <h1>The best way to <br />study for your exam</h1>
+              <p>Sed ut perspiciatis unde omnis iste natus <br />error sit voluptatem accusantium.</p>
             </div>
 
             <div className="section_1_1_2 section_search_form">
@@ -34,7 +36,7 @@ class LandingsPageContainer extends React.Component {
           <div className="section_1_2 section_search_image">
             <img className="search_image_1" src={home_lamp_img} />
           </div>
-        
+
         </div>
 
         <div className="section_2 section_university_logos">
@@ -55,8 +57,8 @@ class LandingsPageContainer extends React.Component {
           </div>
           <div className="section_3_2">
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
-          </div>  
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
+          </div>
         </div>
 
         <div className="section_4 section_coursedashboard">
@@ -89,25 +91,29 @@ class LandingsPageContainer extends React.Component {
             </div>
 
           </div>
-          
+
           <div className="section_5_2">
             <img className="section_5_2_image" src={home_man_walking} />
           </div>
 
         </div>
 
-        <div className="section_6 section_start_studying" > 
-          <div className="section_6_1 ss_div">
-            <h1>Start studying with Acaboo</h1>
-            <Link to="/courses"><button className="btn_blue">Browse courses</button></Link>
+        <div className="section_6 section_start_studying" >
+          <div className="section_6_1">
+            <div>
+              <h1>Start studying with Acaboo</h1>
+            </div>
+            <div>
+              <Link to="/highlights"><button className="btn_blue">Browse courses</button></Link>
+            </div>
           </div>
-          <div className="section_6_2 ss_div">
-           <LoginLink/>
+          <div className="section_6_2">
+            <LoginLink />
           </div>
         </div>
 
 
-        <Testimonial/>
+        <Testimonial />
 
         <div className="section_8 section_focus">
           <div className="section_8_1">
@@ -115,7 +121,7 @@ class LandingsPageContainer extends React.Component {
           </div>
           <div className="section_8_2">
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-          </div>    
+          </div>
         </div>
 
         <div className="section_9 section_image_people">
@@ -127,7 +133,7 @@ class LandingsPageContainer extends React.Component {
             <h1>Start studying with Acaboo.</h1>
           </div>
           <div className="section_10_2">
-            <Link to="/courses"><button className="btn_white">Browse courses</button></Link>
+            <Link to="/highlights"><button className="btn_white">Browse courses</button></Link>
             <Link to="/about"><button className="btn_blue">Learn More</button></Link>
           </div>
         </div>
