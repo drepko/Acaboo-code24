@@ -4,7 +4,6 @@ import Topbar from './components/layout/Topbar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import CoursePageContainer from './components/courses/CoursePageContainer'
 import AboutPageContainer from './components/about/AboutPageContainer'
-import FindCourseContainer from './components/homepage/FindCourseContainer';
 import LandingsPageContainer from './components/homepage/LandingsPageContainer'
 import Footer from './components/layout/Footer'
 import UniversityPageContainer from './components/homepage/UniversityPageContainer'
@@ -17,7 +16,7 @@ import EmailWhenAvailable from './components/courses/EmailWhenAvailable';
 import CheckEmailContainer from './components/checkEmail/CheckEmailContainer';
 import ActivationContainer from './components/activation/ActivationContainer'
 import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurchaseContainer';
-
+import JobDetailPage from './components/careers/JobDetailPage'
 class App extends Component {
   render() {
     return (
@@ -44,6 +43,8 @@ class App extends Component {
               <Route exact path="/verify/:uid/:token" component={ActivationContainer} />
               <Route exact path="/highlights" component={CoursePageContainer} />
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
+              <Route exact path="/jobdetails" component={JobDetailPage} />
+
             </div>
             <div className="App-footer">
               <Footer />

@@ -4,7 +4,7 @@ export default (state = [], { type, payload }) => {
     switch (type) {
       case COURSE_SELECTED:
         // return [...state].push(payload)
-        return state;
+        return [...state, payload]
        
 
         

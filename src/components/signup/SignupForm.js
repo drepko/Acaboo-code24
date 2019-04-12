@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import '../../styles/Form.css'
-import show from '../../images/show.png'
-import hide from '../../images/hide.png'
+import show from '../../images/password/show.png'
+import hide from '../../images/password/hide.png'
 
 export default class SignupForm extends PureComponent {
 
