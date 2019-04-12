@@ -10,7 +10,6 @@ const updateCourses = courses => ({
 })
 
 export const getCourses = (studyId) => (dispatch) => {
-  console.log(studyId, 'study id')
   request
     .get(`${baseUrl}/api/v0/course/?study=${studyId}`)
     .then(result => {

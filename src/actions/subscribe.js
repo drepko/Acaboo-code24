@@ -9,7 +9,6 @@ export const SUBSCRIBE_COURSE_SUCCES = 'SUBSCRIBE_COURSE_SUCCES'
     })
     
     export const subscribeNews = (data) => (dispatch) => {
-        console.log('email is', data)
         request
             .post(`${baseUrl}/api/v0/mailinglist/subscription/`)
             .send({email: data})
@@ -25,7 +24,6 @@ export const SUBSCRIBE_COURSE_SUCCES = 'SUBSCRIBE_COURSE_SUCCES'
     })
 
     export const subscribeCourse = (data, id) => (dispatch) => {
-    console.log(data,'email')
         request
             .post(`${baseUrl}/api/v0/course/${id}/subscribe`)
             .send({email: data})

@@ -8,7 +8,6 @@ export default class MessageForm extends PureComponent {
         const { sender_name, sender_email, sender_phone_number,message} = this.state.formValues
             const data = {sender_name, sender_email, sender_phone_number,message}
             data.message_type = "contact"
-            console.log("DATA submission",data)
 		this.props.onSubmit(data)
 	}
     state = { 

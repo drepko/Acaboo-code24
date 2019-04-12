@@ -17,23 +17,20 @@ import CheckEmailContainer from './components/checkEmail/CheckEmailContainer';
 import ActivationContainer from './components/activation/ActivationContainer'
 import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurchaseContainer';
 import JobDetailPage from './components/careers/JobDetailPage'
+import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
+
 class App extends Component {
   render() {
     return (
       <Router>
         {/* the div below is equivalent to the "body" element - note for Jewel */}
         <div className="App"> 
-          <div className="App-content">
-            <div className="App-header">
               <Topbar/>
-            </div>
-            <div className="App-main">
               <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
-              {/* <Route exact path="/courses" component={FindCourseContainer} /> */}
               <Route exact path="/universities" component={UniversityPageContainer} />
               <Route exact path="/" component={LandingsPageContainer} />
               <Route exact path="/about" component={AboutPageContainer} />
-              <Route exact path="/logins" component={LoginPageContainer} />
+              <Route exact path="/login" component={LoginPageContainer} />
               <Route exact path="/signup" component={SignupPageContainer} />
               <Route exact path="/careers" component={CareersPageContainer} />
               <Route exact path="/faq" component={FAQPageContainer} />
@@ -44,13 +41,9 @@ class App extends Component {
               <Route exact path="/highlights" component={CoursePageContainer} />
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
               <Route exact path="/jobdetails" component={JobDetailPage} />
-
-            </div>
-            <div className="App-footer">
+              <Route exact path="/dashboard" component={UserDashboardContainer} />
               <Footer />
             </div>
-          </div>
-        </div>
       </Router>
     );
   }
