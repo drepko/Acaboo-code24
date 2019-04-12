@@ -4,7 +4,6 @@ import Topbar from './components/layout/Topbar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import CoursePageContainer from './components/courses/CoursePageContainer'
 import AboutPageContainer from './components/about/AboutPageContainer'
-import FindCourseContainer from './components/homepage/FindCourseContainer';
 import LandingsPageContainer from './components/homepage/LandingsPageContainer'
 import Footer from './components/layout/Footer'
 import UniversityPageContainer from './components/homepage/UniversityPageContainer'
