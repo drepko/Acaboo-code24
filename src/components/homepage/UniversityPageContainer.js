@@ -6,7 +6,6 @@ import {getUniversities} from '../../actions/universities'
 class UniversityPageContainer extends PureComponent {
 
     componentWillMount() {
-        console.log("componentdid mount in iniversity container")
         this.props.getUniversities()
     }
 

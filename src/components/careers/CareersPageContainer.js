@@ -1,5 +1,4 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import { Link } from "react-router-dom";
 import Mission from './Mission'
 import OpenPosition from './OpenPosition'
@@ -19,7 +18,7 @@ class CareersPageContainer extends React.Component {
         <OpenPosition/>
         <LifeComponent/>
         <div className="life_at">
-            <img className="home_man_walking" src={home_man_walking} />
+            <img alt="home_man_walking" className="home_man_walking" src={home_man_walking} />
           </div>
           <h1>Reimagine education with us</h1>
           <Link to="/about"><button>Learn more about Acaboo</button></Link>

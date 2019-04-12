@@ -8,7 +8,6 @@ class CheckEmailContainer extends PureComponent {
 
     resendEmail = () => {
         const {email} = this.props.currentUser.credentials
-        console.log(email)
         this.props.resendEmail(email)
     }
 
