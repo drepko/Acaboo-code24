@@ -3,6 +3,10 @@ import {connect} from 'react-redux'
 import AboutPage from './AboutPage'
 import Team from './Team'
 import JoinUs from './JoinUs'
+import BrowseCourse from '../homepage/BrowseCourse'
+import People from '../../images/mock-ups/people.png'
+import Advisors from './Advisiors'
+
 class AboutPageContainer extends React.Component {
   componentDidMount() {
   // something
@@ -10,11 +14,17 @@ class AboutPageContainer extends React.Component {
 
   render() {
     return (
-      <div>
-    <AboutPage />
-    <Team/>
-    <JoinUs/>
-    </div>
+      <div className = "about-main-page">
+        <AboutPage />
+        <Team/>
+        <JoinUs/>
+        <BrowseCourse/>
+        <div className="people-about-us">
+                <img className="people_image_1" src={People} />
+            </div>
+        <Advisors/>
+    </div>    
+    
     )
   }
 }
