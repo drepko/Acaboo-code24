@@ -193,6 +193,13 @@
     justify-content: flex-end
 }
 
+.section_6_1 {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around; 
+    align-items: center;
+}
+
 .section_6_2 p {
     float: right;
     padding: 10px; 
