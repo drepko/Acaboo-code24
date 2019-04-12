@@ -42,7 +42,7 @@ class App extends Component {
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
               <Route exact path="/jobdetails" component={JobDetailPage} />
               <Route exact path="/dashboard" component={UserDashboardContainer} />
-              {/* <Footer /> */}
+              <Footer />
             </div>
       </Router>
     );
