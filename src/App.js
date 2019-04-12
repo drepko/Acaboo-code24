@@ -25,11 +25,7 @@ class App extends Component {
       <Router>
         {/* the div below is equivalent to the "body" element - note for Jewel */}
         <div className="App"> 
-          <div className="App-content">
-            <div className="App-header">
               <Topbar/>
-            </div>
-            <div className="App-main">
               <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
               <Route exact path="/universities" component={UniversityPageContainer} />
               <Route exact path="/" component={LandingsPageContainer} />
@@ -46,13 +42,8 @@ class App extends Component {
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
               <Route exact path="/jobdetails" component={JobDetailPage} />
               <Route exact path="/dashboard" component={UserDashboardContainer} />
-
-            </div>
-            <div className="App-footer">
               <Footer />
             </div>
-          </div>
-        </div>
       </Router>
     );
   }
