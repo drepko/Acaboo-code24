@@ -16,8 +16,6 @@ export default {
     studies,
     currentUser,
     activate,
-    subscribeNews,
-    subscribeCourse,
     sendMessage,
     signUpDetails,
     selectedCourses

@@ -31,7 +31,7 @@ class TopBar extends Component {
                         <Nav.Link href="/singup">Sign up</Nav.Link>}
 
                     {currentUser !== null && 
-                        <Nav.Link href="/logout" onClick={() => { this.props.logout()}}>Logout</Nav.Link>}
+                        <Nav.Link href="/" onClick={() => { this.props.logout()}}>Logout</Nav.Link>}
 
                     {currentUser !== null && currentUser.credentials && 
                         <Nav.Link href="/dashboard">Hi {currentUser.credentials.first_name}</Nav.Link>}

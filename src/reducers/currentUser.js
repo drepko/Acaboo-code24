@@ -4,7 +4,7 @@ import {UPDATE_CURRENT_USER} from '../actions/signup'
 export default function (state = null, {type, payload}) {
 	switch (type) {
     case USER_LOGIN_SUCCESS:
-        return payload
+        return state
     case UPDATE_CURRENT_USER:
       return {...state, credentials: payload}
     case USER_LOGOUT:
