@@ -13,8 +13,6 @@ class CoursePageContainer extends PureComponent {
     componentWillMount = () => {
         const { study, location } = this.props
         study !== null && location.pathname.indexOf('courses') > 0 && this.props.getCourses(study.id)
-
-        //console.log(location, 'location')
         location.pathname.indexOf('highlights') > 0 && this.props.getHighLights()
     }
 
@@ -51,7 +49,6 @@ class CoursePageContainer extends PureComponent {
 
         if (courses === null) return <p>Loading...</p>
 
-        console.log(courses)
         return (
             <div>
                 <CourseFilterbar history={this.props.history}/>

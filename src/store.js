@@ -1,22 +1,3 @@
-// old code ***********
-// import {createStore, applyMiddleware, combineReducers, compose} from 'redux'
-// import ReduxThunk from 'redux-thunk'
-// import reducers from './reducers/index' // which is shorthand for import ./reducers/index.js => here it is 'import ./reducers/'
-
-// const reducer = combineReducers(reducers)
-
-// const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
-
-// const enhancer = compose(
-// 	applyMiddleware(ReduxThunk),
-// 	devTools
-// )
-
-// const store = createStore(reducer, enhancer)
-
-// export default store
-
-// new code ***********
 import thunk from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import { createStore, applyMiddleware, compose } from 'redux'
@@ -37,6 +18,8 @@ const configureStore = composeEnhancers(
 const config = {
   key: 'root',
   storage,
+  // blacklist: ['selectedStudy'], // will not be persisted
+  whitelist: ['courses', 'users', 'login', 'currentUser', 'activate', 'sendMessage'] // only will be persisted
 }
 
 const combinedReducer = persistCombineReducers(config, reducer)
