@@ -6,7 +6,7 @@ import JoinUs from './JoinUs'
 import BrowseCourse from '../homepage/BrowseCourse'
 import People from '../../images/mock-ups/people.png'
 import Advisors from './Advisiors'
-import NewsSubscription from '../subscribe/SubscribeFormContainer'
+import NewsSubscription from '../subscribe/subscriptionForm'
 
 class AboutPageContainer extends React.Component {
   componentDidMount() {
