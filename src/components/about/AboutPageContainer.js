@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import AboutPage from './AboutPage'
 import Team from './Team'
+import JoinUs from './JoinUs'
 class AboutPageContainer extends React.Component {
   componentDidMount() {
   // something
@@ -12,6 +13,7 @@ class AboutPageContainer extends React.Component {
       <div>
     <AboutPage />
     <Team/>
+    <JoinUs/>
     </div>
     )
   }
