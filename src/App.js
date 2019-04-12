@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <Router>
         {/* the div below is equivalent to the "body" element - note for Jewel */}
-        <div className="App"> 
+        <div className="container-fluid"> 
               <Topbar/>
               <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
               <Route exact path="/universities" component={UniversityPageContainer} />
@@ -42,7 +42,7 @@ class App extends Component {
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
               <Route exact path="/jobdetails" component={JobDetailPage} />
               <Route exact path="/dashboard" component={UserDashboardContainer} />
-              <Footer />
+              {/* <Footer /> */}
             </div>
       </Router>
     );
