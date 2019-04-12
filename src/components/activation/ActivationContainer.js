@@ -9,9 +9,7 @@ class ActivationContainer extends PureComponent {
     componentWillMount = () => {
         const uid = this.props.match.params.uid
         const token = this.props.match.params.token
-        const slicedUid = uid.slice(4)
-        const slicedToken = token.slice(6)
-        const data = { uid: slicedUid, token: slicedToken }
+        const data = { uid, token }
         this.props.verifyEmail(data)
     }
 

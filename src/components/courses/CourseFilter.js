@@ -16,22 +16,23 @@ export default class CourseFilter extends Component {
 
     renderStudyOptions = () => {
         const { studies } = this.props
-        console.log("studies list",studies)
-        return (
-       
-            <select onChange={this.props.handleStudySelect}>
-                <option value="" disabled selected>Study</option>
-                {this.props.studies.map((studie) => {
-                    return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
-                })}
-            </select>
-        )
+        if (studies && studies.length > 0) {
+            return (
+
+                <select onChange={this.props.handleStudySelect}>
+                    <option value="" disabled selected>Study</option>
+                    {this.props.studies.map((studie) => {
+                        return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
+                    })}
+                </select>
+            )
+        }
     }
-   
+
     render() {
         const { study } = this.props
         return (
-            <div className = "filter-bar">
+            <div className="filter-bar">
                 <form >
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}
