@@ -12,7 +12,7 @@ import {
   home_studydashboard,
 } from '../../images/imagelinks'
 
-import LoginLink from '../login/LoginLink'
+import BrowseCourse from './BrowseCourse'
 import Testimonial from './Testimonial'
 class LandingsPageContainer extends React.Component {
 
@@ -99,21 +99,10 @@ class LandingsPageContainer extends React.Component {
 
         </div>
 
-        <div className="section_6 section_start_studying" >
-          <div className="section_6_1">
-            <div>
-              <h1>Start studying with Acaboo</h1>
-            </div>
-            <div>
-              <Link to="/highlights"><button className="btn_blue">Browse courses</button></Link>
-            </div>
-          </div>
-          <div className="section_6_2">
-            <LoginLink />
-          </div>
-        </div>
+       
 
 
+        <BrowseCourse/>
         <Testimonial />
 
         <div className="section_8 section_focus">
