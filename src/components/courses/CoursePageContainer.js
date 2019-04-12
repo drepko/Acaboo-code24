@@ -6,6 +6,7 @@ import CourseFilterbar from './CourseFilterbar'
 import {getHighLights} from '../../actions/courses'
 import {withRouter} from 'react-router'
 import {selectCourse} from '../../actions/paymentFlow'
+import Cart from './Cart'
 
 
 class CoursePageContainer extends PureComponent {
@@ -26,7 +27,7 @@ class CoursePageContainer extends PureComponent {
         const course = this.props.courses.find((course) => {
             return course.id === Number(event.target.value)
         })
-        this.props.selectCourse(course)
+        this.props.selectCourse(course)          
     }
 
     subscribe = (event) => {
@@ -35,14 +36,24 @@ class CoursePageContainer extends PureComponent {
 
     renderCourses = (courses) => {
         return (
-            courses.map((course, index) => {
+            <div>
+            {this.props.selectedCourses.length > 0 && 
+            <div><Cart selectedCourses={this.props.selectedCourses}/> 
+            <button>Checkout</button>
+            </div>
+            }    
+
+            {courses.map((course, index) => {
                 return (
+                    <div>
                     <Course
                         key={index}
                         course={course}
                         signUp={course.provided ? this.signUp : this.subscribe}/>
+                    </div>    
                 )
-            })
+            })}
+            </div>
         )
     }
 
