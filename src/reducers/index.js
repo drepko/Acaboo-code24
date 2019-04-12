@@ -4,10 +4,9 @@ import currentUser from './currentUser'
 import studies from './studies'
 import selectedStudy from './setSelectedStudy'
 import activate from './activate'
-import subscribeNews from './subscribeNews'
-import subscribeCourse from './subscribeCourse'
 import sendMessage from './sendMessage'
 import signUpDetails from './signup'
+import selectedCourses from './selectedCourses'
 
 
 export default {
@@ -20,5 +19,6 @@ export default {
     subscribeNews,
     subscribeCourse,
     sendMessage,
-    signUpDetails
+    signUpDetails,
+    selectedCourses
 }

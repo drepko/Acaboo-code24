@@ -12,7 +12,7 @@ import {
   home_studydashboard,
 } from '../../images/imagelinks'
 
-import LoginLink from '../login/LoginLink'
+import BrowseCourse from './BrowseCourse'
 import Testimonial from './Testimonial'
 class LandingsPageContainer extends React.Component {
 
@@ -35,12 +35,12 @@ class LandingsPageContainer extends React.Component {
           </div>
 
           <div className="section_1_2 section_search_image">
-            <img alt="desklamp" className="search_image_1" src={desklamp} />
+            {/* <img alt="desklamp" className="search_image_1" src={desklamp} /> */}
           </div>
 
         </div>
 
-        <div className="section_2 section_university_logos">
+        {/* <div className="section_2 section_university_logos">
           <div className="hu_logo">
             <img alt="hva_logo" className="home_hva_logo_large" src={Universiteit_Leiden} />
           </div>
@@ -50,7 +50,7 @@ class LandingsPageContainer extends React.Component {
           <div className="hu_logo">
             <img alt="hva_logo" className="home_hva_logo_large" src={Universiteit_Leiden} />
           </div>
-        </div>
+        </div> */}
 
         <div className="section_3 section_study_more">
           <div className="section_3_1">
@@ -62,9 +62,9 @@ class LandingsPageContainer extends React.Component {
           </div>
         </div>
 
-        <div className="section_4 section_coursedashboard">
+        {/* <div className="section_4 section_coursedashboard">
           <img alt="cd_image" className="cd_image_1" src={home_studydashboard} />
-        </div>
+        </div> */}
 
         <div className="section_5 section_about_us" >
 
@@ -93,27 +93,16 @@ class LandingsPageContainer extends React.Component {
 
           </div>
 
-          <div className="section_5_2">
+          {/* <div className="section_5_2">
             <img alt="section_5_image" className="section_5_2_image" src={man_handshake} />
-          </div>
+          </div> */}
 
         </div>
 
-        <div className="section_6 section_start_studying" >
-          <div className="section_6_1">
-            <div>
-              <h1>Start studying with Acaboo</h1>
-            </div>
-            <div>
-              <Link to="/highlights"><button className="btn_blue">Browse courses</button></Link>
-            </div>
-          </div>
-          <div className="section_6_2">
-            <LoginLink />
-          </div>
-        </div>
+       
 
 
+        <BrowseCourse/>
         <Testimonial />
 
         <div className="section_8 section_focus">
@@ -125,9 +114,9 @@ class LandingsPageContainer extends React.Component {
           </div>
         </div>
 
-        <div className="section_9 section_image_people">
+        {/* <div className="section_9 section_image_people">
           <img alt="ip_image" className="ip_image_1" src={people} />
-        </div>
+        </div> */}
 
         <div className="section_10 section_start_studying">
           <div className="section_10_1">
