@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import Acaboo_logo from '../../images/Acaboo_logo.svg';
+import { logout } from '../../actions/users'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
@@ -9,6 +10,7 @@ import '../../styles/Topbar.css'
 
 class TopBar extends Component {
     render () {
+      const { history, currentUser } = this.props
         return (
             <Navbar bg="light" expand="lg" sticky="top">
                 <Navbar.Brand href="/">
@@ -19,8 +21,14 @@ class TopBar extends Component {
                     <Nav className="ml-auto">
                         <Nav.Link href="/highlights">Courses</Nav.Link>
                         <Nav.Link href="/faq">Faq</Nav.Link>
-                        <Nav.Link href="/logins">Login</Nav.Link>
-                        <Nav.Link href="/signup">Sign up</Nav.Link>
+                        {currentUser === null && <span className="tm-i tm-logins" onClick={() => history.push('/login')}>Login</span>}
+                    {currentUser === null && <span className="tm-i tm-signup" onClick={() => history.push('/signup')}>Sign up</span>}
+                    {currentUser !== null && <span className="tm-i tm-logins" onClick={() => {
+                        this.props.logout()
+                        history.push('/')
+                    }}>
+                        Logout</span>}
+                    {currentUser !== null && currentUser.credentials && <span className="tm-i tm-signup" onClick={() => history.push('/dashboard')}>Hi {currentUser.credentials.first_name}</span>}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
@@ -29,9 +37,9 @@ class TopBar extends Component {
 }
 
 const mapStateToProps = state => ({
-    
+    currentUser: state.currentUser
 })
 
 export default withRouter(
-    connect(mapStateToProps)(TopBar)
-  )
+    connect(mapStateToProps, { logout })(TopBar)
+)

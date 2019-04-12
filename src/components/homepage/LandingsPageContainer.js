@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 import '../../styles/LandingsPageContainer.css'
-import desklamp from '../../images/mock-ups/desklamp.png'
+import desklamp from '../../images/mock-ups/deskLamp.png'
 import Universiteit_Leiden from '../../images/universities/Universiteit_Leiden.png'
 import UvA from '../../images/universities/UvA.png'
 import man_handshake from'../../images/mock-ups/man_handshake.png'
@@ -35,20 +35,20 @@ class LandingsPageContainer extends React.Component {
           </div>
 
           <div className="section_1_2 section_search_image">
-            <img className="search_image_1" src={desklamp} />
+            <img alt="desklamp" className="search_image_1" src={desklamp} />
           </div>
 
         </div>
 
         <div className="section_2 section_university_logos">
           <div className="hu_logo">
-            <img className="home_hva_logo_large" src={Universiteit_Leiden} />
+            <img alt="hva_logo" className="home_hva_logo_large" src={Universiteit_Leiden} />
           </div>
           <div className="hu_logo">
-            <img className="home_hva_logo_large" src={UvA} />
+            <img alt="hva_logo" className="home_hva_logo_large" src={UvA} />
           </div>
           <div className="hu_logo">
-            <img className="home_hva_logo_large" src={Universiteit_Leiden} />
+            <img alt="hva_logo" className="home_hva_logo_large" src={Universiteit_Leiden} />
           </div>
         </div>
 
@@ -63,7 +63,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="section_4 section_coursedashboard">
-          <img className="cd_image_1" src={home_studydashboard} />
+          <img alt="cd_image" className="cd_image_1" src={home_studydashboard} />
         </div>
 
         <div className="section_5 section_about_us" >
@@ -94,7 +94,7 @@ class LandingsPageContainer extends React.Component {
           </div>
 
           <div className="section_5_2">
-            <img className="section_5_2_image" src={man_handshake} />
+            <img alt="section_5_image" className="section_5_2_image" src={man_handshake} />
           </div>
 
         </div>
@@ -126,7 +126,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="section_9 section_image_people">
-          <img className="ip_image_1" src={people} />
+          <img alt="ip_image" className="ip_image_1" src={people} />
         </div>
 
         <div className="section_10 section_start_studying">

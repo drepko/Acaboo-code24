@@ -5,7 +5,6 @@ import {
 export default function (state = {}, {type, payload}) {
 	switch(type) {
     case USER_SIGNUP_SUCCESS:
-    console.log("signup sucess", payload)
       return {
         success: true
       }

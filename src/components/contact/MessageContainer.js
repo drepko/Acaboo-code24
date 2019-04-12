@@ -8,13 +8,11 @@ class MessageContainer extends React.Component {
 
     
     handleSubmit = (data) => {
-		console.log('signup request  to action',data)
 		this.props.postMessage(data)
 	}
 
 
 	render() {
-        console.log("signup page props" ,this.props.sendMessage)
 		return (
 			<div>
 				<h3>Leave Message</h3>
