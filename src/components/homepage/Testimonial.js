@@ -22,7 +22,7 @@ export default class Course extends Component {
 
               <div className="section_7_2_2">
                 <div className="section_7_2_2_img">
-                  <img alt="home_hva_logo_small" className="home_hva_logo_small" src={home_hva_logo} />
+                  <img className="home_hva_logo_small" src={home_hva_logo} />
                 </div>
                 <div className="section_7_2_2_p">
                   <p>David de Bye, <br />Business Administration, UVA</p>
@@ -37,7 +37,7 @@ export default class Course extends Component {
 
               <div className="section_7_2_2">
                 <div className="section_7_2_2_img">
-                  <img alt="home_hva_logo_small" className="home_hva_logo_small" src={home_hva_logo} />
+                  <img className="home_hva_logo_small" src={home_hva_logo} />
                 </div>
                 <div className="section_7_2_2_p">
                   <p>Paul de Groot, <br />Mathematics teacher, UVA</p>
@@ -52,7 +52,7 @@ export default class Course extends Component {
 
               <div className="section_7_2_2">
                 <div className="section_7_2_2_img">
-                  <img alt="home_hva_logo_small" className="home_hva_logo_small" src={home_hva_logo} />
+                  <img className="home_hva_logo_small" src={home_hva_logo} />
                 </div>
                 <div className="section_7_2_2_p">
                   <p>Emma de Leeuw, <br />Business teacher, UVA</p>

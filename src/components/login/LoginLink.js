@@ -5,7 +5,7 @@ export default  class LoginLink extends React.Component {
     render(){
         return(
             <div className="login-link">
-            <p>Already using Acaboo?<Link to='/login'>Log In</Link> </p>
+            <p>Already using Acaboo?<Link to='/logins'>Log In</Link> </p>
           </div>
         )
 
