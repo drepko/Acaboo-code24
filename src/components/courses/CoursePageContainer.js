@@ -5,6 +5,7 @@ import { getCourses } from '../../actions/courses'
 import CourseFilterbar from './CourseFilterbar'
 import {getHighLights} from '../../actions/courses'
 import {withRouter} from 'react-router'
+import {selectCourse} from '../../actions/paymentFlow'
 
 
 class CoursePageContainer extends PureComponent {
@@ -22,10 +23,10 @@ class CoursePageContainer extends PureComponent {
     }
 
     signUp = (event) => {
-        console.log(event.target.value)
-        // this.setState({
-        //     selectedCourseId: event.target.value
-        // })
+        const course = this.props.courses.find((course) => {
+            return course.id === Number(event.target.value)
+        })
+        this.props.selectCourse(course)
     }
 
     subscribe = (event) => {
@@ -39,7 +40,7 @@ class CoursePageContainer extends PureComponent {
                     <Course
                         key={index}
                         course={course}
-                        signUp={course.provided ? this.signUp : this.subscribe} />
+                        signUp={course.provided ? this.signUp : this.subscribe}/>
                 )
             })
         )
@@ -61,8 +62,9 @@ class CoursePageContainer extends PureComponent {
 
 const mapStateToProps = state => ({
     courses: state.courses,
-    study: state.selectedStudy
+    study: state.selectedStudy,
+    selectedCourses: state.selectedCourses
 })
 
-export default withRouter(connect(mapStateToProps, { getCourses, getHighLights })(CoursePageContainer))
+export default withRouter(connect(mapStateToProps, { getCourses, getHighLights, selectCourse })(CoursePageContainer))
 
