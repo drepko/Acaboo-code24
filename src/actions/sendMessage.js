@@ -15,6 +15,7 @@ export const sendSucess = () => ({
   })
 
 export const sendmessage = (data) => (dispatch) =>{
+	console.log("data at action",data)
 	request
 		.post(`${baseUrl}/api/v0/message/`)
 		.send(data)
@@ -22,6 +23,7 @@ export const sendmessage = (data) => (dispatch) =>{
 			dispatch(sendSucess())
 		})
 		.catch(err => {
+			console.log(data)
 			if (err.status === 400) {
 				console.log(err)
 				dispatch(sendFailed(err.response.body.message))
