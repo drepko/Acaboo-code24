@@ -26,6 +26,9 @@ class CoursePageContainer extends PureComponent {
 
     signUp = (event) => {
         console.log(event.target.value)
+        // this.setState({
+        //     selectedCourseId: event.target.value
+        // })
     }
 
     subscribe = (event) => {

@@ -8,8 +8,9 @@ class ReviewPurchaseContainer extends PureComponent {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	handleClick = () => {
-			this.props.history.push("highlights");
+	handleClick = (e) => {
+		e.preventDefault()
+		this.props.history.push("highlights");
 	}
 
 	render() {
