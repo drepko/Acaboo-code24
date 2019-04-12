@@ -19,7 +19,7 @@ const config = {
   key: 'root',
   storage,
   // blacklist: ['selectedStudy'], // will not be persisted
-  whitelist: ['courses', 'users', 'login', 'currentUser', 'activate', 'sendMessage'] // only will be persisted
+  whitelist: ['courses', 'currentUser', 'activate', 'sendMessage'] // only will be persisted
 }
 
 const combinedReducer = persistCombineReducers(config, reducer)

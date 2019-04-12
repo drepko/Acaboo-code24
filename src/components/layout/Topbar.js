@@ -1,43 +1,27 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
-import '../../styles/Topbar.css'
 import Acaboo_logo from '../../images/Acaboo_logo.svg';
 import { logout } from '../../actions/users'
-
-import {  Nav, NavItem } from 'react-bootstrap'
-
 import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
 
-// class TopBar extends Component {
-//     render () {
-//         return (
-//             <Navbar default collapseOnSelect>
-                
-//                     <Navbar.Brand href="#home">
-//                     <img alt="" src={Acaboo_logo} className="d-inline-block align-top"/>
-//                     </Navbar.Brand>
-                
-//             </Navbar>
-//         )
-//     }
-// }
-
+import '../../styles/Topbar.css'
 
 class TopBar extends Component {
-
-    render() {
-        const { history, currentUser } = this.props
-
+    render () {
+      const { history, currentUser } = this.props
         return (
-            <div className="topnav">
-                <div className="topnav-logo">
-                    <img onClick={() => history.push('/')} src={Acaboo_logo} className="App-logo" alt="logo" />
-                </div>
-                <div className="topnav-menu">
-                    <span className="tm-i tm-courses" onClick={() => history.push('/highlights')}>Courses</span>
-                    <span className="tm-i tm-faq" onClick={() => history.push('/faq')}>FAQ</span>
-                    {currentUser === null && <span className="tm-i tm-logins" onClick={() => history.push('/login')}>Login</span>}
+            <Navbar bg="light" expand="lg" sticky="top">
+                <Navbar.Brand href="/">
+                    <img alt="" src={Acaboo_logo} className="d-inline-block align-top"/>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ml-auto">
+                        <Nav.Link href="/highlights">Courses</Nav.Link>
+                        <Nav.Link href="/faq">Faq</Nav.Link>
+                        {currentUser === null && <span className="tm-i tm-logins" onClick={() => history.push('/login')}>Login</span>}
                     {currentUser === null && <span className="tm-i tm-signup" onClick={() => history.push('/signup')}>Sign up</span>}
                     {currentUser !== null && <span className="tm-i tm-logins" onClick={() => {
                         this.props.logout()
@@ -45,8 +29,9 @@ class TopBar extends Component {
                     }}>
                         Logout</span>}
                     {currentUser !== null && currentUser.credentials && <span className="tm-i tm-signup" onClick={() => history.push('/dashboard')}>Hi {currentUser.credentials.first_name}</span>}
-                </div>
-            </div>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         )
     }
 }

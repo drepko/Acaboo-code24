@@ -7,12 +7,12 @@ import Checkemail from './CheckEmail'
 class CheckEmailContainer extends PureComponent {
 
     resendEmail = () => {
-        const {email} = this.props.currentUser.credentials
+        const {email} = this.props.credentials
         this.props.resendEmail(email)
     }
 
 	render() {
-        const {credentials} = this.props.currentUser
+        const {credentials} = this.props
 		return (
 			<div>
                 <ProgressBar />
@@ -24,7 +24,7 @@ class CheckEmailContainer extends PureComponent {
 
 const mapStateToProps = state => {
 	return {
-		currentUser: state.currentUser
+		credentials: state.signUpDetails
 	}
 }
 

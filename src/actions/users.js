@@ -23,9 +23,8 @@ const userLoginSuccess = (login) => ({
   payload: login
 })
 
-const userLoginFailed = (error) => ({
-  type: USER_LOGIN_FAILED,
-  payload: error || 'Unknown error'
+const userLoginFailed = () => ({
+  type: USER_LOGIN_FAILED
 })
 
 const setCurrentUser = (user) => ({
