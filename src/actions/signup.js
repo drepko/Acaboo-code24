@@ -24,13 +24,11 @@ export const userSignupSuccess = () => ({
 		.post(`${baseUrl}/api/v0/auth/users/create/`)
 		.send(data)
 		.then(() => {
-			console.log("sign up sucess full fetched result")
 			dispatch(userSignupSuccess())
 			dispatch(updateCurrentUser(data))
 			history.push("/checkemail")
 		})
 		.catch(err => {
-			console.log(data)
 			if (err.status === 400) {
 				console.log(err)
 				dispatch(userSignupFailed(err.response.body.message))

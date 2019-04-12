@@ -12,7 +12,7 @@ export default class AboutPage extends Component {
         <h1>Together we reimagine education </h1>
 
         <div className="desk-lamp-about-us">
-            <img className="search_image_1" src={desklamp} />
+            <img className="search_image_1" src={desklamp} alt="desk-lamp-about-us"/>
         </div>
 
         <div className = "desk-lamp-paragraph-1">
@@ -28,14 +28,14 @@ export default class AboutPage extends Component {
         </div>
 
         <div className="women-desk-about-us">
-            <img className="search_image_1" src={womanDesk} />
+            <img className="search_image_1" src={womanDesk} alt="women-desk-about-us" />
         </div>
 
         <h1>Study more efficient with Acaboo.</h1>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
         
         <div className="man-handshake-about-us">
-            <img className="search_image_1" src={manHandshake} />
+            <img className="search_image_1" src={manHandshake} alt="man-handshake-about-us"/>
         </div>
       </div>
     )

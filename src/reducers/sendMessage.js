@@ -5,13 +5,11 @@ import {
 export default function (state = {}, {type, payload}) {
 	switch(type) {
     case MESSAGE_SEND_SUCCESS:
-    console.log("MESSAGE SENT SUCEESFULLY")
       return {
         success: "Message sent sucessfully"
       }
 
     case MESSAGE_SEND_FAILED:
-    console.log("MESSAGE SENT FAILED")
 
       return {
         error: payload

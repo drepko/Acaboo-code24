@@ -2,10 +2,10 @@ import React, { PureComponent } from 'react'
 import Course from './Course'
 import { connect } from 'react-redux'
 import { getCourses } from '../../actions/courses'
-import EmailWhenAvailable from './EmailWhenAvailable';
 import CourseFilterbar from './CourseFilterbar'
 import {getHighLights} from '../../actions/courses'
 import {withRouter} from 'react-router'
+import {selectCourse} from '../../actions/paymentFlow'
 
 
 class CoursePageContainer extends PureComponent {
@@ -13,8 +13,6 @@ class CoursePageContainer extends PureComponent {
     componentWillMount = () => {
         const { study, location } = this.props
         study !== null && location.pathname.indexOf('courses') > 0 && this.props.getCourses(study.id)
-
-        //console.log(location, 'location')
         location.pathname.indexOf('highlights') > 0 && this.props.getHighLights()
     }
 
@@ -25,7 +23,10 @@ class CoursePageContainer extends PureComponent {
     }
 
     signUp = (event) => {
-        console.log(event.target.value)
+        const course = this.props.courses.find((course) => {
+            return course.id === Number(event.target.value)
+        })
+        this.props.selectCourse(course)
     }
 
     subscribe = (event) => {
@@ -39,7 +40,7 @@ class CoursePageContainer extends PureComponent {
                     <Course
                         key={index}
                         course={course}
-                        signUp={course.provided ? this.signUp : this.subscribe} />
+                        signUp={course.provided ? this.signUp : this.subscribe}/>
                 )
             })
         )
@@ -51,7 +52,6 @@ class CoursePageContainer extends PureComponent {
 
         if (courses === null) return <p>Loading...</p>
 
-        console.log(courses)
         return (
             <div>
                 <CourseFilterbar history={this.props.history}/>
@@ -62,8 +62,9 @@ class CoursePageContainer extends PureComponent {
 
 const mapStateToProps = state => ({
     courses: state.courses,
-    study: state.selectedStudy
+    study: state.selectedStudy,
+    selectedCourses: state.selectedCourses
 })
 
-export default withRouter(connect(mapStateToProps, { getCourses, getHighLights })(CoursePageContainer))
+export default withRouter(connect(mapStateToProps, { getCourses, getHighLights, selectCourse })(CoursePageContainer))
 

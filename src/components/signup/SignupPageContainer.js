@@ -2,7 +2,6 @@ import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {signup} from  '../../actions/signup'
 import SignupForm from './SignupForm'
-import {Redirect} from 'react-router-dom'
 import ProgressBar from '../layout/ProgressBar'
 
 class SignupPage extends PureComponent {
@@ -44,7 +43,6 @@ class SignupPage extends PureComponent {
 	}
 
 	fieldChecks = () => {
-		const errors = {}
 		return true
 	}
 
