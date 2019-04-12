@@ -5,9 +5,8 @@ import ProgressBar from '../layout/ProgressBar'
 
 class ReviewPurchaseContainer extends PureComponent {
 	render() {
-		const {first_name, last_name, email, phone_number} = this.props.currentUser.credentials
-
-		console.log('props', this.props)
+        const {first_name, last_name, email, phone_number} = this.props.currentUser.credentials
+        
 		return (
 			<div>
                 <ProgressBar />
