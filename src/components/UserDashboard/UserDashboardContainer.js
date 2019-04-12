@@ -15,7 +15,7 @@ class UserDashboardContainer extends PureComponent {
 
 const mapStateToProps = function (state) {
 	return {
-        userCredentials: state.currentUser.credentials,
+        userCredentials: state.currentUser.credentials && state.currentUser.credentials,
         userToken: state.currentUser.auth_token
 	}
 }

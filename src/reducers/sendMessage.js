@@ -2,7 +2,7 @@ import {
 	MESSAGE_SEND_FAILED, MESSAGE_SEND_SUCCESS
 } from '../actions/sendMessage'
 
-export default function (state = {}, {type, payload}) {
+export default function (state = null, {type, payload}) {
 	switch(type) {
     case MESSAGE_SEND_SUCCESS:
       return {

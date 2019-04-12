@@ -18,14 +18,12 @@ export const logout = () => ({
   type: USER_LOGOUT
 })
 
-const userLoginSuccess = (login) => ({
-  type: USER_LOGIN_SUCCESS,
-  payload: login
+const userLoginSuccess = () => ({
+  type: USER_LOGIN_SUCCESS
 })
 
-const userLoginFailed = (error) => ({
-  type: USER_LOGIN_FAILED,
-  payload: error || 'Unknown error'
+const userLoginFailed = () => ({
+  type: USER_LOGIN_FAILED
 })
 
 const setCurrentUser = (user) => ({

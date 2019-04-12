@@ -6,25 +6,25 @@ import { Redirect } from 'react-router-dom'
 class LoginPageContainer extends PureComponent {
 
 	state = {}
-	
+
 	handleSubmit = (e) => {
 		e.preventDefault()
 		this.props.login(this.state, this.props.history)
 	}
 
 	handleChange = (event) => {
-    const {name, value} = event.target
+		const { name, value } = event.target
 
-    this.setState({
-      [name]: value
-    })
-  }
+		this.setState({
+			[name]: value
+		})
+	}
 
-  showPassword = () => {
-	this.setState({
-		showPassword: !this.state.showPassword
-	})
-}
+	showPassword = () => {
+		this.setState({
+			showPassword: !this.state.showPassword
+		})
+	}
 
 	render() {
 		if (this.props.currentUser) return (
@@ -38,19 +38,15 @@ class LoginPageContainer extends PureComponent {
 				<h3>Enter your account details below</h3>
 
 				<LoginForm showPassword={this.showPassword} state={this.state} onChange={this.handleChange} onSubmit={this.handleSubmit} />
-
-                { this.props.error && 
-                <span style={{color:'red'}}>{this.props.error}</span> }
-            </div>
-        )
+			</div>
+		)
 	}
 }
 
 const mapStateToProps = state => {
 	return {
-		currentUser: state.currentUser,
-        error: state.login.error
+		currentUser: state.currentUser
 	}
 }
 
-export default connect(mapStateToProps, {login})(LoginPageContainer)
+export default connect(mapStateToProps, { login })(LoginPageContainer)
