@@ -17,6 +17,7 @@ import CheckEmailContainer from './components/checkEmail/CheckEmailContainer';
 import ActivationContainer from './components/activation/ActivationContainer'
 import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurchaseContainer';
 import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
+import JobDetailPage from './components/careers/JobDetailPage'
 
 class App extends Component {
   render() {
@@ -44,6 +45,8 @@ class App extends Component {
               <Route exact path="/verify/:uid/:token" component={ActivationContainer} />
               <Route exact path="/highlights" component={CoursePageContainer} />
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
+              <Route exact path="/jobdetails" component={JobDetailPage} />
+
             </div>
             <div className="App-footer">
               <Footer />
