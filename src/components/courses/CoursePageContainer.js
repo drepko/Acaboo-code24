@@ -25,8 +25,11 @@ class CoursePageContainer extends PureComponent {
     }
 
     signUp = (event) => {
-        //this.props.selectCourse(event.target.value)
-        console.log('name', event.target.name)
+        const course = this.props.courses.find((course) => {
+            return course.id === Number(event.target.value)
+        })
+        this.props.selectCourse(course)
+        //console.log('course', course)
     }
 
     subscribe = (event) => {
@@ -40,7 +43,7 @@ class CoursePageContainer extends PureComponent {
                     <Course
                         key={index}
                         course={course}
-                        signUp={course.provided ? this.signUp : this.subscribe} />
+                        signUp={course.provided ? this.signUp : this.subscribe}/>
                 )
             })
         )

@@ -7,7 +7,7 @@ export const COURSE_SELECTED = 'COURSE_SELECTED'
         payload: course
     })
     
-    export const selectCourse = (course) => (dispatch) => {
-        dispatch(selectedCourse(course))        
+    export const selectCourse = (data) => (dispatch) => {
+        dispatch(selectedCourse(data))        
     }
 

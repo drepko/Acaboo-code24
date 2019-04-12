@@ -11,11 +11,7 @@ export default function Course(props) {
                 <p>{props.course.price}</p>
                 <button 
                 onClick = {props.signUp} 
-                value = {props.course.id} 
-                name = {props.course.name} 
-                price = {props.course.price}
-                image = {`${baseUrl}${props.course.image}`} 
-                >Select this course</button>
+                value = {props.course.id}>Select this course</button>
             </div>)
     
 }
