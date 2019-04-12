@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import Course from './Course'
 import { connect } from 'react-redux'
 import { getCourses } from '../../actions/courses'
-import EmailWhenAvailable from './EmailWhenAvailable';
 import CourseFilterbar from './CourseFilterbar'
 import {getHighLights} from '../../actions/courses'
 import {withRouter} from 'react-router'
@@ -14,7 +13,6 @@ class CoursePageContainer extends PureComponent {
     componentWillMount = () => {
         const { study, location } = this.props
         study !== null && location.pathname.indexOf('courses') > 0 && this.props.getCourses(study.id)
-
         location.pathname.indexOf('highlights') > 0 && this.props.getHighLights()
     }
 
@@ -29,7 +27,6 @@ class CoursePageContainer extends PureComponent {
             return course.id === Number(event.target.value)
         })
         this.props.selectCourse(course)
-        //console.log('course', course)
     }
 
     subscribe = (event) => {
@@ -55,7 +52,6 @@ class CoursePageContainer extends PureComponent {
 
         if (courses === null) return <p>Loading...</p>
 
-        console.log(courses)
         return (
             <div>
                 <CourseFilterbar history={this.props.history}/>

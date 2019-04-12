@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { Link } from "react-router-dom";
 import './ProgressBar.css'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router'
@@ -9,7 +8,6 @@ class ProgressBar extends Component {
 
   render() {
     const { location } = this.props
-    console.log("LOCATION",location)
     return (
   <div className="progress-bar">
 

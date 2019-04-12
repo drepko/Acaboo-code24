@@ -63,7 +63,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="section_4 section_coursedashboard">
-          <img className="cd_image_1" src={home_studydashboard} />
+          <img alt="cd_image" className="cd_image_1" src={home_studydashboard} />
         </div>
 
         <div className="section_5 section_about_us" >

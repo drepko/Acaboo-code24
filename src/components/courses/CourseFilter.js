@@ -30,13 +30,12 @@ export default class CourseFilter extends Component {
     }
 
     render() {
-        const { study } = this.props
+    
         return (
             <div className="filter-bar">
                 <form >
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}
-                    {/* {study && study.name !== null && <input type="submit" value="Find your course" />} */}
                 </form>
             </div>
         )

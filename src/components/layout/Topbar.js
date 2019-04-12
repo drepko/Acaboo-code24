@@ -1,53 +1,45 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
-import '../../styles/Topbar.css'
 import Acaboo_logo from '../../images/Acaboo_logo.svg';
-
-import {  Nav, NavItem } from 'react-bootstrap'
-
+import { logout } from '../../actions/users'
 import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+
+import '../../styles/Topbar.css'
 
 class TopBar extends Component {
     render () {
+      const { history, currentUser } = this.props
         return (
-            <Navbar default collapseOnSelect>
-                
-                    <Navbar.Brand href="#home">
+            <Navbar bg="light" expand="lg" sticky="top">
+                <Navbar.Brand href="/">
                     <img alt="" src={Acaboo_logo} className="d-inline-block align-top"/>
-                    </Navbar.Brand>
-                
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ml-auto">
+                        <Nav.Link href="/highlights">Courses</Nav.Link>
+                        <Nav.Link href="/faq">Faq</Nav.Link>
+                        {currentUser === null && <span className="tm-i tm-logins" onClick={() => history.push('/login')}>Login</span>}
+                    {currentUser === null && <span className="tm-i tm-signup" onClick={() => history.push('/signup')}>Sign up</span>}
+                    {currentUser !== null && <span className="tm-i tm-logins" onClick={() => {
+                        this.props.logout()
+                        history.push('/')
+                    }}>
+                        Logout</span>}
+                    {currentUser !== null && currentUser.credentials && <span className="tm-i tm-signup" onClick={() => history.push('/dashboard')}>Hi {currentUser.credentials.first_name}</span>}
+                    </Nav>
+                </Navbar.Collapse>
             </Navbar>
         )
     }
 }
 
-
-// const TopBar = (props) => {
-
-//     const {history} = props
-//     console.log('props', props)
-
-//     return (
-//         <div className="topnav">
-//             <div className="topnav-logo">
-//                 <img onClick={() => history.push('/')} src={Acaboo_logo} className="App-logo" alt="logo" />
-//             </div>
-//             <div className="topnav-menu">
-//                 <a className="tm-i tm-courses" onClick={() => history.push('/highlights')}>Courses</a>
-//                 <a className="tm-i tm-faq" onClick={() => history.push('/faq')}>FAQ</a>
-//                 <a className="tm-i tm-logins" onClick={() => history.push('/logins')}>Login</a>
-//                 <a className="tm-i tm-signup" onClick={() => history.push('/signup')}>Sign up</a>
-//                 {/* <a onClick={() => history.push('/logout')}>Logout</a> */}
-//             </div>
-//         </div>
-//     )
-// }
-
 const mapStateToProps = state => ({
-    
+    currentUser: state.currentUser
 })
 
 export default withRouter(
-    connect(mapStateToProps)(TopBar)
-  )
+    connect(mapStateToProps, { logout })(TopBar)
+)
