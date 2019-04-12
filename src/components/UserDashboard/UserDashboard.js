@@ -7,6 +7,7 @@ export default class UserDashboard extends PureComponent {
         return (
             <div>
                 <span>Welcome back {this.props.user.first_name}!</span>
+                <div>HI</div>
             </div>
         )
     }
