@@ -48,6 +48,7 @@ class ReviewPurchaseContainer extends PureComponent {
 						)
 					)	
 				}
+				<h3>Total price: €{selectedCourses.map(course => course.price).reduce((a, b) => a+b)}</h3>
 
 				<button onClick={this.handleClick}>Add another course</button>
 				<button>Remove selected course(s) (no logic yet)</button> <br />
