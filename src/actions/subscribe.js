@@ -3,18 +3,18 @@ import {baseUrl} from '../constants'
 export const SUBSCRIBE_NEWSLETTER_SUCCESS = 'SUBSCRIBE_NEWSLETTER_SUCCESS'
 export const SUBSCRIBE_COURSE_SUCCES = 'SUBSCRIBE_COURSE_SUCCES'
 
-    const subscribeNewsSucces = subscribe => ({
-        type: SUBSCRIBE_NEWSLETTER_SUCCESS,
-        subscribe
+    const subscribeNewsSucces = () => ({
+        type: SUBSCRIBE_NEWSLETTER_SUCCESS
+ 
     })
     
-    export const subscribeNews = (email) => (dispatch) => {
-    
+    export const subscribeNews = (data) => (dispatch) => {
+        console.log('email is', data)
         request
-            .post(`${baseUrl}/subscribes`)
-            .send(email)
-            .then(response => {
-                dispatch(subscribeNewsSucces(response.body))
+            .post(`${baseUrl}/api/v0/mailinglist/subscription/`)
+            .send({email: data})
+            .then(() => {
+                dispatch(subscribeNewsSucces())
             })
             .catch(console.error)
     }
