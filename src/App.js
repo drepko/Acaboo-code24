@@ -23,11 +23,11 @@ class App extends Component {
       <Router>
         {/* the div below is equivalent to the "body" element - note for Jewel */}
         <div className="App"> 
-          <div className="App-content">
-            <div className="App-header">
+          {/* <div className="App-content">
+            <div className="App-header"> */}  
+            {/* </div> */}
+            {/* <div className="App-main"> */}
               <Topbar/>
-            </div>
-            <div className="App-main">
               <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
               {/* <Route exact path="/courses" component={FindCourseContainer} /> */}
               <Route exact path="/universities" component={UniversityPageContainer} />
@@ -43,12 +43,13 @@ class App extends Component {
               <Route exact path="/verify/:uid/:token" component={ActivationContainer} />
               <Route exact path="/highlights" component={CoursePageContainer} />
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
-            </div>
-            <div className="App-footer">
               <Footer />
             </div>
-          </div>
-        </div>
+            {/* <div className="App-footer"> */}
+              {/* <Footer /> */}
+            {/* </div> */}
+          {/* </div> */}
+        {/* </div> */}
       </Router>
     );
   }
