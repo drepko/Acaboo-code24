@@ -10,13 +10,14 @@ const updateCourses = courses => ({
 })
 
 export const getCourses = (studyId) => (dispatch) => {
-  console.log(studyId, 'study id')
   request
     .get(`${baseUrl}/api/v0/course/?study=${studyId}`)
     .then(result => {
       dispatch(updateCourses(JSON.parse(result.text)))
     })
-    .catch(err => console.error(err))
+    .catch(err => {
+      console.error(err)
+    })
 }
 
 const highLightsFetched = courses => ({
