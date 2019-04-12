@@ -35,24 +35,20 @@ class LandingsPageContainer extends React.Component {
           </div>
 
           <div className="section_1_2 section_search_image">
-            <img alt="search_image" className="search_image_1" src={home_lamp_img} />
-
-
+            <img className="search_image_1" src={desklamp} />
           </div>
 
         </div>
 
         <div className="section_2 section_university_logos">
           <div className="hu_logo">
-
-            <img alt="home_hva_logo_large" className="home_hva_logo_large" src={home_hva_logo} />
+            <img className="home_hva_logo_large" src={Universiteit_Leiden} />
           </div>
           <div className="hu_logo">
-            <img alt="home_hva_logo_large" className="home_hva_logo_large" src={home_hva_logo} />
+            <img className="home_hva_logo_large" src={UvA} />
           </div>
           <div className="hu_logo">
-            <img alt="home_hva_logo_large" className="home_hva_logo_large" src={home_hva_logo} />
-
+            <img className="home_hva_logo_large" src={Universiteit_Leiden} />
           </div>
         </div>
 
@@ -67,7 +63,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="section_4 section_coursedashboard">
-          <img alt="cd_image" className="cd_image_1" src={home_studydashboard} />
+          <img className="cd_image_1" src={home_studydashboard} />
         </div>
 
         <div className="section_5 section_about_us" >
@@ -98,8 +94,7 @@ class LandingsPageContainer extends React.Component {
           </div>
 
           <div className="section_5_2">
-            <img alt="section_5_image" className="section_5_2_image" src={home_man_walking} />
-
+            <img className="section_5_2_image" src={man_handshake} />
           </div>
 
         </div>
@@ -131,8 +126,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="section_9 section_image_people">
-          <img alt="ip_image" className="ip_image_1" src={home_people} />
-
+          <img className="ip_image_1" src={people} />
         </div>
 
         <div className="section_10 section_start_studying">

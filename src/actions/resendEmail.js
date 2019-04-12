@@ -12,6 +12,7 @@ export const resendEmail = (email) => (dispatch) => {
     .post(`${baseUrl}/api/v0/auth/users/resend/`)
     .send({email})
     .then(() => {
+        console.log("Email resend")
       dispatch(resendEmailSucces())
     })
     .catch(err => console.error(err))

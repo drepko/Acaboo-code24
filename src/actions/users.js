@@ -43,12 +43,14 @@ export const login = (data, history) => (dispatch) => {
       return result.body
     })
     .then((result) => {
+      console.log(result)
       request
       .get(`${baseUrl}/api/v0/auth/me`)
       .set({Authorization: `Token ${result.auth_token}`})
       .then((result) => {
+        console.log(result.body)
         dispatch(setCurrentUser(result.body))
-        history.push('/dashboard')
+        history.push('/')
       })
     })
     .catch(err => {
