@@ -20,7 +20,7 @@ class LandingsPageContainer extends React.Component {
     return (
       <div className="main">
 
-        <div className="flex-row jc-between">
+        <div className="flex-row jc">
           <div className="flex-column">
             <div>
                 <h1>The best way to <br />study for your exam</h1>
