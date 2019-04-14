@@ -37,12 +37,20 @@ class CoursePageContainer extends PureComponent {
         this.props.history.push(`/course/${event.target.value}/subscribe`)
     }
 
+    checkCurrentUser = () => {
+        if (this.props.currentUser === null) {
+            this.props.history.push('/signup')
+        } else {
+            this.props.history.push('/reviewpurchase')
+        }
+    }
+
     renderCourses = (courses) => {
         return (
             <div>
                 {this.props.selectedCourses.length > 0 &&
                     <div><Cart selectedCourses={this.props.selectedCourses} />
-                        <button>Checkout</button>
+                        <button onClick={this.checkCurrentUser}>Checkout</button>
                     </div>
                 }
 
@@ -77,7 +85,8 @@ class CoursePageContainer extends PureComponent {
 const mapStateToProps = state => ({
     courses: state.courses,
     study: state.selectedStudy,
-    selectedCourses: state.selectedCourses
+    selectedCourses: state.selectedCourses,
+    currentUser: state.currentUser,
 })
 
 export default withRouter(connect(mapStateToProps, { getCourses, getHighLights, selectCourse })(CoursePageContainer))
