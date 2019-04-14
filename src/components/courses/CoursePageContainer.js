@@ -3,9 +3,9 @@ import Course from './Course'
 import { connect } from 'react-redux'
 import { getCourses } from '../../actions/courses'
 import CourseFilterbar from './CourseFilterbar'
-import {getHighLights} from '../../actions/courses'
-import {withRouter} from 'react-router'
-import {selectCourse} from '../../actions/paymentFlow'
+import { getHighLights } from '../../actions/courses'
+import { withRouter } from 'react-router'
+import { selectCourse } from '../../actions/paymentFlow'
 import Cart from './Cart'
 
 
@@ -18,7 +18,7 @@ class CoursePageContainer extends PureComponent {
     }
 
     componentDidUpdate = (prevProps) => {
-        if(prevProps.study !== this.props.study) {
+        if (prevProps.study !== this.props.study) {
             this.props.getCourses(this.props.study.id)
         }
     }
@@ -27,7 +27,10 @@ class CoursePageContainer extends PureComponent {
         const course = this.props.courses.find((course) => {
             return course.id === Number(event.target.value)
         })
-        this.props.selectCourse(course)          
+        if (!this.props.selectedCourses.includes(course)) {
+            this.props.selectCourse(course)
+        }
+
     }
 
     subscribe = (event) => {
@@ -37,22 +40,22 @@ class CoursePageContainer extends PureComponent {
     renderCourses = (courses) => {
         return (
             <div>
-            {this.props.selectedCourses.length > 0 && 
-            <div><Cart selectedCourses={this.props.selectedCourses}/> 
-            <button>Checkout</button>
-            </div>
-            }    
+                {this.props.selectedCourses.length > 0 &&
+                    <div><Cart selectedCourses={this.props.selectedCourses} />
+                        <button>Checkout</button>
+                    </div>
+                }
 
-            {courses.map((course, index) => {
-                return (
-                    <div>
-                    <Course
-                        key={index}
-                        course={course}
-                        signUp={course.provided ? this.signUp : this.subscribe}/>
-                    </div>    
-                )
-            })}
+                {courses.map((course, index) => {
+                    return (
+                        <div>
+                            <Course
+                                key={index}
+                                course={course}
+                                signUp={course.provided ? this.signUp : this.subscribe} />
+                        </div>
+                    )
+                })}
             </div>
         )
     }
@@ -65,7 +68,7 @@ class CoursePageContainer extends PureComponent {
 
         return (
             <div>
-                <CourseFilterbar history={this.props.history}/>
+                <CourseFilterbar history={this.props.history} />
                 {this.renderCourses(courses)}
             </div>)
     }
