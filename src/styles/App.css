@@ -14,7 +14,19 @@ div {
   -webkit-align-items: center;
   margin-bottom: 10px;
   max-width: 100%;
-  max-height: 100%
+  max-height: 100%;
+}
+
+.main-small div {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  margin-bottom: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  border: thin #545B5E
 }
 
 form {
@@ -34,12 +46,13 @@ select {
   height: 165px;
 }
 
-/* .left {
-  align-self: flex-start;
-} */
+.medium-div {
+  width: 40%
+}
 
 .right {
-  align-self: flex-end
+  align-self: flex-end;
+  margin: 20px
 }
 
 .flex-row {
@@ -110,6 +123,12 @@ select {
 .text-med {
   font-size: 45px
 }
+
+.text-med-left {
+  font-size: 45px;
+  text-align: start
+}
+
 .text-small {
   font-size: 10px
 }
