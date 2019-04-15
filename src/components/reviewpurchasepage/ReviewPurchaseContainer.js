@@ -58,11 +58,15 @@ class ReviewPurchaseContainer extends PureComponent {
 
 				<p>****************</p>
 				{
-					selectedCourses &&
-					<h3>Total price: €{selectedCourses.map(course => course.price).reduce((a, b) => a+b)}</h3>
-				}
+					!selectedCourses ?
 
+					<p>Your cart is empty</p> :
+
+					<h3>Total price: €{selectedCourses.map(course => course.price).reduce((a, b) => a + b, 0)}</h3>
+				}
 				<button onClick={this.handleClick}>Add another course</button>
+				
+				<p></p><br /> {/* adding a blank line, I know this is not smart but who cares? */}
 				
 				<p>****************</p>
                 <h2>Payment</h2>
