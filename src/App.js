@@ -8,7 +8,6 @@ import LandingsPageContainer from './components/homepage/LandingsPageContainer'
 import Footer from './components/layout/Footer'
 import UniversityPageContainer from './components/homepage/UniversityPageContainer'
 import SignupPageContainer from './components/signup/SignupPageContainer'
-import LoginPageContainer from './components/login/LoginPageContainer'
 import CareersPageContainer from './components/careers/CareersPageContainer'
 import FAQPageContainer from './components/faq/FAQPageContainer'
 import MessageContainer from './components/contact/MessageContainer'
@@ -18,6 +17,8 @@ import ActivationContainer from './components/activation/ActivationContainer'
 import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurchaseContainer';
 import JobDetailPage from './components/careers/JobDetailPage'
 import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
+import LoginFormContainer from './components/login/LoginFormContainer';
+import FormExample from './components/login/Test';
 
 class App extends Component {
   render() {
@@ -30,7 +31,7 @@ class App extends Component {
               <Route exact path="/universities" component={UniversityPageContainer} />
               <Route exact path="/" component={LandingsPageContainer} />
               <Route exact path="/about" component={AboutPageContainer} />
-              <Route exact path="/login" component={LoginPageContainer} />
+              <Route exact path="/login" component={LoginFormContainer} />
               <Route exact path="/signup" component={SignupPageContainer} />
               <Route exact path="/careers" component={CareersPageContainer} />
               <Route exact path="/faq" component={FAQPageContainer} />
@@ -42,6 +43,7 @@ class App extends Component {
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
               <Route exact path="/jobdetails" component={JobDetailPage} />
               <Route exact path="/dashboard" component={UserDashboardContainer} />
+              <Route exact path="/test" component={FormExample} />
               <Footer />
             </div>
       </Router>

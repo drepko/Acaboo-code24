@@ -2,6 +2,10 @@
   padding-right: 25px;
 }
 
+.form-group .col-form-label {
+    display: none;
+}
+
 .password-image {
   width: 20px;
   height: auto;

@@ -16,17 +16,28 @@ export default class CourseFilter extends Component {
 
     renderStudyOptions = () => {
         const { studies } = this.props
-        if (studies && studies.length > 0) {
-            return (
-
-                <select onChange={this.props.handleStudySelect}>
-                    <option value="" disabled selected>Study</option>
-                    {this.props.studies.map((studie) => {
-                        return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
-                    })}
-                </select>
-            )
-        }
+        return (
+            
+            studies === null ?
+            <div className="select_option">
+                <div >
+                    <select disabled>
+                        <option value="" disabled selected>First select your university</option>
+                    </select><br/>
+                </div>
+            </div>
+                :
+            <div className="select_option">
+                <div>
+                    <select onChange={this.props.handleStudySelect}>
+                        <option value="" disabled selected>Select your study...</option>
+                            {this.props.studies.map((studie) => {
+                                return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
+                            })}
+                    </select><br/>
+                </div>
+            </div>
+        )
     }
 
     render() {
