@@ -6,8 +6,10 @@ import { subscribeCourse } from '../../actions/subscribe'
 class EmailWhenAvailable extends PureComponent {
     state = {
         email: '',
+        message: 'Let me know when available'
     }
 
+     
     onChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
@@ -21,6 +23,7 @@ class EmailWhenAvailable extends PureComponent {
 
         this.setState({
             email: '',
+            message: 'Thanks for your subscription!'
         })      
     }
 
@@ -28,7 +31,7 @@ class EmailWhenAvailable extends PureComponent {
         return (
             <div>
             <h1>Oops! We don’t offer your course yet!</h1>
-            <p>Let me know when available</p>
+            <p>{this.state.message}</p>
             <EmailForm
                 onSubmit={this.onSubmit}
                 onChange={this.onChange}
