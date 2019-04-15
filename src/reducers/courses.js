@@ -5,7 +5,7 @@ export default (state = null, { type, payload }) => {
     case UPDATE_COURSES:
       return payload
     case GET_HIGHLIGHTS:
-    return payload      
+      return payload
     default:
       return state
   }
