@@ -8,8 +8,7 @@ class EmailWhenAvailable extends PureComponent {
         email: '',
         message: 'Let me know when available'
     }
-
-     
+    
     onChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
@@ -27,6 +26,10 @@ class EmailWhenAvailable extends PureComponent {
         })      
     }
 
+    backToCourses = () => {
+        this.props.history.goBack()
+    }
+
     render() {
         return (
             <div>
@@ -37,6 +40,7 @@ class EmailWhenAvailable extends PureComponent {
                 onChange={this.onChange}
                 formValues={this.state}
             />
+            <button onClick = {this.backToCourses}>Back to courses</button>
             
             </div>)
     }
