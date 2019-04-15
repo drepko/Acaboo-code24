@@ -5,6 +5,7 @@ import OpenPosition from './OpenPosition'
 import LifeComponent from './LifeAt'
 import {home_man_walking} from '../../images/imagelinks'
 import '../../styles/CareersPageContainer.css'
+import AboutUsButton from '../about/AboutUsButton'
 
 
 class CareersPageContainer extends React.Component {
@@ -20,8 +21,7 @@ class CareersPageContainer extends React.Component {
         <div className="life_at">
             <img alt="home_man_walking" className="home_man_walking" src={home_man_walking} />
           </div>
-          <h1>Reimagine education with us</h1>
-          <Link to="/about"><button>Learn more about Acaboo</button></Link>
+          <AboutUsButton/>
       </div>
     )
   }
