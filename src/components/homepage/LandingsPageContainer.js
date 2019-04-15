@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
-import '../../styles/LandingsPageContainer.css'
 import desklamp from '../../images/mock-ups/deskLamp.png'
 import Universiteit_Leiden from '../../images/universities/Universiteit_Leiden.png'
 import UvA from '../../images/universities/UvA.png'
@@ -14,121 +13,107 @@ import {
 
 import BrowseCourse from './BrowseCourse'
 import Testimonial from './Testimonial'
+
 class LandingsPageContainer extends React.Component {
 
   render() {
     return (
       <div className="main">
 
-        <div className="section_1 section_search">
-
-          <div className="section_1_1 section_search_box">
-
-            <div className="section_1_1_1 section_search_text">
-              <h1>The best way to <br />study for your exam</h1>
-              <p>Sed ut perspiciatis unde omnis iste natus <br />error sit voluptatem accusantium.</p>
+        <div className="flex-row jc">
+          <div className="flex-column">
+            <div>
+                <h1>The best way to <br />study for your exam</h1>
+                <p>Sed ut perspiciatis unde omnis iste natus <br />error sit voluptatem accusantium.</p>
             </div>
 
-            <div className="section_1_1_2 section_search_form">
-              <FindCourseContainer history={this.props.history} />
+            <div>
+                <FindCourseContainer history={this.props.history} />
             </div>
           </div>
 
-          <div className="section_1_2 section_search_image">
-            {/* <img alt="desklamp" className="search_image_1" src={desklamp} /> */}
+          <div>
+            <img alt="image" className="image-lg" src={desklamp} />
           </div>
+        </div>
+        
 
+        <div className="flex-column jc">
+          <h6>TRUSTED BY STUDENTS FROM:</h6>
+          <div className="flex-row jc logo-p">
+            <img alt="hva_logo" className="logo-p" src={Universiteit_Leiden} />
+            <img alt="hva_logo" className="logo-p" src={UvA} />
+            <img alt="hva_logo" className="logo-p" src={Universiteit_Leiden} />
+          </div>
         </div>
 
-        {/* <div className="section_2 section_university_logos">
-          <div className="hu_logo">
-            <img alt="hva_logo" className="home_hva_logo_large" src={Universiteit_Leiden} />
-          </div>
-          <div className="hu_logo">
-            <img alt="hva_logo" className="home_hva_logo_large" src={UvA} />
-          </div>
-          <div className="hu_logo">
-            <img alt="hva_logo" className="home_hva_logo_large" src={Universiteit_Leiden} />
-          </div>
-        </div> */}
-
-        <div className="section_3 section_study_more">
-          <div className="section_3_1">
+        <div className="text-center">
             <h1>Study more efficiently with Acaboo.</h1>
-          </div>
-          <div className="section_3_2">
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
-          </div>
         </div>
 
-        {/* <div className="section_4 section_coursedashboard">
-          <img alt="cd_image" className="cd_image_1" src={home_studydashboard} />
-        </div> */}
+        <div className="">
+          <img alt="image" className="image-lg" src={home_studydashboard} />
+        </div>
 
-        <div className="section_5 section_about_us" >
+        <div className="flex-row" >
 
-          <div className="section_5_1">
+          <div className="flex-column align-start">
 
-            <div className="section_5_1_1 about_us_1">
+            <div className="text-box-lg">
               <h1>About Acaboo</h1>
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
               <Link to="/about">Learn more &#8594;</Link>
             </div>
-
-            <div className="section_5_1_2">
-              <div className="section_5_1_2_1">
-                <h4>Feature 1</h4>
-                <p>  Sed ut perspiciatis unde omnis iste <br />
-                  natus error sit voluptatem<br />
-                  accusantium.</p>
-              </div>
-              <div className="section_5_1_2_2">
-                <h4>Feature 2</h4>
-                <p>  Sed ut perspiciatis unde omnis iste <br />
-                  natus error sit voluptatem <br />
-                  accusantium.</p>
-              </div>
+            <div className="text-box-med">
+              <h4>Feature 1</h4>
+              <p>  Sed ut perspiciatis unde omnis iste <br />
+                natus error sit voluptatem<br />
+                accusantium.</p>
             </div>
+            <div className="text-box-med">
+              <h4>Feature 2</h4>
+              <p>  Sed ut perspiciatis unde omnis iste <br />
+                natus error sit voluptatem <br />
+                accusantium.</p>
+            </div>
+            
 
           </div>
 
-          {/* <div className="section_5_2">
-            <img alt="section_5_image" className="section_5_2_image" src={man_handshake} />
-          </div> */}
+          <div className="section_5_2">
+            <img alt="image" className="image-med" src={man_handshake} /> 
+          </div> 
 
         </div>
-
-       
-
 
         <BrowseCourse/>
+
         <Testimonial />
 
-        <div className="section_8 section_focus">
-          <div className="section_8_1">
-            <h1>Too much distraction, no focus? </h1>
-          </div>
-          <div className="section_8_2">
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-          </div>
+        <div className="text-center">
+          <h1>Too much distraction, no focus? </h1>
+          <p className="font-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
         </div>
 
-        {/* <div className="section_9 section_image_people">
-          <img alt="ip_image" className="ip_image_1" src={people} />
-        </div> */}
-
-        <div className="section_10 section_start_studying">
-          <div className="section_10_1">
-            <h1>Start studying with Acaboo.</h1>
-          </div>
-          <div className="section_10_2">
-            <Link to="/highlights"><button className="btn_white">Browse courses</button></Link>
-            <Link to="/about"><button className="btn_blue">Learn More</button></Link>
-          </div>
+      <div className="section_9 section_image_people">
+          <img alt="image" className="image-lg" src={people} />
         </div>
 
-      </div>)
+        <div className="text-center">
+          <h1 className="text-med">Start studying with Acaboo.</h1>
+          <div className="flex-row jc">
+            <div>
+            <Link to="/highlights"><button className="btn-white-med">Browse courses</button></Link>
+            </div>
+            <div>
+            <Link to="/about"><button className="btn-blue-med">Learn More</button></Link>  
+            </div>
+          </div>
+          <p>Add some helper text here to explain the finer details of your product or service.</p>
+        </div>
+    </div>)
   }
 }
 

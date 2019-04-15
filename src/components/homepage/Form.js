@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import '../../styles/Form.css'
-
 
 export default class Course extends Component {
 
@@ -19,7 +17,6 @@ export default class Course extends Component {
     renderStudyOptions = () => {
         const { studies } = this.props
         return (
-            
             studies === null ?
             <div className="select_option">
                 <div >
@@ -45,11 +42,13 @@ export default class Course extends Component {
     render() {
         const { study } = this.props
         return (
-            <div>
+            <div >
                 <form onSubmit={this.props.onSubmit}>
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}
-                    {study && study.name !== null && <input type="submit" value="Find your course" />}
+                    {/* {study && study.name !== null &&  */}
+                    <input type="submit" value="Find your course" className="btn-blue-lg"/>
+                    {/* } */}
                 </form>
             </div>
         )

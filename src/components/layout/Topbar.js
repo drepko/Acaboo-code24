@@ -28,7 +28,7 @@ class TopBar extends Component {
                         <Nav.Link href="/login">Login</Nav.Link>}
 
                     {currentUser === null && 
-                        <Nav.Link href="/singup">Sign up</Nav.Link>}
+                        <Nav.Link href="/signup">Sign up</Nav.Link>}
 
                     {currentUser !== null && 
                         <Nav.Link href="/" onClick={() => { this.props.logout()}}>Logout</Nav.Link>}
@@ -43,7 +43,7 @@ class TopBar extends Component {
 }
 
 const mapStateToProps = state => ({
-    currentUser: state.currentUser
+    currentUser: state.currentUser,
 })
 
 export default withRouter(

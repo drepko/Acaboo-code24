@@ -50,7 +50,7 @@ class SignupPage extends PureComponent {
 
 		return (
 			<div>
-				<ProgressBar  />
+				<ProgressBar/>
 				<h3>Sign up</h3>
 				<SignupForm handleTermsChange={this.handleTermsChange} handleChange={this.handleChange} showPassword={this.showPassword} state={this.state} handleSubmit={this.handleSubmit} />
 			</div>
