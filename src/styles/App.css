@@ -31,6 +31,8 @@ in order to make the navigation-bar and footer full-width */
   max-height: 100vh;
 }
 
+
+/* add padding to the side or top of an element */
 .padding-side {
   padding-left: 10%;
   padding-right: 10%;
@@ -40,6 +42,7 @@ in order to make the navigation-bar and footer full-width */
   padding-top: 10%
 }
 
+/* flex direction */
 .flex-row {
   flex-direction: row;
 }
@@ -103,6 +106,7 @@ select {
   height: 5vh;
   color: #666666;
   align-self: flex-start;
+  border: thin #666666
 }
 
 /* select, option {
@@ -176,8 +180,8 @@ select {
 }
 
 .image-small {
-  max-width: 30%;
-  max-height: 30%;
+  max-width: 20vw;
+  max-height: 20vh;
   overflow: hidden;
 }
 
@@ -206,6 +210,16 @@ select {
   font-size: 3vw;
   color: #333333;
   text-align: start
+}
+
+.text-med-grey {
+  font-size: 1.5vw;
+  color: #666666;
+}
+
+.text-med-black {
+  font-size: 1.5vw;
+  color: #2F2E41;
 }
 
 .text-sm-grey {
@@ -259,6 +273,14 @@ select {
   border-radius: 10px;
   width: 220px;
   height: 70px
+}
+
+.btn-blue-xl {
+  color: #FFFFFF;
+  background-color: #2D66F6;
+  border-radius: 10px;
+  width: 35vw;
+  height: 5vh;
 }
 
 .btn-white-med {

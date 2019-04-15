@@ -42,7 +42,7 @@ export default class Course extends Component {
                         onSubmit={this.props.onSubmit}>
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}
-                    {study && study.name !== null && <input type="submit" value="Find your course" className="btn-blue-lg"/>}
+                    {study && study.name !== null && <input type="submit" value="Find your course" className="btn-blue-xl"/>}
                 </form>
             </div>
         )
