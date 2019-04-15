@@ -1,26 +1,21 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+//import '../../styles/App.css';
+
 
 
 export default class BrowseCourse extends Component {
   render() {
     return (
-      <div className ="join-us-main">
-         <div className="section_6 section_start_studying" >
-          <div className="section_6_1">
-            <div>
+      <div> 
+          <div className="large flex-row jc-between bg-blue">
               <h1>Start studying with Acaboo</h1>
-            </div>
-            <div>
-              <Link to="/highlights"><button className="btn_blue">Browse courses</button></Link>
-            </div>
+              <Link to="/highlights"><button className="btn-white-lg">Browse courses</button></Link>
           </div>
-          <div className="login-link">
-            <p>Already using Acaboo?<Link to='/logins'>Log In</Link> </p>
-          </div>
-          
-        </div>
 
+          <div className="right font-grey">
+            <p>Already using Acaboo? <Link to='/logins'>Log In</Link> </p>
+          </div>
       </div>
     )
   }

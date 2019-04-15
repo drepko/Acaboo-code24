@@ -9,7 +9,7 @@ export default class SignupForm extends PureComponent {
 		const { handleSubmit, handleChange, state, showPassword, handleTermsChange } = this.props
 
 		return (
-			<div className="signup-form">
+			<div className="main">
 				<form onSubmit={handleSubmit}>
 
 					<input placeholder="First Name" type="text" name="first_name" value={
@@ -31,12 +31,12 @@ export default class SignupForm extends PureComponent {
 					<input className="password-field" placeholder="Password" type={state.showPassword ? "text" : "password"} name="password" value={
 						state.formValues.password || ''
 					} onChange={handleChange} />
-					<img alt="hide-show-password" onClick={showPassword} src={state.showPassword === false ? hide : show} className="password-image" />
+					<img alt="hide-show-password" onClick={showPassword} src={state.showPassword === false ? hide : show} className="password-image image-xsmall" />
 
 					<input className="password-field" placeholder="Confirm Password" type={state.showPassword ? "text" : "password"} name="confirmPassword" value={
 						state.formValues.confirmPassword || ''
 					} onChange={handleChange} />
-					<img alt="hide-show-password" onClick={showPassword} src={state.showPassword === false ? hide : show} className="password-image" />
+					<img alt="hide-show-password" onClick={showPassword} src={state.showPassword === false ? hide : show} className="password-image image-xsmall" />
 
 					{
 						state.formValues.password &&
