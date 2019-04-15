@@ -2,7 +2,7 @@ import React from 'react'
 import {mission_man_sitting}  from  '../../images/imagelinks'
 import { Link } from "react-router-dom";
 import LifeAtAcaboo from './LifeAt'
-
+import AboutUsButton from '../about/AboutUsButton'
 class JobDetailPage extends React.Component {
   
     render() {
@@ -42,8 +42,7 @@ class JobDetailPage extends React.Component {
            <LifeAtAcaboo/>
 
            <div className = "about-us-job" >
-              <h2>Reimagine education with us</h2>
-              <Link to ='/about'><button>Learn more about our culture</button></Link>
+              <AboutUsButton/>
            </div>
         </div>
       )
