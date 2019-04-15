@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
-import desklamp from '../../images/mock-ups/deskLamp.png'
+import woman_desk from '../../images/mock-ups/woman_desk.png'
 import Universiteit_Leiden from '../../images/universities/Universiteit_Leiden.png'
 import UvA from '../../images/universities/UvA.png'
 import man_handshake from'../../images/mock-ups/man_handshake.png'
@@ -20,8 +20,8 @@ class LandingsPageContainer extends React.Component {
     return (
       <div className="main">
 
-        <div className="flex-row jc">
-          <div className="flex-column">
+        <div className="flex-row jc align-top">
+          <div className="flex-column half-width">
             <div>
                 <h1>The best way to <br />study for your exam</h1>
                 <p>Sed ut perspiciatis unde omnis iste natus <br />error sit voluptatem accusantium.</p>
@@ -32,8 +32,8 @@ class LandingsPageContainer extends React.Component {
             </div>
           </div>
 
-          <div>
-            <img alt="image" className="image-lg" src={desklamp} />
+          <div className="half-width">
+            <img alt="image" className="image-lg" src={woman_desk} />
           </div>
         </div>
         

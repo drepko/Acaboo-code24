@@ -5,7 +5,7 @@ import "../../styles/App.css"
 export default function Course(props) {
 
         return (
-            <div className="main-small">
+            <div className="main border-thin-grey">
                 <div className="flex-row jc-between">
                     <div>
                         <img className="image-large" alt={props.course.name} src={`${baseUrl}${props.course.image}`} />
