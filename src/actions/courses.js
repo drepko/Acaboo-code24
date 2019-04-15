@@ -3,6 +3,7 @@ import { baseUrl } from '../constants'
 
 export const UPDATE_COURSES = 'UPDATE_COURSES'
 export const GET_HIGHLIGHTS = 'GET_HIGHLIGHTS'
+export const DELETE_COURSE = 'DELETE_COURSE'
 
 const updateCourses = courses => ({
   type: UPDATE_COURSES,
@@ -23,7 +24,7 @@ const highLightsFetched = courses => ({
   payload: courses
 })
 
-export const getHighLights = () =>(dispatch) => {
+export const getHighLights = () => (dispatch) => {
   request
     .get(`${baseUrl}/api/v0/course/highlights`)
     .then(result => {
@@ -32,3 +33,11 @@ export const getHighLights = () =>(dispatch) => {
     .catch(err => console.error(err))
 }
 
+const removeCourse = id => ({
+  type: DELETE_COURSE,
+  payload: id
+})
+
+export const deleteCourse = course => (dispatch) => {
+  dispatch(removeCourse(course))
+}

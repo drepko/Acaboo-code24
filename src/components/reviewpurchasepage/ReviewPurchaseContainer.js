@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import ProgressBar from '../layout/ProgressBar'
 import courses from '../../reducers/courses'
-import { baseUrl } from '../../constants';
+import { baseUrl } from '../../constants'
+import { deleteCourse } from '../../actions/courses'
 
 class ReviewPurchaseContainer extends PureComponent {
 	constructor(props) {
@@ -14,6 +15,11 @@ class ReviewPurchaseContainer extends PureComponent {
 		e.preventDefault()
 		this.props.history.push("highlights");
 	}
+
+	onDelete = (event) => {
+		const course = this.props.selectedCourses.find(course => course.id === Number(event.target.value))
+		this.props.deleteCourse(course)
+	}	
 
 	render() {
 		const {first_name, last_name, email, phone_number} = this.props.currentUser.credentials
@@ -44,14 +50,19 @@ class ReviewPurchaseContainer extends PureComponent {
 								Course name: {course.name} <br />
 								Price: €{course.price} <br />
 								<img alt={course.id} src={`${baseUrl}${course.image}`}/>
+								<button onClick={this.onDelete} value={course.id}>Remove this course</button> <br />
 							</p>
 						)
 					)	
 				}
-				<h3>Total price: €{selectedCourses.map(course => course.price).reduce((a, b) => a+b)}</h3>
+
+				<p>****************</p>
+				{
+					selectedCourses &&
+					<h3>Total price: €{selectedCourses.map(course => course.price).reduce((a, b) => a+b)}</h3>
+				}
 
 				<button onClick={this.handleClick}>Add another course</button>
-				<button>Remove selected course(s) (no logic yet)</button> <br />
 				
 				<p>****************</p>
                 <h2>Payment</h2>
@@ -68,4 +79,4 @@ const mapStateToProps = state => {
 	}
 }
 
-export default connect(mapStateToProps)(ReviewPurchaseContainer)
+export default connect(mapStateToProps, { deleteCourse })(ReviewPurchaseContainer)
