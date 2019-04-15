@@ -4,7 +4,6 @@ import "../../styles/App.css"
 
 export default function Course(props) {
 
-    console.log("PROVIDED" ,props.course.provided)
 if(props.course.provided){
         return (<div className="main-small">
                 <div className="flex-row jc-between">
