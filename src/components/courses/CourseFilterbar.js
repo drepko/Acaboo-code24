@@ -5,6 +5,7 @@ import { getStudies, setSelectedStudy } from '../../actions/studies'
 import {getCourses} from '../../actions/courses'
 import Filter from './CourseFilter'
 
+
 class CourseFilter extends PureComponent {
 
     constructor(props) {
@@ -38,12 +39,14 @@ class CourseFilter extends PureComponent {
              await this.props.setSelectedStudy(this.state.study)
              this.props.history.push(`/courses/${this.state.university.name}/${this.state.study.name}`)
 
-            
-
     }
 
 
     render() {
+        let selectedUniversity = this.props.selectedUniversity
+        let selectedStudy = this.props.selectedStudy
+
+       
         return this.props.universities === null ? <p>Loading ...</p> :
             <Filter
                 handleUniversitySelect={this.handleUniversitySelect}
@@ -52,6 +55,8 @@ class CourseFilter extends PureComponent {
                 university={this.state.university}
                 study={this.state.study}
                 studies={this.props.studies}
+                selectedStudy = {selectedStudy}
+                selectedUniversity = {selectedUniversity}
             />
     }
 }

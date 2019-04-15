@@ -7,6 +7,7 @@ import { getHighLights } from '../../actions/courses'
 import { withRouter } from 'react-router'
 import { selectCourse } from '../../actions/paymentFlow'
 import Cart from './Cart'
+import queryString from 'query-string';
 
 
 class CoursePageContainer extends PureComponent {
@@ -82,13 +83,21 @@ class CoursePageContainer extends PureComponent {
 
     render() {
 
+        let url = this.props.location.pathname
+        let  array = url.split('/')
+        let selectedUniversity = array[2]
+        let selectedStudy = array[3]
+
+
         const { courses } = this.props
 
         if (courses === null) return <p>Loading...</p>
 
         return (
             <div>
-                <CourseFilterbar history={this.props.history} />
+                <CourseFilterbar history={this.props.history}
+                 selectedUniversity = {selectedUniversity}
+                 selectedStudy = {selectedStudy} />
                 {this.renderCourses(courses)}
             </div>)
     }

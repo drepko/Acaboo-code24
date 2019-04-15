@@ -5,7 +5,7 @@ export default class CourseFilter extends Component {
 
     renderUniversityOptions = () => {
         return (
-            <select onChange={this.props.handleUniversitySelect}>
+            <select value = {this.props.selectedUniversity}onChange={this.props.handleUniversitySelect}>
                 <option value="" disabled selected>University/Hogeschool</option>
                 {this.props.universities.map((university) => {
                     return <option key={university.id} id={university.id} value={university.name}>{university.name}</option>
@@ -19,7 +19,7 @@ export default class CourseFilter extends Component {
         if (studies && studies.length > 0) {
             return (
 
-                <select onChange={this.props.handleStudySelect}>
+                <select value = {this.props.selectedStudy} onChange={this.props.handleStudySelect}>
                     <option value="" disabled selected>Study</option>
                     {this.props.studies.map((studie) => {
                         return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
