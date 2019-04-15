@@ -74,37 +74,36 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="flex-row" >
+       
+          <div className="flex-column ai-start small-width">
 
-          <div className="flex-column ai-start">
-
-            <div className="text-box-lg">
-              <h1>About Acaboo</h1>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-              <Link to="/about">Learn more &#8594;</Link>
+            <div className="">
+              <p className="text-med-black">About Acaboo</p>
+              <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+              <Link to="/about" className="text-med">Learn more &#8594;</Link>
             </div>
             <div className="text-box-med">
-              <h4>Feature 1</h4>
-              <p>  Sed ut perspiciatis unde omnis iste <br />
+              <p className="text-sm-black">Feature 1</p>
+              <p className="text-sm-grey">  Sed ut perspiciatis unde omnis iste <br />
                 natus error sit voluptatem<br />
                 accusantium.</p>
             </div>
             <div className="text-box-med">
-              <h4>Feature 2</h4>
-              <p>  Sed ut perspiciatis unde omnis iste <br />
+              <p className="text-sm-black">Feature 2</p>
+              <p className="text-sm-grey">  Sed ut perspiciatis unde omnis iste <br />
                 natus error sit voluptatem <br />
                 accusantium.</p>
             </div>
-            
-
+          
           </div>
 
-          <div className="section_5_2">
-            <img alt="image" className="image-med" src={man_handshake} /> 
+          <div className="med-width">
+            <img alt="image" className="image-lg" src={man_handshake} /> 
           </div> 
 
         </div>
 
-        {/* <BrowseCourse/> */}
+        <BrowseCourse/>
 
         <Testimonial />
 
