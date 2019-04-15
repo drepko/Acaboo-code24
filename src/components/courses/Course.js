@@ -4,9 +4,9 @@ import "../../styles/App.css"
 
 export default function Course(props) {
 
-    console.log("PROVIDED" ,props.course.provided)
 if(props.course.provided){
-        return (<div className="main-small">
+        return (<div className="main border-thin-grey">
+
                 <div className="flex-row jc-between">
                     <div>
                         <img className="image-large" alt={props.course.name} src={`${baseUrl}${props.course.image}`} />

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
-import desklamp from '../../images/mock-ups/deskLamp.png'
+import woman_desk from '../../images/mock-ups/woman_desk.png'
 import Universiteit_Leiden from '../../images/universities/Universiteit_Leiden.png'
 import UvA from '../../images/universities/UvA.png'
 import man_handshake from'../../images/mock-ups/man_handshake.png'
@@ -20,46 +20,62 @@ class LandingsPageContainer extends React.Component {
     return (
       <div className="main">
 
-        <div className="flex-row jc">
-          <div className="flex-column">
-            <div>
-                <h1>The best way to <br />study for your exam</h1>
-                <p>Sed ut perspiciatis unde omnis iste natus <br />error sit voluptatem accusantium.</p>
-            </div>
+        <div className="flex-row fw jc ai-start-reverse">
 
-            <div>
+          <div className="flex-column half-width ai-start padding-top">
+
+            <div className="full-width ai-start">
+
+              <div className="full-width text-lg-black">
+                <p className="full-width"> Pass your exam with ease
+                </p>
+              </div>
+
+              <div className="full-width text-sm-grey">
+                <p className="full-width">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+                </p>
+              </div> 
+
+            </div>
                 <FindCourseContainer history={this.props.history} />
-            </div>
           </div>
 
-          <div>
-            <img alt="image" className="image-lg" src={desklamp} />
+          <div className="half-width">
+            <img alt="image" className="image-lg" src={woman_desk} />
           </div>
+
         </div>
         
 
-        <div className="flex-column jc">
-          <h6>TRUSTED BY STUDENTS FROM:</h6>
-          <div className="flex-row jc logo-p">
-            <img alt="hva_logo" className="logo-p" src={Universiteit_Leiden} />
-            <img alt="hva_logo" className="logo-p" src={UvA} />
-            <img alt="hva_logo" className="logo-p" src={Universiteit_Leiden} />
+        <div className="flex-column jc text-med-black">
+          <p>TRUSTED BY STUDENTS FROM:</p>
+          <div className="flex-row jc ai-start logo-p">
+            <div className="">
+              <img alt="uvl_logo" className="logo-p image-small" src={Universiteit_Leiden} />
+            </div>
+            <div>
+              <img alt="uva_logo" className="logo-p image-small" src={UvA} />
+            </div>
+            <div>
+              <img alt="hva_logo" className="logo-p image-small" src={Universiteit_Leiden} />
+            </div>
           </div>
         </div>
 
         <div className="text-center">
-            <h1>Study more efficiently with Acaboo.</h1>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
+            <p className="text-lg-black">Study more efficiently with Acaboo.</p>
+            <p className="text-med-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
         </div>
 
         <div className="">
-          <img alt="image" className="image-lg" src={home_studydashboard} />
+          <img alt="image" className="image-lg-overflow shadow" src={home_studydashboard} />
         </div>
 
         <div className="flex-row" >
 
-          <div className="flex-column align-start">
+          <div className="flex-column ai-start">
 
             <div className="text-box-lg">
               <h1>About Acaboo</h1>
@@ -88,7 +104,7 @@ class LandingsPageContainer extends React.Component {
 
         </div>
 
-        <BrowseCourse/>
+        {/* <BrowseCourse/> */}
 
         <Testimonial />
 
@@ -101,7 +117,7 @@ class LandingsPageContainer extends React.Component {
           <img alt="image" className="image-lg" src={people} />
         </div>
 
-        <div className="text-center">
+        {/* <div className="text-center">
           <h1 className="text-med">Start studying with Acaboo.</h1>
           <div className="flex-row jc">
             <div>
@@ -112,7 +128,7 @@ class LandingsPageContainer extends React.Component {
             </div>
           </div>
           <p>Add some helper text here to explain the finer details of your product or service.</p>
-        </div>
+        </div> */}
     </div>)
   }
 }

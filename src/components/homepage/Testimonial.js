@@ -13,7 +13,7 @@ export default class Testimonal extends Component {
             </h2>
           </div>
 
-          <div className="flex-row">
+          <div className="flex-row ai-start">
 
           <div className="font-grey">
             <p>“Saves me the hassle of studying. Acaboo does everything <br />everywhere.”</p>
