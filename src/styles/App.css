@@ -1,9 +1,27 @@
 /* styling body */
 
+
+/* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
+<<<<<<< Updated upstream
   /* border: solid black; */
   /* max-width: 100%;
   max-height: 100% */
+=======
+  border: solid black;
+}
+
+/* sets the page to have to padding left and right 
+in order to make the navigation-bar and footer full-width */
+.container-fluid {
+  padding-right:0px;
+  padding-left:0px;
+}
+
+/* add this class to set a shadow around an element (e.g. image)*/
+.shadow {
+  box-shadow: 0px 0px 30px #C4C4C4
+>>>>>>> Stashed changes
 }
 
 .main div {
@@ -37,6 +55,7 @@ div {
   border: thin #545B5E
 }
 
+<<<<<<< Updated upstream
 .align-top {
   align-items: flex-start;
 }
@@ -50,6 +69,13 @@ div {
 .select-small {
   align-items: flex-start
 }
+=======
+/* form {
+  margin: 20px;
+  width: 600px;
+  height: 750px
+} */
+>>>>>>> Stashed changes
 
 select, input {
   width: 400px;
@@ -96,8 +122,8 @@ select, input {
 /* image-size */
 
 .image-lg {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
   overflow: hidden;
 } 
 

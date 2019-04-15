@@ -54,7 +54,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="">
-          <img alt="image" className="image-lg" src={home_studydashboard} />
+          <img alt="image" className="image-lg shadow" src={home_studydashboard} />
         </div>
 
         <div className="flex-row" >
