@@ -1,9 +1,8 @@
 /* styling body */
 
-
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
-  /* border: solid #666666; */
+  border: solid #666666;
 }
 
 /* sets the page to have to padding left and right 
@@ -13,13 +12,12 @@ in order to make the navigation-bar and footer full-width */
   padding-left:0px;
 }
 
-
-
 /* add this class to set a shadow around an element (e.g. image)*/
 .shadow {
   box-shadow: 0px 0px 30px #C4C4C4
 }
 
+/*  */
 .main div {
   display: flex;
   display: -webkit-flex;
@@ -31,13 +29,16 @@ in order to make the navigation-bar and footer full-width */
   max-height: 100vh;
 }
 
-
 /* add padding to the side or top of an element */
 .padding-side {
   padding-left: 10%;
   padding-right: 10%;
 }
 
+.padding-side-small {
+  padding-left: 1vw;
+  padding-right: 1vw
+}
 .padding-top {
   padding-top: 10%
 }
@@ -72,6 +73,14 @@ in order to make the navigation-bar and footer full-width */
   min-width: 50%;
 }
 
+.small-width {
+  min-width: 25%;
+}
+
+.med-width {
+  min-width: 75%;
+}
+
 .half-height {
   min-height: 50%
 }
@@ -80,26 +89,10 @@ in order to make the navigation-bar and footer full-width */
   border: thin #545B5E
 }
 
-/* .align-top {
-  align-items: flex-start;
-} */
-
 .form-small {
-  /* margin: 20px; */
   width: 100vw;
   height: 350vh
 }
-
-/* .select-small {
-  align-items: flex-start;
-  width: 100vw
-} */
-
-/* form {
-  margin: 20px;
-  width: 600px;
-  height: 750px
-} */
 
 select {
   width: 35vw;
@@ -109,31 +102,10 @@ select {
   border: thin #666666
 }
 
-/* select, option {
-  max-width: 100%;
-  width: 100%;
-  height: 40%;
-  margin-top: 20px;
-  border-radius: 10px;
-} */
-
-.large {
-  max-width: 100%;
-  max-height: 100%;
-  width: 1110vw;
-  height: 165vh;
-}
-
 .right {
   align-self: flex-end;
   margin: 20px
 }
-
-
- 
-/* .align-start {
-  position: relative;
-} */
 
 .jc {
   justify-content: space-evenly;
@@ -190,36 +162,34 @@ select {
   max-height: 10%;
   overflow: hidden;
 }
-/* size of a text-box */
+/* set font-size and color */
 
-.text-box-med {
-  text-align: left;
-  height:30%;
-  width: 30%;
-  align-items: stretch
-}
-
-.text-box-lg {
-  text-align: left;
-  height: 50%;
-  width: 50%;
-  align-items: stretch
-}
-
+/* black */
 .text-lg-black {
   font-size: 3vw;
   color: #333333;
   text-align: start
 }
 
-.text-med-grey {
-  font-size: 1.5vw;
-  color: #666666;
-}
-
 .text-med-black {
   font-size: 1.5vw;
   color: #2F2E41;
+}
+
+.text-sm-black {
+  font-size: 1vw;
+  color:#2F2E41
+}
+
+/* grey */
+.text-lg-grey {
+  font-size: 2vw;
+  color: #666666
+}
+
+.text-med-grey {
+  font-size: 1.5vw;
+  color: #666666;
 }
 
 .text-sm-grey {
@@ -228,10 +198,31 @@ select {
   text-align: start
 }
 
-.text-med {
-  font-size: 45px
+/* white */
+
+.text-lg-white {
+  font-size: 3vw;
+  color: #FFFFFF;
 }
 
+.text-med-white {
+  font-size: 1.5vw;
+  color: #FFFFFF
+}
+
+.text-sm-white {
+  font-size: 1vw;
+  color:#FFFFFF
+}
+
+/* set only the font-size  */
+.text-med {
+  font-size: 1.5vw;
+  text-align: start
+}
+
+
+/* 
 .text-med-left {
   font-size: 45px;
   text-align: start
@@ -243,7 +234,7 @@ select {
 
 .font-grey {
   color: #545B5E
-}
+} */
 
 /* sets background to blue and font to white or vise versa */
 
@@ -295,8 +286,8 @@ select {
   color: #2D66F6;
   background-color: #FFFFFF;
   border-radius: 10px;
-  width: 220px;
-  height: 70px
+  width: 10vw;
+  height: 5vh
 }
 
 /* styling footer */
