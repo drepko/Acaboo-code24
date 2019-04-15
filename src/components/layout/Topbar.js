@@ -11,7 +11,7 @@ class TopBar extends Component {
     render () {
       const { currentUser } = this.props
         return (
-            <Navbar collapseOnSelect expand="md" bg="light" sticky="top">
+            <Navbar collapseOnSelect expand="md" bg="light" sticky="top" className="padding-side">
                 <Navbar.Brand href="/">
                     <img alt="" src={Acaboo_logo} className="d-inline-block align-top"/>
                 </Navbar.Brand>

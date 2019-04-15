@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Course extends Component {
 
     renderUniversityOptions = () => {
-        return (<div className="select-small">
+        return (<div>
                     <select onChange={this.props.handleUniversitySelect}>
                         <option value="" disabled selected>Select your university...</option>
                         {this.props.universities.map((university) => {
@@ -17,23 +17,19 @@ export default class Course extends Component {
         const { studies } = this.props
         return (
             studies === null ?
-            <div className="select-small">
-                
-                    <select disabled>
-                        <option value="" disabled selected>First select your university</option>
-                    </select><br/>
-                
+            <div >
+                <select disabled >
+                    <option value="" disabled selected>First select your university</option>
+                </select><br/>
             </div>
                 :
-            <div className="select-small">
-                
-                    <select onChange={this.props.handleStudySelect}>
-                        <option value="" disabled selected>Select your study...</option>
-                            {this.props.studies.map((studie) => {
-                                return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
-                            })}
-                    </select><br/>
-                
+            <div >
+                <select onChange={this.props.handleStudySelect}>
+                    <option value="" disabled selected>Select your study...</option>
+                        {this.props.studies.map((studie) => {
+                            return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
+                        })}
+                </select><br/>
             </div>
         )
     }
@@ -41,8 +37,8 @@ export default class Course extends Component {
     render() {
         const { study } = this.props
         return (
-            <div >
-                <form   className="form-small"
+            <div className="full-width">
+                <form className="full-width"
                         onSubmit={this.props.onSubmit}>
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}
