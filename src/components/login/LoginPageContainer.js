@@ -10,6 +10,9 @@ class LoginPageContainer extends PureComponent {
 	handleSubmit = (e) => {
 		e.preventDefault()
 		this.props.login(this.state, this.props.history)
+		if(this.props.selectedCourses.length > 0) {
+			this.props.history.push('/reviewpurchase')
+		}
 	}
 
 	handleChange = (event) => {
@@ -45,7 +48,8 @@ class LoginPageContainer extends PureComponent {
 
 const mapStateToProps = state => {
 	return {
-		currentUser: state.currentUser
+		currentUser: state.currentUser,
+		selectedCourses: state.selectedCourses
 	}
 }
 
