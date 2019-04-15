@@ -42,7 +42,7 @@ class TopBar extends Component {
 }
 
 const mapStateToProps = state => ({
-    currentUser: state.currentUser
+    currentUser: state.currentUser,
 })
 
 export default withRouter(
