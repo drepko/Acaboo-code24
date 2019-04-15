@@ -7,8 +7,6 @@ import { getHighLights } from '../../actions/courses'
 import { withRouter } from 'react-router'
 import { selectCourse } from '../../actions/paymentFlow'
 import Cart from './Cart'
-import queryString from 'query-string';
-
 
 class CoursePageContainer extends PureComponent {
 
