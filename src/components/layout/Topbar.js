@@ -19,7 +19,7 @@ class TopBar extends Component {
                 <Navbar.Collapse id="responsive-navbar-nav">
 
                     <Nav className="ml-auto">
-                        <Nav.Link href="/highlights">Courses</Nav.Link>
+                        <Nav.Link href="/courses">Courses</Nav.Link>
 
                         <Nav.Link href="/faq">FAQ</Nav.Link>
 

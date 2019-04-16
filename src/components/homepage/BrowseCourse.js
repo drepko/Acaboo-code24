@@ -11,7 +11,7 @@ export default class BrowseCourse extends Component {
         <div className="ai-start-reverse">
           <div className="flex-row jc-between med-width bg-blue padding-side-small">
               <p className="text-med-white">Start studying with Acaboo</p>
-              <Link to="/highlights"><button className="btn-white-lg text-sm-white">Browse courses</button></Link>
+              <Link to="/courses"><button className="btn-white-lg text-sm-white">Browse courses</button></Link>
           </div>
 
           <div className="text-sm-black font-grey">
