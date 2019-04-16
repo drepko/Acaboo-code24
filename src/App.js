@@ -18,6 +18,7 @@ import ActivationContainer from './components/activation/ActivationContainer'
 import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurchaseContainer';
 import JobDetailPage from './components/careers/JobDetailPage'
 import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
+import ScrollUp from './components/scrollup/scrollup'
 
 class App extends Component {
   render() {
@@ -45,6 +46,7 @@ class App extends Component {
               <Route exact path="/dashboard" component={UserDashboardContainer} />
           </div>
             <Footer />
+            <ScrollUp />
         </div>
       </Router>
     );
