@@ -18,7 +18,6 @@ import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurch
 import JobDetailPage from './components/careers/JobDetailPage'
 import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
 import LoginFormContainer from './components/login/LoginFormContainer';
-import FormExample from './components/login/Test';
 import ScrollUp from './components/scrollup/scrollup'
 
 class App extends Component {
