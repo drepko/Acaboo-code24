@@ -30,6 +30,7 @@ class SubscribeForm extends React.Component {
                 onSubmit={this.onSubmit}
                 onChange={this.onChange}
                 formValues={this.state}
+                value='Subscribe'
             />
 
             </div>)

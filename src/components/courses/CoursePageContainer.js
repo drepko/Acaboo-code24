@@ -44,9 +44,9 @@ class CoursePageContainer extends PureComponent {
 
     }
 
-    subscribe = (event) => {
-        this.props.history.push(`/course/${event.target.value}/subscribe`)
-    }
+    // subscribe = (event) => {
+    //     this.props.history.push(`/course/${event.target.value}/subscribe`)
+    // }
 
     checkCurrentUser = () => {
         if (this.props.currentUser === null) {
@@ -71,7 +71,7 @@ class CoursePageContainer extends PureComponent {
                             <Course
                                 key={index}
                                 course={course}
-                                signUp={course.provided ? this.signUp : this.subscribe} />
+                                signUp= {this.signUp} />
                         </div>
                     )
                 })}
