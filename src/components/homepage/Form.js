@@ -37,13 +37,13 @@ export default class Course extends Component {
     render() {
         const { study } = this.props
         return (
-            <div className="full-width">
-                <form className="full-width"
+            <div className="half-width ai-start">
+                <form className=""
                         onSubmit={this.props.onSubmit}>
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}
                     {/* {study && study.name !== null &&  */}
-                    <input type="submit" value="Find your course" className="btn-blue-xl"/>
+                    <input type="submit" value="Find your course" className=" form-control form-control-sm btn-blue-xl"/>
 
                 </form>
             </div>
