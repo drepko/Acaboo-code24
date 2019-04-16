@@ -1,18 +1,19 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
+
 import woman_desk from '../../images/mock-ups/woman_desk.png'
-import Universiteit_Leiden from '../../images/universities/Universiteit_Leiden.png'
-import UvA from '../../images/universities/UvA.png'
-import man_handshake from '../../images/mock-ups/man_handshake.png'
-import people from '../../images/mock-ups/people.png'
+import man_handshake from'../../images/mock-ups/man_handshake.png'
+import people from'../../images/mock-ups/people.png'
 
 import {
   home_studydashboard,
 } from '../../images/imagelinks'
 
+import UsedByInstitutions from './UsedByInstitutions'
 import BrowseCourse from './BrowseCourse'
 import Testimonial from './Testimonial'
+import StartStudying from './StartStudying';
 
 class LandingsPageContainer extends React.Component {
 
@@ -49,20 +50,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
 
-        <div className="flex-column jc">
-          <p className="text-xs-black">TRUSTED BY STUDENTS FROM:</p>
-          <div className="flex-row jc ai-start fw logo-p">
-            <div className="">
-              <img alt="uvl_logo" className="logo-p image-small" src={Universiteit_Leiden} />
-            </div>
-            <div>
-              <img alt="uva_logo" className="logo-p image-small" src={UvA} />
-            </div>
-            <div>
-              <img alt="hva_logo" className="logo-p image-small" src={Universiteit_Leiden} />
-            </div>
-          </div>
-        </div>
+        <UsedByInstitutions />
 
         <div className="text-center">
           <p className="text-lg-black">Study more efficiently with Acaboo.</p>
@@ -135,19 +123,8 @@ class LandingsPageContainer extends React.Component {
           <img alt="image" className="image-lg-overflow" src={people} />
         </div>
 
-        <div className="padding-top">
-          <h1 className="text-lg-black">Start studying with Acaboo.</h1>
-          <div className="flex-row jc">
-            <div>
-              <Link to="/courses"><button className="btn-white-med">Browse courses</button></Link>
-            </div>
-            <div>
-              <Link to="/about"><button className="btn-blue-med">Learn More</button></Link>
-            </div>
-          </div>
-          <p>Add some helper text here to explain the finer details of your product or service.</p>
-        </div>
-      </div>)
+        <StartStudying/>
+    </div>)
   }
 }
 
