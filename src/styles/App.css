@@ -79,7 +79,7 @@ in order to make the navigation-bar and footer full-width */
 }
 
 .med-width {
-  min-width: 75vw;
+  min-width: 60vw;
 }
 
 .half-height {
@@ -87,7 +87,7 @@ in order to make the navigation-bar and footer full-width */
 }
 
 .border-thin-grey {
-  border: thin #545B5E
+  border: thin #989898
 }
 
 .form-small {
@@ -144,8 +144,6 @@ select {
   max-height: 120%;
   width: 120%;
   height: 120%;
-  /* height: 700px;
-  width: auto; */
 }
 
 .image-lg-overflow {
@@ -209,32 +207,32 @@ select {
 
 .text-xl-grey {
   font-size: 6.2vh;
-  color: #545B5E;
+  color: #989898;
 }
 
 .text-lg-grey {
   font-size: 4.6vh;
-  color: #545B5E;
+  color: #989898;
 }
 
 .text-med-grey {
   font-size: 3.6vh;
-  color: #545B5E;
+  color: #989898;
 }
 
 .text-sm-med-grey {
   font-size: 3vh;
-  color:#545B5E;
+  color:#989898;
 }
 
 .text-sm-grey {
   font-size: 2vh;
-  color:#545B5E
+  color:#989898
 }
 
 .text-xs-grey {
   font-size:1.3vh;
-  color:#545B5E
+  color:#989898
 }
 
 /* white */
@@ -318,16 +316,16 @@ select {
   color: #FFFFFF;
   background-color: #2D66F6;
   border-radius: 10px;
-  width: 200px;
-  height: 60px
+  width: 10vw;
+  height: 5vh
 }
 
 .btn-blue-lg {
   color: #FFFFFF;
   background-color: #2D66F6;
   border-radius: 10px;
-  width: 220px;
-  height: 70px
+  width: 17vw;
+  height: 7vh
 }
 
 .btn-blue-xl {
@@ -340,14 +338,16 @@ select {
   color: #2D66F6;
   background-color: #FFFFFF;
   border-radius: 10px;
-  width: 200px;
-  height: 60px
+  width: 10vw;
+  height: 5vh
 }
 
 .btn-white-lg {
   color: #2D66F6;
   background-color: #FFFFFF;
   border-radius: 10px;
+  width: 17vw;
+  height: 7vh
 }
 
 /* styling footer */
