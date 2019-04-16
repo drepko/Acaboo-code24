@@ -19,22 +19,23 @@ import JobDetailPage from './components/careers/JobDetailPage'
 import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
 import LoginFormContainer from './components/login/LoginFormContainer';
 import FormExample from './components/login/Test';
-import ScrollUp from './components/scrollup/scrollup'
+import ScrollToTop from './components/layout/ScrollToTop'
 
 class App extends Component {
   render() {
     return (
       <Router>
+        <ScrollToTop>
         {/* the div below is equivalent to the "body" element - note for Jewel */}
         <div className="container-fluid"> 
             <Topbar/>
           <div className="padding-side">   
               <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
-              <Route exact path="/universities" component={UniversityPageContainer} />
+              <Route exact path="/universities" component={UniversityPageContainer} onUpdate={() => window.scrollTo(0, 0)}/>
               <Route exact path="/" component={LandingsPageContainer} />
-              <Route exact path="/about" component={AboutPageContainer} />
-              <Route exact path="/login" component={LoginFormContainer} />
-              <Route exact path="/signup" component={SignupPageContainer} />
+              <Route exact path="/about" component={AboutPageContainer}  />
+              <Route exact path="/login" component={LoginFormContainer}  />
+              <Route exact path="/signup" component={SignupPageContainer}  />
               <Route exact path="/careers" component={CareersPageContainer} />
               <Route exact path="/faq" component={FAQPageContainer} />
               <Route exact path="/email" component={MessageContainer} />
@@ -47,8 +48,8 @@ class App extends Component {
               <Route exact path="/dashboard" component={UserDashboardContainer} />
           </div>
             <Footer />
-            <ScrollUp />
         </div>
+        </ScrollToTop>
       </Router>
     );
   }
