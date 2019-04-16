@@ -1,23 +1,75 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
+import BrowseCourse from '../homepage/BrowseCourse'
+import Testimonial from "../homepage/Testimonial"
+import StartStudying from '../homepage/StartStudying';
+import man_handshake from'../../images/mock-ups/man_handshake.png'
 
 export default class FAQPage extends Component {
   render() {
     return (
-      <div>
-        <h1>FREQUENTLY ASKED QUESTIONS</h1> <br/>
-        <h3>Can I change my course later on?</h3>
-        <p>No, never ever. Sorry =))</p> <br />
-        <h3>Do you offer discount codes?</h3>
-        <p>Yes, once every 100 years</p> <br />
-        <h3>Are you available in bulk?</h3>
-        <p>Sure, but keep in mind there is no discount for bulk purchase</p> <br />
-        <h3>Can I change my course later on?</h3>
-        <p>No, never ever. Sorry =))</p> <br />
-        <h3>Do you offer discount codes?</h3>
-        <p>Yes, once every 100 years</p> <br />
-        <h3>Are you available in bulk?</h3>
-        <p>Sure, but keep in mind there is no discount for bulk purchase</p> <br />
+      <div className="main">
+        <p className="padding-top text-lg-black">FREQUENTLY ASKED QUESTIONS</p> <br/>
+
+        <p className="text-sm-black">Can I change my course later on?</p>
+        <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit 
+          <br/>voluptatem accusantium doloremque laudantium,
+          <br/> totam rem aperiam, eaque ipsa quae ab illo inventore 
+          <br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p> 
+          <br/>
+
+        <p className="text-sm-black">Do you offer discount codes?</p>
+        <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit 
+          <br/>voluptatem accusantium doloremque laudantium,
+          <br/> totam rem aperiam, eaque ipsa quae ab illo inventore 
+          <br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p> 
+          <br/>
+
+        <p className="text-sm-black">Are you available in bulk?</p>
+        <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit 
+          <br/>voluptatem accusantium doloremque laudantium,
+          <br/> totam rem aperiam, eaque ipsa quae ab illo inventore 
+          <br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p> 
+          <br/>
+
+        <p className="text-sm-black">Can I change my course later on?</p>
+        <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit 
+          <br/>voluptatem accusantium doloremque laudantium,
+          <br/> totam rem aperiam, eaque ipsa quae ab illo inventore 
+          <br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p> 
+          <br/>
+
+        <p className="text-sm-black">Do you offer discount codes?</p>
+        <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit 
+          <br/>voluptatem accusantium doloremque laudantium,
+          <br/> totam rem aperiam, eaque ipsa quae ab illo inventore 
+          <br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p> 
+          <br/>
+
+        <p className="text-sm-black">Are you available in bulk?</p>
+        <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit 
+          <br/>voluptatem accusantium doloremque laudantium,
+          <br/> totam rem aperiam, eaque ipsa quae ab illo inventore 
+          <br/>veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p> 
+          <br/>
+
+        <p>Still have more questions? Chat with us!</p>
+
+        <div className="padding-top"/>
+
+        <BrowseCourse/>
+
+        <div className="padding-top"/>
+
+        <div className="med-width">
+            <img alt="image" className="image-med" src={man_handshake} /> 
+        </div>
+
+        <Testimonial />
+
+        <div className="padding-top"/>
+
+        <StartStudying/>
+
       </div>
     )
   }
