@@ -7,14 +7,14 @@ export default class StartStudying extends Component {
         <div>
           <h1 className="text-lg-black">Start studying with Acaboo.</h1>
           <div className="flex-row jc-between">
-            <div>
+            <div className="padding-side-small">
                 <Link to="/courses">
                 <button className="form-control form-control-sm btn-blue-lg text-sm-white">
                 Browse courses
                 </button>
                 </Link>
             </div>
-            <div className="padding-side-small ">
+            <div className="padding-side-small">
                 <Link to="/about">
                 <button className="form-control form-control-sm btn-white-lg text-sm-white">
                 Learn More
