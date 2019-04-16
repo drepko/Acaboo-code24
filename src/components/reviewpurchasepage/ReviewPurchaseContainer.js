@@ -13,7 +13,7 @@ class ReviewPurchaseContainer extends PureComponent {
 
 	handleClick = (e) => {
 		e.preventDefault()
-		this.props.history.push("highlights");
+		this.props.history.push("courses");
 	}
 
 	onDelete = (event) => {

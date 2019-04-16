@@ -1,9 +1,9 @@
 /* styling body */
 
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
-/* div {
+div {
   border: solid #666666;
-} */
+}
 
 /* sets the page to have to padding left and right 
 in order to make the navigation-bar and footer full-width */

@@ -120,7 +120,7 @@ class LandingsPageContainer extends React.Component {
           <h1 className="text-med">Start studying with Acaboo.</h1>
           <div className="flex-row jc">
             <div>
-            <Link to="/highlights"><button className="btn-white-med">Browse courses</button></Link>
+            <Link to="/courses"><button className="btn-white-med">Browse courses</button></Link>
             </div>
             <div>
             <Link to="/about"><button className="btn-blue-med">Learn More</button></Link>  
