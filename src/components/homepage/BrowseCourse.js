@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default class BrowseCourse extends Component {
   render() {
     return (
-      <div className="med-width"> 
+      <div className="med-width padding-top" > 
         <div className="ai-start-reverse med-width">
           <div className="flex-row jc-between bg-blue padding-side-small med-width half-height">
               <p className="text-med-white">Start studying with Acaboo</p>
