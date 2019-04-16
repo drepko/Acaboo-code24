@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { getUniversities } from '../../actions/universities'
-import { getStudies, setSelectedStudy } from '../../actions/studies'
+import { getStudies, setSelectedStudy, setSelectedUniversity } from '../../actions/studies'
 import Form from './Form'
 
 class FindCourseContainer extends PureComponent {
@@ -38,6 +38,7 @@ class FindCourseContainer extends PureComponent {
     handleSubmit(event) {
         event.preventDefault();
         if(this.state.university.name && this.state.study.name) {
+        this.props.setSelectedUniversity(this.state.university)
         this.props.setSelectedStudy(this.state.study)
         this.props.history.push(`/courses/${this.state.university.name}/${this.state.study.name}`)
         } 
@@ -62,4 +63,4 @@ const mapStateToProps = state => ({
     studies: state.studies
 })
 
-export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy })(FindCourseContainer)
+export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy , setSelectedUniversity})(FindCourseContainer)

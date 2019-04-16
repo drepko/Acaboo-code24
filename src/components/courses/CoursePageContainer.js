@@ -9,7 +9,7 @@ import { selectCourse } from '../../actions/paymentFlow'
 import Cart from './Cart'
 
 class CoursePageContainer extends PureComponent {
-
+   
     componentWillMount = () => {
         const { study, location, selectedCourses} = this.props
         if (study!== null && location.pathname.indexOf('courses') > 0) {
@@ -81,10 +81,6 @@ class CoursePageContainer extends PureComponent {
 
     render() {
 
-        let url = this.props.location.pathname
-        let  array = url.split('/')
-        let selectedUniversity = array[2]
-        let selectedStudy = array[3]
 
 
         const { courses } = this.props
@@ -93,9 +89,7 @@ class CoursePageContainer extends PureComponent {
 
         return (
             <div>
-                <CourseFilterbar history={this.props.history}
-                 selectedUniversity = {selectedUniversity}
-                 selectedStudy = {selectedStudy} />
+                <CourseFilterbar history={this.props.history} />
                 {this.renderCourses(courses)}
             </div>)
     }

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { getUniversities } from '../../actions/universities'
-import { getStudies, setSelectedStudy } from '../../actions/studies'
+import { getStudies, setSelectedStudy,setSelectedUniversity } from '../../actions/studies'
 import {getCourses} from '../../actions/courses'
 import Filter from './CourseFilter'
 
@@ -24,10 +24,12 @@ class CourseFilter extends PureComponent {
         this.props.getUniversities()
     }
 
-    handleUniversitySelect(event) {
+    async handleUniversitySelect(event) {
         const selectedIndex = event.target.options.selectedIndex;
         const id = event.target.options[selectedIndex].getAttribute('id')
-        this.setState({ university: { id: id, name: event.target.value } });
+        await this.setState({
+              university: { id: id, name: event.target.value } });
+              this.props.setSelectedUniversity(this.state.university)
         this.props.getStudies(id)
     }
 
@@ -43,10 +45,8 @@ class CourseFilter extends PureComponent {
 
 
     render() {
-        let selectedUniversity = this.props.selectedUniversity
-        let selectedStudy = this.props.selectedStudy
+      
 
-       
         return this.props.universities === null ? <p>Loading ...</p> :
             <Filter
                 handleUniversitySelect={this.handleUniversitySelect}
@@ -55,8 +55,7 @@ class CourseFilter extends PureComponent {
                 university={this.state.university}
                 study={this.state.study}
                 studies={this.props.studies}
-                selectedStudy = {selectedStudy}
-                selectedUniversity = {selectedUniversity}
+
             />
     }
 }
@@ -65,7 +64,8 @@ const mapStateToProps = state => ({
     universities: state.universities,
     university: state.university,
     studies: state.studies,
-    study: state.selectedStudy
+    study: state.selectedStudy,
+    
 })
 
-export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy ,getCourses})(CourseFilter)
+export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy ,getCourses,setSelectedUniversity})(CourseFilter)
