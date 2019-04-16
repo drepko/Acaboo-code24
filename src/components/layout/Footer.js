@@ -1,5 +1,5 @@
 import React from 'react'
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SubscribeFormContainer from '../subscribe/SubscribeFormContainer'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -37,10 +37,10 @@ export default function Footer(props) {
                 </Col>
             </Row>
             <Row className="social-media">
-                <Image src={Instagram}/>
-                <Image src={LinkedIn}/>
-                <Image src={Twitter}/>
-                <Image src={Facebook}/>
+               <Link onClick={()=> window.open("https://www.instagram.com/acaboonl/", "_blank")}> <Image src={Instagram}/></Link>
+               <Link onClick={()=> window.open("https://www.linkedin.com/company/18289841/", "_blank")}> <Image src={LinkedIn}/></Link>
+               <Link onClick={()=> window.open("https://twitter.com/acaboonl", "_blank")}><Image src={Twitter}/></Link>
+               <Link onClick={()=> window.open("https://www.facebook.com/acaboo/", "_blank")}><Image src={Facebook}/></Link>
             </Row>
             <Row className="Acaboo-2019">
             &#169; Acaboo 2019. This page is subject to the Privacy Policy and Terms of Service.
