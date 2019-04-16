@@ -41,7 +41,7 @@ class App extends Component {
               <Route exact path="/course/:id/subscribe" component={EmailWhenAvailable} />                            
               <Route exact path="/checkemail" component={CheckEmailContainer} />
               <Route exact path="/verify/:uid/:token" component={ActivationContainer} />
-              <Route exact path="/highlights" component={CoursePageContainer} />
+              <Route exact path="/courses" component={CoursePageContainer} />
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
               <Route exact path="/jobdetails" component={JobDetailPage} />
               <Route exact path="/dashboard" component={UserDashboardContainer} />
