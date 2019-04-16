@@ -2,7 +2,7 @@
 
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
-  border: solid #666666;
+  /* border: solid #666666; */
 }
 
 /* sets the page to have to padding left and right 
@@ -32,8 +32,8 @@ in order to make the navigation-bar and footer full-width */
 
 /* add padding to the side or top of an element */
 .padding-side {
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
 
 .padding-side-small {
@@ -117,6 +117,10 @@ select {
   padding: 20px 
 }
 
+.jc-center {
+  justify-content: center
+}
+
 .jc-between {
   justify-content: space-between;
 }
@@ -136,10 +140,10 @@ select {
 /* image-size */
 
 .image-lg {
-  max-width: 90%;
-  max-height: 90%;
-  width: 90%;
-  height: 90%;
+  max-width: 120%;
+  max-height: 120%;
+  width: 120%;
+  height: 120%;
   /* height: 700px;
   width: auto; */
 }
@@ -172,107 +176,130 @@ select {
 
 /* black */
 .text-xl-black {
-  font-size: 4.25vh;
+  font-size: 6.2vh;
   color: #333333;
 }
 
 .text-lg-black {
-  font-size: 3.75vh;
+  font-size: 4.6vh;
   color: #333333;
 }
 
 .text-med-black {
-  font-size: 1.57vh;
+  font-size: 3.6vh;
   color: #2F2E41;
 }
 
-.text-sm-black {
-  font-size: 1vh;
+.text-sm-med-black {
+  font-size: 3vh;
   color:#2F2E41;
 }
 
+.text-sm-black {
+  font-size: 2vh;
+  color:#2F2E41
+}
+
 .text-xs-black {
-  font-size:0.8vh;
+  font-size:1.3vh;
   color:#2F2E41
 }
 
 /* grey */
 
 .text-xl-grey {
-  font-size: 4.25vh;
-  color: #666666;
+  font-size: 6.2vh;
+  color: #545B5E;
 }
+
 .text-lg-grey {
-  font-size: 3.75vh;
-  color: #666666;
+  font-size: 4.6vh;
+  color: #545B5E;
 }
 
 .text-med-grey {
-  font-size: 1.57vh;
-  color: #666666;
+  font-size: 3.6vh;
+  color: #545B5E;
+}
+
+.text-sm-med-grey {
+  font-size: 3vh;
+  color:#545B5E;
 }
 
 .text-sm-grey {
-  font-size: 1vh;
-  color: #666666;
+  font-size: 2vh;
+  color:#545B5E
 }
 
 .text-xs-grey {
-  font-size:0.8vh;
-  color: #666666;
+  font-size:1.3vh;
+  color:#545B5E
 }
 
 /* white */
 .text-xl-white {
-  font-size: 4.25vh;
+  font-size: 6.2vh;
   color: #FFFFFF;
 }
+
 .text-lg-white {
-  font-size: 3.75vh;
+  font-size: 4.6vh;
   color: #FFFFFF;
 }
 
 .text-med-white {
-  font-size: 1.57vh;
+  font-size: 3.6vh;
   color: #FFFFFF;
+}
+
+.text-sm-med-white {
+  font-size: 3vh;
+  color:#FFFFFF;
 }
 
 .text-sm-white {
-  font-size: 1vh;
-  color: #FFFFFF;
+  font-size: 2vh;
+  color:#FFFFFF
 }
 
 .text-xs-white {
-  font-size:0.8vh;
-  color: #FFFFFF;
+  font-size:1.3vh;
+  color:#FFFFFF
 }
+
+
 
 /* blue */
 .text-xl-blue {
-  font-size: 4.25vh;
+  font-size: 6.2vh;
   color: #2D66F6;
 }
 
 .text-lg-blue {
-  font-size: 3.75vh;
+  font-size: 4.6vh;
   color: #2D66F6;
 }
 
 .text-med-blue {
-  font-size: 1.57vh;
+  font-size: 3.6vh;
   color: #2D66F6;
 }
 
-.text-sm-blue {
-  font-size: 1vh;
+.text-sm-med-blue {
+  font-size: 3vh;
   color:#2D66F6;
 }
 
-.text-xs-blue {
-  font-size:0.8vh;
+.text-sm-blue {
+  font-size: 2vh;
   color:#2D66F6
 }
 
+.text-xs-blue {
+  font-size:1.3vh;
+  color:#2D66F6
+}
 /* sets background to blue and font to white or vise versa */
 
 .bg-blue {
