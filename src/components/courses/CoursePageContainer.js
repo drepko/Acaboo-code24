@@ -11,21 +11,19 @@ import Cart from './Cart'
 class CoursePageContainer extends PureComponent {
 
     componentWillMount = () => {
-        const { study, location, selectedCourses} = this.props
-        if (study!== null && location.pathname.indexOf('courses') > 0) {
+        const { study, location, selectedCourses } = this.props
+        if (study !== null
+        ) {
             this.props.getCourses(study.id)
         }
-        if (study !== null && location.pathname.indexOf('highlights') > 0 && selectedCourses.length > 0) { 
+        if (study !== null
+            && selectedCourses.length > 0) {
             this.props.getCourses(study.id)
         }
         else {
             this.props.getHighLights()
         }
 
-        // study !== null && location.pathname.indexOf('courses') > 0 && this.props.getCourses(study.id)
-
-        // location.pathname.indexOf('hightlights') > 0 && selectedCourses.length > 0 && this.props.getCourses(study.id)
-        // location.pathname.indexOf('highlights') > 0 && this.props.getHighLights()
     }
 
     componentDidUpdate = (prevProps) => {
@@ -71,7 +69,7 @@ class CoursePageContainer extends PureComponent {
                             <Course
                                 key={index}
                                 course={course}
-                                signUp= {this.signUp} />
+                                signUp={this.signUp} />
                         </div>
                     )
                 })}
@@ -82,7 +80,7 @@ class CoursePageContainer extends PureComponent {
     render() {
 
         let url = this.props.location.pathname
-        let  array = url.split('/')
+        let array = url.split('/')
         let selectedUniversity = array[2]
         let selectedStudy = array[3]
 
@@ -94,8 +92,8 @@ class CoursePageContainer extends PureComponent {
         return (
             <div>
                 <CourseFilterbar history={this.props.history}
-                 selectedUniversity = {selectedUniversity}
-                 selectedStudy = {selectedStudy} />
+                    selectedUniversity={selectedUniversity}
+                    selectedStudy={selectedStudy} />
                 {this.renderCourses(courses)}
             </div>)
     }
