@@ -5,13 +5,12 @@ import Acaboo_logo from '../../images/Acaboo_logo.svg';
 import { logout } from '../../actions/users'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import '../../styles/Topbar.css'
 
 class TopBar extends Component {
     render () {
       const { currentUser } = this.props
         return (
-            <Navbar collapseOnSelect expand="md" bg="light" sticky="top">
+            <Navbar collapseOnSelect expand="md" bg="light" sticky="top" className="padding-side text-sm-grey">
                 <Navbar.Brand href="/">
                     <img alt="" src={Acaboo_logo} className="d-inline-block align-top"/>
                 </Navbar.Brand>
@@ -43,7 +42,7 @@ class TopBar extends Component {
 }
 
 const mapStateToProps = state => ({
-    currentUser: state.currentUser
+    currentUser: state.currentUser,
 })
 
 export default withRouter(

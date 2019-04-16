@@ -14,7 +14,7 @@ import '../../styles/App.css'
 
 export default function Footer(props) {
     return (
-        <Container className="footer">
+        <Container className="footer padding">
             <Row>
                 <Col>
                     <h3>Navigate</h3>

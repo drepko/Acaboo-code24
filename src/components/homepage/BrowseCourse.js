@@ -7,15 +7,17 @@ import { Link } from "react-router-dom";
 export default class BrowseCourse extends Component {
   render() {
     return (
-      <div> 
-          <div className="large flex-row jc-between bg-blue">
-              <h1>Start studying with Acaboo</h1>
-              <Link to="/highlights"><button className="btn-white-lg">Browse courses</button></Link>
+      <div className="med-width"> 
+        <div className="ai-start-reverse">
+          <div className="flex-row jc-between med-width bg-blue padding-side-small">
+              <p className="text-med-white">Start studying with Acaboo</p>
+              <Link to="/highlights"><button className="btn-white-lg text-sm-white">Browse courses</button></Link>
           </div>
 
-          <div className="right font-grey">
+          <div className="text-sm-black font-grey">
             <p>Already using Acaboo? <Link to='/logins'>Log In</Link> </p>
           </div>
+        </div>
       </div>
     )
   }

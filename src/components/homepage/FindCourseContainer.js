@@ -37,8 +37,10 @@ class FindCourseContainer extends PureComponent {
 
     handleSubmit(event) {
         event.preventDefault();
+        if(this.state.university.name && this.state.study.name) {
         this.props.setSelectedStudy(this.state.study)
         this.props.history.push(`/courses/${this.state.university.name}/${this.state.study.name}`)
+        } 
     }
 
     render() {
