@@ -16,7 +16,7 @@ export default function EmailForm(props) {
                 />
             </div>
             <br />
-            <input type="submit" value="Subscribe" />
+            <input type="submit" value={props.value} />
         </form>
     )
 }
