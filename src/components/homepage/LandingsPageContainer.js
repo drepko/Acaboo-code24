@@ -27,12 +27,12 @@ class LandingsPageContainer extends React.Component {
           
             <div className="half-width ai-start">
 
-              <div className="half-width">
+              <div className="half-width ai-start">
                 <p className="text-xl-black"> Pass your exam <br/>with ease
                 </p>
               </div>
 
-              <div className="half-width ">
+              <div className="half-width ai-start">
                 <p className="text-med-grey">
                   Sed ut perspiciatis unde omnis iste natus <br/>error sit voluptatem accusantium.
                 </p>

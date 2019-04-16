@@ -15,7 +15,7 @@ export default class Testimonal extends Component {
 
           <div className="flex-row jc fw">
 
-          <div >
+          <div className="ai-start small-width">
             <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
             <div className="flex-row flex-start top">
               <img alt="image" className="image-xsmall" src={UvA} />
@@ -25,7 +25,7 @@ export default class Testimonal extends Component {
             </div>
           </div>
 
-          <div >
+          <div className="ai-start">
             <p className="text-sm-black">“It enables my students to <br/>get the most out of a course, <br/>everytime...”</p>
             <div className="flex-row flex-start top">
               <img alt="image" className="image-xsmall" src={UvA} />
@@ -35,7 +35,7 @@ export default class Testimonal extends Component {
             </div>
           </div>
 
-          <div >
+          <div className="ai-start">
             <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
             <div className="flex-row flex-start top">
               <img alt="image" className="image-xsmall" src={UvA} />
