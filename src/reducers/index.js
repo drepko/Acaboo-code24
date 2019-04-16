@@ -7,6 +7,7 @@ import activate from './activate'
 import sendMessage from './sendMessage'
 import signUpDetails from './signup'
 import selectedCourses from './selectedCourses'
+import selectedUniversity from './setSelectedUniversity'
 
 
 export default {
@@ -18,5 +19,6 @@ export default {
     activate,
     sendMessage,
     signUpDetails,
-    selectedCourses
+    selectedCourses,
+    selectedUniversity
 }

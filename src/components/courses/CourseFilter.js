@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './CourseFilter.css'
 
-export default class CourseFilter extends Component {
+ class CourseFilter extends Component {
+
 
     renderUniversityOptions = () => {
-        return (
-            <select value = {this.props.selectedUniversity}onChange={this.props.handleUniversitySelect}>
+         return (
+            <select value = {this.props.selectedUniversity.name} onChange={this.props.handleUniversitySelect}>
                 <option value="" disabled selected>University/Hogeschool</option>
                 {this.props.universities.map((university) => {
                     return <option key={university.id} id={university.id} value={university.name}>{university.name}</option>
@@ -14,12 +16,13 @@ export default class CourseFilter extends Component {
         )
     }
 
+
     renderStudyOptions = () => {
         const { studies } = this.props
         if (studies && studies.length > 0) {
             return (
 
-                <select value = {this.props.selectedStudy} onChange={this.props.handleStudySelect}>
+                <select value = {this.props.selectedStudy.name} onChange={this.props.handleStudySelect}>
                     <option value="" disabled selected>Study</option>
                     {this.props.studies.map((studie) => {
                         return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
@@ -30,7 +33,7 @@ export default class CourseFilter extends Component {
     }
 
     render() {
-    
+
         return (
             <div className="filter-bar">
                 <form >
@@ -41,3 +44,10 @@ export default class CourseFilter extends Component {
         )
     }
 }
+const mapStateToProps = state => {
+	return {
+		selectedUniversity: state.selectedUniversity,
+		selectedStudy: state.selectedStudy
+	}
+}
+export default connect(mapStateToProps)(CourseFilter)
