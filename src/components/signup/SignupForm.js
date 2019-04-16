@@ -130,7 +130,7 @@ export default class SignupForm extends PureComponent {
                         Please accept our terms
               </Form.Control.Feedback>
                 </Form.Group>
-                <Button disabled={submitting} type="submit">Submit form</Button>
+                <Button disabled={submitting} type="submit">Sign up</Button>
             </Form>
 		)
 	}
