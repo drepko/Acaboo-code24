@@ -87,7 +87,7 @@ class LandingsPageContainer extends React.Component {
                   <Link to="/about" className="text-med">Learn more &#8594;</Link>
                 </div> */}
 
-                <div className="text-box-med">
+                <div className="text-box-med" id='text-box'>
                   <p className="text-med-black">About Acaboo</p>
                   <p className="text-sm-grey"> Acaboo is an online study book<br/> 
                   platform with study books from</p>
