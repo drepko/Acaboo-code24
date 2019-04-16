@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { getUniversities } from '../../actions/universities'
 import { getStudies, setSelectedStudy } from '../../actions/studies'
-import {getCourses} from '../../actions/courses'
 import Filter from './CourseFilter'
 
 
@@ -68,4 +67,4 @@ const mapStateToProps = state => ({
     study: state.selectedStudy
 })
 
-export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy ,getCourses})(CourseFilter)
+export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy})(CourseFilter)
