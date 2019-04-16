@@ -117,8 +117,8 @@ class LandingsPageContainer extends React.Component {
           <img alt="image" className="image-lg-overflow" src={people} />
         </div>
 
-        {/* <div className="text-center">
-          <h1 className="text-med">Start studying with Acaboo.</h1>
+        <div className="padding-top">
+          <h1 className="text-lg-black">Start studying with Acaboo.</h1>
           <div className="flex-row jc">
             <div>
             <Link to="/courses"><button className="btn-white-med">Browse courses</button></Link>
@@ -128,7 +128,7 @@ class LandingsPageContainer extends React.Component {
             </div>
           </div>
           <p>Add some helper text here to explain the finer details of your product or service.</p>
-        </div> */}
+        </div>
     </div>)
   }
 }
