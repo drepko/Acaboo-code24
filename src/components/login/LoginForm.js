@@ -2,7 +2,7 @@ import { Form, Input } from 'formsy-react-components';
 import React, { Component } from 'react';
 import show from '../../images/password/show.png'
 import hide from '../../images/password/hide.png'
-import './TestForm.css'
+import './LoginForm.css'
 
 export default class LoginForm extends Component {
     constructor(props) {

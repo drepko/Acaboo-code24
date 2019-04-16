@@ -18,8 +18,12 @@ import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurch
 import JobDetailPage from './components/careers/JobDetailPage'
 import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
 import LoginFormContainer from './components/login/LoginFormContainer';
+<<<<<<< feat/password-strength
+import ScrollUp from './components/scrollup/scrollup'
+=======
 import FormExample from './components/login/Test';
 import ScrollToTop from './components/scrollup/scrollup'
+>>>>>>> dev
 
 class App extends Component {
   render() {
