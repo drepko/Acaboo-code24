@@ -106,7 +106,7 @@ class FormExample extends Component {
                         />
                         <Form.Control.Feedback type="invalid">
                             Please fill in your phonenumber.
-                            </Form.Control.Feedback>
+                        </Form.Control.Feedback>
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
@@ -126,7 +126,7 @@ class FormExample extends Component {
                 </Form.Row>
                 <Form.Row>
                     <Form.Group as={Col} md="8" controlId="formBasicPassword">
-                    <InputGroup className="mb-3">
+                        <InputGroup className="mb-3">
                             <FormControl
                                 type={showPassword ? "text" : "password"}
                                 placeholder="Password"
@@ -137,12 +137,12 @@ class FormExample extends Component {
                                 aria-describedby="basic-addon2"
                             />
                             <InputGroup.Append>
-                                <button type="button" onClick={this.showPassword} variant="light"><img alt="hide-show-password" src={showPassword === false ? hide : show} className="passwordImage" /></button>
+                                <button tabIndex="-1" type="button" onClick={this.showPassword} variant="light"><img alt="hide-show-password" src={showPassword === false ? hide : show} className="passwordImage" /></button>
                             </InputGroup.Append>
-                        </InputGroup>
-                        <Form.Control.Feedback type="invalid">
-                            Please fill in a password.
+                            <Form.Control.Feedback type="invalid">
+                                Please fill in a password.
                         </Form.Control.Feedback>
+                        </InputGroup>
                     </Form.Group>
                 </Form.Row>
                 <Form.Row>
@@ -155,16 +155,17 @@ class FormExample extends Component {
                                 required
                                 value={passwordConfirmation || ""}
                                 onChange={(e) => { this.handleChange(e) }}
-                                isInvalid={password && password !== passwordConfirmation}
+                                isInvalid={password && password !== passwordConfirmation && passwordConfirmation}
+                                isValid={passwordConfirmation && password === passwordConfirmation}
                                 aria-describedby="basic-addon2"
                             />
                             <InputGroup.Append>
-                                <button type="button" onClick={this.showPassword} variant="light"><img alt="hide-show-password" src={showPassword === false ? hide : show} className="passwordImage" /></button>
+                                <button tabIndex="-1" type="button" onClick={this.showPassword} variant="light"><img alt="hide-show-password" src={showPassword === false ? hide : show} className="passwordImage" /></button>
                             </InputGroup.Append>
+                            <Form.Control.Feedback type="invalid">
+                                {`${passwordConfirmation ? "Password confirmation does not match the password field." : "Please confirm your password."} `}
+                            </Form.Control.Feedback>
                         </InputGroup>
-                        <Form.Control.Feedback type="invalid">
-                            Password confirmation does not match the password field.
-                        </Form.Control.Feedback>
                     </Form.Group>
                 </Form.Row>
                 <Form.Group>
