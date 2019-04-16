@@ -45,17 +45,10 @@ class App extends Component {
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
               <Route exact path="/jobdetails" component={JobDetailPage} />
               <Route exact path="/dashboard" component={UserDashboardContainer} />
-<<<<<<< HEAD
-              <Route exact path="/test" component={FormExample} />
-              <Footer />
-            </div>
-            </div>
-=======
           </div>
             <Footer />
             <ScrollUp />
         </div>
->>>>>>> 453fd10f9da2c2885931e7c7a1915fea5ee191fd
       </Router>
     );
   }
