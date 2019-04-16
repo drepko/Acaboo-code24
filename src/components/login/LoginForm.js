@@ -1,8 +1,8 @@
-import { Form, Input } from 'formsy-react-components';
 import React, { Component } from 'react';
 import show from '../../images/password/show.png'
 import hide from '../../images/password/hide.png'
 import './LoginForm.css'
+import { Form, Col, InputGroup, Button, FormControl } from 'react-bootstrap'
 
 export default class LoginForm extends Component {
     constructor(props) {
@@ -19,43 +19,53 @@ export default class LoginForm extends Component {
       }
    
     render() {
-        const { state, onSubmit, showPassword } = this.props
+        const { showPasswordFunc, handleSubmit, handleChange } = this.props
+        const {formValues, showPassword, validated, submitting} = this.props.state
 
         return (
 
             <Form
-                onSubmit={(data) => { onSubmit(data) }}
-                className="custom-classname-is-rendered"
-                layout="vertical"
-            >   
-
-                <Input
-                    ref={this.email}
-                    name="email"
-                    value=""
-                    type="email"
-                    onChange={this.logRef}
-                    autoComplete="on"
-                    placeholder="Please fill in your e-mail."
-                    validations="isEmail"
-                    validationErrors={{
-                        isEmail: 'Please fill in a valid e-mail.',
-                    }}
-                    required
-                />
-                <Input
-                    name="password"
-                    onChange={this.changeValue}
-                    value=""
-                    type={state.showPassword ? "text" : "password"}
-                    placeholder="Fill in your password."
-                    required
-                />
-
-                <img alt="hide-show-password" onClick={showPassword} src={state.showPassword === false ? hide : show} className="password-image image-xsmall" />
-                <div>
-                    <button className="btn-blue-med right" disabled={!state.canSubmit} type="submit">Login</button>
-                </div>
+                noValidate
+                validated={validated}
+                onSubmit={e => handleSubmit(e)}
+            >
+                <Form.Row>
+                    <Form.Group as={Col} md="8" controlId="validationCustomEmail">
+                        <Form.Control
+                            type="email"
+                            placeholder="Email"
+                            name="email"
+                            required
+                            value={formValues.email || ""}
+                            onChange={(e) => { handleChange(e) }}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                            Please fill in your email.
+                            </Form.Control.Feedback>
+                    </Form.Group>
+                </Form.Row>
+                <Form.Row>
+                    <Form.Group as={Col} md="8" controlId="formBasicPassword">
+                        <InputGroup className="mb-3">
+                            <FormControl
+                                type={showPassword ? "text" : "password"}
+                                placeholder="Password"
+                                name="password"
+                                required
+                                value={formValues.password || ""}
+                                onChange={(e) => { handleChange(e) }}
+								aria-describedby="basic-addon2"
+                            />
+                            <InputGroup.Append>
+                                <button tabIndex="-1" type="button" onClick={showPasswordFunc} variant="light"><img alt="hide-show-password" src={showPassword === false ? hide : show} className="passwordImage" /></button>
+                            </InputGroup.Append>
+                            <Form.Control.Feedback type="invalid">
+                            Please fill in your password.
+                            </Form.Control.Feedback>
+                        </InputGroup>
+                    </Form.Group>
+                </Form.Row>
+                <Button disabled={submitting} type="submit">Login</Button>
             </Form>
         )
     }
