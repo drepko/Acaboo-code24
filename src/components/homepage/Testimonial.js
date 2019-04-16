@@ -1,45 +1,45 @@
 import React, { Component } from 'react'
-import {home_hva_logo } from '../../images/imagelinks'
+import UvA from '../../images/universities/UvA.png'
 import '../../styles/LandingsPageContainer.css'
 
 export default class Testimonal extends Component {
     render(){
         return(
-          <div className="flex-column">
+          <div className="flex-column ">
 
           <div className="text-center">
-            <h2>
+            <p className="text-lg-black">
               Loved by students and teachers
-            </h2>
+            </p>
           </div>
 
-          <div className="flex-row ai-start">
+          <div className="flex-row jc fw">
 
-          <div className="font-grey">
-            <p>“Saves me the hassle of studying. Acaboo does everything <br />everywhere.”</p>
-            <div className="flex-row">
-              <img alt="image" className="image-small" src={home_hva_logo} />
-              <div className="text-small">
+          <div className="ai-start small-width">
+            <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
+            <div className="flex-row flex-start top">
+              <img alt="image" className="image-xsmall" src={UvA} />
+              <div className="top text-sm-grey">
                 <p>David de Bye, <br />Business Administration, UVA</p>
               </div>  
             </div>
           </div>
 
-          <div className="font-grey">
-            <p>“It enables my students to get the most out of a course, everytime...”</p>
-            <div className="flex-row">
-              <img alt="hva_logo" className="image-small" src={home_hva_logo} />
-              <div className="text-small">
+          <div className="ai-start">
+            <p className="text-sm-black">“It enables my students to <br/>get the most out of a course, <br/>everytime...”</p>
+            <div className="flex-row flex-start top">
+              <img alt="image" className="image-xsmall" src={UvA} />
+              <div className="top text-sm-grey">
                 <p>Paul de Groot, <br />Mathematics teacher, UVA</p>
               </div>
             </div>
           </div>
 
-          <div className="font-grey">
-            <p>“Saves me the hassle of studying. Acaboo does everything <br />everywhere.”</p>
-            <div className="flex-row flex-start">
-              <img alt="hva_logo" className="image-small" src={home_hva_logo} />
-              <div className="text-small">
+          <div className="ai-start">
+            <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
+            <div className="flex-row flex-start top">
+              <img alt="image" className="image-xsmall" src={UvA} />
+              <div className="top text-sm-grey">
                 <p>Emma de Leeuw, <br />Business teacher, UVA</p>
               </div>
             </div>

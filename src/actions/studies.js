@@ -3,6 +3,7 @@ import { baseUrl } from '../constants'
 
 export const UPDATE_STUDIES = 'UPDATE_STUDIES'
 export const SET_SELECTED_STUDY = 'SET_SELECTED_STUDY'
+export const SET_SELECTED_UNIVERSITY ='SET_SELECTED_UNIVERSITY'
 
 const updateStudies = studies => ({
   type: UPDATE_STUDIES,
@@ -12,6 +13,11 @@ const updateStudies = studies => ({
 export const setSelectedStudy = study => ({
   type: SET_SELECTED_STUDY,
   payload: study
+})
+
+export const setSelectedUniversity = university => ({
+  type: SET_SELECTED_UNIVERSITY,
+  payload: university
 })
 
 export const getStudies = (universityId) => (dispatch) => {

@@ -18,7 +18,12 @@ import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurch
 import JobDetailPage from './components/careers/JobDetailPage'
 import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
 import LoginFormContainer from './components/login/LoginFormContainer';
+<<<<<<< feat/password-strength
 import ScrollUp from './components/scrollup/scrollup'
+=======
+import FormExample from './components/login/Test';
+import ScrollToTop from './components/scrollup/scrollup'
+>>>>>>> dev
 
 class App extends Component {
   render() {
@@ -29,24 +34,24 @@ class App extends Component {
             <Topbar/>
           <div className="padding-side">   
               <Route exact path="/courses/:university/:study" component={CoursePageContainer} />
-              <Route exact path="/universities" component={UniversityPageContainer} />
+              <Route exact path="/universities" component={UniversityPageContainer} onUpdate={() => window.scrollTo(0, 0)}/>
               <Route exact path="/" component={LandingsPageContainer} />
-              <Route exact path="/about" component={AboutPageContainer} />
-              <Route exact path="/login" component={LoginFormContainer} />
-              <Route exact path="/signup" component={SignupPageContainer} />
+              <Route exact path="/about" component={AboutPageContainer}  />
+              <Route exact path="/login" component={LoginFormContainer}  />
+              <Route exact path="/signup" component={SignupPageContainer}  />
               <Route exact path="/careers" component={CareersPageContainer} />
               <Route exact path="/faq" component={FAQPageContainer} />
               <Route exact path="/email" component={MessageContainer} />
               <Route exact path="/course/:id/subscribe" component={EmailWhenAvailable} />                            
               <Route exact path="/checkemail" component={CheckEmailContainer} />
               <Route exact path="/verify/:uid/:token" component={ActivationContainer} />
-              <Route exact path="/highlights" component={CoursePageContainer} />
+              <Route exact path="/courses" component={CoursePageContainer} />
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
               <Route exact path="/jobdetails" component={JobDetailPage} />
               <Route exact path="/dashboard" component={UserDashboardContainer} />
           </div>
             <Footer />
-            <ScrollUp />
+            <ScrollToTop />
         </div>
       </Router>
     );

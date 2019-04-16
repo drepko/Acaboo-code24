@@ -1,6 +1,7 @@
 import React from'react'
 import {baseUrl} from '../../constants'
 import "../../styles/App.css"
+import EmailwhenAvailable from './EmailWhenAvailable'
 
 export default function Course(props) {
 
@@ -31,9 +32,6 @@ if(props.course.provided){
             </div>)  }
             return (<div className="main-small">
             <div className="flex-row jc-between">
-                <div>
-                    <img className="image-large" alt={props.course.name} src={`${baseUrl}${props.course.image}`} />
-                </div>
                 <div className="flex-column medium-div">
                     <div className="text-med-left">
                         <p>{props.course.name}</p>
@@ -41,14 +39,10 @@ if(props.course.provided){
                     <div>
                         <p>{props.course.description}</p>
                     </div>
+                    <EmailwhenAvailable id={props.course.id}/>
                 </div>
                 <div>
-                    <p>&#8364; {props.course.price}</p>
-                </div>
-                <div>
-                    <button className="btn-white-med right"
-                    onClick = {props.signUp} 
-                    value = {props.course.id}>Course not available Click to Subscribe</button>
+                    <p>Not Available</p>
                 </div>
             </div> 
         </div>)

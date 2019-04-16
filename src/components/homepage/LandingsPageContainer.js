@@ -20,20 +20,21 @@ class LandingsPageContainer extends React.Component {
     return (
       <div className="main">
 
-        <div className="flex-row fw jc ai-start-reverse">
+        <div className="flex-row fw jc-center ai-start-reverse"> 
+        
 
-          <div className="flex-column half-width ai-start padding-top">
+          <div className="flex-column half-width padding-top">
+          
+            <div className="half-width ai-start">
 
-            <div className="full-width ai-start">
-
-              <div className="full-width text-lg-black">
-                <p className="full-width"> Pass your exam with ease
+              <div className="half-width ai-start">
+                <p className="text-xl-black"> Pass your exam <br/>with ease
                 </p>
               </div>
 
-              <div className="full-width text-sm-grey">
-                <p className="full-width">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+              <div className="half-width ai-start">
+                <p className="text-sm-med-grey">
+                  Sed ut perspiciatis unde omnis iste natus <br/>error sit voluptatem accusantium.
                 </p>
               </div> 
 
@@ -48,9 +49,9 @@ class LandingsPageContainer extends React.Component {
         </div>
         
 
-        <div className="flex-column jc text-med-black">
-          <p>TRUSTED BY STUDENTS FROM:</p>
-          <div className="flex-row jc ai-start logo-p">
+        <div className="flex-column jc">
+          <p className="text-xs-black">TRUSTED BY STUDENTS FROM:</p>
+          <div className="flex-row jc ai-start fw logo-p">
             <div className="">
               <img alt="uvl_logo" className="logo-p image-small" src={Universiteit_Leiden} />
             </div>
@@ -65,11 +66,11 @@ class LandingsPageContainer extends React.Component {
 
         <div className="text-center">
             <p className="text-lg-black">Study more efficiently with Acaboo.</p>
-            <p className="text-med-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
+            <p className="text-sm-med-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
         </div>
 
-        <div className="">
+        <div className="padding-top">
           <img alt="image" className="image-lg-overflow shadow" src={home_studydashboard} />
         </div>
 
@@ -98,7 +99,7 @@ class LandingsPageContainer extends React.Component {
           </div>
 
           <div className="med-width">
-            <img alt="image" className="image-lg" src={man_handshake} /> 
+            <img alt="image" className="image-lg-overflow" src={man_handshake} /> 
           </div> 
 
         </div>
@@ -108,26 +109,26 @@ class LandingsPageContainer extends React.Component {
         <Testimonial />
 
         <div className="text-center">
-          <h1>Too much distraction, no focus? </h1>
+          <p className="text-lg-black">Too much distraction, no focus? </p>
           <p className="font-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
         </div>
 
       <div className="section_9 section_image_people">
-          <img alt="image" className="image-lg" src={people} />
+          <img alt="image" className="image-lg-overflow" src={people} />
         </div>
 
-        {/* <div className="text-center">
-          <h1 className="text-med">Start studying with Acaboo.</h1>
+        <div className="padding-top">
+          <h1 className="text-lg-black">Start studying with Acaboo.</h1>
           <div className="flex-row jc">
             <div>
-            <Link to="/highlights"><button className="btn-white-med">Browse courses</button></Link>
+            <Link to="/courses"><button className="btn-white-med">Browse courses</button></Link>
             </div>
             <div>
             <Link to="/about"><button className="btn-blue-med">Learn More</button></Link>  
             </div>
           </div>
           <p>Add some helper text here to explain the finer details of your product or service.</p>
-        </div> */}
+        </div>
     </div>)
   }
 }

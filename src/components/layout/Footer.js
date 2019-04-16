@@ -21,7 +21,7 @@ export default function Footer(props) {
                     <p><Nav.Link href="/about">About</Nav.Link></p>
                     <p><Nav.Link href="/blog">Blog</Nav.Link></p>
                     <p><Nav.Link href="/team">Team</Nav.Link></p>
-                    <p><Nav.Link href="/highlights">Courses</Nav.Link></p>
+                    <p><Nav.Link href="/courses">Courses</Nav.Link></p>
                     <p><Nav.Link href="/careers">We’re Hiring</Nav.Link></p>
                 </Col>
                 <Col>
