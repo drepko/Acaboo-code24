@@ -5,7 +5,6 @@ import { getStudies, setSelectedStudy,setSelectedUniversity } from '../../action
 import {getCourses} from '../../actions/courses'
 import Filter from './CourseFilter'
 
-
 class CourseFilter extends PureComponent {
 
     constructor(props) {
@@ -68,4 +67,6 @@ const mapStateToProps = state => ({
     
 })
 
-export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy ,getCourses,setSelectedUniversity})(CourseFilter)
+
+export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy , getCourses , setSelectedUniversity })(CourseFilter)
+

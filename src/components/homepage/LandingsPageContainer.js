@@ -20,20 +20,21 @@ class LandingsPageContainer extends React.Component {
     return (
       <div className="main">
 
-        <div className="flex-row fw jc ai-start-reverse">
+        <div className="flex-row fw jc ai-start-reverse"> 
+        
 
-          <div className="flex-column half-width ai-start padding-top">
+          <div className="flex-column half-width padding-top">
+          
+            <div className="half-width ai-start">
 
-            <div className="full-width ai-start">
-
-              <div className="full-width text-lg-black">
-                <p className="full-width"> Pass your exam with ease
+              <div className="half-width text-lg-black">
+                <p className="half-width"> Pass your exam <br/>with ease
                 </p>
               </div>
 
-              <div className="full-width text-sm-grey">
-                <p className="full-width">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+              <div className="half-width text-sm-grey">
+                <p className="half-width">
+                  Sed ut perspiciatis unde omnis iste natus <br/>error sit voluptatem accusantium.
                 </p>
               </div> 
 
@@ -50,7 +51,7 @@ class LandingsPageContainer extends React.Component {
 
         <div className="flex-column jc text-med-black">
           <p>TRUSTED BY STUDENTS FROM:</p>
-          <div className="flex-row jc ai-start logo-p">
+          <div className="flex-row jc ai-start fw logo-p">
             <div className="">
               <img alt="uvl_logo" className="logo-p image-small" src={Universiteit_Leiden} />
             </div>
@@ -120,7 +121,7 @@ class LandingsPageContainer extends React.Component {
           <h1 className="text-med">Start studying with Acaboo.</h1>
           <div className="flex-row jc">
             <div>
-            <Link to="/highlights"><button className="btn-white-med">Browse courses</button></Link>
+            <Link to="/courses"><button className="btn-white-med">Browse courses</button></Link>
             </div>
             <div>
             <Link to="/about"><button className="btn-blue-med">Learn More</button></Link>  

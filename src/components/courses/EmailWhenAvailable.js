@@ -17,7 +17,7 @@ class EmailWhenAvailable extends PureComponent {
 
     onSubmit = (event) => {
         event.preventDefault()
-        const id = this.props.match.params.id
+        const id = this.props.id
         this.props.subscribeCourse(this.state.email, id)
 
         this.setState({
@@ -26,22 +26,17 @@ class EmailWhenAvailable extends PureComponent {
         })      
     }
 
-    backToCourses = () => {
-        this.props.history.goBack()
-    }
-
     render() {
         return (
             <div>
-            <h1>Oops! We don’t offer your course yet!</h1>
+            <p>Oops! We don’t offer your course yet!</p>
             <p>{this.state.message}</p>
             <EmailForm
                 onSubmit={this.onSubmit}
                 onChange={this.onChange}
                 formValues={this.state}
-            />
-            <button onClick = {this.backToCourses}>Back to courses</button>
-            
+                value='Sent'
+            />            
             </div>)
     }
 }

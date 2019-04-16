@@ -11,21 +11,19 @@ import Cart from './Cart'
 class CoursePageContainer extends PureComponent {
    
     componentWillMount = () => {
-        const { study, location, selectedCourses} = this.props
-        if (study!== null && location.pathname.indexOf('courses') > 0) {
+        const { study, location, selectedCourses } = this.props
+        if (study !== null
+        ) {
             this.props.getCourses(study.id)
         }
-        if (study !== null && location.pathname.indexOf('highlights') > 0 && selectedCourses.length > 0) { 
+        if (study !== null
+            && selectedCourses.length > 0) {
             this.props.getCourses(study.id)
         }
         else {
             this.props.getHighLights()
         }
 
-        // study !== null && location.pathname.indexOf('courses') > 0 && this.props.getCourses(study.id)
-
-        // location.pathname.indexOf('hightlights') > 0 && selectedCourses.length > 0 && this.props.getCourses(study.id)
-        // location.pathname.indexOf('highlights') > 0 && this.props.getHighLights()
     }
 
     componentDidUpdate = (prevProps) => {
@@ -44,9 +42,9 @@ class CoursePageContainer extends PureComponent {
 
     }
 
-    subscribe = (event) => {
-        this.props.history.push(`/course/${event.target.value}/subscribe`)
-    }
+    // subscribe = (event) => {
+    //     this.props.history.push(`/course/${event.target.value}/subscribe`)
+    // }
 
     checkCurrentUser = () => {
         if (this.props.currentUser === null) {
@@ -71,7 +69,7 @@ class CoursePageContainer extends PureComponent {
                             <Course
                                 key={index}
                                 course={course}
-                                signUp={course.provided ? this.signUp : this.subscribe} />
+                                signUp={this.signUp} />
                         </div>
                     )
                 })}
@@ -81,8 +79,6 @@ class CoursePageContainer extends PureComponent {
 
     render() {
 
-
-
         const { courses } = this.props
 
         if (courses === null) return <p>Loading...</p>
@@ -90,6 +86,7 @@ class CoursePageContainer extends PureComponent {
         return (
             <div>
                 <CourseFilterbar history={this.props.history} />
+
                 {this.renderCourses(courses)}
             </div>)
     }

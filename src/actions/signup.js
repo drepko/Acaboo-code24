@@ -19,7 +19,7 @@ export const userSignupSuccess = () => ({
 	})
 
   export const signup = (data, history) => (dispatch) =>{
-
+	console.log(data)
 	request
 		.post(`${baseUrl}/api/v0/auth/users/create/`)
 		.send(data)

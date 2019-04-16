@@ -7,6 +7,8 @@
     "add": "^2.0.6",
     "bootstrap": "^4.3.1",
     "dom": "0.0.3",
+    "formsy-react": "^1.1.5",
+    "formsy-react-components": "^2.0.0-alpha.1",
     "jquery": "^1.9.1",
     "material-ui": "^0.20.2",
     "react": "^16.8.6",
