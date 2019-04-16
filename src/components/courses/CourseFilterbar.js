@@ -21,6 +21,7 @@ class CourseFilter extends PureComponent {
 
     componentWillMount() {
         this.props.getUniversities()
+        this.props.selectedUniversity && this.props.getStudies(this.props.selectedUniversity.id)
     }
 
     async handleUniversitySelect(event) {
@@ -64,6 +65,8 @@ const mapStateToProps = state => ({
     university: state.university,
     studies: state.studies,
     study: state.selectedStudy,
+    selectedUniversity: state.selectedUniversity,
+		selectedStudy: state.selectedStudy
     
 })
 
