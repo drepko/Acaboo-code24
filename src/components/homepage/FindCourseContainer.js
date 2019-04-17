@@ -46,6 +46,9 @@ class FindCourseContainer extends PureComponent {
         this.props.setSelectedStudy(this.state.study)
         this.props.history.push(`/courses/${this.state.university.name}/${this.state.study.name}`)
         } 
+        else {
+        this.props.history.push(`/courses`)
+        }
     }
 
     render() {
@@ -55,9 +58,7 @@ class FindCourseContainer extends PureComponent {
                 handleUniversitySelect={this.handleUniversitySelect}
                 handleStudySelect={this.handleStudySelect}
                 universities={this.props.universities}
-                university={this.state.university}
                 selectedUniversity={this.props.selectedUniversity}
-                study={this.state.study}
                 studies={this.props.studies}
                 selectedStudy={this.props.selectedStudy}
             />
