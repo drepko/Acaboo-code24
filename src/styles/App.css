@@ -463,6 +463,7 @@ select {
  .form-width-height{
   width: 40vh;
   height: 5vh; 
+  margin: 1vh
  }
 
  .contact-padding{
@@ -473,6 +474,7 @@ select {
   font-size: 17px;
   line-height: normal;
  }
+ 
  .footer .subscription-text p{
   font-family: Inter UI;
   font-style: normal;

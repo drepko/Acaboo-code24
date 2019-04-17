@@ -27,17 +27,17 @@ export default function Footer(props) {
 
                 <Col xs={2} className ='contact-padding'>
                     <h3>Contact</h3> 
-                    <p>Boelelaan 1081 <br/>
-                        WN-P246<br/> 
-                        1081 HV Amsterdam
+                    <p>&#xe062;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WN-P246<br/> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1081 HV Amsterdam
                     </p>
                         
-                    <p>
-                        &#9742;  + 31 615536113<br/>
-                        Mon - Fri 9:00 - 17:00<br/>
+                    <p><span>&#9742;&nbsp;&nbsp;&nbsp;</span> 
+                        + 31 615536113<br/>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon - Fri 9:00 - 17:00</span><br/>
                     </p>
                     <p>
-                        &#9993; info@acaboo.com<br/>
+                       <br/> <span>&#9993;&nbsp;&nbsp;&nbsp;&nbsp;</span>info@acaboo.com<br/>
                     </p>
                 </Col>
 
