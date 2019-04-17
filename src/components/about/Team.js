@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
-import LinkedIn  from '../../images/social-media-logos/Mail.png'
 import '../../styles/Team.css'
 
 
@@ -17,7 +16,7 @@ export default class Team extends Component {
                 <p><b>Mikel Palokaj</b></p>
                 <p>Founder & CEO</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                <Link onClick={()=> window.open("https://www.linkedin.com", "_blank")}> <img className="search_image_1" src="" alt ="linkiden image"/> </Link>
+                <Link onClick={()=> window.open("https://www.linkedin.com", "_blank")}> <img className="search_image_1" src="" alt ="linkedin"/> </Link>
             </div>
 
             <div className ="person-2">
@@ -25,7 +24,7 @@ export default class Team extends Component {
                 <p><b>Mark Laagland</b></p>
                 <p>Co-founder & CTO</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>             
-                <Link onClick={()=> window.open("https://www.linkedin.com", "_blank")}> <img className="search_image_1" src="" alt ="linkiden image"/> </Link>
+                <Link onClick={()=> window.open("https://www.linkedin.com", "_blank")}> <img className="search_image_1" src="" alt ="linkedin"/> </Link>
             </div>
 
             <div className ="person-3">
@@ -33,10 +32,8 @@ export default class Team extends Component {
                 <p><b>Kent de Bruin</b></p>
                 <p>Co-founder & CPO</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                <Link onClick={()=> window.open("https://www.linkedin.com", "_blank")}> <img className="search_image_1" src="" alt ="linkiden image"/> </Link>
+                <Link onClick={()=> window.open("https://www.linkedin.com", "_blank")}> <img className="search_image_1" src="" alt ="linkedin"/> </Link>
             </div>
-
-
         </div>
       </div>
     )

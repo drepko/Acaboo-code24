@@ -1,8 +1,12 @@
 /* styling body */
-
+@import  "../fonts/Inter-web/inter.css";
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
-  border: solid #666666;
+  /* border: solid #666666; */
+}
+
+body {
+  font-family: "Inter"
 }
 
 /* sets the page to have to padding left and right 
@@ -32,8 +36,8 @@ in order to make the navigation-bar and footer full-width */
 
 /* add padding to the side or top of an element */
 .padding-side {
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
 }
 
 .padding-side-small {
@@ -41,7 +45,15 @@ in order to make the navigation-bar and footer full-width */
   padding-right: 1vw
 }
 .padding-top {
-  padding-top: 10vh
+  padding-top: 60px;
+}
+
+.padding-bottom {
+  padding-bottom: 60px
+}
+
+.padding {
+  padding:30px
 }
 
 /* flex direction */
@@ -76,10 +88,11 @@ in order to make the navigation-bar and footer full-width */
 
 .small-width {
   min-width: 25vw;
+  /* max-width: 35vw; */
 }
 
 .med-width {
-  min-width: 75vw;
+  min-width: 60vw;
 }
 
 .half-height {
@@ -87,7 +100,8 @@ in order to make the navigation-bar and footer full-width */
 }
 
 .border-thin-grey {
-  border: thin #545B5E
+  border: solid #989898;
+  border-radius: 10px
 }
 
 .form-small {
@@ -117,6 +131,10 @@ select {
   padding: 20px 
 }
 
+.jc-center {
+  justify-content: center
+}
+
 .jc-between {
   justify-content: space-between;
 }
@@ -136,18 +154,31 @@ select {
 /* image-size */
 
 .image-lg {
-  max-width: 90%;
-  max-height: 90%;
-  width: 90%;
-  height: 90%;
-  /* height: 700px;
-  width: auto; */
+  max-width: 120%;
+  max-height: 120%;
+  width: 120%;
+  height: 120%;
+}
+
+#about-and-picture {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#about-flex-child-one {
+  width: 30%;
+}
+
+#about-flex-child-two {
+  width: 70%;
+  max-width: 100%;
+
 }
 
 .image-lg-overflow {
-  max-width: 90%;
-  max-height: 90%;
-  overflow: hidden;
+  width: 110%;
+  height: auto;
 } 
 
 .image-med {
@@ -157,9 +188,9 @@ select {
 }
 
 .image-small {
-  max-width: 20vw;
-  max-height: 20vh;
-  overflow: hidden;
+  max-width: 20%;
+  max-height: 20%;
+  /* overflow: hidden; */
 }
 
 .image-xsmall {
@@ -172,107 +203,130 @@ select {
 
 /* black */
 .text-xl-black {
-  font-size: 4.25vh;
+  font-size: 6.2vh;
   color: #333333;
 }
 
 .text-lg-black {
-  font-size: 3.75vh;
+  font-size: 4.6vh;
   color: #333333;
 }
 
 .text-med-black {
-  font-size: 1.57vh;
+  font-size: 3.6vh;
   color: #2F2E41;
 }
 
-.text-sm-black {
-  font-size: 1vh;
+.text-sm-med-black {
+  font-size: 3vh;
   color:#2F2E41;
 }
 
+.text-sm-black {
+  font-size: 2vh;
+  color:#2F2E41
+}
+
 .text-xs-black {
-  font-size:0.8vh;
+  font-size:1.3vh;
   color:#2F2E41
 }
 
 /* grey */
 
 .text-xl-grey {
-  font-size: 4.25vh;
-  color: #666666;
+  font-size: 6.2vh;
+  color: #989898;
 }
+
 .text-lg-grey {
-  font-size: 3.75vh;
-  color: #666666;
+  font-size: 4.6vh;
+  color: #989898;
 }
 
 .text-med-grey {
-  font-size: 1.57vh;
-  color: #666666;
+  font-size: 3.6vh;
+  color: #989898;
+}
+
+.text-sm-med-grey {
+  font-size: 3vh;
+  color:#989898;
 }
 
 .text-sm-grey {
-  font-size: 1vh;
-  color: #666666;
+  font-size: 2vh;
+  color:#989898
 }
 
 .text-xs-grey {
-  font-size:0.8vh;
-  color: #666666;
+  font-size:1.3vh;
+  color:#989898
 }
 
 /* white */
 .text-xl-white {
-  font-size: 4.25vh;
+  font-size: 6.2vh;
   color: #FFFFFF;
 }
+
 .text-lg-white {
-  font-size: 3.75vh;
+  font-size: 4.6vh;
   color: #FFFFFF;
 }
 
 .text-med-white {
-  font-size: 1.57vh;
+  font-size: 3.6vh;
   color: #FFFFFF;
+}
+
+.text-sm-med-white {
+  font-size: 3vh;
+  color:#FFFFFF;
 }
 
 .text-sm-white {
-  font-size: 1vh;
-  color: #FFFFFF;
+  font-size: 2vh;
+  color:#FFFFFF
 }
 
 .text-xs-white {
-  font-size:0.8vh;
-  color: #FFFFFF;
+  font-size:1.3vh;
+  color:#FFFFFF
 }
+
+
 
 /* blue */
 .text-xl-blue {
-  font-size: 4.25vh;
+  font-size: 6.2vh;
   color: #2D66F6;
 }
 
 .text-lg-blue {
-  font-size: 3.75vh;
+  font-size: 4.6vh;
   color: #2D66F6;
 }
 
 .text-med-blue {
-  font-size: 1.57vh;
+  font-size: 3.6vh;
   color: #2D66F6;
 }
 
-.text-sm-blue {
-  font-size: 1vh;
+.text-sm-med-blue {
+  font-size: 3vh;
   color:#2D66F6;
 }
 
-.text-xs-blue {
-  font-size:0.8vh;
+.text-sm-blue {
+  font-size: 2vh;
   color:#2D66F6
 }
 
+.text-xs-blue {
+  font-size:1.3vh;
+  color:#2D66F6
+}
 /* sets background to blue and font to white or vise versa */
 
 .bg-blue {
@@ -291,16 +345,16 @@ select {
   color: #FFFFFF;
   background-color: #2D66F6;
   border-radius: 10px;
-  width: 200px;
-  height: 60px
+  width: 10vw;
+  height: 5vh
 }
 
 .btn-blue-lg {
   color: #FFFFFF;
   background-color: #2D66F6;
   border-radius: 10px;
-  width: 220px;
-  height: 70px
+  width: 17vw;
+  height: 7vh
 }
 
 .btn-blue-xl {
@@ -313,14 +367,16 @@ select {
   color: #2D66F6;
   background-color: #FFFFFF;
   border-radius: 10px;
-  width: 200px;
-  height: 60px
+  width: 10vw;
+  height: 5vh
 }
 
 .btn-white-lg {
   color: #2D66F6;
   background-color: #FFFFFF;
   border-radius: 10px;
+  width: 17vw;
+  height: 7vh
 }
 
 /* styling footer */
@@ -330,7 +386,6 @@ select {
   padding: 20px;
   background-color: #2F2E41;
   color: #FFFFFF;
-  font-family: "Inter";
   font-style: normal;
   font-weight: normal;
   font-size: 17px;

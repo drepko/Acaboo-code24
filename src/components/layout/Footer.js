@@ -45,6 +45,7 @@ export default function Footer(props) {
                 <Col lg={true} lg={6}>
                 <h3>Subscribe</h3>
                 <SubscribeFormContainer />
+
                 </Col>
             </Row>
             <div className="social-media">

@@ -14,3 +14,7 @@
   right: 25px;
   cursor: pointer
 } */
+
+.form-group .col-form-label {
+  display: none;
+}

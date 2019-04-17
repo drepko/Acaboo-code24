@@ -11,23 +11,20 @@ import Cart from './Cart'
 class CoursePageContainer extends PureComponent {
    
     componentWillMount = () => {
-        const { study, location, selectedCourses } = this.props
+        const { study } = this.props
         if (study !== null
         ) {
             this.props.getCourses(study.id)
         }
-        if (study !== null
-            && selectedCourses.length > 0) {
-            this.props.getCourses(study.id)
-        }
         else {
+            console.log(study)
             this.props.getHighLights()
         }
 
     }
 
     componentDidUpdate = (prevProps) => {
-        if (prevProps.study !== this.props.study) {
+        if (this.props.study && prevProps.study !== this.props.study) {
             this.props.getCourses(this.props.study.id)
         }
     }

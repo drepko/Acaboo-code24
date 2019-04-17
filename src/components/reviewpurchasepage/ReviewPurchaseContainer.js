@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import ProgressBar from '../layout/ProgressBar'
-import courses from '../../reducers/courses'
 import { baseUrl } from '../../constants'
 import { deleteCourse } from '../../actions/courses'
 
@@ -24,6 +23,8 @@ class ReviewPurchaseContainer extends PureComponent {
 	render() {
 		const {first_name, last_name, email, phone_number} = this.props.currentUser.credentials
 		const {selectedCourses} = this.props
+		const total = selectedCourses.map(course => course.price).reduce((a,b) => a + b, 0)
+		const subtotal = Number.isInteger(total) ? total + `,-` : total.toFixed(2).toString().replace(".", ",")
 
 		return (
 			<div>
@@ -42,14 +43,13 @@ class ReviewPurchaseContainer extends PureComponent {
 
 				<p>****************</p>
                 <h2>Selected course(s)</h2>
-                <p>List of selected course</p>
 
 				{
 					selectedCourses.map(course => (
 							<p>
 								Course name: {course.name} <br />
-								Price: €{course.price} <br />
-								<img alt={course.id} src={`${baseUrl}${course.image}`}/>
+								Price: €{course.price.toFixed(2).toString().replace(".", ",")} <br />
+								<img alt={course.id} src={`${baseUrl}${course.image}`}/> <br />
 								<button onClick={this.onDelete} value={course.id}>Remove this course</button> <br />
 							</p>
 						)
@@ -58,11 +58,11 @@ class ReviewPurchaseContainer extends PureComponent {
 
 				<p>****************</p>
 				{
-					!selectedCourses ?
+					!total ?
 
 					<p>Your cart is empty</p> :
 
-					<h3>Total price: €{selectedCourses.map(course => course.price).reduce((a, b) => a + b, 0)}</h3>
+					<h3>Total price: €{subtotal}</h3>
 				}
 				<button onClick={this.handleClick}>Add another course</button>
 				

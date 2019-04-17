@@ -18,7 +18,7 @@ export default class Testimonal extends Component {
           <div className="ai-start small-width">
             <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
             <div className="flex-row flex-start top">
-              <img alt="image" className="image-xsmall" src={UvA} />
+              <img alt="Business Administration" className="image-xsmall" src={UvA} />
               <div className="top text-sm-grey">
                 <p>David de Bye, <br />Business Administration, UVA</p>
               </div>  
@@ -28,7 +28,7 @@ export default class Testimonal extends Component {
           <div className="ai-start">
             <p className="text-sm-black">“It enables my students to <br/>get the most out of a course, <br/>everytime...”</p>
             <div className="flex-row flex-start top">
-              <img alt="image" className="image-xsmall" src={UvA} />
+              <img alt="Mathematics teacher" className="image-xsmall" src={UvA} />
               <div className="top text-sm-grey">
                 <p>Paul de Groot, <br />Mathematics teacher, UVA</p>
               </div>
@@ -38,7 +38,7 @@ export default class Testimonal extends Component {
           <div className="ai-start">
             <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
             <div className="flex-row flex-start top">
-              <img alt="image" className="image-xsmall" src={UvA} />
+              <img alt="Business teacher" className="image-xsmall" src={UvA} />
               <div className="top text-sm-grey">
                 <p>Emma de Leeuw, <br />Business teacher, UVA</p>
               </div>
