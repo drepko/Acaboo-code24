@@ -21,7 +21,7 @@ if(props.course.provided){
                         </div>
                     </div>
                     <div>
-                        <p>&#8364; {props.course.price}</p>
+                        <p>&#8364; {props.course.price.toFixed(2).toString().replace(".", ",")}</p>
                     </div>
                     <div>
                         <button className="btn-white-med right"
