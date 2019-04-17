@@ -27,7 +27,7 @@ class CoursePageContainer extends PureComponent {
     }
 
     componentDidUpdate = (prevProps) => {
-        if (prevProps.study !== this.props.study) {
+        if (this.props.study && prevProps.study !== this.props.study) {
             this.props.getCourses(this.props.study.id)
         }
     }
