@@ -23,16 +23,17 @@ class FindCourseContainer extends PureComponent {
     }
 
     handleUniversitySelect(event) {
-        const selectedIndex = event.target.options.selectedIndex;
-        const id = event.target.options[selectedIndex].getAttribute('id')
-        this.setState({ university: { id, name: event.target.value } });
+        console.log(event, 'uni')
+        // const selectedIndex = event.target.options.selectedIndex;
+        const id = event.id
+        this.setState({ university: { id, name: event.value } });
         this.props.getStudies(id)
     }
 
     handleStudySelect(event) {
-        const selectedIndex = event.target.options.selectedIndex;
-        const id = event.target.options[selectedIndex].getAttribute('id')
-        this.setState({ study: { id, name: event.target.value } });
+        // const selectedIndex = event.target.options.selectedIndex;
+        const id = event.id
+        this.setState({ study: { id, name: event.value } });
     }
 
     handleSubmit(event) {
