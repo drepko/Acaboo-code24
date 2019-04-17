@@ -8,7 +8,7 @@ export default class Team extends Component {
       <div className ="join-us-main">
         <h1>Join Us </h1>
         <p>Acaboo is based in the beautiful Amsterdam. We are a diverse group of people interested in education, tecnology and the future of life!</p>
-        <p>Interested in joining us? <Link to =  './careers'>Learn more here 👈</Link></p>
+        <p>Interested in joining us? <Link to =  './careers'>Learn more here</Link></p>
 
       </div>
     )

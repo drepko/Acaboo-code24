@@ -44,7 +44,7 @@ class LandingsPageContainer extends React.Component {
           </div>
 
           <div className="half-width">
-            <img alt="image" className="image-lg" src={woman_desk} />
+            <img alt="woman_desk" className="image-lg" src={woman_desk} />
           </div>
 
         </div>
@@ -59,7 +59,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="padding-top">
-          <img alt="image" className="image-lg-overflow shadow" src={home_studydashboard} />
+          <img alt="home_studydashboard" className="image-lg-overflow shadow" src={home_studydashboard} />
         </div>
 
         <div className="flex-row about-box padding-top" >
@@ -98,7 +98,7 @@ class LandingsPageContainer extends React.Component {
 
               <div id='about-flex-child-two'>
                 <div className="">
-                  <img alt="image" className="image-lg-overflow" src={man_handshake} />
+                  <img alt="man_handshake" className="image-lg-overflow" src={man_handshake} />
                 </div>
               </div>
 
@@ -120,7 +120,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="section_9 section_image_people">
-          <img alt="image" className="image-lg-overflow" src={people} />
+          <img alt="people" className="image-lg-overflow" src={people} />
         </div>
 
         <StartStudying/>

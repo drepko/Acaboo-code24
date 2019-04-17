@@ -56,7 +56,7 @@ class FormExample extends Component {
 			switch (currentError) {
 				case "min":
 					return [...array, "Your password is too short. (min 10 characters)"]
-				case "min":
+				case "max":
 					return [...array, "Your password is too long. (max 100 characters)"]
 				case "digits":
 					return [...array, "A password needs to contain atleast 1 number."]
@@ -73,7 +73,6 @@ class FormExample extends Component {
 				default:
 					break;
 			}
-
 		}, [])
 		return errorArray
 	}

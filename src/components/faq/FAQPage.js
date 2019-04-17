@@ -61,7 +61,7 @@ export default class FAQPage extends Component {
         <div className="padding-top"/>
 
         <div className="med-width">
-            <img alt="image" className="image-med" src={man_handshake} /> 
+            <img alt="man_handshake" className="image-med" src={man_handshake} /> 
         </div>
 
         <Testimonial />

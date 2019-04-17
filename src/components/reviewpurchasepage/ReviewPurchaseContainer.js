@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import ProgressBar from '../layout/ProgressBar'
-import courses from '../../reducers/courses'
 import { baseUrl } from '../../constants'
 import { deleteCourse } from '../../actions/courses'
 
