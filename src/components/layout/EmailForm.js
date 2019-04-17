@@ -6,7 +6,7 @@ export default function EmailForm(props) {
     return (
         <form onSubmit={props.onSubmit}>
             <div>
-                <input
+                <input className ='form-control form-control-sm form-width-height'
                     onChange = {props.onChange}
                     placeholder="Email Address"
                     type="email"
@@ -15,7 +15,7 @@ export default function EmailForm(props) {
                     value={props.formValues.email}
                 />
             </div>
-            <button className ='btn-blue-lg' type="submit" >{props.value} </button>
+            <button className ='form-control form-control-sm btn-blue-xl form-width-height'  type="submit" >{props.value} </button>
         </form>
     )
 }

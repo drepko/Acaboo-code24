@@ -403,3 +403,7 @@ select {
   
  }
  
+ .form-width-height{
+  width: 40vh;
+  height: 5vh; 
+ }
