@@ -23,8 +23,6 @@ export default class MessageForm extends PureComponent {
 	}
 
 	render() {
-		const { handleSubmit } = this.props
-
 		return (
 			<div className="signup-form">
 				<form onSubmit={this.handleSubmit}>

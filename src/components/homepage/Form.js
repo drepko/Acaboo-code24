@@ -35,7 +35,6 @@ export default class Course extends Component {
     }
 
     render() {
-        const { study } = this.props
         return (
             <div className="half-width ai-start">
                 <form className=""

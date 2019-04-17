@@ -21,8 +21,8 @@ class AboutPageContainer extends React.Component {
         <JoinUs/>
         <BrowseCourse/>
         <div className="people-about-us">
-                <img className="people_image_1" src={People} />
-            </div>
+          <img alt="" className="people_image_1" src={People} />
+        </div>
         <Advisors/>
         <h1>Want more? Subscribe to our newsletter</h1>
         <NewsSubscription/>

@@ -11,7 +11,7 @@ import Cart from './Cart'
 class CoursePageContainer extends PureComponent {
    
     componentWillMount = () => {
-        const { study, location, selectedCourses } = this.props
+        const { study, selectedCourses } = this.props
         if (study !== null
         ) {
             this.props.getCourses(study.id)
