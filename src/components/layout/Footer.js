@@ -18,11 +18,11 @@ export default function Footer(props) {
             <Row>
                 <Col>
                     <h3>Navigate</h3>
-                    <p><Nav.Link href="/about">About</Nav.Link></p>
-                    <p><Nav.Link href="/blog">Blog</Nav.Link></p>
-                    <p><Nav.Link href="/team">Team</Nav.Link></p>
-                    <p><Nav.Link href="/courses">Courses</Nav.Link></p>
-                    <p><Nav.Link href="/careers">We’re Hiring</Nav.Link></p>
+                    <p><Link to="/about">About</Link></p>
+                    <p><Link to="/blog">Blog</Link></p>
+                    <p><Link to="/team">Team</Link></p>
+                    <p><Link to="/courses">Courses</Link></p>
+                    <p><Link to="/careers">We’re Hiring</Link></p>
                 </Col>
                 <Col>
                     <h3>Contact</h3> 
@@ -48,5 +48,6 @@ export default function Footer(props) {
         </Container>
     )
 }
+
 
 

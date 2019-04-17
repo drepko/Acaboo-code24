@@ -346,3 +346,11 @@ select {
   justify-content: center
 }
 
+.footer a{
+  color: #FFFFFF;
+  font-family: Inter UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: normal;
+}
