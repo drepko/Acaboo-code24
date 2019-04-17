@@ -27,7 +27,7 @@ export default function Footer(props) {
 
                 <Col xs={2} className ='contact-padding'>
                     <h3>Contact</h3> 
-                    <p>&#xe062;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
+                    <p>&#xf232;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WN-P246<br/> 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1081 HV Amsterdam
                     </p>
