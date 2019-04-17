@@ -34,12 +34,15 @@ if(props.course.provided){
             <div className="flex-row jc-between">
                 <div className="flex-column medium-div">
                     <div className="text-med-left">
-                        <p>{props.course.name}</p>
+                        {/* <p>{props.course.name}</p> */}
                     </div>
                     <div>
                         <p>{props.course.description}</p>
                     </div>
-                    <EmailwhenAvailable id={props.course.id}/>
+                    <EmailwhenAvailable 
+                    id={props.course.id}
+                    course={props.course.name}
+                    />
                 </div>
                 <div>
                     <p>Not Available</p>
