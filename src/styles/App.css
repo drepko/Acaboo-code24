@@ -1,8 +1,12 @@
 /* styling body */
-
+@import  "../fonts/Inter-web/inter.css";
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
   /* border: solid #666666; */
+}
+
+body {
+  font-family: "Inter"
 }
 
 /* sets the page to have to padding left and right 
@@ -374,7 +378,6 @@ select {
   padding: 20px;
   background-color: #2F2E41;
   color: #FFFFFF;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 25px
