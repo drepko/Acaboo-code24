@@ -16,35 +16,34 @@ export default function Footer(props) {
     return (
         <Container className="footer padding">
             <Row>
-                <Col>
+                <Col  xs={{ span: 2, offset: 1 }}>
                     <h3>Navigate</h3>
                     <Link to="/about">About</Link>
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/blog">Blog</Link> 
                     <Link to="/team">Team</Link>
                     <Link to="/courses">Courses</Link>
                     <Link to="/careers">We’re Hiring</Link>
                 </Col>
 
-                <Col className ='contact-padding'>
-                
-                        <h3>Contact</h3> 
-                        <p>Boelelaan 1081 <br/>
+                <Col xs={2} className ='contact-padding'>
+                    <h3>Contact</h3> 
+                    <p>Boelelaan 1081 <br/>
                         WN-P246<br/> 
-                        1081 HV Amsterdam</p>
-                    
+                        1081 HV Amsterdam
+                    </p>
+                        
                     <p>
-                       &#9742;  + 31 615536113<br/>
+                        &#9742;  + 31 615536113<br/>
                         Mon - Fri 9:00 - 17:00<br/>
                     </p>
                     <p>
-                         &#9993; info@acaboo.com<br/>
+                        &#9993; info@acaboo.com<br/>
                     </p>
-                   
                 </Col>
 
-                <Col lg={true} lg={6}>
-                <h3>Subscribe</h3>
-                <SubscribeFormContainer />
+                <Col xs={{ offset: 2 }}>
+                    <h3>Subscribe</h3>
+                    <SubscribeFormContainer />
 
                 </Col>
             </Row>
