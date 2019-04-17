@@ -41,14 +41,13 @@ class ReviewPurchaseContainer extends PureComponent {
 
 				<p>****************</p>
                 <h2>Selected course(s)</h2>
-                <p>List of selected course</p>
 
 				{
 					selectedCourses.map(course => (
 							<p>
 								Course name: {course.name} <br />
 								Price: €{course.price} <br />
-								<img alt={course.id} src={`${baseUrl}${course.image}`}/>
+								<img alt={course.id} src={`${baseUrl}${course.image}`}/> <br />
 								<button onClick={this.onDelete} value={course.id}>Remove this course</button> <br />
 							</p>
 						)
