@@ -465,6 +465,8 @@ select {
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
+  font-family: Inter UI;
+  justify-content: space-between
   
 }
 
@@ -520,13 +522,13 @@ select {
   padding-right: 100px;
   list-style-type: none;
  }
- .footer p{
+ /* .footer p{
   font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: normal;
- }
+ } */
  
  .subscribe-button{
   margin: 10px;
@@ -537,8 +539,24 @@ select {
  .form-width-height{
   width: 40vh;
   height: 5vh; 
+  margin: 1vh
  }
 
  .contact-padding{
-  padding-right: 3vh
+  padding-right: 3vh;
+  font-family: Inter UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: normal;
  }
+ 
+ .footer .subscription-text p{
+  font-family: Inter UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: normal;
+  color: #959595;
+ }
+
