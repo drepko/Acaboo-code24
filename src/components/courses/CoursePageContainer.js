@@ -8,6 +8,7 @@ import { withRouter } from 'react-router'
 import { selectCourse } from '../../actions/paymentFlow'
 import Cart from './Cart'
 import people from'../../images/mock-ups/people.png'
+import { Link } from 'react-router-dom'
  
 
 class CoursePageContainer extends PureComponent {
@@ -86,7 +87,11 @@ class CoursePageContainer extends PureComponent {
             <div>
                 <CourseFilterbar history={this.props.history} />
                 {this.renderCourses(courses)}
-                <img alt="people" className="image-med" src={people} /> 
+                <img alt="people" className="image-med margin-side" src={people} /> 
+                <p className="text-lg-black text-center">Start studying with Acaboo.</p>
+                <div className="margin-side text-center margin-bottom">
+                    <Link to="/about" className="text-med">Learn more &#8594;</Link>
+                </div>
             </div>)
     }
 }

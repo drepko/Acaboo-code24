@@ -29,10 +29,10 @@ class EmailWhenAvailable extends PureComponent {
     render() {
         return (
             !this.state.sent? 
-            <div>
-            <p>{this.props.course}</p>    
-            <p>Oops! We don’t offer your course yet!</p>
-            <p>Let me know when available</p>
+            <div className="padding-bottom">
+               
+            <p className="text-sm-black">Oops! We don’t offer your course yet!<br/>
+            Let me know when available</p>
             <EmailForm
                 onSubmit={this.onSubmit}
                 onChange={this.onChange}
@@ -42,7 +42,7 @@ class EmailWhenAvailable extends PureComponent {
             </div>
             :
             <div>
-                <p>We'll let you know when {this.props.course} is available.</p>
+                <p className="text-sm-black">We'll let you know when {this.props.course} is available.</p>
             </div>)
     }
 }

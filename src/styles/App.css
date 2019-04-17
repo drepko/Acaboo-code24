@@ -63,11 +63,29 @@ in order to make the navigation-bar and footer full-width */
   padding-bottom: 60px
 }
 
+.padding-tb {
+  padding-top: 25px;
+  padding-bottom: 25px
+}
 .padding-left {
   padding-left: 20%
 }
 .padding {
   padding:30px
+}
+
+.margin-left {
+  margin-left: 15px;
+}
+
+.margin-bottom {
+  margin-bottom: 25px
+}
+
+.margin-side {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* flex direction */
@@ -82,6 +100,10 @@ in order to make the navigation-bar and footer full-width */
 .fw {
   flex-wrap: wrap-reverse;
   -webkit-flex-wrap: wrap-reverse
+}
+
+.float-left {
+  float: left
 }
 
 .ai-start-reverse {
@@ -129,7 +151,7 @@ in order to make the navigation-bar and footer full-width */
 }
 
 .medium-div {
-  height: 80%;
+  min-width: 67%
 }
 
 .half-height {
