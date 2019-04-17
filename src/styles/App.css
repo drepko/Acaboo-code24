@@ -76,6 +76,7 @@ in order to make the navigation-bar and footer full-width */
 
 .small-width {
   min-width: 25vw;
+  /* max-width: 35vw; */
 }
 
 .med-width {

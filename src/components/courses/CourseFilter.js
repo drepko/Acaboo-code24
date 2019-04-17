@@ -6,7 +6,7 @@ import './CourseFilter.css'
 
     renderUniversityOptions = () => {
          return (
-            <select value = {this.props.selectedUniversity ? this.props.selectedUniversity.name : ""} onChange={this.props.handleUniversitySelect}>
+            <select class="form-control form-control-sm" value = {this.props.selectedUniversity ? this.props.selectedUniversity.name : ""} onChange={this.props.handleUniversitySelect}>
                 <option value="" disabled selected>Select a university...</option>
                 {this.props.universities.map((university) => {
                     return <option key={university.id} id={university.id} value={university.name}>{university.name}</option>
@@ -21,7 +21,7 @@ import './CourseFilter.css'
         if (studies && studies.length > 0) {
             return (
 
-                <select value = {this.props.selectedStudy ? this.props.selectedStudy.name : ""} onChange={this.props.handleStudySelect}>
+                <select class="form-control form-control-sm" value = {this.props.selectedStudy ? this.props.selectedStudy.name : ""} onChange={this.props.handleStudySelect}>
                     <option value="" disabled selected>{`${this.props.selectedUniversity ? "Select a study" :"Select a university first..."}`}</option>
                     {this.props.studies.map((studie) => {
                         return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
@@ -34,8 +34,8 @@ import './CourseFilter.css'
     render() {
 
         return (
-            <div className="filter-bar">
-                <form >
+            <div className="small-width ai-start">
+                <form className="padding-top">
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}
                 </form>
