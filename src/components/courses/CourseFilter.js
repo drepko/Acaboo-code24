@@ -44,7 +44,7 @@ import './CourseFilter.css'
 
         return (
             <div className="small-width ai-start">
-                <form className="padding-top">
+                <form className="padding-top padding-bottom">
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}
                 </form>
