@@ -23,7 +23,7 @@ in order to make the navigation-bar and footer full-width */
 }
 
 /*  */
-.main div {
+.main div: not(form) {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
