@@ -13,7 +13,15 @@ export default (state = null, { type, payload }) => {
         })
       )
     case GET_HIGHLIGHTS:
-      return payload
+      return payload.map(course => ({
+        description: course.description,
+        id: course.id,
+        image: course.image,
+        name: course.name,
+        price: course.price ? course.price/100 : null,
+        provided: course.provided
+        })
+      )
     default:
       return state
   }
