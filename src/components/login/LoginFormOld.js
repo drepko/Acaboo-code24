@@ -10,7 +10,7 @@ export default class LoginForm extends PureComponent {
 		const { state, onChange, onSubmit, showPassword } = this.props
 
 		return (
-			<div className="main">
+			<div className="main-column">
 				<div className="flex-column jc-between">
 					<form onSubmit={onSubmit}>
 						<input placeholder="Email" type="email" name="email" value={

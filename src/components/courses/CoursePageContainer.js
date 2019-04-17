@@ -7,6 +7,8 @@ import { getHighLights } from '../../actions/courses'
 import { withRouter } from 'react-router'
 import { selectCourse } from '../../actions/paymentFlow'
 import Cart from './Cart'
+import people from'../../images/mock-ups/people.png'
+ 
 
 class CoursePageContainer extends PureComponent {
    
@@ -83,8 +85,8 @@ class CoursePageContainer extends PureComponent {
         return (
             <div>
                 <CourseFilterbar history={this.props.history} />
-
                 {this.renderCourses(courses)}
+                <img alt="people" className="image-lg-overflow ai-center" src={people} /> 
             </div>)
     }
 }

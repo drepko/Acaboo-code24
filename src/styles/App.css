@@ -2,7 +2,7 @@
 @import  "../fonts/Inter-web/inter.css";
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
-  /* border: solid #666666; */
+  border: solid #666666;
 }
 
 body {
@@ -23,10 +23,21 @@ in order to make the navigation-bar and footer full-width */
 }
 
 /*  */
-.main div {
+.main-column div {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  margin-bottom: 10;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.main-row div {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
   align-items: center;
   -webkit-align-items: center;
   margin-bottom: 10;
@@ -91,6 +102,21 @@ in order to make the navigation-bar and footer full-width */
   /* max-width: 35vw; */
 }
 
+.max-width-med {
+  width: 55vw;
+  max-width: 55vw;
+}
+
+.max-width-small {
+  width: 25vw;
+  max-width: 25vw;
+}
+
+.max-width-xsmall {
+  width: 8vw;
+  max-width: 8vw;
+}
+
 .med-width {
   min-width: 60vw;
 }
@@ -126,6 +152,10 @@ select {
   align-self: flex-start
 }
 
+.ai-center {
+  align-self: center
+}
+
 .jc {
   justify-content: space-evenly;
   padding: 20px 
@@ -137,6 +167,10 @@ select {
 
 .jc-between {
   justify-content: space-between;
+}
+
+.jc-start {
+  justify-content: flex-start
 }
 
 .text-center {
@@ -179,6 +213,7 @@ select {
 .image-lg-overflow {
   width: 110%;
   height: auto;
+  border-radius: 10px;
 } 
 
 .image-med {
@@ -256,7 +291,8 @@ select {
 
 .text-sm-grey {
   font-size: 2vh;
-  color:#989898
+  color:#989898;
+  word-wrap: break-word;
 }
 
 .text-xs-grey {
@@ -366,6 +402,7 @@ select {
 .btn-white-med {
   color: #2D66F6;
   background-color: #FFFFFF;
+  border: 1px solid #2D66F6;
   border-radius: 10px;
   width: 10vw;
   height: 5vh
@@ -374,6 +411,7 @@ select {
 .btn-white-lg {
   color: #2D66F6;
   background-color: #FFFFFF;
+  border: 1px solid #2D66F6;
   border-radius: 10px;
   width: 17vw;
   height: 7vh
