@@ -7,7 +7,7 @@ import man_handshake from'../../images/mock-ups/man_handshake.png'
 export default class FAQPage extends Component {
   render() {
     return (
-      <div className="main">
+      <div className="main-column">
         <p className="padding-top text-lg-black">FREQUENTLY ASKED QUESTIONS</p> <br/>
 
         <p className="text-sm-black">Can I change my course later on?</p>

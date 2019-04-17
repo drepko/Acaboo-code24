@@ -19,7 +19,7 @@ class LandingsPageContainer extends React.Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="main-column">
 
         <div className="flex-row fw jc-center ai-start-reverse">
 
