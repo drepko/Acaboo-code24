@@ -44,6 +44,14 @@ in order to make the navigation-bar and footer full-width */
   padding-top: 60px;
 }
 
+.padding-bottom {
+  padding-bottom: 60px
+}
+
+.padding {
+  padding:30px
+}
+
 /* flex direction */
 .flex-row {
   flex-direction: row;
@@ -88,7 +96,8 @@ in order to make the navigation-bar and footer full-width */
 }
 
 .border-thin-grey {
-  border: thin #989898
+  border: solid #989898;
+  border-radius: 10px
 }
 
 .form-small {
@@ -146,6 +155,7 @@ select {
   width: 120%;
   height: 120%;
 }
+
 #about-and-picture {
   display: flex;
   flex-direction: row;
@@ -161,12 +171,10 @@ select {
   max-width: 100%;
 
 }
+
 .image-lg-overflow {
-  /* max-width: 70%;
-  max-height: 70%; */
   width: 110%;
   height: auto;
-  /* overflow: hidden; */
 } 
 
 .image-med {
@@ -176,9 +184,9 @@ select {
 }
 
 .image-small {
-  max-width: 20vw;
-  max-height: 20vh;
-  overflow: hidden;
+  max-width: 20%;
+  max-height: 20%;
+  /* overflow: hidden; */
 }
 
 .image-xsmall {
