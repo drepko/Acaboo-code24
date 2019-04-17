@@ -24,21 +24,22 @@ export default function Footer(props) {
                     <Link to="/courses">Courses</Link>
                     <Link to="/careers">We’re Hiring</Link>
                 </Col>
+
+                <Col className ='contact-padding'>
                 
-                <Col>
-                    <ul>
                         <h3>Contact</h3> 
-                        <li>Boelelaan 1081 </li>
-                       <li> WN-P246 </li>
-                        <li>1081 HV Amsterdam</li>
-                    </ul>
-                    <ul>
-                       <li> &#9742;  + 31 615536113</li>
-                        <li>Mon - Fri 9:00 - 17:00</li>
-                    </ul>
-                    <ul>
-                         <li>&#9993; info@acaboo.com</li>
-                    </ul>
+                        <p>Boelelaan 1081 <br/>
+                        WN-P246<br/> 
+                        1081 HV Amsterdam</p>
+                    
+                    <p>
+                       &#9742;  + 31 615536113<br/>
+                        Mon - Fri 9:00 - 17:00<br/>
+                    </p>
+                    <p>
+                         &#9993; info@acaboo.com<br/>
+                    </p>
+                   
                 </Col>
 
                 <Col lg={true} lg={6}>

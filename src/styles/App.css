@@ -407,3 +407,7 @@ select {
   width: 40vh;
   height: 5vh; 
  }
+
+ .contact-padding{
+  padding-right: 3vh
+ }
