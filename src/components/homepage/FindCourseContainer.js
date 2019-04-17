@@ -15,7 +15,8 @@ class FindCourseContainer extends PureComponent {
 
     state = {
         university: { id: null, name: null },
-        study: { id: null, name: null }
+        study: { id: null, name: null },
+        selectedOption: null
     }
 
     componentWillMount() {
@@ -23,20 +24,18 @@ class FindCourseContainer extends PureComponent {
     }
 
     async handleUniversitySelect(event) {
-        const selectedIndex = event.target.options.selectedIndex;
-        const id = event.target.options[selectedIndex].getAttribute('id')
-        await this.setState({ university: { id, name: event.target.value } });
+        const id = event.id
+        await this.setState({ university: { id, name: event.value }, selectedOption: null });
         this.props.setSelectedUniversity(this.state.university)
         this.props.getStudies(id)
         await this.props.clearSelectedStudy()
     }
 
     async handleStudySelect(event) {
-        const selectedIndex = event.target.options.selectedIndex;
-        const id = event.target.options[selectedIndex].getAttribute('id')
-        await this.setState({
-            study: { id, name: event.target.value} });
+        const id = event.id
+        await this.setState({ study: { id, name: event.value }, selectedOption: event });
         await this.props.setSelectedStudy(this.state.study)
+
     }
 
     async handleSubmit(event) {
@@ -61,6 +60,7 @@ class FindCourseContainer extends PureComponent {
                 selectedUniversity={this.props.selectedUniversity}
                 studies={this.props.studies}
                 selectedStudy={this.props.selectedStudy}
+                selectedOption={this.state.selectedOption}
             />
     }
 }
