@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { getUniversities } from '../../actions/universities'
-import { getStudies, setSelectedStudy, setSelectedUniversity } from '../../actions/studies'
+import { getStudies, setSelectedStudy, setSelectedUniversity, clearSelectedStudy } from '../../actions/studies'
 import Form from './Form'
 
 class FindCourseContainer extends PureComponent {
@@ -22,17 +22,21 @@ class FindCourseContainer extends PureComponent {
         this.props.getUniversities()
     }
 
-    handleUniversitySelect(event) {
+    async handleUniversitySelect(event) {
         const selectedIndex = event.target.options.selectedIndex;
         const id = event.target.options[selectedIndex].getAttribute('id')
-        this.setState({ university: { id, name: event.target.value } });
+        await this.setState({ university: { id, name: event.target.value } });
+        this.props.setSelectedUniversity(this.state.university)
         this.props.getStudies(id)
+        await this.props.clearSelectedStudy()
     }
 
-    handleStudySelect(event) {
+    async handleStudySelect(event) {
         const selectedIndex = event.target.options.selectedIndex;
         const id = event.target.options[selectedIndex].getAttribute('id')
-        this.setState({ study: { id, name: event.target.value } });
+        await this.setState({
+            study: { id, name: event.target.value} });
+        await this.props.setSelectedStudy(this.state.study)
     }
 
     handleSubmit(event) {
@@ -52,15 +56,19 @@ class FindCourseContainer extends PureComponent {
                 handleStudySelect={this.handleStudySelect}
                 universities={this.props.universities}
                 university={this.state.university}
+                selectedUniversity={this.props.selectedUniversity}
                 study={this.state.study}
                 studies={this.props.studies}
+                selectedStudy={this.props.selectedStudy}
             />
     }
 }
 
 const mapStateToProps = state => ({
     universities: state.universities,
-    studies: state.studies
+    studies: state.studies,
+    selectedUniversity: state.selectedUniversity,
+    selectedStudy: state.selectedStudy
 })
 
-export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy , setSelectedUniversity})(FindCourseContainer)
+export default connect(mapStateToProps, { getUniversities, getStudies, setSelectedStudy , setSelectedUniversity, clearSelectedStudy})(FindCourseContainer)
