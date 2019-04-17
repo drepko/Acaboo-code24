@@ -13,7 +13,7 @@ class CoursePageContainer extends PureComponent {
     componentWillMount = () => {
         const { study } = this.props
         if (study !== null
-        ) {
+        ) { console.log(study.id, 'study id in pagecontrainer')
             this.props.getCourses(study.id)
         }
         else {

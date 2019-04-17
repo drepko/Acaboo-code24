@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Select from 'react-select'
 
 export default class Course extends Component {
+    // state = {
+    //     studyName: this.props.selectedStudy.name
+    // }
     Select = require('react-select')
 
     renderUniversityOptions = () => {
@@ -54,6 +57,7 @@ export default class Course extends Component {
     renderStudyOptions = () => {
         const { studies } = this.props
          
+        //value = {this.props.selectedStudy ? this.props.selectedStudy.name : ""}
 
             const studyOptions = studies ? studies.map((study) => {
                 return {
@@ -84,8 +88,7 @@ export default class Course extends Component {
                 </div>
                 :
                 <div >
-
-                    <Select placeholder={'Select your study...'}options={studyOptions} onChange={this.props.handleStudySelect}>
+                    <Select value={this.props.selectedOption} placeholder={'Select your study...'}options={studyOptions} onChange={this.props.handleStudySelect}>
                         {/* <option value="" disabled selected>Select your study...</option>
                         {this.props.studies.map((studie) => {
                             return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
