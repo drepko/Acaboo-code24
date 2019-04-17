@@ -2,7 +2,7 @@
 @import  "../fonts/Inter-web/inter.css";
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
-  border: solid #666666;
+  /* border: solid #666666; */
 }
 
 body {
@@ -23,7 +23,7 @@ in order to make the navigation-bar and footer full-width */
 }
 
 /*  */
-.main-column div : not(form) {
+.main-column div  {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ in order to make the navigation-bar and footer full-width */
   max-height: 100vh;
 }
 
-.main-row div {
+.main-row {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -63,6 +63,9 @@ in order to make the navigation-bar and footer full-width */
   padding-bottom: 60px
 }
 
+.padding-left {
+  padding-left: 20%
+}
 .padding {
   padding:30px
 }
@@ -87,6 +90,10 @@ in order to make the navigation-bar and footer full-width */
 
 .ai-start {
   align-items: flex-start !important
+}
+
+.ai-center {
+  align-items: center
 }
 
 .full-width {
@@ -119,6 +126,10 @@ in order to make the navigation-bar and footer full-width */
 
 .med-width {
   min-width: 60vw;
+}
+
+.medium-div {
+  height: 80%;
 }
 
 .half-height {
@@ -232,6 +243,11 @@ select {
   max-width: 10%;
   max-height: 10%;
   overflow: hidden;
+}
+
+.image-book {
+  max-width: 90%;
+  max-height: 90%;
 }
 
 /* set font-size and color */
