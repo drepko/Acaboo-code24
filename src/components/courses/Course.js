@@ -7,10 +7,10 @@ import EmailwhenAvailable from './EmailWhenAvailable'
 export default function Course(props) {
 
     if(props.course.provided){
-        return (<div className="main-row jc-between">
-                    <div className="jc-start border-thin-grey max-width-med">
+        return (<div className="main-row">
+                    <div className="main-row border-thin-grey max-width-med">
                         <div className="padding-side-small">
-                            <img className="image-lg-overflow" alt={props.course.name} src={`${baseUrl}${props.course.image}`} />
+                            <img className="image-book" alt={props.course.name} src={`${baseUrl}${props.course.image}`} />
                         </div>
                         <div className="flex-column medium-div ai-start">
                             <div className="text-sm-med-black text-start">
@@ -20,7 +20,7 @@ export default function Course(props) {
                                 <p>{props.course.description}</p>
                             </div>
                         </div>
-                        <div className="text-sm-med-black padding-side-small">
+                        <div className="text-sm-med-black padding-left">
                             <p>&#8364; {props.course.price.toFixed(2).toString().replace(".", ",")}</p>
                         </div>
                     </div> 
@@ -33,7 +33,7 @@ export default function Course(props) {
 
         return (<div className="main-small">
                     <div className="flex-row jc-between">
-                        <div className="flex-column medium-div">
+                        <div className="flex-column">
                             <div className="text-med-left">
                                 {/* <p>{props.course.name}</p> */}
                             </div>

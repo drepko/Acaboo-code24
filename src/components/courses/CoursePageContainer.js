@@ -86,7 +86,7 @@ class CoursePageContainer extends PureComponent {
             <div>
                 <CourseFilterbar history={this.props.history} />
                 {this.renderCourses(courses)}
-                <img alt="people" className="image-lg-overflow ai-center" src={people} /> 
+                <img alt="people" className="image-med" src={people} /> 
             </div>)
     }
 }
