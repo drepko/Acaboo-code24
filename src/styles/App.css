@@ -332,21 +332,38 @@ select {
   color: #FFFFFF;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 600;
-  font-size: 25px
+  font-weight: normal;
+  font-size: 17px;
   
 }
 
 .social-media {
-  justify-content: space-evenly;
-  margin: 30px
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3vh
+  
+}
+.social-media
+  img{
+    margin: 0 2vh;
+    height: 3vh;
+    width: 3vh
+
 }
 
 .Acaboo-2019{
-  justify-content: center
+  justify-content: center;
+  font-family: Inter UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: normal;
+  color: #959595;
 }
 
 .footer a{
+  display: block;
   color: #FFFFFF;
   font-family: Inter UI;
   font-style: normal;
@@ -354,3 +371,35 @@ select {
   font-size: 17px;
   line-height: normal;
 }
+ .footer h3{
+  font-family: Inter UI;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: normal;
+  padding-top: 5vh
+ }
+
+ .footer ul {
+  font-family: Inter UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: normal;
+  padding-right: 100px;
+  list-style-type: none;
+ }
+ .footer p{
+  font-family: Inter UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: normal;
+ }
+ 
+ .subscribe-button{
+  margin: 10px;
+  justify-content: center;
+  
+ }
+ 

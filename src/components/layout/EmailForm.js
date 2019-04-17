@@ -15,8 +15,7 @@ export default function EmailForm(props) {
                     value={props.formValues.email}
                 />
             </div>
-            <br />
-            <input type="submit" value={props.value} />
+            <button className ='btn-blue-lg' type="submit" >{props.value} </button>
         </form>
     )
 }
