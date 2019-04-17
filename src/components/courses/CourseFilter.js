@@ -18,17 +18,26 @@ import './CourseFilter.css'
 
     renderStudyOptions = () => {
         const { studies } = this.props
-        if (studies && studies.length > 0) {
+        
             return (
 
+                studies === null ?
+            <div >
+                <select class="form-control form-control-sm" disabled >
+                    <option value="" disabled selected>First select your university</option>
+                </select><br/>
+            </div>
+                :
+            <div >
                 <select class="form-control form-control-sm" value = {this.props.selectedStudy ? this.props.selectedStudy.name : ""} onChange={this.props.handleStudySelect}>
                     <option value="" disabled selected>{`${this.props.selectedUniversity ? "Select a study" :"Select a university first..."}`}</option>
                     {this.props.studies.map((studie) => {
                         return <option key={studie.id} id={studie.id} value={studie.name}>{studie.name}</option>
                     })}
                 </select>
+            </div>
             )
-        }
+        
     }
 
     render() {
