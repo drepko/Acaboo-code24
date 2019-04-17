@@ -3,6 +3,7 @@ import { baseUrl } from '../constants'
 
 export const UPDATE_STUDIES = 'UPDATE_STUDIES'
 export const SET_SELECTED_STUDY = 'SET_SELECTED_STUDY'
+export const CLEAR_SELECTED_STUDY = 'CLEAR_SELECTED_STUDY'
 export const SET_SELECTED_UNIVERSITY ='SET_SELECTED_UNIVERSITY'
 
 const updateStudies = studies => ({
@@ -13,6 +14,10 @@ const updateStudies = studies => ({
 export const setSelectedStudy = study => ({
   type: SET_SELECTED_STUDY,
   payload: study
+})
+
+export const clearSelectedStudy = () => ({
+  type: CLEAR_SELECTED_STUDY
 })
 
 export const setSelectedUniversity = university => ({
