@@ -33,7 +33,7 @@ export default function Footer(props) {
                     <br/>Mon - Fri 9:00 - 17:00
                     <br/> &#9993; info@acaboo.com
                 </Col>
-                <Col lg={true} lg={6}><SubscribeFormContainer />
+                <Col lg={6}><SubscribeFormContainer />
                 </Col>
             </Row>
             <Row className="social-media">

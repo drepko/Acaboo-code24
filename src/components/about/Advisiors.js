@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
-import LinkedIn  from '../../images/social-media-logos/Mail.png'
 import '../../styles/Advisor.css'
-
 
 export default class Team extends Component {
   render() {
