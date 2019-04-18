@@ -60,10 +60,6 @@ class TestFormContainer extends PureComponent {
 
 		return (
 			<div>
-				<h1>Welcome back</h1>
-
-				<h3>Enter your account details below</h3>
-
 				<LoginForm 
 				handleChange={this.handleChange}
 				handleSubmit={this.handleSubmit}
