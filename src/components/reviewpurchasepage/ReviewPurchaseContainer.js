@@ -30,7 +30,7 @@ class ReviewPurchaseContainer extends PureComponent {
 			<div>
                 <ProgressBar />
 
-				<h1>Review and Purchase</h1> <br />
+				<p className="text-med-black">Review and Purchase</p> <br />
 				<p>****************</p>
                 <h2>Info</h2>
 

@@ -5,10 +5,7 @@ import FindCourseContainer from './FindCourseContainer';
 import woman_desk from '../../images/mock-ups/woman-desk2.png'
 import man_handshake from'../../images/mock-ups/man_handshake.png'
 import people from'../../images/mock-ups/people.png'
-
-import {
-  home_studydashboard,
-} from '../../images/imagelinks'
+import course_dashboard from '../../images/course_dashboard.png'
 
 import UsedByInstitutions from './UsedByInstitutions'
 import BrowseCourse from './BrowseCourse'
@@ -63,7 +60,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <div className="padding-top">
-          <img alt="home_studydashboard" className="image-lg-overflow shadow" src={home_studydashboard} />
+          <img alt="home_studydashboard" className="image-lg-overflow" src={course_dashboard} />
         </div>
 
         <div className="flex-row about-box padding-top" >

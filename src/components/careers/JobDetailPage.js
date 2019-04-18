@@ -1,8 +1,10 @@
 import React from 'react'
-import {mission_man_sitting}  from  '../../images/imagelinks'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import woman_desk  from  '../../images/mock-ups/woman_desk.png'
 import LifeAtAcaboo from './LifeAt'
 import AboutUsButton from '../about/AboutUsButton'
+
+
 class JobDetailPage extends React.Component {
   
     render() {
@@ -12,7 +14,7 @@ class JobDetailPage extends React.Component {
            <h4>Intro</h4>
            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa. Four years ago I started my bachelors in business. Just like all of my fellow students I bought all the required books for the first courses and to be honest, those were the last books bought during the entire study. </p>
            <div className = 'intro-image'>
-              <img alt="mission_man_image " className="search_image_1" src={mission_man_sitting} />
+              <img alt="mission_man_image " className="search_image_1" src={woman_desk} />
            </div>
 
            <div className ="about-job">
