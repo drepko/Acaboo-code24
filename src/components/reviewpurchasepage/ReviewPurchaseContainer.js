@@ -31,7 +31,7 @@ class ReviewPurchaseContainer extends PureComponent {
                 <ProgressBar />
 				<p className="text-med-black padding-top border-bottom-grey">Review and Purchase</p> <br />
 				<div className="display-flex-start border-bottom-grey">
-					<div className="main-row ai-start">
+					<div className="ai-start review-purchase">
 
 
 						<div className="padding-right">
@@ -50,12 +50,12 @@ class ReviewPurchaseContainer extends PureComponent {
 								<div className="display-flex flex-column">
 									{selectedCourses.map(course => 
 										(<div className="main-row margin-bottom padding-bottom-small">
-											<div className="display-flex-start main-row half-width border-thin-grey">
+											<div className="course-width display-flex-start main-row half-width border-thin-grey">
 												<div className="padding-small width-50">
 													<img className="image-book-small" alt={course.id} src={`${baseUrl}${course.image}`}/>
 												</div>
-												<div className="width-max flex-column ai-start width-50">
-													<p className="text-sm-black"><b>{course.name}</b></p>
+												<div className="flex-column ai-start width-50">
+													<p className="text-sm-black"><b className="overflow-wrap">{course.name}</b></p>
 													<p className="text-sm-black"><b>&#8364;&nbsp;{course.price.toFixed(2).toString().replace(".", ",")}</b></p>
 												</div>
 											</div>
@@ -71,7 +71,7 @@ class ReviewPurchaseContainer extends PureComponent {
 						
 					</div>
 				</div>
-                <div>
+                <div className="padding-top">
 					<p className="text-med-black">Payment Method</p>
 					<p>Adyen (looking for a way to integrate)</p>
 				</div>
