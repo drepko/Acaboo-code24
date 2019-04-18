@@ -79,9 +79,19 @@ class CoursePageContainer extends PureComponent {
 
     render() {
 
-        const { courses } = this.props
+        const { courses, selectedStudy } = this.props
 
-        if (courses === null) return <p>Loading...</p>
+        if (!courses.length && selectedStudy) return (
+            <div>
+                <CourseFilterbar history={this.props.history} />
+                <p>Sorry, no course provided</p>
+                <img alt="people" className="image-med margin-side" src={people} /> 
+                <p className="text-lg-black text-center">Start studying with Acaboo.</p>
+                <div className="margin-side text-center margin-bottom">
+                    <Link to="/about" className="text-med">Learn more &#8594;</Link>
+                </div>
+            </div>
+        )
 
         return (
             <div>
@@ -92,7 +102,8 @@ class CoursePageContainer extends PureComponent {
                 <div className="margin-side text-center margin-bottom">
                     <Link to="/about" className="text-med">Learn more &#8594;</Link>
                 </div>
-            </div>)
+            </div>
+        )
     }
 }
 
@@ -101,6 +112,7 @@ const mapStateToProps = state => ({
     study: state.selectedStudy,
     selectedCourses: state.selectedCourses,
     currentUser: state.currentUser,
+    selectedStudy: state.selectedStudy
 })
 
 export default withRouter(connect(mapStateToProps, { getCourses, getHighLights, selectCourse })(CoursePageContainer))
