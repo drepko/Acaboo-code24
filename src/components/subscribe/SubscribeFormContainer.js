@@ -10,7 +10,7 @@ export default class SubscribeFormContainer extends React.Component {
             The latest Acaboo news, articles, and <br />
             resources, sent straight to your inbox every <br />
             month.
-           <SubscriptionForm/>
+            <SubscriptionForm/>
             <p>We’ll never share your details. See our Privacy Policy</p>
 
             </div>)
