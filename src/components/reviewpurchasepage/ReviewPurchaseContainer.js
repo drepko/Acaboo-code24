@@ -53,7 +53,7 @@ class ReviewPurchaseContainer extends PureComponent {
 					selectedCourses.map(course => (
 							<p>
 								Course name: {course.name} <br />
-								Price: €{course.price.toFixed(2).toString().replace(".", ",")} <br />
+								Price: €&nbsp;{course.price.toFixed(2).toString().replace(".", ",")} <br />
 								<img alt={course.id} src={`${baseUrl}${course.image}`}/> <br />
 								<button onClick={this.onDelete} value={course.id}>Remove this course</button> <br />
 							</p>
@@ -67,7 +67,7 @@ class ReviewPurchaseContainer extends PureComponent {
 
 					<p>Your cart is empty</p> :
 
-					<h3>Total price: €{subtotal}</h3>
+					<h3>Total price: €&nbsp;{subtotal}</h3>
 				}
 				<button onClick={this.handleClick}>Add another course</button>
 				

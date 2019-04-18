@@ -20,7 +20,7 @@ export default function Course(props) {
                             </div>
                         </div>
                         <div className="text-sm-med-black">
-                            <p>&#8364; {props.course.price.toFixed(2).toString().replace(".", ",")}</p>
+                            <p>&#8364;&nbsp;{props.course.price.toFixed(2).toString().replace(".", ",")}&nbsp;</p>
                         </div>
                     </div> 
                     <div className="padding-side-small max-width-xsmall">

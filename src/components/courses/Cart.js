@@ -11,10 +11,10 @@ export default function Cart(props) {
             {props.selectedCourses
                 .map(course => (<div className="main-row">
                     <p className="text-sm-white">{course.name}</p>
-                    <p className="text-sm-white ml-auto">€{course.price.toFixed(2).toString().replace(".", ",")}</p></div>))}
+                    <p className="text-sm-white ml-auto">€&nbsp;{course.price.toFixed(2).toString().replace(".", ",")}</p></div>))}
             <div className="main-row">            
                 <p className="text-sm-white">Subtotal:&nbsp;&nbsp;</p>
-                <p className="text-sm-med-white">€ {subtotal}</p>
+                <p className="text-sm-med-white">€&nbsp;{subtotal}</p>
                 <button className="btn-white-sm ml-auto text-sm-black" onClick={props.checkCurrentUser}>Checkout</button>
             </div>
         </div>
