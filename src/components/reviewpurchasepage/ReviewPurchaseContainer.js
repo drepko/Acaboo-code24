@@ -30,16 +30,21 @@ class ReviewPurchaseContainer extends PureComponent {
 			<div>
                 <ProgressBar />
 
-				<p className="text-med-black">Review and Purchase</p> <br />
-				<p>****************</p>
-                <h2>Info</h2>
+				<p className="text-med-black padding-top border-bottom-grey">Review and Purchase</p> <br />
+				
+				<div>
+					<div>
+						<p className="text-med-black">Info</p>
+						<p className="text-sm-black">
+							First name: {first_name} <br />
+							Last name: {last_name} <br />
+							Email: {email} <br />
+							Telephone: {phone_number} <br />
+						</p>
+					</div>
 
-				<p>
-                    First name: {first_name} <br />
-                    Last name: {last_name} <br />
-                    Email: {email} <br />
-                    Telephone: {phone_number} <br />
-                </p>
+				</div>
+                
 
 				<p>****************</p>
                 <h2>Selected course(s)</h2>
