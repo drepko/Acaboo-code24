@@ -17,36 +17,34 @@ export default function Footer(props) {
     return (
         <Container className="footer padding">
             <Row>
-                <Col>
+                <Col  xs={{ span: 2, offset: 1 }}>
                     <h3>Navigate</h3>
                     <Link to="/about">About</Link>
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/blog">Blog</Link> 
                     <Link to="/team">Team</Link>
                     <Link to="/courses">Courses</Link>
                     <Link to="/careers">We’re Hiring</Link>
                 </Col>
 
-                <Col className ='contact-padding'>
-                
-                        <h3>Contact</h3> 
-                        <img src={location} />
-                        <p>Boelelaan 1081 <br/>
-                        WN-P246<br/> 
-                        1081 HV Amsterdam</p>
-                    
-                    <p>
-                       &#9742;  + 31 615536113<br/>
-                        Mon - Fri 9:00 - 17:00<br/>
+                <Col xs={2} className ='contact-padding'>
+                    <h3>Contact</h3> 
+                    <p>&#xf232;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WN-P246<br/> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1081 HV Amsterdam
+                    </p>
+                        
+                    <p><span>&#9742;&nbsp;&nbsp;&nbsp;</span> 
+                        + 31 615536113<br/>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon - Fri 9:00 - 17:00</span><br/>
                     </p>
                     <p>
-                         &#9993; info@acaboo.com<br/>
+                       <br/> <span>&#9993;&nbsp;&nbsp;&nbsp;&nbsp;</span>info@acaboo.com<br/>
                     </p>
-                   
                 </Col>
 
-                <Col lg={true} lg={6}>
-                <h3>Subscribe</h3>
-                <SubscribeFormContainer />
+                <Col xs={{ offset: 2 }}>
+                    <h3>Subscribe</h3>
+                    <SubscribeFormContainer />
 
                 </Col>
             </Row>
