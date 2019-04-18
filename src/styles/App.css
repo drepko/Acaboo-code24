@@ -21,6 +21,10 @@ in order to make the navigation-bar and footer full-width */
   box-shadow: #989898;
 }
 
+.display-flex {
+  display: flex;
+}
+
 /*  */
 .main-column div  {
   display: flex;
@@ -75,6 +79,19 @@ in order to make the navigation-bar and footer full-width */
 
 .margin-left {
   margin-left: 15px;
+}
+
+.padding-top-small {
+  padding-top: 10px;
+}
+
+.padding-bottom-small {
+  padding-bottom: 10px;
+}
+
+.padding-side-small {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .margin-bottom {
@@ -135,6 +152,10 @@ in order to make the navigation-bar and footer full-width */
   max-width: 55vw;
 }
 
+.width-80 {
+  width: 80%
+}
+
 .max-width-small {
   width: 25vw;
   max-width: 25vw;
@@ -155,6 +176,10 @@ in order to make the navigation-bar and footer full-width */
 
 .half-height {
   min-height: 12vh
+}
+
+.border-bottom {
+  border-radius: 0px !important;
 }
 
 .border-thin-grey {
@@ -487,8 +512,13 @@ select {
   display: flex;
   justify-content: center;
   padding-bottom: 3vh
-  
 }
+
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .social-media
   img{
     margin: 0 2vh;
