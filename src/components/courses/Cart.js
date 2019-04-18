@@ -21,10 +21,4 @@ export default function Cart(props) {
     )
 }
 
-// {game.players
-//     .map(player => (
-//       <TableRow className={users[player.userId].email} key={users[player.userId].id}>
-//         <TableCell component="th" scope="row">{users[player.userId].email}</TableCell>
-//         <TableCell component="th" scope="row">{player.score}</TableCell>
-//       </TableRow>))} 
 
