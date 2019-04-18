@@ -2,8 +2,6 @@ import React from'react'
 import {baseUrl} from '../../constants'
 import "../../styles/App.css"
 import EmailwhenAvailable from './EmailWhenAvailable'
-import no_image from '../../images/no_image.svg'
-
 
 export default function Course(props) {
 

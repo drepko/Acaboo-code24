@@ -44,7 +44,6 @@ export default class Course extends Component {
         id: 999999,
         rating: 'disabled'})
 
-        console.log(uniOptions, 'uni')
         return (<div >
             <Select placeholder={'Select your university...'}isOptionDisabled={(option) => option.rating === 'disabled'} options={uniOptions} onChange={this.props.handleUniversitySelect}>
                 {/* <option value="" disabled selected>Select your university...</option>
@@ -69,8 +68,6 @@ export default class Course extends Component {
                 }
             })
             : []
-        console.log(studyOptions, 'study')
-
 
         const disabled = [{
                 value: "",
