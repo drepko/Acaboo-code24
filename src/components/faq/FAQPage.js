@@ -54,13 +54,13 @@ export default class FAQPage extends Component {
 
         <p>Still have more questions? Chat with us!</p>
 
-        <div className="padding-top"/>
+        <div className=""/>
 
         <BrowseCourse/>
 
         <div className="padding-top"/>
 
-        <div className="med-width">
+        <div className="med-width main-column-div">
             <img alt="man_handshake" className="image-med" src={man_handshake} /> 
         </div>
 
