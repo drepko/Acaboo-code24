@@ -766,7 +766,6 @@ select {
   border-radius: 5px;
   width: 40vh;
   height: 5vh; 
-<<<<<<< HEAD
   margin: 1vh
  }
 
@@ -810,7 +809,3 @@ select {
 .font-weight-bold {
   font-weight: bold;
 }
-=======
-  margin: 1vh 1vh 1vh 0;
- }
->>>>>>> dev

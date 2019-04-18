@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import deskLamp from "../../images/mock-ups/deskLamp.png"
-import woman_desk from  '../../images/mock-ups/woman_desk.png'
+import woman_desk from  '../../images/mock-ups/woman-desk2.png'
 import man_handshake from '../../images/mock-ups/man_handshake.png'
 
 
