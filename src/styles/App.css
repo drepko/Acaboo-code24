@@ -651,3 +651,28 @@ select {
   height: 5vh; 
   margin: 1vh
  }
+
+ .img-with-text-vertical {
+  text-align: justify;
+  width: 100%;
+}
+
+.img-with-text-vertical img {
+  display: block; 
+ margin: 0 auto; 
+}
+
+.img-with-text-vertical p {
+  width: 60%;
+  /* margin-left: auto; */
+  margin-right: auto;
+}
+
+.blue-cirlce{
+    height: 35px;
+    width: 35px;
+    background-color: #2D66F6;
+    border-radius: 50%;
+    display: inline-block;
+  
+}

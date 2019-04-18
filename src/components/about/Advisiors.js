@@ -5,8 +5,8 @@ export default class Team extends Component {
   render() {
     return (
       <div className ="team-main">
-        <h3>Advisors</h3>
-        <p>We are fortunate to work with some of the best advisors</p>        
+        <p className ='text-med-black'>Advisors</p>
+        <p className = 'text-sm-med-black' >We are fortunate to work with some of the best advisors</p>        
         <div className = "advisors-peoples">
          <div className = "advisor-line-1">
                 <div className ="person-1">
