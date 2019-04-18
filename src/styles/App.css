@@ -541,12 +541,25 @@ select {
   color:#FFFFFF
 }
 
+.course-width {
+  min-width: 40vw;
+  max-width: 40vw;
+}
 
+.review-purchase {
+  display: flex;
+  display: -webkit-flex;
+  max-width: 100%;
+}
 
 /* blue */
 .text-xl-blue {
   font-size: 6.2vh;
   color: #2D66F6;
+}
+
+.overflow-wrap {
+  overflow-wrap: break-word;
 }
 
 .text-lg-blue {

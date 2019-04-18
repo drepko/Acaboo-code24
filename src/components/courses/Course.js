@@ -21,7 +21,7 @@ export default function Course(props) {
                         </div>
                         <div className="text-sm-med-black">
 
-                            <p className="padding-right">&#8364;&nbsp;{props.course.price.toFixed(2).toString().replace(".", ",")}</p>
+                            <p className="padding-right">&#8364;&nbsp;{props.course.price.toFixed(2).toString().replace(".", ",")}&nbsp;</p>
 
                         </div>
                     </div> 
