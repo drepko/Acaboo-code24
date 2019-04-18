@@ -105,3 +105,4 @@ const mapStateToProps = state => ({
 
 export default withRouter(connect(mapStateToProps, { getCourses, getHighLights, selectCourse })(CoursePageContainer))
 
+

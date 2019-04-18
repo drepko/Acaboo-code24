@@ -10,6 +10,7 @@ import Instagram from '../../images/social-media-logos/Instagram.png'
 import LinkedIn from '../../images/social-media-logos/LinkedIn.png'
 import Twitter from '../../images/social-media-logos/Twitter.png'
 import Facebook from '../../images/social-media-logos/Facebook.png'
+import location from '../../images/location.svg'
 import '../../styles/App.css'
 
 export default function Footer(props) {
