@@ -29,53 +29,62 @@ class ReviewPurchaseContainer extends PureComponent {
 		return (
 			<div>
                 <ProgressBar />
-
 				<p className="text-med-black padding-top border-bottom-grey">Review and Purchase</p> <br />
-				
-				<div>
-					<div>
-						<p className="text-med-black">Info</p>
-						<p className="text-sm-black">
-							First name: {first_name} <br />
-							Last name: {last_name} <br />
-							Email: {email} <br />
-							Telephone: {phone_number} <br />
-						</p>
-					</div>
+				<div className="display-flex-start border-bottom-grey">
+					<div className="main-row ai-start">
 
-				</div>
-                
-
-				<p>****************</p>
-                <h2>Selected course(s)</h2>
-
-				{
-					selectedCourses.map(course => (
-							<p>
-								Course name: {course.name} <br />
-								Price: €{course.price.toFixed(2).toString().replace(".", ",")} <br />
-								<img alt={course.id} src={`${baseUrl}${course.image}`}/> <br />
-								<button onClick={this.onDelete} value={course.id}>Remove this course</button> <br />
+						<div className="padding-right">
+							<p className="text-med-black">Info</p>
+							<p className="text-sm-black">
+								First name: <b>{first_name}</b> <br />
+								Last name: <b>{last_name}</b> <br />
+								Email: <b>{email}</b> <br />
+								Telephone: <b>{phone_number}</b> <br />
 							</p>
-						)
-					)	
-				}
+						</div>
 
-				<p>****************</p>
-				{
-					!total ?
+						<div className="">
+							<p className="text-med-black">Course</p>
+								<div className="display-flex flex-column">
+									{selectedCourses.map(course => 
+										(<div className="main-row margin-bottom padding-bottom-small">
+											<div className="display-flex-start main-row half-width border-thin-grey">
+												<div className="padding-small width-50">
+													<img className="image-book-small" alt={course.id} src={`${baseUrl}${course.image}`}/>
+												</div>
+												<div className="width-max flex-column ai-start width-50">
+													<p className="text-sm-black"><b>{course.name}</b></p>
+													<p className="text-sm-black"><b>€ &nbsp;{course.price.toFixed(2).toString().replace(".", ",")}</b></p>
+												</div>
+											</div>
+											<div className="width-max ai-center padding-side-small">
+												<button className="btn-white-med text-sm-blue margin-side" onClick={this.onDelete} value={course.id}>Remove</button>
+											</div>
+										</div>
+									))}
+								</div>
+						</div>
 
-					<p>Your cart is empty</p> :
-
-					<h3>Total price: €{subtotal}</h3>
-				}
-				<button onClick={this.handleClick}>Add another course</button>
+						
+					</div>
+				</div>
+                <div>
+					<p className="text-med-black">Payment Method</p>
+					<p>Adyen (looking for a way to integrate)</p>
+				</div>
+				<div>
+					{!total 
+					?<p>Your cart is empty</p> 
+					:<p>Total price: €{subtotal}</p>
+					}
+					<button className="btn-white-lg" onClick={this.handleClick}>Add another course</button>
+				</div>
+				
 				
 				<p></p><br /> {/* adding a blank line, I know this is not smart but who cares? */}
 				
-				<p>****************</p>
-                <h2>Payment</h2>
-                <p>Adyen (looking for a way to integrate)</p>
+				
+                
             </div>
         )
 	}

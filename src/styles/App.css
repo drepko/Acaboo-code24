@@ -101,6 +101,14 @@ in order to make the navigation-bar and footer full-width */
 .width-30 {
   width: 30%;
 }
+
+.width-50 {
+  width: 50%
+}
+
+.width-max {
+  width: max-content
+}
 /*  */
 .main-column-div {
   display: flex;
@@ -130,10 +138,6 @@ in order to make the navigation-bar and footer full-width */
   padding-right: 15vw;
 }
 
-.padding-side-small {
-  padding-left: 1vw;
-  padding-right: 1vw
-}
 .padding-top {
   padding-top: 60px;
 }
@@ -148,7 +152,13 @@ in order to make the navigation-bar and footer full-width */
 }
 .padding-left {
   padding-left: 20%
+
 }
+
+.padding-right {
+  padding-right: 5%
+}  
+
 .padding {
   padding:30px
 }
@@ -170,9 +180,15 @@ in order to make the navigation-bar and footer full-width */
   padding-right: 2rem;
 }
 
+.padding-small {
+  padding: 2rem
+}
+
 .margin-bottom {
   margin-bottom: 25px
 }
+
+
 
 .margin-side {
   display: block;
@@ -207,7 +223,7 @@ in order to make the navigation-bar and footer full-width */
 }
 
 .ai-center {
-  align-items: center
+  align-self: center
 }
 
 .full-width {
@@ -285,10 +301,6 @@ select {
   align-self: flex-start
 }
 
-.ai-center {
-  align-self: center
-}
-
 .jc {
   justify-content: space-evenly;
   padding: 20px 
@@ -363,6 +375,12 @@ select {
   justify-content: center;
 }
 
+.display-flex-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
+}
+
 .image-lg-overflow {
   width: 100%;
   height: auto;
@@ -396,6 +414,13 @@ select {
 .image-book {
   max-width: 90%;
   max-height: 90%;
+  border-radius: 5px
+}
+
+.image-book-small {
+  max-width: 70%;
+  max-height: 70%;
+  border-radius: 5px
 }
 
 .img-with-text {
