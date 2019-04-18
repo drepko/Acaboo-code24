@@ -11,6 +11,9 @@ import LinkedIn from '../../images/social-media-logos/LinkedIn.png'
 import Twitter from '../../images/social-media-logos/Twitter.png'
 import Facebook from '../../images/social-media-logos/Facebook.png'
 import location from '../../images/location.svg'
+import mail from '../../images/mail.svg'
+import phone from '../../images/phone.svg'
+
 import '../../styles/App.css'
 
 export default function Footer(props) {
@@ -28,18 +31,16 @@ export default function Footer(props) {
 
                 <Col xs={2} className ='contact-padding'>
                     <h3>Contact</h3> 
-                    <img src ={location}/><span>
-                    <p>Boelelaan 1081<br/>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WN-P246<br/> 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1081 HV Amsterdam
-                    </p></span>
+                    <p><img alt="mail_image" src={location} className = "footer-images" /> &nbsp;&nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WN-P246<br/> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1081 HV Amsterdam
+                    </p>
                         
-                    <p><span>&#9742;&nbsp;&nbsp;&nbsp;</span> 
-                        + 31 615536113<br/>
+                    <p><img alt="mail_image" src={phone} className = "footer-images" /> &nbsp;&nbsp;&nbsp;+ 31 615536113<br/>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon - Fri 9:00 - 17:00</span><br/>
                     </p>
                     <p>
-                       <br/> <span>&#9993;&nbsp;&nbsp;&nbsp;&nbsp;</span>info@acaboo.com<br/>
+                       <br/> <img alt="mail_image" src={mail} className = "footer-images" />&nbsp;&nbsp;&nbsp;&nbsp;info@acaboo.com<br/>
                     </p>
                 </Col>
 

@@ -8,7 +8,7 @@ import no_image from '../../images/no_image.svg'
 export default function Course(props) {
 
     if(props.course.provided){
-        return (<div className="main-row margin-bottom">
+        return (<div  className="main-row margin-bottom">
                     <div className="main-row border-thin-grey max-width-med">
                         <div className="padding-side-small">
                             <img className="image-book" alt={props.course.name} src={`${baseUrl}${props.course.image}`} />
@@ -32,7 +32,7 @@ export default function Course(props) {
                     </div>
                 </div>)  }
 
-        return (<div className="main-row margin-bottom">
+        return (<div id = 'course-container' className="main-row margin-bottom">
                     <div className="main-row border-thin-grey max-width-med">
                         
                         <div className="padding-side-small">

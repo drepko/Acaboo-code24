@@ -1,18 +1,18 @@
 import React from 'react'
-import {home_lamp_img,mission_man_sitting}  from  '../../images/imagelinks'
+import deskLamp from "../../images/mock-ups/deskLamp.png"
+import woman_desk from  '../../images/mock-ups/woman_desk.png'
 export default class Mission extends React.Component {
 
     render(){
         return(
-            <div className = 'mission-main'>
-            <h1>Mission Acaboo</h1>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa. Four years ago I started my bachelors in business. Just like all of my fellow students I bought all the required books for the first courses and to be honest, those were the last books bought during the entire study.</p>
+            <div className="">
+                <p className="text-med-black">Mission Acaboo</p>
+                <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa. Four years ago I started my bachelors in business. Just like all of my fellow students I bought all the required books for the first courses and to be honest, those were the last books bought during the entire study.</p>
 
-                <div className = 'mission-image'>
-                    <img alt="search_image" className="search_image_1" src={home_lamp_img} />
-                    <img alt="mission_man_image" className="search_image_1" src={mission_man_sitting} />
+                <div className="main-row">
+                    <img alt="desklamp" className="image_lg" src={deskLamp} />
+                    <img alt="woman_desk" className="image_lg" src={woman_desk} />
                 </div>
-
             </div>
 
         )

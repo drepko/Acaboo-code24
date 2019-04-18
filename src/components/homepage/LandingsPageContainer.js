@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 
-import woman_desk from '../../images/mock-ups/woman_desk.png'
+import woman_desk from '../../images/mock-ups/woman-desk2.png'
 import man_handshake from'../../images/mock-ups/man_handshake.png'
 import people from'../../images/mock-ups/people.png'
 
@@ -24,7 +24,7 @@ class LandingsPageContainer extends React.Component {
         <div className="flex-row fw jc-center ai-start-reverse">
 
 
-          <div className="flex-row half-width padding-top">
+          <div id="flex-find-course"className="flex-row half-width padding-top">
 
             <div className="half-width ai-start">
 
@@ -45,7 +45,7 @@ class LandingsPageContainer extends React.Component {
             </div>
 
             <div className="half-width">
-            <img alt="woman_desk" className="image-md" src={woman_desk} />
+            <img id="women-desk-img" alt="woman_desk"  src={woman_desk} />
           </div>
           </div>
 
