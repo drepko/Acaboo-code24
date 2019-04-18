@@ -68,21 +68,23 @@ class ReviewPurchaseContainer extends PureComponent {
 						
 					</div>
 				</div>
-                
-				{
-					!total ?
-
-					<p>Your cart is empty</p> :
-
-					<h3>Total price: €{subtotal}</h3>
-				}
-				<button onClick={this.handleClick}>Add another course</button>
+                <div>
+					<p className="text-med-black">Payment Method</p>
+					<p>Adyen (looking for a way to integrate)</p>
+				</div>
+				<div>
+					{!total 
+					?<p>Your cart is empty</p> 
+					:<p>Total price: €{subtotal}</p>
+					}
+					<button className="btn-white-lg" onClick={this.handleClick}>Add another course</button>
+				</div>
+				
 				
 				<p></p><br /> {/* adding a blank line, I know this is not smart but who cares? */}
 				
-				<p>****************</p>
-                <h2>Payment</h2>
-                <p>Adyen (looking for a way to integrate)</p>
+				
+                
             </div>
         )
 	}
