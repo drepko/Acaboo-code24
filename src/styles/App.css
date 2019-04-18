@@ -699,7 +699,7 @@ select {
  .form-width-height{
   width: 40vh;
   height: 5vh; 
-  margin: 1vh
+  margin: 1vh 1vh 1vh 0;
  }
 
  .contact-padding{
@@ -738,5 +738,5 @@ select {
   border-radius: 5px;
   width: 40vh;
   height: 5vh; 
-  margin: 1vh
+  margin: 1vh 1vh 1vh 0;
  }
