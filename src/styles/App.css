@@ -4,7 +4,31 @@
 div {
   /* border: solid #666666; */
 }
+.signup-login{
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
 
+#checkbox-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+#checkbox{
+  width: 1rem;
+  height: 1rem;
+  align-items: stretch;
+}
+
+#flex-label{
+  align-items: stretch;
+}
+.signup-login-form{
+  margin-bottom: 1rem;
+}
 table {
   table-layout: fixed;
   width: 100%;
@@ -77,6 +101,14 @@ in order to make the navigation-bar and footer full-width */
 .width-30 {
   width: 30%;
 }
+
+.width-50 {
+  width: 50%
+}
+
+.width-max {
+  width: max-content
+}
 /*  */
 .main-column-div {
   display: flex;
@@ -106,10 +138,6 @@ in order to make the navigation-bar and footer full-width */
   padding-right: 15vw;
 }
 
-.padding-side-small {
-  padding-left: 1vw;
-  padding-right: 1vw
-}
 .padding-top {
   padding-top: 60px;
 }
@@ -124,7 +152,13 @@ in order to make the navigation-bar and footer full-width */
 }
 .padding-left {
   padding-left: 20%
+
 }
+
+.padding-right {
+  padding-right: 5%
+}  
+
 .padding {
   padding:30px
 }
@@ -146,9 +180,15 @@ in order to make the navigation-bar and footer full-width */
   padding-right: 2rem;
 }
 
+.padding-small {
+  padding: 2rem
+}
+
 .margin-bottom {
   margin-bottom: 25px
 }
+
+
 
 .margin-side {
   display: block;
@@ -183,7 +223,7 @@ in order to make the navigation-bar and footer full-width */
 }
 
 .ai-center {
-  align-items: center
+  align-self: center
 }
 
 .full-width {
@@ -261,10 +301,6 @@ select {
   align-self: flex-start
 }
 
-.ai-center {
-  align-self: center
-}
-
 .jc {
   justify-content: space-evenly;
   padding: 20px 
@@ -272,6 +308,10 @@ select {
 
 .jc-center {
   justify-content: center
+}
+
+.jc-right {
+  justify-content: right
 }
 
 .jc-between {
@@ -335,6 +375,12 @@ select {
   justify-content: center;
 }
 
+.display-flex-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
+}
+
 .image-lg-overflow {
   width: 100%;
   height: auto;
@@ -368,6 +414,13 @@ select {
 .image-book {
   max-width: 90%;
   max-height: 90%;
+  border-radius: 5px
+}
+
+.image-book-small {
+  max-width: 70%;
+  max-height: 70%;
+  border-radius: 5px
 }
 
 .img-with-text {
@@ -699,7 +752,7 @@ select {
  .form-width-height{
   width: 40vh;
   height: 5vh; 
-  margin: 1vh
+  margin: 1vh 1vh 1vh 0;
  }
 
  .contact-padding{
@@ -738,5 +791,46 @@ select {
   border-radius: 5px;
   width: 40vh;
   height: 5vh; 
-  margin: 1vh
+  margin: 1vh 0 1vh 0
  }
+
+ .img-with-text-vertical {
+  text-align: justify;
+  width: 100%;
+}
+
+.img-with-text-vertical img {
+  display: block; 
+ margin: 0 auto; 
+}
+
+.img-with-text-vertical p {
+  width: 60%;
+  /* margin-left: auto; */
+  margin-right: auto;
+}
+
+.blue-cirlce{
+    height: 35px;
+    width: 35px;
+    background-color: #2D66F6;
+    border-radius: 50%;
+    display: inline-block;
+  
+}
+
+#about-container #email-button{
+  color: #FFFFFF;
+  background-color: #2D66F6;
+  border-radius: 5px;
+  width: 12vw;
+  height: 5.5vh;
+  float: left;
+  margin-left: 15px;
+ }
+ #about-container #email{
+  float: left;
+ }
+.font-weight-bold {
+  font-weight: bold;
+}

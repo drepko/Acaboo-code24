@@ -117,7 +117,7 @@ class FormExample extends Component {
 	render() {
 
 		return (
-			<SignupForm
+			<SignupForm 
 				handleChange={this.handleChange}
 				handleTermsChange={this.handleTermsChange}
 				handleSubmit={this.handleSubmit}
