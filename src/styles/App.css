@@ -2,7 +2,7 @@
 @import  "../fonts/Inter-web/inter.css";
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
-  border: solid #666666;
+  /* border: solid #666666; */
 }
 
 table {
@@ -16,6 +16,31 @@ table {
 
 body {
   font-family: "Inter"
+}
+.find-course-form {
+  display: block;
+  display: -webkit-block;
+  flex-direction: row;
+  width: 25vw;
+  height: auto;
+}
+
+/* #course-select div{
+  display: block;
+  width: 30vw;
+} */
+
+#women-desk-img {
+  height: 110%;
+  width: auto;
+}
+.css-bg1rzq-control, .css-14ojxsb-control{
+  display: flex;
+  flex-direction: row
+}
+
+.find-form-container{
+  width: 25vw;
 }
 
 /* sets the page to have to padding left and right 
@@ -34,8 +59,14 @@ in order to make the navigation-bar and footer full-width */
   display: flex;
 }
 
+#flex-find-course{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 /*  */
-.main-column div  {
+.main-column div:not(#course-select div)  {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -115,7 +146,7 @@ in order to make the navigation-bar and footer full-width */
 
 /* flex direction */
 .flex-row {
-  flex-direction: row;
+  flex-direction: row ;
 }
 
 .flex-column {
