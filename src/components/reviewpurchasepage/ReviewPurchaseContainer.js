@@ -30,10 +30,10 @@ class ReviewPurchaseContainer extends PureComponent {
 			<div>
                 <ProgressBar />
 				<p className="text-med-black padding-top border-bottom-grey">Review and Purchase</p> <br />
-				<div className="display-flex-start">
+				<div className="display-flex-start border-bottom-grey">
 					<div className="main-row ai-start">
 
-						<div>
+						<div className="padding-right">
 							<p className="text-med-black">Info</p>
 							<p className="text-sm-black">
 								First name: <b>{first_name}</b> <br />
@@ -43,34 +43,32 @@ class ReviewPurchaseContainer extends PureComponent {
 							</p>
 						</div>
 
-						<div className="max-width-med">
+						<div className="">
 							<p className="text-med-black">Course</p>
-							<div className="main-row border-thin-grey max-width-med">
-								{selectedCourses.map(course => 
-								(<div>
-									<div className="padding-side-small">
-										<img className="image-book" alt={course.id} src={`${baseUrl}${course.image}`}/>
-									</div>
-									<div className="flex-column  medium-div ai-start padding-tb">
-										<p>Course name: <b>{course.name}</b></p>
-										<p>Price: <b>€ &nbsp;{course.price.toFixed(2).toString().replace(".", ",")}</b></p>
-									</div>
-								</div>))}							
-							</div>
+								<div className="display-flex flex-column">
+									{selectedCourses.map(course => 
+										(<div className="main-row margin-bottom padding-bottom-small">
+											<div className="display-flex-start main-row half-width border-thin-grey">
+												<div className="padding-small width-50">
+													<img className="image-book-small" alt={course.id} src={`${baseUrl}${course.image}`}/>
+												</div>
+												<div className="width-max flex-column ai-start width-50">
+													<p className="text-sm-black"><b>{course.name}</b></p>
+													<p className="text-sm-black"><b>€ &nbsp;{course.price.toFixed(2).toString().replace(".", ",")}</b></p>
+												</div>
+											</div>
+											<div className="width-max ai-center padding-side-small">
+												<button className="btn-white-med text-sm-blue margin-side" onClick={this.onDelete} value={course.id}>Remove</button>
+											</div>
+										</div>
+									))}
+								</div>
 						</div>
 
+						
 					</div>
-
-					<div className="ai-center padding">
-					{selectedCourses.map(course => (
-						<button className="btn-white-med text-sm-blue margin-side" onClick={this.onDelete} value={course.id}>Remove</button>))}
-					</div>
-
 				</div>
                 
-
-
-				<p>****************</p>
 				{
 					!total ?
 
