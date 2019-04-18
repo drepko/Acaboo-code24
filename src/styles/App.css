@@ -4,6 +4,12 @@
 div {
   /* border: solid #666666; */
 }
+
+#people-image-home{
+  /* max-width: 50% !important;
+  max-height: 50% !important;
+  overflow: hidden !important; */
+}
 .signup-login{
   margin-top: 3rem;
   margin-bottom: 5rem;
