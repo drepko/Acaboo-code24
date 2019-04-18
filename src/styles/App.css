@@ -8,6 +8,27 @@ div {
 body {
   font-family: "Inter"
 }
+.find-course-form {
+  display: block;
+  display: -webkit-block;
+  flex-direction: row;
+  width: 25vw;
+  height: auto;
+}
+
+#course-select div{
+  display: block;
+  width: 100%
+}
+
+.css-bg1rzq-control, .css-14ojxsb-control{
+  display: flex;
+  flex-direction: row
+}
+
+.find-form-container{
+  width: 100%;
+}
 
 /* sets the page to have to padding left and right 
 in order to make the navigation-bar and footer full-width */
@@ -90,7 +111,7 @@ in order to make the navigation-bar and footer full-width */
 
 /* flex direction */
 .flex-row {
-  flex-direction: row;
+  flex-direction: row ;
 }
 
 .flex-column {

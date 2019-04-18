@@ -20,6 +20,7 @@ class FindCourseContainer extends PureComponent {
     }
 
     componentWillMount() {
+        console.log('didmount')
         this.props.getUniversities()
     }
 
@@ -52,7 +53,7 @@ class FindCourseContainer extends PureComponent {
 
     render() {
         return this.props.universities === null ? <p>Loading ...</p> :
-            <Form
+            <Form 
                 onSubmit={this.handleSubmit}
                 handleUniversitySelect={this.handleUniversitySelect}
                 handleStudySelect={this.handleStudySelect}
