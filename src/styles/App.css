@@ -2,9 +2,33 @@
 @import  "../fonts/Inter-web/inter.css";
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
-  border: solid #666666;
+  /* border: solid #666666; */
+}
+.signup-login{
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 
+#checkbox-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+#checkbox{
+  width: 1rem;
+  height: 1rem;
+  align-items: stretch;
+}
+
+#flex-label{
+  align-items: stretch;
+}
+.signup-login-form{
+  margin-bottom: 1rem;
+}
 table {
   table-layout: fixed;
   width: 100%;
@@ -17,12 +41,46 @@ table {
 body {
   font-family: "Inter"
 }
+.find-course-form {
+  display: block;
+  display: -webkit-block;
+  flex-direction: row;
+  width: 25vw;
+  height: auto;
+}
+
+/* #course-select div{
+  display: block;
+  width: 30vw;
+} */
+
+#women-desk-img {
+  height: 110%;
+  width: auto;
+}
+.css-bg1rzq-control, .css-14ojxsb-control{
+  display: flex;
+  flex-direction: row
+}
+
+.find-form-container{
+  width: 25vw;
+}
 
 /* sets the page to have to padding left and right 
 in order to make the navigation-bar and footer full-width */
 .container-fluid {
   padding-right:0vw;
   padding-left:0vw;
+}
+/* #universities-logo{
+  display: flex;
+} */
+
+.trusted-container{
+  margin-top: 5rem;
+  justify-content: center;
+  display: flex;
 }
 
 /* add this class to set a shadow around an element (e.g. image)*/
@@ -34,8 +92,17 @@ in order to make the navigation-bar and footer full-width */
   display: flex;
 }
 
+#flex-find-course{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.width-30 {
+  width: 30%;
+}
 /*  */
-.main-column div  {
+.main-column-div {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -115,7 +182,7 @@ in order to make the navigation-bar and footer full-width */
 
 /* flex direction */
 .flex-row {
-  flex-direction: row;
+  flex-direction: row ;
 }
 
 .flex-column {
@@ -255,6 +322,12 @@ select {
   text-align: start
 }
 
+.faq-border {
+  margin-right: 10px;
+  border-right: 1px solid #dee2e6;
+  padding-right: 20px !important;
+}
+
 .logo-p {
   padding:20px;
 }
@@ -291,7 +364,7 @@ select {
 }
 
 .image-lg-overflow {
-  width: 110%;
+  width: 100%;
   height: auto;
   border-radius: 5px;
 } 
@@ -315,7 +388,7 @@ select {
 }
 
 .image-xsmall {
-  max-width: 10%;
+  max-width: 25%;
   max-height: 10%;
   overflow: hidden;
 }
@@ -484,12 +557,52 @@ select {
   border-radius: 5px
 }
 
+#responsive-navbar-nav {
+  line-height: 185%;
+}
+
+.rectangle {
+  position: absolute;
+  width: 100%;
+  height: 156vh;
+  left: 0px;
+  top: 134%;
+  background: #F6E9DC;
+  z-index: -1;
+}
+
+.rectangle:before {
+  width: 100%;
+  height: 40vh;
+  /* border-radius:0px 40px 0px 900px; */
+  /* border-top-left-radius: 1000px; */
+  /* border-top-right-radius:   1000px; */
+  border-bottom-left-radius: 400%;
+  border-bottom-right-radius: 150%;
+  background-color:#FFF;    
+  display:inline-block;
+  vertical-align: middle;
+  content: '';
+}
+
 .btn-blue-med {
   color: #FFFFFF;
   background-color: #2D66F6;
   border-radius: 5px;
   width: 10vw;
   height: 5vh
+}
+
+.topbar-button {
+  border: 0px;
+  width: 10vh;
+  margin-left: 10px;
+}
+
+.dashboard-button {
+  border: 0px;
+  width: 20vh;
+  margin-left: 10px;
 }
 
 .btn-blue-lg {
@@ -614,7 +727,7 @@ select {
  .form-width-height{
   width: 40vh;
   height: 5vh; 
-  margin: 1vh
+  margin: 1vh 1vh 1vh 0;
  }
 
  .contact-padding{
@@ -653,6 +766,7 @@ select {
   border-radius: 5px;
   width: 40vh;
   height: 5vh; 
+<<<<<<< HEAD
   margin: 1vh
  }
 
@@ -696,3 +810,7 @@ select {
 .font-weight-bold {
   font-weight: bold;
 }
+=======
+  margin: 1vh 1vh 1vh 0;
+ }
+>>>>>>> dev

@@ -1,10 +1,9 @@
 import React from 'react'
-import life_image_1 from '../../images/life-at-acaboo/life-image-1.svg'
-import life_image_2 from '../../images/life-at-acaboo/life-image-2.svg'
-import life_image_3 from '../../images/life-at-acaboo/life-image-3.svg'
-import life_image_4 from '../../images/life-at-acaboo/life-image-4.svg'
-import life_image_5 from '../../images/life-at-acaboo/life-image-5.svg'
-import life_image_6 from '../../images/life-at-acaboo/life-image-6.svg'
+import image_1 from '../../images/life-at-acaboo/image_1.png'
+import image_2 from '../../images/life-at-acaboo/image_2.png'
+import image_3 from '../../images/life-at-acaboo/image_3.png'
+import image_4 from '../../images/life-at-acaboo/image_4.png'
+import image_5 from '../../images/life-at-acaboo/image_5.png'
 
 export default class LifeComponent extends React.Component {
 
@@ -16,31 +15,31 @@ export default class LifeComponent extends React.Component {
                     <div className ="flex-column fw">
                     <div className="flex-row display-flex">
                         <div className="img-with-text">
-                            <img src={life_image_1} className="image-med-lg" alt="image1" />
-                            <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
+                            <img src={image_1} className="image-med-lg" alt="image1" />
+                            <p className="text-sm-grey"> It enables my students to get the most out of a course, everytime...</p>
                         </div>
                         <div className="img-with-text">
-                            <img src={life_image_2} className="image-med-lg" alt="image2" />
+                            <img src={image_2} className="image-med-lg" alt="image2" />
                             <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
                         </div>
                     </div>
                     <div className="flex-row display-flex">        
                         <div className="img-with-text">
-                            <img src={life_image_3} className="image-med-lg" alt="image3" />
+                            <img src={image_3} className="image-med-lg" alt="image3" />
                             <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
                         </div>
                         <div className="img-with-text">
-                            <img src={life_image_4} className="image-med-lg" alt="image4" />
+                            <img src={image_4} className="image-med-lg" alt="image4" />
                             <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
                         </div>
                     </div>  
                     <div className="flex-row display-flex">
                         <div className="img-with-text">
-                                <img src={life_image_5} className="image-med-lg" alt="image5" />
+                                <img src={image_5} className="image-med-lg" alt="image5" />
                                 <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
                             </div>
                             <div className="img-with-text">
-                                <img src={life_image_6} className="image-med-lg" alt="image6" />
+                                <img src={image_3} className="image-med-lg" alt="image6" />
                                 <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
                             </div>
                     </div>  

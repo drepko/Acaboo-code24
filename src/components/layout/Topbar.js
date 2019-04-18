@@ -5,6 +5,7 @@ import Acaboo_logo from '../../images/Acaboo_logo.svg';
 import { logout } from '../../actions/users'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { Link } from 'react-router-dom'
 
 class TopBar extends Component {
     render () {
@@ -23,19 +24,20 @@ class TopBar extends Component {
                     <Nav className="ml-auto">
                         <Nav.Link href="/courses">Courses</Nav.Link>
 
-                        <Nav.Link href="/faq">FAQ</Nav.Link>
+                        <Nav.Link className="faq-border" href="/faq">FAQ</Nav.Link>
 
                     {currentUser === null && 
                         <Nav.Link href="/login">Login</Nav.Link>}
 
                     {currentUser === null && 
-                        <Nav.Link href="/signup">Sign up</Nav.Link>}
+                        <Link to="/signup"><button className="btn-blue-med topbar-button">Sign up</button></Link>}
 
                     {currentUser !== null && 
                         <Nav.Link href="/" onClick={() => { this.props.logout()}}>Logout</Nav.Link>}
 
                     {currentUser !== null && currentUser.credentials && 
-                        <Nav.Link href="/dashboard">Hi {currentUser.credentials.first_name}</Nav.Link>}
+                    <Link to="/dashboard"><button className="btn-blue-med dashboard-button">Hi {currentUser.credentials.first_name}</button></Link>}
+                        {/* <Nav.Link href="/dashboard">Hi {currentUser.credentials.first_name}</Nav.Link>} */}
                     </Nav>
                 </Navbar.Collapse>
                 </div>

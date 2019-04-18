@@ -33,7 +33,8 @@ export default class Course extends Component {
                 value: university.name,
                 label: university.name,
                 key: university.id,
-                id: university.id
+                id: university.id,
+                
             }
         })
 
@@ -43,8 +44,7 @@ export default class Course extends Component {
         id: 999999,
         rating: 'disabled'})
 
-        console.log(uniOptions, 'uni')
-        return (<div>
+        return (<div >
             <Select placeholder={'Select your university...'}isOptionDisabled={(option) => option.rating === 'disabled'} options={uniOptions} onChange={this.props.handleUniversitySelect}>
                 {/* <option value="" disabled selected>Select your university...</option>
                         {this.props.universities.map((university) => {
@@ -68,8 +68,6 @@ export default class Course extends Component {
                 }
             })
             : []
-        console.log(studyOptions, 'study')
-
 
         const disabled = [{
                 value: "",
@@ -100,10 +98,10 @@ export default class Course extends Component {
 
     render() {
         return (
-            <div 
+            <div className="find-form-container"
             // className="half-width ai-start"
             >
-                <form className=""
+                <form id="course-select"
                     onSubmit={this.props.onSubmit}>
                     {this.renderUniversityOptions()}
                     {this.renderStudyOptions()}

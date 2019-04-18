@@ -2,13 +2,10 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 
-import woman_desk from '../../images/mock-ups/woman_desk.png'
+import woman_desk from '../../images/mock-ups/woman-desk2.png'
 import man_handshake from'../../images/mock-ups/man_handshake.png'
 import people from'../../images/mock-ups/people.png'
-
-import {
-  home_studydashboard,
-} from '../../images/imagelinks'
+import course_dashboard from '../../images/course_dashboard.png'
 
 import UsedByInstitutions from './UsedByInstitutions'
 import BrowseCourse from './BrowseCourse'
@@ -21,31 +18,35 @@ class LandingsPageContainer extends React.Component {
     return (
       <div className="main-column">
 
-        <div className="flex-row fw jc-center ai-start-reverse">
+        <div className="flex-row fw">
 
 
-          <div className="flex-column half-width padding-top">
+          <div id="flex-find-course"className="flex-row half-width padding-top">
 
-            <div className="half-width ai-start">
+            <div className="half-width ">
 
-              <div className="half-width ai-start">
-                <p className="text-xl-black"> Pass your exam <br />with ease
+            <div className="flex-column">
+              <div className="half-width ">
+                <p className="text-xl-black"> The new way of studying
                 </p>
               </div>
 
-              <div className="half-width ai-start">
+              <div className="half-width ">
                 <p className="text-sm-med-grey">
-                  Sed ut perspiciatis unde omnis iste natus <br />error sit voluptatem accusantium.
+                  Digital study books with interactive questions. Pass you exam with ease!
                 </p>
               </div>
 
             </div>
             <FindCourseContainer history={this.props.history} />
+            </div>
+
+            <div className="half-width">
+            <img id="women-desk-img" alt="woman_desk"  src={woman_desk} />
+          </div>
           </div>
 
-          <div className="half-width">
-            <img alt="woman_desk" className="image-lg" src={woman_desk} />
-          </div>
+
 
         </div>
 
@@ -54,12 +55,11 @@ class LandingsPageContainer extends React.Component {
 
         <div className="text-center">
           <p className="text-lg-black">Study more efficiently with Acaboo.</p>
-          <p className="text-sm-med-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
+          <p className="text-sm-med-grey">Acaboo guides you along your course. We help you plan for your exam. Earn points for finished chapters, study together and ask for feedback from your teacher.</p>
         </div>
 
         <div className="padding-top">
-          <img alt="home_studydashboard" className="image-lg-overflow shadow" src={home_studydashboard} />
+          <img alt="home_studydashboard" className="image-lg-overflow" src={course_dashboard} />
         </div>
 
         <div className="flex-row about-box padding-top" >
@@ -83,16 +83,12 @@ class LandingsPageContainer extends React.Component {
                 </div>
 
                 <div className="text-box-med">
-                  <p className="text-sm-black">Feature 1</p>
-                  <p className="text-sm-grey">  Sed ut perspiciatis unde omnis iste <br />
-                    natus error sit voluptatem<br />
-                    accusantium.</p>
+                  <p className="text-sm-black"><br/>Your books, always online.</p>
+                  <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
                 </div>
                 <div className="text-box-med">
-                  <p className="text-sm-black">Feature 2</p>
-                  <p className="text-sm-grey">  Sed ut perspiciatis unde omnis iste <br />
-                    natus error sit voluptatem <br />
-                    accusantium.</p>
+                  <p className="text-sm-black"><br/>Cheaper then physical books.</p>
+                  <p className="text-sm-grey">Books on Acaboo are cheaper because we can cut on distribution and printing costs. Also better for the environment.</p>
                 </div>
               </div>
 
@@ -115,8 +111,8 @@ class LandingsPageContainer extends React.Component {
         <Testimonial />
 
         <div className="text-center">
-          <p className="text-lg-black">Too much distraction, no focus? </p>
-          <p className="font-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          <p className="text-lg-black">Too much distraction, no focus?</p>
+          <p className="font-grey">Acaboo helps you focus on the right moments. Together we save your exams.</p>
         </div>
 
         <div className="section_9 section_image_people">
@@ -124,6 +120,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <StartStudying/>
+        <div className="rectangle"></div>
     </div>)
   }
 }

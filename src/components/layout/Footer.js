@@ -4,7 +4,6 @@ import SubscribeFormContainer from '../subscribe/SubscribeFormContainer'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Nav from 'react-bootstrap/Nav'
 import Image from 'react-bootstrap/Image'
 import Instagram from '../../images/social-media-logos/Instagram.png'
 import LinkedIn from '../../images/social-media-logos/LinkedIn.png'
@@ -31,16 +30,19 @@ export default function Footer(props) {
 
                 <Col xs={2} className ='contact-padding'>
                     <h3>Contact</h3> 
-                    <p><img alt="mail_image" src={location} className = "footer-images" /> &nbsp;&nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
+                    <p>
+                        <img alt="mail_image" src={location} className = "footer-images" /> &nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WN-P246<br/> 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1081 HV Amsterdam
                     </p>
                         
-                    <p><img alt="mail_image" src={phone} className = "footer-images" /> &nbsp;&nbsp;&nbsp;+ 31 615536113<br/>
+                    <p>
+                        <img alt="mail_image" src={phone} className = "footer-images" /> &nbsp;&nbsp;&nbsp;+ 31 615536113<br/>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon - Fri 9:00 - 17:00</span><br/>
                     </p>
+
                     <p>
-                       <br/> <img alt="mail_image" src={mail} className = "footer-images" />&nbsp;&nbsp;&nbsp;&nbsp;info@acaboo.com<br/>
+                        <img alt="mail_image" src={mail} className = "footer-images" />&nbsp;&nbsp;&nbsp;&nbsp;info@acaboo.com<br/>
                     </p>
                 </Col>
 
@@ -51,10 +53,10 @@ export default function Footer(props) {
                 </Col>
             </Row>
             <div className="social-media">
-               <Link onClick={()=> window.open("https://www.instagram.com/acaboonl/", "_blank")}> <Image src={Instagram}/></Link>
-               <Link onClick={()=> window.open("https://www.linkedin.com/company/18289841/", "_blank")}> <Image src={LinkedIn}/></Link>
-               <Link onClick={()=> window.open("https://twitter.com/acaboonl", "_blank")}><Image src={Twitter}/></Link>
-               <Link onClick={()=> window.open("https://www.facebook.com/acaboo/", "_blank")}><Image src={Facebook}/></Link>
+               <Link to onClick={()=> window.open("https://www.instagram.com/acaboonl/", "_blank")}> <Image src={Instagram}/></Link>
+               <Link to onClick={()=> window.open("https://www.linkedin.com/company/18289841/", "_blank")}> <Image src={LinkedIn}/></Link>
+               <Link to onClick={()=> window.open("https://twitter.com/acaboonl", "_blank")}><Image src={Twitter}/></Link>
+               <Link to onClick={()=> window.open("https://www.facebook.com/acaboo/", "_blank")}><Image src={Facebook}/></Link>
             </div>
             <Row className="Acaboo-2019">
             &#169; Acaboo 2019. This page is subject to the Privacy Policy and Terms of Service.
