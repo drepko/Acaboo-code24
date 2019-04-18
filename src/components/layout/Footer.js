@@ -19,7 +19,7 @@ export default function Footer(props) {
     return (
         <Container className="footer padding">
             <Row>
-                <Col  xs={{ span: 2, offset: 1 }}>
+                <Col  xs={{ span: 2, offset: 2 }}>
                     <h3>Navigate</h3>
                     <Link to="/about">About</Link>
                     <Link to="/blog">Blog</Link> 
@@ -28,7 +28,7 @@ export default function Footer(props) {
                     <Link to="/careers">We’re Hiring</Link>
                 </Col>
 
-                <Col xs={2} className ='contact-padding'>
+                <Col xs={{span: 2, offset: 0}} className ='contact-padding'>
                     <h3>Contact</h3> 
                     <p>
                         <img alt="mail_image" src={location} className = "footer-images" /> &nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
@@ -46,7 +46,7 @@ export default function Footer(props) {
                     </p>
                 </Col>
 
-                <Col xs={{ offset: 2 }}>
+                <Col xs={{ offset: 1 }}>
                     <h3>Subscribe</h3>
                     <SubscribeFormContainer />
 
