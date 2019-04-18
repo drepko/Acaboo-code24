@@ -36,6 +36,7 @@ class AboutPageContainer extends React.Component {
         <br/>
         
         <p className ='text-xs-grey text-center'>Add some helper text here to explain the finer details of <br/> your product or service. </p>
+        <div className="about-rectangle"></div>
     </div>    
     
     )
