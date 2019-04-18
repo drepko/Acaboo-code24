@@ -21,20 +21,20 @@ class LandingsPageContainer extends React.Component {
     return (
       <div className="main-column">
 
-        <div className="flex-row fw jc-center ai-start-reverse">
+        <div className="flex-row fw">
 
 
           <div id="flex-find-course"className="flex-row half-width padding-top">
 
-            <div className="half-width ai-start">
+            <div className="half-width ">
 
             <div className="flex-column">
-              <div className="half-width ai-start">
+              <div className="half-width ">
                 <p className="text-xl-black"> Pass your exam <br />with ease
                 </p>
               </div>
 
-              <div className="half-width ai-start">
+              <div className="half-width ">
                 <p className="text-sm-med-grey">
                   Sed ut perspiciatis unde omnis iste natus <br />error sit voluptatem accusantium.
                 </p>
