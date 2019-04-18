@@ -501,8 +501,7 @@ select {
   color: #FFFFFF;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
-  font-family: Inter UI;
+  font-size: 14px;
   justify-content: space-between
   
 }
@@ -529,10 +528,9 @@ select {
 
 .Acaboo-2019{
   justify-content: center;
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 12px;
   line-height: normal;
   color: #959595;
 }
@@ -540,14 +538,12 @@ select {
 .footer a{
   display: block;
   color: #FFFFFF;
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 14px;
   line-height: normal;
 }
  .footer h3{
-  font-family: Inter UI;
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -556,7 +552,6 @@ select {
  }
 
  .footer ul {
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -583,18 +578,16 @@ select {
 
  .contact-padding{
   padding-right: 3vh;
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 14px;
   line-height: normal;
  }
  
  .footer .subscription-text p{
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 12px;
   line-height: normal;
   color: #959595;
  }
