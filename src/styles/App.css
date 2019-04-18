@@ -298,6 +298,10 @@ select {
   justify-content: center
 }
 
+.jc-right {
+  justify-content: right
+}
+
 .jc-between {
   justify-content: space-between;
 }
@@ -762,5 +766,46 @@ select {
   border-radius: 5px;
   width: 40vh;
   height: 5vh; 
-  margin: 1vh 1vh 1vh 0;
+  margin: 1vh
  }
+
+ .img-with-text-vertical {
+  text-align: justify;
+  width: 100%;
+}
+
+.img-with-text-vertical img {
+  display: block; 
+ margin: 0 auto; 
+}
+
+.img-with-text-vertical p {
+  width: 60%;
+  /* margin-left: auto; */
+  margin-right: auto;
+}
+
+.blue-cirlce{
+    height: 35px;
+    width: 35px;
+    background-color: #2D66F6;
+    border-radius: 50%;
+    display: inline-block;
+  
+}
+
+#about-container #email-button{
+  color: #FFFFFF;
+  background-color: #2D66F6;
+  border-radius: 5px;
+  width: 12vw;
+  height: 5.5vh;
+  float: left;
+  margin-left: 15px;
+ }
+ #about-container #email{
+  float: left;
+ }
+.font-weight-bold {
+  font-weight: bold;
+}
