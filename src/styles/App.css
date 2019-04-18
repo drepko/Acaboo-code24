@@ -49,6 +49,15 @@ in order to make the navigation-bar and footer full-width */
   padding-right:0vw;
   padding-left:0vw;
 }
+/* #universities-logo{
+  display: flex;
+} */
+
+.trusted-container{
+  margin-top: 5rem;
+  justify-content: center;
+  display: flex;
+}
 
 /* add this class to set a shadow around an element (e.g. image)*/
 .shadow {
