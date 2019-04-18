@@ -33,6 +33,7 @@ class ReviewPurchaseContainer extends PureComponent {
 				<div className="display-flex-start border-bottom-grey">
 					<div className="main-row ai-start">
 
+
 						<div className="padding-right">
 							<p className="text-med-black">Info</p>
 							<p className="text-sm-black">
@@ -40,6 +41,7 @@ class ReviewPurchaseContainer extends PureComponent {
 								Last name: <b>{last_name}</b> <br />
 								Email: <b>{email}</b> <br />
 								Telephone: <b>{phone_number}</b> <br />
+
 							</p>
 						</div>
 
@@ -54,7 +56,7 @@ class ReviewPurchaseContainer extends PureComponent {
 												</div>
 												<div className="width-max flex-column ai-start width-50">
 													<p className="text-sm-black"><b>{course.name}</b></p>
-													<p className="text-sm-black"><b>€ &nbsp;{course.price.toFixed(2).toString().replace(".", ",")}</b></p>
+													<p className="text-sm-black"><b>&#8364;&nbsp;{course.price.toFixed(2).toString().replace(".", ",")}</b></p>
 												</div>
 											</div>
 											<div className="width-max ai-center padding-side-small">
@@ -64,6 +66,7 @@ class ReviewPurchaseContainer extends PureComponent {
 									))}
 								</div>
 						</div>
+
 
 						
 					</div>
@@ -75,11 +78,12 @@ class ReviewPurchaseContainer extends PureComponent {
 				<div>
 					{!total 
 					?<p>Your cart is empty</p> 
-					:<p>Total price: €{subtotal}</p>
+					:<p>Total price: &#8364;&nbsp;{subtotal}</p>
 					}
 					<button className="btn-white-lg" onClick={this.handleClick}>Add another course</button>
 				</div>
 				
+
 				
 				<p></p><br /> {/* adding a blank line, I know this is not smart but who cares? */}
 				
