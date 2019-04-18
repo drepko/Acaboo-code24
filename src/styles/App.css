@@ -255,6 +255,11 @@ select {
 
 }
 
+.display-flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .image-lg-overflow {
   width: 110%;
