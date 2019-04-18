@@ -74,8 +74,11 @@ in order to make the navigation-bar and footer full-width */
   justify-content: center;
 }
 
+.width-30 {
+  width: 30%;
+}
 /*  */
-.main-column div:not(#course-select div)  {
+.main-column-div {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -327,7 +330,7 @@ select {
 }
 
 .image-lg-overflow {
-  width: 110%;
+  width: 100%;
   height: auto;
   border-radius: 5px;
 } 
@@ -351,7 +354,7 @@ select {
 }
 
 .image-xsmall {
-  max-width: 10%;
+  max-width: 25%;
   max-height: 10%;
   overflow: hidden;
 }
