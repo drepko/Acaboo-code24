@@ -10,7 +10,9 @@ class TopBar extends Component {
     render () {
       const { currentUser } = this.props
         return (
-            <Navbar collapseOnSelect expand="md" bg="light" sticky="top" className="padding-side text-sm-grey">
+            
+            <Navbar collapseOnSelect expand="md" bg="white" sticky="top" className="margin-auto text-sm-grey">
+            <div className="border-bottom width-80 display-flex padding-bottom-small padding-side-small margin-auto text-sm-grey">
                 <Navbar.Brand href="/">
                     <img alt="" src={Acaboo_logo} className="d-inline-block align-top"/>
                 </Navbar.Brand>
@@ -36,6 +38,7 @@ class TopBar extends Component {
                         <Nav.Link href="/dashboard">Hi {currentUser.credentials.first_name}</Nav.Link>}
                     </Nav>
                 </Navbar.Collapse>
+                </div>
             </Navbar>
         )
     }
