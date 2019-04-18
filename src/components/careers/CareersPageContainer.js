@@ -12,8 +12,8 @@ class CareersPageContainer extends React.Component {
   render() {
     return (
       <div className="hiring-page">
-      <h3>Join the team</h3>
-      <h1>We are Acaboo. Help shape the future of education.</h1>
+      <p className="text-sm-med-grey">Join the team</p>
+      <p className="text-lg-black">We are Acaboo. <br/>Help shape the future of education.</p>
         <Mission/>
         <OpenPosition/>
         <LifeComponent/>
