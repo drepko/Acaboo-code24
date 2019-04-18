@@ -557,3 +557,18 @@ select {
   color: #959595;
  }
 
+ #course-container #email-input{
+  float: left;
+ }
+
+ #course-container #email-button{
+  color: #FFFFFF;
+  background-color: #2D66F6;
+  border-radius: 10px;
+  width: 10vw;
+  height: 5vh;
+  float: left;
+  margin-left: 15px;
+
+
+ }
