@@ -27,13 +27,13 @@ class LandingsPageContainer extends React.Component {
 
             <div className="flex-column">
               <div className="half-width ">
-                <p className="text-xl-black"> Pass your exam <br />with ease
+                <p className="text-xl-black"> The new way of studying
                 </p>
               </div>
 
               <div className="half-width ">
                 <p className="text-sm-med-grey">
-                  Sed ut perspiciatis unde omnis iste natus <br />error sit voluptatem accusantium.
+                  Digital study books with interactive questions. Pass you exam with ease!
                 </p>
               </div>
 
@@ -55,8 +55,7 @@ class LandingsPageContainer extends React.Component {
 
         <div className="text-center">
           <p className="text-lg-black">Study more efficiently with Acaboo.</p>
-          <p className="text-sm-med-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem<br />
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
+          <p className="text-sm-med-grey">Acaboo guides you along your course. We help you plan for your exam. Earn points for finished chapters, study together and ask for feedback from your teacher.</p>
         </div>
 
         <div className="padding-top">
@@ -84,16 +83,12 @@ class LandingsPageContainer extends React.Component {
                 </div>
 
                 <div className="text-box-med">
-                  <p className="text-sm-black">Feature 1</p>
-                  <p className="text-sm-grey">  Sed ut perspiciatis unde omnis iste <br />
-                    natus error sit voluptatem<br />
-                    accusantium.</p>
+                  <p className="text-sm-black"><br/>Your books, always online.</p>
+                  <p className="text-sm-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
                 </div>
                 <div className="text-box-med">
-                  <p className="text-sm-black">Feature 2</p>
-                  <p className="text-sm-grey">  Sed ut perspiciatis unde omnis iste <br />
-                    natus error sit voluptatem <br />
-                    accusantium.</p>
+                  <p className="text-sm-black"><br/>Cheaper then physical books.</p>
+                  <p className="text-sm-grey">Books on Acaboo are cheaper because we can cut on distribution and printing costs. Also better for the environment.</p>
                 </div>
               </div>
 
@@ -116,8 +111,8 @@ class LandingsPageContainer extends React.Component {
         <Testimonial />
 
         <div className="text-center">
-          <p className="text-lg-black">Too much distraction, no focus? </p>
-          <p className="font-grey">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+          <p className="text-lg-black">Too much distraction, no focus?</p>
+          <p className="font-grey">Acaboo helps you focus on the right moments. Together we save your exams.</p>
         </div>
 
         <div className="section_9 section_image_people">
