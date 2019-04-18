@@ -3,6 +3,7 @@ import show from '../../images/password/show.png'
 import hide from '../../images/password/hide.png'
 import './LoginForm.css'
 import { Form, Col, InputGroup, Button, FormControl } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 
 export default class LoginForm extends Component {
     constructor(props) {
@@ -23,8 +24,10 @@ export default class LoginForm extends Component {
         const {formValues, showPassword, validated, submitting} = this.props.state
 
         return (
-
-            <Form
+            <div className='signup-login'>
+            <h1>Welcome back</h1><br/>
+            <p className = "text-sm-grey">Enter your account details below</p><br/>
+            <Form className="signup-login-form"
                 noValidate
                 validated={validated}
                 onSubmit={e => handleSubmit(e)}
@@ -67,6 +70,9 @@ export default class LoginForm extends Component {
                 </Form.Row>
                 <Button disabled={submitting} type="submit">Login</Button>
             </Form>
+            <p>Don't have an account yet <Link to="/signup">Create one</Link></p>
+
+            </div>
         )
     }
 }
