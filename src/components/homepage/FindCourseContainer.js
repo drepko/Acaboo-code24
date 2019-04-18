@@ -20,7 +20,6 @@ class FindCourseContainer extends PureComponent {
     }
 
     componentWillMount() {
-        console.log('didmount')
         this.props.getUniversities()
     }
 
