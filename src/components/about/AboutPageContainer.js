@@ -5,6 +5,7 @@ import Team from './Team'
 import JoinUs from './JoinUs'
 import BrowseCourse from '../homepage/BrowseCourse'
 import people from '../../images/mock-ups/people.png'
+import man_desk_degree from '../../images/mock-ups/man_desk_degree.png'
 import Advisors from './Advisiors'
 import NewsSubscription from '../subscribe/subscriptionForm'
 
@@ -15,7 +16,7 @@ class AboutPageContainer extends React.Component {
 
   render() {
     return (
-      <div className = "about-main-page">
+      <div className = "about-main-page padding-top-small ">
         <AboutPage />
         <Team/>
         <JoinUs/>
@@ -24,9 +25,17 @@ class AboutPageContainer extends React.Component {
           <img alt="people" className="image-lg-overflow" src={people} />
         </div>
         <Advisors/>
-        <h1>Want more? Subscribe to our newsletter</h1>
+        <div className="section_9 section_image_people">
+          <img alt="man_desk_degree" className="image-med-lg" src={man_desk_degree} />
+        </div>
+        <p className="text-lg-black text-center font-weight-bold">Want more?<br/> Subscribe to our newsletter</p>
+        <div id = 'about-container' className = 'padding-bottom-small '>
         <NewsSubscription/>
-        <p>Add some helper text here to explain the finer details of your product or service. </p>
+        </div>
+        <br/>
+        <br/>
+        
+        <p className ='text-xs-grey text-center'>Add some helper text here to explain the finer details of <br/> your product or service. </p>
     </div>    
     
     )

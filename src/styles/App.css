@@ -231,6 +231,10 @@ select {
   justify-content: center
 }
 
+.jc-right {
+  justify-content: right
+}
+
 .jc-between {
   justify-content: space-between;
 }
@@ -675,4 +679,20 @@ select {
     border-radius: 50%;
     display: inline-block;
   
+}
+
+#about-container #email-button{
+  color: #FFFFFF;
+  background-color: #2D66F6;
+  border-radius: 5px;
+  width: 12vw;
+  height: 5.5vh;
+  float: left;
+  margin-left: 15px;
+ }
+ #about-container #email{
+  float: left;
+ }
+.font-weight-bold {
+  font-weight: bold;
 }

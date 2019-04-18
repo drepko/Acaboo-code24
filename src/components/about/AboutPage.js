@@ -9,7 +9,7 @@ export default class AboutPage extends Component {
     return (
       <div className ="about-us-main">
         <h3 className="text-sm-med-grey">About Acaboo</h3>
-        <p className="text-lg-black">Together we reimagine education </p>
+        <p className="text-lg-black font-weight-bold">Together we reimagine education </p>
         <div className="main-row img-with-text-vertical">
           <div className="desk-lamp-about-us">
           <img alt="desklamp" className="image_lg" src={deskLamp} />
@@ -36,7 +36,7 @@ export default class AboutPage extends Component {
         </div>
         </div>
         <div className="text-center">
-        <p className="text-lg-black">Study more efficient with Acaboo.</p>
+        <p className="text-lg-black font-weight-bold">Study more efficient with Acaboo.</p>
         </div>
         <p className="text-sm-grey" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
         <div className="med-width">
