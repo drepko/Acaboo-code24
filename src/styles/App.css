@@ -2,7 +2,7 @@
 @import  "../fonts/Inter-web/inter.css";
 /* adds a border to all the divs, use this when styling the page. Comment out before deploy!!  */
 div {
-  /* border: solid #666666; */
+  border: solid #666666;
 }
 
 table {
@@ -324,6 +324,12 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.display-flex-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
 }
 
 .image-lg-overflow {
