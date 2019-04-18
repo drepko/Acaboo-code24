@@ -120,6 +120,7 @@ class LandingsPageContainer extends React.Component {
         </div>
 
         <StartStudying/>
+        <div className="rectangle"></div>
     </div>)
   }
 }
