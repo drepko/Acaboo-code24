@@ -94,7 +94,7 @@ class LandingsPageContainer extends React.Component {
 
               <div >
                 <div className="">
-                  <img alt="man_handshake" src={man_handshake} />
+                  <img className="image-lg-overflow" alt="man_handshake" src={man_handshake} />
                 </div>
               </div>
 
