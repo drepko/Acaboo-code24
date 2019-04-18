@@ -13,24 +13,38 @@ export default class LifeComponent extends React.Component {
             <div className="">
                 <p className="text-med-black">Life at Acaboo</p>
                 <p className="text-sm-black">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa. We are located in the heart of education in Amsterdam, right in the Vrije Universiteit Amsterdam </p>           
-                    <div className ="main-row">
-                        <img src={life_image_1} className="image-lg" alt="image1" />
-                        <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
-
-                        <img src={life_image_2} className="image-lg" alt="image2" />
-                        <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
-
-                        <img src={life_image_3} className="image-lg" alt="image3" />
-                        <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
-
-                        <img src={life_image_4} className="image-lg" alt="image4" />
-                        <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
-
-                        <img src={life_image_5} className="image-lg" alt="image5" />
-                        <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
-
-                        <img src={life_image_6} className="image-lg" alt="image6" />
-                        <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
+                    <div className ="flex-column fw">
+                    <div className="flex-row display-flex">
+                        <div className="img-with-text">
+                            <img src={life_image_1} className="image-med-lg" alt="image1" />
+                            <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
+                        </div>
+                        <div className="img-with-text">
+                            <img src={life_image_2} className="image-med-lg" alt="image2" />
+                            <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
+                        </div>
+                    </div>
+                    <div className="flex-row display-flex">        
+                        <div className="img-with-text">
+                            <img src={life_image_3} className="image-med-lg" alt="image3" />
+                            <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
+                        </div>
+                        <div className="img-with-text">
+                            <img src={life_image_4} className="image-med-lg" alt="image4" />
+                            <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
+                        </div>
+                    </div>  
+                    <div className="flex-row display-flex">
+                        <div className="img-with-text">
+                                <img src={life_image_5} className="image-med-lg" alt="image5" />
+                                <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
+                            </div>
+                            <div className="img-with-text">
+                                <img src={life_image_6} className="image-med-lg" alt="image6" />
+                                <p className="text-sm-grey">It enables my students to get the most out of a course, everytime...</p>
+                            </div>
+                    </div>  
+                        
                     </div>
            
            

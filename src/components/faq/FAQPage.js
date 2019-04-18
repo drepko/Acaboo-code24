@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import BrowseCourse from '../homepage/BrowseCourse'
 import Testimonial from "../homepage/Testimonial"
 import StartStudying from '../homepage/StartStudying';
-import man_handshake from'../../images/mock-ups/man_handshake.png'
+import man_handshake from '../../images/mock-ups/man_handshake.png'
 
 export default class FAQPage extends Component {
   render() {

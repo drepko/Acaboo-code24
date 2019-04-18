@@ -239,7 +239,7 @@ select {
   height: 120%;
 }
 
-#about-and-picture {
+#about-and-picture, .display-flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -255,11 +255,18 @@ select {
 
 }
 
+
 .image-lg-overflow {
   width: 110%;
   height: auto;
   border-radius: 5px;
 } 
+
+.image-med-lg {
+  max-width: 75%;
+  max-height: 75%;
+  overflow: hidden;
+}
 
 .image-med {
   max-width: 50%;
@@ -282,6 +289,22 @@ select {
 .image-book {
   max-width: 90%;
   max-height: 90%;
+}
+
+.img-with-text {
+  text-align: justify;
+  width: 40%;
+}
+
+.img-with-text img {
+  display: block;
+  margin: 0 auto;
+}
+
+.img-with-text p {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* set font-size and color */
