@@ -791,7 +791,7 @@ select {
   border-radius: 5px;
   width: 40vh;
   height: 5vh; 
-  margin: 1vh
+  margin: 1vh 0 1vh 0
  }
 
  .img-with-text-vertical {
