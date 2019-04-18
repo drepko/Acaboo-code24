@@ -58,8 +58,8 @@ class CoursePageContainer extends PureComponent {
         return (
             <div>
                 {this.props.selectedCourses.length > 0 &&
-                    <div><Cart selectedCourses={this.props.selectedCourses} />
-                        <button onClick={this.checkCurrentUser}>Checkout</button>
+                    <div>
+                        <Cart selectedCourses={this.props.selectedCourses} checkCurrentUser={this.checkCurrentUser}/>   
                     </div>
                 }
 

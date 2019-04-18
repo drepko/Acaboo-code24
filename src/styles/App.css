@@ -18,8 +18,7 @@ in order to make the navigation-bar and footer full-width */
 
 /* add this class to set a shadow around an element (e.g. image)*/
 .shadow {
-  box-shadow: #2D66F6;
-  
+  box-shadow: #989898;
 }
 
 /*  */
@@ -160,7 +159,7 @@ in order to make the navigation-bar and footer full-width */
 
 .border-thin-grey {
   border: solid #989898;
-  border-radius: 10px
+  border-radius: 5px
 }
 
 .form-small {
@@ -171,9 +170,9 @@ in order to make the navigation-bar and footer full-width */
 select {
   width: 35vw;
   height: 5vh;
-  color: #666666;
+  color: #989898;
   align-self: flex-start;
-  border: thin #666666
+  border: thin #989898
 }
 
 .right {
@@ -204,6 +203,10 @@ select {
 
 .jc-start {
   justify-content: flex-start
+}
+
+.ai-end {
+  align-items: flex-end
 }
 
 .text-center {
@@ -246,7 +249,7 @@ select {
 .image-lg-overflow {
   width: 110%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 5px;
 } 
 
 .image-med {
@@ -406,19 +409,19 @@ select {
 .bg-blue {
   color: #FFFFFF;
   background-color: #2D66F6;
-  border-radius: 10px
+  border-radius: 5px
 }
 
 .bg-white {
   color: #2D66F6;
   background-color: #FFFFFF;
-  border-radius: 10px
+  border-radius: 5px
 }
 
 .btn-blue-med {
   color: #FFFFFF;
   background-color: #2D66F6;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 10vw;
   height: 5vh
 }
@@ -426,7 +429,7 @@ select {
 .btn-blue-lg {
   color: #FFFFFF;
   background-color: #2D66F6;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 17vw;
   height: 7vh
 }
@@ -434,14 +437,23 @@ select {
 .btn-blue-xl {
   color: #FFFFFF;
   background-color: #2D66F6;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.btn-white-sm {
+  /* color: #2D66F6; */
+  background-color: #FFFFFF;
+  border: 1px solid #2D66F6;
+  border-radius: 5px;
+  width: 7vw;
+  height: 4vh
 }
 
 .btn-white-med {
   color: #2D66F6;
   background-color: #FFFFFF;
   border: 1px solid #2D66F6;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 10vw;
   height: 5vh
 }
@@ -450,7 +462,7 @@ select {
   color: #2D66F6;
   background-color: #FFFFFF;
   border: 1px solid #2D66F6;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 17vw;
   height: 7vh
 }
