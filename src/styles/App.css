@@ -599,18 +599,25 @@ select {
   color: #959595;
  }
 
- #course-container #email-input{
+ #course-container #email{
   float: left;
  }
 
  #course-container #email-button{
   color: #FFFFFF;
   background-color: #2D66F6;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 10vw;
   height: 5vh;
   float: left;
   margin-left: 15px;
+ }
 
-
+ #footer-container #email-button{
+  color: #FFFFFF;
+  background-color: #2D66F6;
+  border-radius: 5px;
+  width: 40vh;
+  height: 5vh; 
+  margin: 1vh
  }
