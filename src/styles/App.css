@@ -522,13 +522,10 @@ select {
   padding-right: 100px;
   list-style-type: none;
  }
- /* .footer p{
-  font-family: Inter UI;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: normal;
- } */
+ .footer-images{
+  width: 2vh;
+  height: 2vh;
+ }
  
  .subscribe-button{
   margin: 10px;
