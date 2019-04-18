@@ -6,7 +6,7 @@ export default class SubscribeFormContainer extends React.Component {
 
     render() {
         return (
-            <div className = "subscription-text">
+            <div id = 'footer-container' className = "subscription-text">
             The latest Acaboo news, articles, and <br />
             resources, sent straight to your inbox every <br />
             month.

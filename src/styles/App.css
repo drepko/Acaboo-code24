@@ -533,8 +533,7 @@ select {
   color: #FFFFFF;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
-  font-family: Inter UI;
+  font-size: 14px;
   justify-content: space-between
   
 }
@@ -561,10 +560,9 @@ select {
 
 .Acaboo-2019{
   justify-content: center;
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 12px;
   line-height: normal;
   color: #959595;
 }
@@ -572,14 +570,12 @@ select {
 .footer a{
   display: block;
   color: #FFFFFF;
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 14px;
   line-height: normal;
 }
  .footer h3{
-  font-family: Inter UI;
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -588,7 +584,6 @@ select {
  }
 
  .footer ul {
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -596,13 +591,10 @@ select {
   padding-right: 100px;
   list-style-type: none;
  }
- /* .footer p{
-  font-family: Inter UI;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: normal;
- } */
+ .footer-images{
+  width: 2vh;
+  height: 2vh;
+ }
  
  .subscribe-button{
   margin: 10px;
@@ -618,19 +610,39 @@ select {
 
  .contact-padding{
   padding-right: 3vh;
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 14px;
   line-height: normal;
  }
  
  .footer .subscription-text p{
-  font-family: Inter UI;
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 12px;
   line-height: normal;
   color: #959595;
  }
 
+ #course-container #email{
+  float: left;
+ }
+
+ #course-container #email-button{
+  color: #FFFFFF;
+  background-color: #2D66F6;
+  border-radius: 5px;
+  width: 10vw;
+  height: 5vh;
+  float: left;
+  margin-left: 15px;
+ }
+
+ #footer-container #email-button{
+  color: #FFFFFF;
+  background-color: #2D66F6;
+  border-radius: 5px;
+  width: 40vh;
+  height: 5vh; 
+  margin: 1vh
+ }
