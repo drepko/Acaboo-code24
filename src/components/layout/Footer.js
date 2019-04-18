@@ -28,10 +28,11 @@ export default function Footer(props) {
 
                 <Col xs={2} className ='contact-padding'>
                     <h3>Contact</h3> 
-                    <p>&#xf232;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
+                    <img src ={location}/><span>
+                    <p>Boelelaan 1081<br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WN-P246<br/> 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1081 HV Amsterdam
-                    </p>
+                    </p></span>
                         
                     <p><span>&#9742;&nbsp;&nbsp;&nbsp;</span> 
                         + 31 615536113<br/>
