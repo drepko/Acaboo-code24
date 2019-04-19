@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 
+import people from'../../images/mock-ups/people.png'
 import woman_desk from '../../images/mock-ups/woman-desk2.png'
 import man_handshake from'../../images/mock-ups/man_handshake.png'
-import people from'../../images/mock-ups/people.png'
 import course_dashboard from '../../images/course_dashboard.png'
 
 import UsedByInstitutions from './UsedByInstitutions'
@@ -92,9 +92,9 @@ class LandingsPageContainer extends React.Component {
                 </div>
               </div>
 
-              <div id='about-flex-child-two'>
+              <div >
                 <div className="">
-                  <img alt="man_handshake" className="image-lg-overflow" src={man_handshake} />
+                  <img className="image-lg-overflow" alt="man_handshake" src={man_handshake} />
                 </div>
               </div>
 
@@ -115,9 +115,8 @@ class LandingsPageContainer extends React.Component {
           <p className="font-grey">Acaboo helps you focus on the right moments. Together we save your exams.</p>
         </div>
 
-        <div className="section_9 section_image_people">
-          <img alt="people" className="image-lg-overflow" src={people} />
-        </div>
+        <img alt="people" className="image-med-lg margin-side" src={people} /> 
+
 
         <StartStudying/>
         <div className="rectangle"></div>
