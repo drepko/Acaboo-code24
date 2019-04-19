@@ -369,6 +369,12 @@ select {
   border-radius: 5px;
 } 
 
+.image-med-overflow {
+  max-width: 50%;
+  max-height: auto;
+  border-radius: 5px;
+} 
+
 .image-med-lg {
   max-width: 75%;
   max-height: 75%;
