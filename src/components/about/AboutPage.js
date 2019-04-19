@@ -38,9 +38,9 @@ export default class AboutPage extends Component {
         <div className="text-center">
         <p className="text-lg-black font-weight-bold">Study more efficient with Acaboo.</p>
         </div>
-        <p className="text-sm-grey" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
+        <p className="text-sm-grey text-center" >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque <br/> laudantium, totam rem aperiam, eaque ipsa.</p>
         <div className="med-width">
-            <img alt="man_handshake" className="image-med" src={man_handshake} /> 
+            <img alt="man_handshake" className="image-med-overflow margin-side" src={man_handshake} /> 
         </div>
       </div>
     )

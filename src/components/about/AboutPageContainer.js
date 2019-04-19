@@ -22,12 +22,16 @@ class AboutPageContainer extends React.Component {
         <JoinUs/>
         <BrowseCourse/>
         <div className="section_9 section_image_people">
-          <img alt="people" className="image-lg-overflow" src={people} />
+          <img alt="people" className="image-med-overflow margin-side" src={people} />
         </div>
         <Advisors/>
+
         <div className="section_9 section_image_people">
-          <img alt="man_desk_degree" className="image-med-lg" src={man_desk_degree} />
+          <img alt="man_desk_degree" className="image-med-overflow margin-side" src={man_desk_degree} />
         </div>
+
+
+
         <p className="text-lg-black text-center font-weight-bold">Want more?<br/> Subscribe to our newsletter</p>
         <div id = 'about-container' className = 'padding-bottom-small '>
         <NewsSubscription/>
@@ -36,6 +40,7 @@ class AboutPageContainer extends React.Component {
         <br/>
         
         <p className ='text-xs-grey text-center'>Add some helper text here to explain the finer details of <br/> your product or service. </p>
+        <div className="about-rectangle"></div>
     </div>    
     
     )
