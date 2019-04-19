@@ -21,11 +21,11 @@ export default function Footer(props) {
             <Row>
                 <Col  xs={{ span: 2, offset: 2 }}>
                     <h3>Navigate</h3>
-                    <Link to="/about">About</Link>
-                    <Link to="/blog">Blog</Link> 
-                    <Link to="/team">Team</Link>
-                    <Link to="/courses">Courses</Link>
-                    <Link to="/careers">We’re Hiring</Link>
+                    <Link to="/about" className="padding-bottom-small">About</Link>
+                    <Link to="/blog" className="padding-bottom-small">Blog</Link> 
+                    <Link to="/team" className="padding-bottom-small">Team</Link>
+                    <Link to="/courses" className="padding-bottom-small">Courses</Link>
+                    <Link to="/careers" className="padding-bottom-small">We’re Hiring</Link>
                 </Col>
 
                 <Col xs={{span: 2, offset: 0}} className ='contact-padding'>
