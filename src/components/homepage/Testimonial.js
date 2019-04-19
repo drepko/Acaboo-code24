@@ -5,7 +5,7 @@ import '../../styles/LandingsPageContainer.css'
 export default class Testimonal extends Component {
     render(){
         return(
-          <div className="flex-column ">
+          <div id="testimonial-container" className="flex-column padding-top border-bottom-grey padding-bottom-large">
 
           <div className="text-center">
             <p className="text-lg-black">
@@ -15,9 +15,9 @@ export default class Testimonal extends Component {
 
           <div className="flex-row jc fw main-column-div">
 
-          <div className="main-column-div width-30">
+          <div className="main-column-div width-30 border-right">
           <div>
-            <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
+            <p className="text-sm-black padding-bottom-30">“Saves me the hassle of studying. Acaboo does everything everywhere.”</p>
             <div className="">
               <img alt="Business Administration" className="image-xsmall float-left" src={UvA} />
               <div className="text-sm-grey float-left">
@@ -27,9 +27,9 @@ export default class Testimonal extends Component {
             </div>
           </div>
 
-          <div className="main-column-div width-30">
+          <div className="main-column-div width-30 border-right">
           <div>
-            <p className="text-sm-black">“It enables my students to <br/>get the most out of a course, <br/>everytime...”</p>
+            <p className="text-sm-black padding-bottom-30">“It enables my students to get the most out of a course, everytime...”</p>
             <div className="">
               <img alt="Mathematics teacher" className="image-xsmall float-left" src={UvA} />
               <div className="text-sm-grey float-left">
@@ -41,7 +41,7 @@ export default class Testimonal extends Component {
 
           <div className="main-column-div width-30">
           <div>
-            <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
+            <p className="text-sm-black padding-bottom-30">“Saves me the hassle of studying. Acaboo does everything everywhere.”</p>
             <div className="">
               <img alt="Business teacher" className="image-xsmall float-left" src={UvA} />
               <div className="text-sm-grey float-left">

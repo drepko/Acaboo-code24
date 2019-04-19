@@ -26,6 +26,7 @@ export default function Footer(props) {
                     <Link className="padding-top-xsmall text-xs-grey" to="/team">Team</Link>
                     <Link className="padding-top-xsmall text-xs-grey" to="/courses">Courses</Link>
                     <Link className="padding-top-xsmall text-xs-grey" to="/careers">We’re Hiring</Link>
+
                 </Col>
 
                 <Col xs={{span: 2, offset: 0}} className ='contact-padding'>

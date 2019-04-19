@@ -60,7 +60,7 @@ export default class FAQPage extends Component {
 
         <div className="padding-top"/>
 
-        <div className="med-width main-column-div">
+        <div className="med-width main-column-div padding-bottom-large">
             <img alt="man_handshake" className="image-med" src={man_handshake} /> 
         </div>
 
