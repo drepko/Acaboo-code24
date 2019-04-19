@@ -19,7 +19,7 @@ import JobDetailPage from './components/careers/JobDetailPage'
 import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
 import LoginFormContainer from './components/login/LoginFormContainer';
 import ScrollToTop from './components/scrollup/scrollup'
-
+import Team from './components/about/Team'
 class App extends Component {
   render() {
     return (
@@ -44,6 +44,8 @@ class App extends Component {
               <Route exact path="/reviewpurchase" component={ReviewPurchaseContainer} />
               <Route exact path="/jobdetails" component={JobDetailPage} />
               <Route exact path="/dashboard" component={UserDashboardContainer} />
+              <Route exact path="/team" component={Team} />
+
           </div>
             <Footer />
             <ScrollToTop />
