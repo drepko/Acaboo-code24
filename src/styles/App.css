@@ -193,6 +193,10 @@ in order to make the navigation-bar and footer full-width */
   padding-top: 10px;
 }
 
+.padding-top-xsmall {
+  padding-top: 4px;
+}
+
 .padding-bottom-small {
   padding-bottom: 10px;
 }
@@ -731,13 +735,11 @@ select {
 .footer {
   min-width: 100%;
   padding: 20px;
+  /* color:#FFFFFF; */
   background-color: #2F2E41;
-  color: #FFFFFF;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
   justify-content: space-between
-  
 }
 
 .social-media {
@@ -769,9 +771,8 @@ select {
   color: #959595;
 }
 
-.footer a{
+.footer a {
   display: block;
-  color: #FFFFFF;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

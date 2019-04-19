@@ -20,34 +20,35 @@ export default function Footer(props) {
         <Container className="footer padding">
             <Row>
                 <Col  xs={{ span: 2, offset: 2 }}>
-                    <h3>Navigate</h3>
-                    <Link to="/about" className="padding-bottom-small">About</Link>
-                    <Link to="/blog" className="padding-bottom-small">Blog</Link> 
-                    <Link to="/team" className="padding-bottom-small">Team</Link>
-                    <Link to="/courses" className="padding-bottom-small">Courses</Link>
-                    <Link to="/careers" className="padding-bottom-small">We’re Hiring</Link>
+                    <h3 className="text-med-white">Navigate</h3>
+                    <Link className="padding-top-xsmall text-xs-grey" to="/about">About</Link>
+                    <Link className="padding-top-xsmall text-xs-grey" to="/blog">Blog</Link> 
+                    <Link className="padding-top-xsmall text-xs-grey" to="/team">Team</Link>
+                    <Link className="padding-top-xsmall text-xs-grey" to="/courses">Courses</Link>
+                    <Link className="padding-top-xsmall text-xs-grey" to="/careers">We’re Hiring</Link>
+
                 </Col>
 
                 <Col xs={{span: 2, offset: 0}} className ='contact-padding'>
-                    <h3>Contact</h3> 
-                    <p>
+                    <h3 className="text-med-white">Contact</h3> 
+                    <p className="padding-top-xsmall text-xs-grey">
                         <img alt="mail_image" src={location} className = "footer-images" /> &nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WN-P246<br/> 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1081 HV Amsterdam
                     </p>
                         
-                    <p>
+                    <p className="padding-top-xsmall text-xs-grey">
                         <img alt="mail_image" src={phone} className = "footer-images" /> &nbsp;&nbsp;&nbsp;+ 31 615536113<br/>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon - Fri 9:00 - 17:00</span><br/>
                     </p>
 
-                    <p>
+                    <p className="padding-top-xsmall text-xs-grey">
                         <img alt="mail_image" src={mail} className = "footer-images" />&nbsp;&nbsp;&nbsp;&nbsp;info@acaboo.com<br/>
                     </p>
                 </Col>
 
                 <Col xs={{ offset: 1 }}>
-                    <h3>Subscribe</h3>
+                    <h3 className="text-med-white">Subscribe</h3>
                     <SubscribeFormContainer />
 
                 </Col>
