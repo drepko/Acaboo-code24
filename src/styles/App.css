@@ -843,18 +843,27 @@ select {
   
 }
 
-#about-container #email-button{
+#about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }
+ 
+ #about-container #email-button{
   color: #FFFFFF;
   background-color: #2D66F6;
   border-radius: 5px;
   width: 12vw;
-  height: 5.5vh;
-  float: left;
-  margin-left: 15px;
+  justify-content: center;
+  align-items: center;
  }
+ 
  #about-container #email{
-  float: left;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
  }
+ 
 .font-weight-bold {
   font-weight: bold;
 }
