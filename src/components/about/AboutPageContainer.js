@@ -33,7 +33,7 @@ class AboutPageContainer extends React.Component {
 
 
         <p className="text-lg-black text-center font-weight-bold">Want more?<br/> Subscribe to our newsletter</p>
-        <div id = 'about-container' className = 'padding-bottom-small '>
+        <div id = 'about-container'>
         <NewsSubscription/>
         </div>
         <br/>
