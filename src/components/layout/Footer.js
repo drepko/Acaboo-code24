@@ -32,18 +32,18 @@ export default function Footer(props) {
                 <Col xs={{span: 2, offset: 0}} className ='contact-padding'>
                     <h3 className="text-med-white">Contact</h3> 
                     <p className="padding-top-xsmall text-xs-grey">
-                        <img alt="mail_image" src={location} className = "footer-images" /> &nbsp;&nbsp;&nbsp;Boelelaan 1081 <br/>
+                        <img alt="mail_image" src={location} className = "footer-images" />&nbsp;&nbsp;Boelelaan 1081 <br/>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WN-P246<br/> 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1081 HV Amsterdam
                     </p>
                         
                     <p className="padding-top-xsmall text-xs-grey">
-                        <img alt="mail_image" src={phone} className = "footer-images" /> &nbsp;&nbsp;&nbsp;+ 31 615536113<br/>
+                        <img alt="mail_image" src={phone} className = "footer-images" /> &nbsp;&nbsp;+ 31 615536113<br/>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mon - Fri 9:00 - 17:00</span><br/>
                     </p>
 
                     <p className="padding-top-xsmall text-xs-grey">
-                        <img alt="mail_image" src={mail} className = "footer-images" />&nbsp;&nbsp;&nbsp;&nbsp;info@acaboo.com<br/>
+                        <img alt="mail_image" src={mail} className = "footer-images" />&nbsp;&nbsp;&nbsp;info@acaboo.com<br/>
                     </p>
                 </Col>
 
