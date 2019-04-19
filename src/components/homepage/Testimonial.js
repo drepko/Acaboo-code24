@@ -13,36 +13,42 @@ export default class Testimonal extends Component {
             </p>
           </div>
 
-          <div className="flex-row jc fw">
+          <div className="flex-row jc fw main-column-div">
 
-          <div className="ai-start small-width">
+          <div className="main-column-div width-30">
+          <div>
             <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
-            <div className="flex-row flex-start top">
-              <img alt="image" className="image-xsmall" src={UvA} />
-              <div className="top text-sm-grey">
+            <div className="">
+              <img alt="Business Administration" className="image-xsmall float-left" src={UvA} />
+              <div className="text-sm-grey float-left">
                 <p>David de Bye, <br />Business Administration, UVA</p>
               </div>  
             </div>
+            </div>
           </div>
 
-          <div className="ai-start">
+          <div className="main-column-div width-30">
+          <div>
             <p className="text-sm-black">“It enables my students to <br/>get the most out of a course, <br/>everytime...”</p>
-            <div className="flex-row flex-start top">
-              <img alt="image" className="image-xsmall" src={UvA} />
-              <div className="top text-sm-grey">
+            <div className="">
+              <img alt="Mathematics teacher" className="image-xsmall float-left" src={UvA} />
+              <div className="text-sm-grey float-left">
                 <p>Paul de Groot, <br />Mathematics teacher, UVA</p>
               </div>
             </div>
           </div>
+          </div>
 
-          <div className="ai-start">
+          <div className="main-column-div width-30">
+          <div>
             <p className="text-sm-black">“Saves me the hassle of <br/>studying. Acaboo does <br/>everything everywhere.”</p>
-            <div className="flex-row flex-start top">
-              <img alt="image" className="image-xsmall" src={UvA} />
-              <div className="top text-sm-grey">
+            <div className="">
+              <img alt="Business teacher" className="image-xsmall float-left" src={UvA} />
+              <div className="text-sm-grey float-left">
                 <p>Emma de Leeuw, <br />Business teacher, UVA</p>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>)

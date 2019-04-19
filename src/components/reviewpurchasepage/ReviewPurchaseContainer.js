@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import ProgressBar from '../layout/ProgressBar'
-import courses from '../../reducers/courses'
 import { baseUrl } from '../../constants'
 import { deleteCourse } from '../../actions/courses'
 
@@ -24,53 +23,72 @@ class ReviewPurchaseContainer extends PureComponent {
 	render() {
 		const {first_name, last_name, email, phone_number} = this.props.currentUser.credentials
 		const {selectedCourses} = this.props
+		const total = selectedCourses.map(course => course.price).reduce((a,b) => a + b, 0)
+		const subtotal = Number.isInteger(total) ? total + `,-` : total.toFixed(2).toString().replace(".", ",")
 
 		return (
 			<div>
                 <ProgressBar />
+				<p className="text-med-black padding-top border-bottom-grey">Review and Purchase</p> <br />
+				<div className="display-flex-start border-bottom-grey">
+					<div className="ai-start review-purchase">
 
-				<h1>Review and Purchase</h1> <br />
-				<p>****************</p>
-                <h2>Info</h2>
 
-				<p>
-                    First name: {first_name} <br />
-                    Last name: {last_name} <br />
-                    Email: {email} <br />
-                    Telephone: {phone_number} <br />
-                </p>
+						<div className="padding-right">
+							<p className="text-med-black">Info</p>
+							<p className="text-sm-black">
+								First name: <b>{first_name}</b> <br />
+								Last name: <b>{last_name}</b> <br />
+								Email: <b>{email}</b> <br />
+								Telephone: <b>{phone_number}</b> <br />
 
-				<p>****************</p>
-                <h2>Selected course(s)</h2>
-                <p>List of selected course</p>
-
-				{
-					selectedCourses.map(course => (
-							<p>
-								Course name: {course.name} <br />
-								Price: €{course.price} <br />
-								<img alt={course.id} src={`${baseUrl}${course.image}`}/>
-								<button onClick={this.onDelete} value={course.id}>Remove this course</button> <br />
 							</p>
-						)
-					)	
-				}
+						</div>
 
-				<p>****************</p>
-				{
-					!selectedCourses ?
+						<div className="">
+							<p className="text-med-black">Course</p>
+								<div className="display-flex flex-column">
+									{selectedCourses.map(course => 
+										(<div className="main-row margin-bottom padding-bottom-small">
+											<div className="course-width display-flex-start main-row half-width border-thin-grey">
+												<div className="padding-small width-50">
+													<img className="image-book-small" alt={course.id} src={`${baseUrl}${course.image}`}/>
+												</div>
+												<div className="flex-column ai-start width-50">
+													<p className="text-sm-black"><b className="overflow-wrap">{course.name}</b></p>
+													<p className="text-sm-black"><b>&#8364;&nbsp;{course.price.toFixed(2).toString().replace(".", ",")}</b></p>
+												</div>
+											</div>
+											<div className="width-max ai-center padding-side-small">
+												<button className="btn-white-med text-sm-blue margin-side" onClick={this.onDelete} value={course.id}>Remove</button>
+											</div>
+										</div>
+									))}
+								</div>
+						</div>
 
-					<p>Your cart is empty</p> :
 
-					<h3>Total price: €{selectedCourses.map(course => course.price).reduce((a, b) => a + b, 0)}</h3>
-				}
-				<button onClick={this.handleClick}>Add another course</button>
+						
+					</div>
+				</div>
+                <div className="padding-top">
+					<p className="text-med-black">Payment Method</p>
+					<p>Adyen (looking for a way to integrate)</p>
+				</div>
+				<div>
+					{!total 
+					?<p>Your cart is empty</p> 
+					:<p>Total price: &#8364;&nbsp;{subtotal}</p>
+					}
+					<button className="btn-white-lg" onClick={this.handleClick}>Add another course</button>
+				</div>
+				
+
 				
 				<p></p><br /> {/* adding a blank line, I know this is not smart but who cares? */}
 				
-				<p>****************</p>
-                <h2>Payment</h2>
-                <p>Adyen (looking for a way to integrate)</p>
+				
+                
             </div>
         )
 	}

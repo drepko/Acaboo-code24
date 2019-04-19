@@ -6,7 +6,7 @@ import { subscribeCourse } from '../../actions/subscribe'
 class EmailWhenAvailable extends PureComponent {
     state = {
         email: '',
-        message: 'Let me know when available'
+        sent: false
     }
     
     onChange = (event) => {
@@ -22,21 +22,27 @@ class EmailWhenAvailable extends PureComponent {
 
         this.setState({
             email: '',
-            message: 'Thanks for your subscription!'
+            sent: true
         })      
     }
 
     render() {
         return (
-            <div>
-            <p>Oops! We don’t offer your course yet!</p>
-            <p>{this.state.message}</p>
+            !this.state.sent? 
+            <div className="padding-bottom">
+               
+            <p className="text-sm-black">Oops! We don’t offer your course yet!<br/>
+            Let me know when available</p>
             <EmailForm
                 onSubmit={this.onSubmit}
                 onChange={this.onChange}
                 formValues={this.state}
                 value='Sent'
             />            
+            </div>
+            :
+            <div>
+                <p className="text-sm-black">We'll let you know when {this.props.course} is available.</p>
             </div>)
     }
 }

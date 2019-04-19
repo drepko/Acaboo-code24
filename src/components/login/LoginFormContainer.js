@@ -12,6 +12,8 @@ class TestFormContainer extends PureComponent {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+	state = { showPassword: false, canSubmit: true, formValues: {}, validated: false, submitting: false }
+
 	disableButton() {
 		this.setState({ canSubmit: false });
 	}
@@ -20,10 +22,28 @@ class TestFormContainer extends PureComponent {
 		this.setState({ canSubmit: true });
 	}
 
-	state = { showPassword: false, canSubmit: true }
+	handleChange = (event) => {
 
-	handleSubmit = (data) => {
-		this.props.login(data, this.props.history)
+		const { name, value } = event.target
+
+		this.setState({
+			formValues: { ...this.state.formValues, [name]: value }
+		})
+	}
+
+	handleSubmit(event) {
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
+			event.preventDefault();
+			event.stopPropagation();
+		} else {
+			event.preventDefault();
+			const { password, email } = this.state.formValues
+			const data = { password, email }
+			this.setState({ submitting: true })
+			this.props.login(data, this.props.history)
+		}
+		this.setState({ validated: true });
 	}
 
 	showPassword = () => {
@@ -40,11 +60,12 @@ class TestFormContainer extends PureComponent {
 
 		return (
 			<div>
-				<h1>Welcome back</h1>
-
-				<h3>Enter your account details below</h3>
-
-				<LoginForm showPassword={this.showPassword} state={this.state} onSubmit={this.handleSubmit} />
+				<LoginForm 
+				handleChange={this.handleChange}
+				handleSubmit={this.handleSubmit}
+				showPasswordFunc={this.showPassword}
+				state={this.state}
+				/>
 	
 			</div>
 		)

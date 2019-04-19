@@ -7,27 +7,27 @@ import { getHighLights } from '../../actions/courses'
 import { withRouter } from 'react-router'
 import { selectCourse } from '../../actions/paymentFlow'
 import Cart from './Cart'
+import people from'../../images/mock-ups/people.png'
+import { Link } from 'react-router-dom'
+ 
 
 class CoursePageContainer extends PureComponent {
    
     componentWillMount = () => {
-        const { study, location, selectedCourses } = this.props
+        const { study } = this.props
         if (study !== null
-        ) {
-            this.props.getCourses(study.id)
-        }
-        if (study !== null
-            && selectedCourses.length > 0) {
+        ) { console.log(study.id, 'study id in pagecontrainer')
             this.props.getCourses(study.id)
         }
         else {
+            console.log(study)
             this.props.getHighLights()
         }
 
     }
 
     componentDidUpdate = (prevProps) => {
-        if (prevProps.study !== this.props.study) {
+        if (this.props.study && prevProps.study !== this.props.study) {
             this.props.getCourses(this.props.study.id)
         }
     }
@@ -58,8 +58,8 @@ class CoursePageContainer extends PureComponent {
         return (
             <div>
                 {this.props.selectedCourses.length > 0 &&
-                    <div><Cart selectedCourses={this.props.selectedCourses} />
-                        <button onClick={this.checkCurrentUser}>Checkout</button>
+                    <div>
+                        <Cart selectedCourses={this.props.selectedCourses} checkCurrentUser={this.checkCurrentUser}/>   
                     </div>
                 }
 
@@ -79,16 +79,31 @@ class CoursePageContainer extends PureComponent {
 
     render() {
 
-        const { courses } = this.props
+        const { courses, selectedStudy } = this.props
 
-        if (courses === null) return <p>Loading...</p>
+        if (!courses.length && selectedStudy) return (
+            <div>
+                <CourseFilterbar history={this.props.history} />
+                <p>Sorry, no course provided</p>
+                <img alt="people" className="image-med margin-side" src={people} /> 
+                <p className="text-lg-black text-center">Start studying with Acaboo.</p>
+                <div className="margin-side text-center margin-bottom">
+                    <Link to="/about" className="text-med">Learn more &#8594;</Link>
+                </div>
+            </div>
+        )
 
         return (
             <div>
                 <CourseFilterbar history={this.props.history} />
-
                 {this.renderCourses(courses)}
-            </div>)
+                <img alt="people" className="image-med margin-side" src={people} /> 
+                <p className="text-lg-black text-center">Start studying with Acaboo.</p>
+                <div className="margin-side text-center margin-bottom">
+                    <Link to="/about" className="text-med">Learn more &#8594;</Link>
+                </div>
+            </div>
+        )
     }
 }
 
@@ -97,7 +112,9 @@ const mapStateToProps = state => ({
     study: state.selectedStudy,
     selectedCourses: state.selectedCourses,
     currentUser: state.currentUser,
+    selectedStudy: state.selectedStudy
 })
 
 export default withRouter(connect(mapStateToProps, { getCourses, getHighLights, selectCourse })(CoursePageContainer))
+
 

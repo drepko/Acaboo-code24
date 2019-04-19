@@ -6,11 +6,11 @@ export default class SubscribeFormContainer extends React.Component {
 
     render() {
         return (
-            <div>
-            <p>The latest Acaboo news, articles, and <br />
+            <div id = 'footer-container' className = "subscription-text">
+            The latest Acaboo news, articles, and <br />
             resources, sent straight to your inbox every <br />
-            month.</p>
-           <SubscriptionForm/>
+            month.
+            <SubscriptionForm/>
             <p>We’ll never share your details. See our Privacy Policy</p>
 
             </div>)

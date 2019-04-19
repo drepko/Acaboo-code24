@@ -18,14 +18,12 @@ import ReviewPurchaseContainer from './components/reviewpurchasepage/ReviewPurch
 import JobDetailPage from './components/careers/JobDetailPage'
 import UserDashboardContainer from './components/UserDashboard/UserDashboardContainer';
 import LoginFormContainer from './components/login/LoginFormContainer';
-import FormExample from './components/login/Test';
-import ScrollToTop from './components/layout/ScrollToTop'
+import ScrollToTop from './components/scrollup/scrollup'
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <ScrollToTop>
         {/* the div below is equivalent to the "body" element - note for Jewel */}
         <div className="container-fluid"> 
             <Topbar/>
@@ -48,8 +46,8 @@ class App extends Component {
               <Route exact path="/dashboard" component={UserDashboardContainer} />
           </div>
             <Footer />
+            <ScrollToTop />
         </div>
-        </ScrollToTop>
       </Router>
     );
   }
