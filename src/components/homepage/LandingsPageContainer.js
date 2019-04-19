@@ -112,7 +112,7 @@ class LandingsPageContainer extends React.Component {
 
         <div className="text-center">
           <p className="text-lg-black">Too much distraction, no focus?</p>
-          <p className="font-grey">Acaboo helps you focus on the right moments. Together we save your exams.</p>
+          <p className="text-sm-grey">Acaboo helps you focus on the right moments. Together we save your exams.</p>
         </div>
 
         <img alt="people" className="image-med-lg margin-side" src={people} /> 
