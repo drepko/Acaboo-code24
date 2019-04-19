@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import FindCourseContainer from './FindCourseContainer';
 
 import people from'../../images/mock-ups/people.png'
-import woman_desk from '../../images/mock-ups/woman-desk2.png'
+import woman_desk2 from '../../images/mock-ups/woman_desk2.png'
 import man_handshake from'../../images/mock-ups/man_handshake.png'
 import course_dashboard from '../../images/course_dashboard.png'
 
@@ -42,7 +42,7 @@ class LandingsPageContainer extends React.Component {
             </div>
 
             <div className="half-width">
-            <img id="women-desk-img" alt="woman_desk"  src={woman_desk} />
+            <img id="women-desk-img" alt="woman_desk2"  src={woman_desk2} />
           </div>
           </div>
 

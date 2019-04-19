@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import deskLamp from "../../images/mock-ups/deskLamp.png"
-import woman_desk from  '../../images/mock-ups/woman-desk2.png'
+import woman_desk2 from  '../../images/mock-ups/woman_desk2.png'
 import man_handshake from '../../images/mock-ups/man_handshake.png'
 
 
@@ -32,7 +32,7 @@ export default class AboutPage extends Component {
         </div>
 
         <div className="women-desk-about-us">
-        <img alt="woman_desk" className="image_lg" src={woman_desk} />
+        <img alt="woman_desk2" className="image_lg" src={woman_desk2} />
         </div>
         </div>
         <div className="text-center">

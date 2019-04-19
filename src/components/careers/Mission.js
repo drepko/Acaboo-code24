@@ -1,6 +1,6 @@
 import React from 'react'
 import deskLamp from "../../images/mock-ups/deskLamp.png"
-import woman_desk from  '../../images/mock-ups/woman_desk.png'
+import woman_desk2 from  '../../images/mock-ups/woman_desk2.png'
 export default class Mission extends React.Component {
 
     render(){
@@ -11,7 +11,7 @@ export default class Mission extends React.Component {
 
                 <div className="main-row">
                     <img alt="desklamp" className="image_lg" src={deskLamp} />
-                    <img alt="woman_desk" className="image_lg" src={woman_desk} />
+                    <img alt="woman_desk2" className="image_lg" src={woman_desk2} />
                 </div>
             </div>
 
