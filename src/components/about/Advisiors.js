@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Team extends Component {
   render() {
     return (
-      <div className ="team-main">
+      <div className ="team-main ">
         <p className ='text-med-black font-weight-bold'>Advisors</p>
         <p className = 'text-sm-black' >We are fortunate to work with some of the best advisors</p>        
         <div className = "advisors-peoples">
