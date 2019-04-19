@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 export default class StartStudying extends Component {
   render() {
     return (
-        <div className="main-column-div">
-          <h1 className="text-lg-black">Start studying with Acaboo.</h1>
-          <div className="flex-row jc-between main-column-div">
+        <div className="main-column-div padding-bottom-large">
+          <h1 className="text-lg-black padding-bottom-30">Start studying with Acaboo.</h1>
+          <div className="flex-row jc-between main-column-div padding-bottom-small">
             <div className="">
                 <Link to="/courses">
                 <button className="form-control form-control-sm btn-blue-med text-sm-white">
