@@ -6,12 +6,11 @@ export default function EmailForm(props) {
     return (
         <form onSubmit={props.onSubmit}>
             <div>
-                <input id = 'email' className ='form-control form-control-sm form-width-height'
+                <input id='email' className ='form-control form-control-sm form-width-height'
                     onChange = {props.onChange}
                     placeholder="Email Address"
                     type="email"
                     name="email"
-                    id="email"
                     value={props.formValues.email}
                 />
             </div>

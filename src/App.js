@@ -27,7 +27,6 @@ class App extends Component {
     return (
       <Router>
         <StartAtTop>
-        {/* the div below is equivalent to the "body" element - note for Jewel */}
         <div className="container-fluid"> 
             <Topbar/>
           <div className="padding-side">   
@@ -48,9 +47,8 @@ class App extends Component {
               <Route exact path="/jobdetails" component={JobDetailPage} />
               <Route exact path="/dashboard" component={UserDashboardContainer} />
               <Route exact path="/team" component={Team} />
-
           </div>
-            <Footer />
+            <Footer/>
             <ScrollToTop />
         </div>
         </StartAtTop>
