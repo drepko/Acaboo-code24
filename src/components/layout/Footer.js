@@ -17,7 +17,7 @@ import '../../styles/App.css'
 
 export default function Footer(props) {
     return (
-        <Container className="footer padding">
+        <Container className="footer padding ">
             <Row>
                 <Col  xs={{ span: 2, offset: 2 }}>
                     <h3 className="text-med-white">Navigate</h3>
@@ -54,10 +54,10 @@ export default function Footer(props) {
                 </Col>
             </Row>
             <div className="social-media">
-               <Link to onClick={()=> window.open("https://www.instagram.com/acaboonl/", "_blank")}> <Image src={Instagram}/></Link>
-               <Link to onClick={()=> window.open("https://www.linkedin.com/company/18289841/", "_blank")}> <Image src={LinkedIn}/></Link>
-               <Link to onClick={()=> window.open("https://twitter.com/acaboonl", "_blank")}><Image src={Twitter}/></Link>
-               <Link to onClick={()=> window.open("https://www.facebook.com/acaboo/", "_blank")}><Image src={Facebook}/></Link>
+               <Link to="" onClick={()=> window.open("https://www.instagram.com/acaboonl/", "_blank")}> <Image src={Instagram}/></Link>
+               <Link to="" onClick={()=> window.open("https://www.linkedin.com/company/18289841/", "_blank")}> <Image src={LinkedIn}/></Link>
+               <Link to="" onClick={()=> window.open("https://twitter.com/acaboonl", "_blank")}><Image src={Twitter}/></Link>
+               <Link to="" onClick={()=> window.open("https://www.facebook.com/acaboo/", "_blank")}><Image src={Facebook}/></Link>
             </div>
             <Row className="Acaboo-2019">
             &#169; Acaboo 2019. This page is subject to the Privacy Policy and Terms of Service.
@@ -68,3 +68,4 @@ export default function Footer(props) {
 
 
 
+// 
