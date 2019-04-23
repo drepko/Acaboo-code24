@@ -20,10 +20,13 @@ import UserDashboardContainer from './components/UserDashboard/UserDashboardCont
 import LoginFormContainer from './components/login/LoginFormContainer';
 import ScrollToTop from './components/scrollup/scrollup'
 import Team from './components/about/Team'
+import StartAtTop from './components/layout/ScrollToTop'
+
 class App extends Component {
   render() {
     return (
       <Router>
+        <StartAtTop>
         {/* the div below is equivalent to the "body" element - note for Jewel */}
         <div className="container-fluid"> 
             <Topbar/>
@@ -50,6 +53,7 @@ class App extends Component {
             <Footer />
             <ScrollToTop />
         </div>
+        </StartAtTop>
       </Router>
     );
   }
