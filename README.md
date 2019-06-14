@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) to build new front-end of Acaboo, an Amsterdam-based start-up providing online book service.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) to build new front-end for Acaboo, an Amsterdam-based start-up providing online book service.
 
 Contributors: [Danielle Repko](https://github.com/drepko), [Duc Vu](https://github.com/DucMVu), [Jewel Breeveld](https://github.com/JewelBreeveld), [Sandra Padua](https://github.com/sandrapadua) and [Stefan Moes](https://github.com/CurlyBracket1990).
 
