@@ -9,6 +9,11 @@ Contributors: [Danielle Repko](https://github.com/drepko), [Duc Vu](https://gith
 ## Getting Started
 
 1. Clone this repo
+
+    ```
+    git clone https://github.com/drepko/Acaboo-code24.git
+    ```
+
 2. Install dependencies
 
     ```
