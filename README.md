@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Contributors: [Danielle Repko](https://github.com/drepko), [Duc Vu](https://github.com/DucMVu), [Jewel Breeveld](https://github.com/JewelBreeveld), [Sandra Padua](https://github.com/sandrapadua) and [Stefan Moes](https://github.com/CurlyBracket1990).
 
+
+
 ## Available Scripts
 
 In the project directory, you can run:
