@@ -1,0 +1,50 @@
+/* styling for src/components/Topbar.js */
+/* 
+.topnav {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    top: 0;
+    width: 100%;
+    
+}
+
+.topnav, .topnav-logo {
+    margin-right: auto;
+}
+
+.topnav-menu {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.tm-i {
+    color: #545B5E;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: normal;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+}
+
+.tm-logins {
+    border-left: 1px solid;
+    border-color: #959595;
+}
+
+.tm-signup {
+    margin-right: 40px;
+    background: #2D66F6;
+    border-radius: 5px; 
+    color: #FFFFFF;
+} */

@@ -1,0 +1,16 @@
+/* input.password-field {
+    padding-right: 25px;
+}
+
+.password-image {
+    width: 20px;
+    height: auto;
+    position: relative;
+    top: 7px;
+    right: 25px;
+    cursor: pointer
+} */
+
+.passwordImage {
+    height: 20px;
+}
