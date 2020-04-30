@@ -9,7 +9,7 @@
     "dom": "0.0.3",
     "formsy-react": "^1.1.5",
     "formsy-react-components": "^2.0.0-alpha.1",
-    "jquery": "^1.12.4",
+    "jquery": "^3.5.0",
     "material-ui": "^0.20.2",
     "password-validator": "^4.1.1",
     "react": "^16.8.6",
